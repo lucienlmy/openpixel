@@ -291,3 +291,54 @@
 - [수정할 소스](../works/light-painting/source.js)
 
 [작품 목록으로 돌아가기](../README.ko.md#gallery)
+
+
+<a id="iron-flower"></a>
+
+## 쇳물 꽃불 / 打铁花
+
+쇳물을 쳐 올려 마을을 비추는 금빛 불꽃을 만듭니다.
+
+수동 조작으로 바꾼 뒤 J를 길게 눌러 막대를 올리고, 놓아서 쳐 올립니다. 좌우 방향키로 조준합니다. 기다릴수록 쇳물은 식습니다.
+
+`works/iron-flower/index.html` · [source.js](../works/iron-flower/source.js)
+
+<a id="watercolor"></a>
+
+## 수채화 번짐 / 水彩晕染
+
+젖은 종이에서 물감이 퍼지고 섞이는 모습을 그립니다.
+
+종이 위를 드래그해 그리고 아래 물감 칸을 눌러 색을 바꿉니다. 젖은 곳을 짧게 누르면 진한 물감이, 길게 누르면 물이 더해집니다. 새 종이 버튼으로 초기화할 수 있습니다.
+
+`works/watercolor/index.html` · [source.js](../works/watercolor/source.js)
+
+<a id="coral-reef"></a>
+
+## 산호초 / 珊瑚礁
+
+산호를 건드리거나 물살을 만들면 작은 바닷속 세계가 반응합니다.
+
+산호를 짧게 누르면 수축이 퍼지고, 길게 누르면 가까운 부분이 닫힌 채 유지됩니다. 드래그해 물살을 만들고 말미잘 가까이를 누르면 흰동가리가 숨습니다.
+
+`works/coral-reef/index.html` · [source.js](../works/coral-reef/source.js)
+
+<a id="dandelion"></a>
+
+## 민들레 / 蒲公英
+
+씨앗을 날리고 땅에 떨어진 씨앗이 새로 자라는 모습을 봅니다.
+
+씨앗 머리 위를 드래그하거나 옆을 길게 눌러 바람을 붑니다. 떨어진 씨앗 일부는 잎, 노란 꽃, 새 씨앗 머리로 자랍니다. 성장 빠르게 버튼도 사용할 수 있습니다.
+
+`works/dandelion/index.html` · [source.js](../works/dandelion/source.js)
+
+<a id="kaleidoscope"></a>
+
+## 만화경 / 万花筒
+
+통을 돌릴 때마다 색 조각이 새로운 대칭 무늬를 만듭니다.
+
+누른 채 원을 그리며 드래그해 통을 돌리고 가운데를 눌러 흔듭니다. 버튼으로 꽃잎 수를 8·12·16·24개로, 재료를 유리·구슬·압화로 바꿀 수 있습니다.
+
+`works/kaleidoscope/index.html` · [source.js](../works/kaleidoscope/source.js)

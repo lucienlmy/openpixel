@@ -492,5 +492,100 @@
       "method": "native-runtime",
       "time_seconds": 5
     }
+  },
+  {
+    "order": 27,
+    "slug": "iron-flower",
+    "title": "打铁花",
+    "group": "互动与材质",
+    "summary": "雪夜里，一棒打出满天铁花",
+    "url": "works/iron-flower/index.html",
+    "source": "works/iron-flower/source.html",
+    "poster": "works/iron-flower/poster.webp",
+    "origin_id": "pixel-explore--showcase--index::ironflower::0",
+    "origin_path": "pixel-explore/showcase/index.html",
+    "origin_sha256": "f5000a60446fbad8f2a606edd5d167296cebb7f5b788fb558cfef6f21aac3c0a",
+    "source_sha256": "fc59dfd3eb0c759d5db07fcdd01a95caaa5762ff262add8f858d2b3338739f8f",
+    "source_bytes": 153545,
+    "poster_capture": {
+      "method": "native-runtime"
+    },
+    "batch": 2
+  },
+  {
+    "order": 28,
+    "slug": "watercolor",
+    "title": "水彩晕染",
+    "group": "互动与材质",
+    "summary": "让颜色在湿纸上自己生长",
+    "url": "works/watercolor/index.html",
+    "source": "works/watercolor/source.html",
+    "poster": "works/watercolor/poster.webp",
+    "origin_id": "pixel-explore--interactive-art-4--index::watercolor::0",
+    "origin_path": "pixel-explore/interactive-art-4/index.html",
+    "origin_sha256": "c956e2f54eda001f76455613bca4494e3a0ef95191720eab4dec513627c0f409",
+    "source_sha256": "ca90ae4a56fd1d0c87463e0985426d19026b1fab83c8537f3d1262a69470c237",
+    "source_bytes": 38739,
+    "poster_capture": {
+      "method": "native-runtime"
+    },
+    "batch": 2
+  },
+  {
+    "order": 29,
+    "slug": "coral-reef",
+    "title": "珊瑚礁",
+    "group": "自然与宇宙",
+    "summary": "碰一下，整片珊瑚依次收起",
+    "url": "works/coral-reef/index.html",
+    "source": "works/coral-reef/source.html",
+    "poster": "works/coral-reef/poster.webp",
+    "origin_id": "pixel-explore--interactive-art-4--index::reef::0",
+    "origin_path": "pixel-explore/interactive-art-4/index.html",
+    "origin_sha256": "c956e2f54eda001f76455613bca4494e3a0ef95191720eab4dec513627c0f409",
+    "source_sha256": "635b8d96c932ca052032608ab7b56b5b13ea3fc131ad57657913d87707981586",
+    "source_bytes": 40890,
+    "poster_capture": {
+      "method": "native-runtime"
+    },
+    "batch": 2
+  },
+  {
+    "order": 30,
+    "slug": "dandelion",
+    "title": "蒲公英",
+    "group": "自然与宇宙",
+    "summary": "吹散一朵，再长出一片",
+    "url": "works/dandelion/index.html",
+    "source": "works/dandelion/source.html",
+    "poster": "works/dandelion/poster.webp",
+    "origin_id": "pixel-explore--interactive-art-3--index::dandelion::0",
+    "origin_path": "pixel-explore/interactive-art-3/index.html",
+    "origin_sha256": "fe1354c613e260ea0c6b905148cbd637c0db5706dbf98b1fb574c3c69af4821d",
+    "source_sha256": "72ec955c8fcfac7b159f6e9283cbd396698555b54188a368e7ca328761de0a5d",
+    "source_bytes": 43416,
+    "poster_capture": {
+      "method": "native-runtime"
+    },
+    "batch": 2
+  },
+  {
+    "order": 31,
+    "slug": "kaleidoscope",
+    "title": "万花筒",
+    "group": "互动与材质",
+    "summary": "转一下，就得到一朵新图案",
+    "url": "works/kaleidoscope/index.html",
+    "source": "works/kaleidoscope/source.html",
+    "poster": "works/kaleidoscope/poster.webp",
+    "origin_id": "pixel-explore--interactive-art-3--index::kaleido::0",
+    "origin_path": "pixel-explore/interactive-art-3/index.html",
+    "origin_sha256": "fe1354c613e260ea0c6b905148cbd637c0db5706dbf98b1fb574c3c69af4821d",
+    "source_sha256": "5a07199a7bd2d3973dc11902c8005a1443c5281e74ef384e15dacf2d04f125f6",
+    "source_bytes": 40212,
+    "poster_capture": {
+      "method": "native-runtime"
+    },
+    "batch": 2
   }
 ]

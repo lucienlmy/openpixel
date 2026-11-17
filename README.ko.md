@@ -8,21 +8,39 @@
 
 **픽셀 세계를 나만의 작품으로.**
 
-연못의 물결부터 은하 충돌까지, 브라우저에서 실시간으로 그리는 26개의 픽셀 실험입니다.
+연못의 물결부터 은하 충돌까지, 브라우저에서 실시간으로 그리는 31개의 픽셀 실험입니다.
 
 <img src="docs/assets/badge-works.ko.svg" alt="작품"> <img src="docs/assets/badge-runtime.ko.svg" alt="실행"> <img src="docs/assets/badge-license.ko.svg" alt="라이선스">
 
-[첫 번째 모음 다운로드](https://github.com/ma1902056219-coder/openpixel/archive/refs/heads/main.zip) · [작품 목록](#gallery) · [로컬에서 실행하기](#start) · [수정 가이드](docs/guide.ko.md)
+[작품 모음 다운로드](https://github.com/ma1902056219-coder/openpixel/archive/refs/heads/main.zip) · [작품 목록](#gallery) · [로컬에서 실행하기](#start) · [수정 가이드](docs/guide.ko.md)
 
 </div>
+
+## 두 번째 공개 · 직접 바꿔 볼 다섯 실험
+
+쇳물 불꽃부터 민들레 씨앗까지. 각 폴더를 독립 실행할 수 있으며 편집 가능한 코드와 조작 설명이 있습니다.
+
+<table>
+<tr>
+<td width="33%" valign="top"><a href="docs/works.ko.md#iron-flower"><img src="works/iron-flower/poster.webp" alt="쇳물 꽃불" width="100%"><br><strong>쇳물 꽃불</strong></a><br><sub>쇳물을 쳐 올려 마을을 비추는 금빛 불꽃을 만듭니다.</sub><br><a href="works/iron-flower/source.js">소스 보기</a></td>
+<td width="33%" valign="top"><a href="docs/works.ko.md#watercolor"><img src="works/watercolor/poster.webp" alt="수채화 번짐" width="100%"><br><strong>수채화 번짐</strong></a><br><sub>젖은 종이에서 물감이 퍼지고 섞이는 모습을 그립니다.</sub><br><a href="works/watercolor/source.js">소스 보기</a></td>
+<td width="33%" valign="top"><a href="docs/works.ko.md#coral-reef"><img src="works/coral-reef/poster.webp" alt="산호초" width="100%"><br><strong>산호초</strong></a><br><sub>산호를 건드리거나 물살을 만들면 작은 바닷속 세계가 반응합니다.</sub><br><a href="works/coral-reef/source.js">소스 보기</a></td>
+</tr>
+<tr>
+<td width="33%" valign="top"><a href="docs/works.ko.md#dandelion"><img src="works/dandelion/poster.webp" alt="민들레" width="100%"><br><strong>민들레</strong></a><br><sub>씨앗을 날리고 땅에 떨어진 씨앗이 새로 자라는 모습을 봅니다.</sub><br><a href="works/dandelion/source.js">소스 보기</a></td>
+<td width="33%" valign="top"><a href="docs/works.ko.md#kaleidoscope"><img src="works/kaleidoscope/poster.webp" alt="만화경" width="100%"><br><strong>만화경</strong></a><br><sub>통을 돌릴 때마다 색 조각이 새로운 대칭 무늬를 만듭니다.</sub><br><a href="works/kaleidoscope/source.js">소스 보기</a></td>
+<td width="33%"></td>
+</tr>
+</table>
+
 
 ## 움직이는 모습부터 살펴보세요
 
 <div align="center">
-<img src="docs/assets/showcase.gif" alt="실제 실행 화면: 물결, 물고기 떼, 은하 충돌" width="850">
+<img src="docs/assets/batch-02.gif" alt="쇳물 꽃불, 수채화, 산호, 민들레와 만화경의 실제 실행 화면" width="850">
 </div>
 
-미리보기는 작품을 실제로 실행해 녹화한 화면입니다. [44초 전체 소개 영상 보기 또는 다운로드](https://github.com/ma1902056219-coder/openpixel/releases/download/v0.1.0/openpixel-vol01-promo.mp4).
+이번에 추가한 다섯 작품의 실제 실행 화면입니다. 첫 공개 26개를 포함해 현재 총 31개 작품입니다.
 
 - **직접 만져보기:** 비단잉어에게 먹이를 주고, 자기장을 움직이고, 성에를 닦고, 모래에 무늬를 남겨 보세요.
 - **변화 관찰하기:** 위성은 고리가 되고, 물고기는 돌고래를 피하며, 별의 궤적은 긴 꼬리를 만듭니다.
@@ -33,7 +51,7 @@
 
 ## 로컬에서 실행하기
 
-1. [첫 번째 모음을 다운로드하고 압축을 풀거나](https://github.com/ma1902056219-coder/openpixel/archive/refs/heads/main.zip) 저장소를 clone 합니다.
+1. [작품 모음을 다운로드하고 압축을 풀거나](https://github.com/ma1902056219-coder/openpixel/archive/refs/heads/main.zip) 저장소를 clone 합니다.
 2. 루트의 `index.html` 또는 `works/<작품명>/index.html`을 엽니다.
 3. 데모를 본 뒤 각 페이지의 조작 안내에 따라 직접 움직여 보세요.
 
@@ -53,7 +71,7 @@ README, 수정 가이드, 작품 조작 안내는 네 가지 언어로 제공됩
 
 ## 작품 목록
 
-카드를 클릭하면 한국어 조작 안내와 소스 링크가 열립니다. 26개 작품 모두 수정 가능한 `source.js`가 있습니다. 작품을 실행하려면 모음을 다운로드하세요.
+카드를 클릭하면 한국어 조작 안내와 소스 링크가 열립니다. 31개 작품 모두 수정 가능한 `source.js`가 있습니다. 작품을 실행하려면 모음을 다운로드하세요.
 
 ### 상호작용과 질감
 
@@ -155,7 +173,7 @@ source.js를 읽고 초기화, 프레임별 갱신, 그리기 함수를 찾아�
 
 ## 업데이트와 참여
 
-첫 번째 모음으로 26개 작품을 공개했습니다. 새로운 효과도 비정기적으로 공개할 예정입니다. 조작성, 시각 효과, 성능 개선을 환영합니다. 문제를 제보할 때는 작품명, 브라우저, 재현 단계를 적어주세요. Pull Request에는 변경 내용과 데모·수동 조작 확인 결과를 함께 적어주세요. 원문 참여 안내는 [CONTRIBUTING.md](CONTRIBUTING.md)에 있습니다.
+두 차례 공개로 현재 총 31개 작품을 제공합니다. 새로운 효과도 비정기적으로 공개할 예정입니다. 조작성, 시각 효과, 성능 개선을 환영합니다. 문제를 제보할 때는 작품명, 브라우저, 재현 단계를 적어주세요. Pull Request에는 변경 내용과 데모·수동 조작 확인 결과를 함께 적어주세요. 원문 참여 안내는 [CONTRIBUTING.md](CONTRIBUTING.md)에 있습니다.
 
 ## 제작자와 라이선스
 

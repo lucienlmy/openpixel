@@ -8,21 +8,39 @@
 
 **ピクセルの世界を、あなたの作品に。**
 
-池の波紋から銀河の衝突まで。ブラウザでリアルタイムに描画する、26 のピクセル実験です。
+池の波紋から銀河の衝突まで。ブラウザでリアルタイムに描画する、31 のピクセル実験です。
 
 <img src="docs/assets/badge-works.ja.svg" alt="作品"> <img src="docs/assets/badge-runtime.ja.svg" alt="実行"> <img src="docs/assets/badge-license.ja.svg" alt="ライセンス">
 
-[第1集をダウンロード](https://github.com/ma1902056219-coder/openpixel/archive/refs/heads/main.zip) · [作品一覧](#gallery) · [ローカルで動かす](#start) · [改造ガイド](docs/guide.ja.md)
+[作品集をダウンロード](https://github.com/ma1902056219-coder/openpixel/archive/refs/heads/main.zip) · [作品一覧](#gallery) · [ローカルで動かす](#start) · [改造ガイド](docs/guide.ja.md)
 
 </div>
+
+## 第2弾 · 改造して学べる5つの実験
+
+鉄の火花からタンポポの種まで。各フォルダーで独立実行でき、編集用コードと操作説明が付いています。
+
+<table>
+<tr>
+<td width="33%" valign="top"><a href="docs/works.ja.md#iron-flower"><img src="works/iron-flower/poster.webp" alt="打鉄花" width="100%"><br><strong>打鉄花</strong></a><br><sub>溶けた鉄を打ち上げ、村を照らす金色の火花に。</sub><br><a href="works/iron-flower/source.js">ソースを見る</a></td>
+<td width="33%" valign="top"><a href="docs/works.ja.md#watercolor"><img src="works/watercolor/poster.webp" alt="水彩のにじみ" width="100%"><br><strong>水彩のにじみ</strong></a><br><sub>濡れた紙で絵の具が広がり、混ざり合う。</sub><br><a href="works/watercolor/source.js">ソースを見る</a></td>
+<td width="33%" valign="top"><a href="docs/works.ja.md#coral-reef"><img src="works/coral-reef/poster.webp" alt="サンゴ礁" width="100%"><br><strong>サンゴ礁</strong></a><br><sub>サンゴへのタッチや水流に、小さな海の世界が反応する。</sub><br><a href="works/coral-reef/source.js">ソースを見る</a></td>
+</tr>
+<tr>
+<td width="33%" valign="top"><a href="docs/works.ja.md#dandelion"><img src="works/dandelion/poster.webp" alt="タンポポ" width="100%"><br><strong>タンポポ</strong></a><br><sub>綿毛を飛ばし、落ちた種から新しい株を育てる。</sub><br><a href="works/dandelion/source.js">ソースを見る</a></td>
+<td width="33%" valign="top"><a href="docs/works.ja.md#kaleidoscope"><img src="works/kaleidoscope/poster.webp" alt="万華鏡" width="100%"><br><strong>万華鏡</strong></a><br><sub>鏡筒を回すたび、色のかけらが新しい模様になる。</sub><br><a href="works/kaleidoscope/source.js">ソースを見る</a></td>
+<td width="33%"></td>
+</tr>
+</table>
+
 
 ## まずは動く様子を
 
 <div align="center">
-<img src="docs/assets/showcase.gif" alt="実際の実行画面：波紋、魚群、銀河の衝突" width="850">
+<img src="docs/assets/batch-02.gif" alt="打鉄花、水彩、サンゴ、タンポポ、万華鏡の実行映像" width="850">
 </div>
 
-プレビューは作品の実行画面を収録したものです。[44秒の紹介動画を見る・ダウンロードする](https://github.com/ma1902056219-coder/openpixel/releases/download/v0.1.0/openpixel-vol01-promo.mp4)。
+今回追加した5作品の実際の実行映像です。初回の26作品を含め、現在は全31作品です。
 
 - **触ってみる：** 錦鯉に餌をあげ、磁場を動かし、霜を拭い、砂紋を描けます。
 - **変化を眺める：** 衛星が環になり、魚群がイルカを避け、星の軌跡が長い尾になります。
@@ -33,7 +51,7 @@
 
 ## ローカルで動かす
 
-1. [第1集をダウンロードして解凍](https://github.com/ma1902056219-coder/openpixel/archive/refs/heads/main.zip)するか、リポジトリを clone します。
+1. [作品集をダウンロードして解凍](https://github.com/ma1902056219-coder/openpixel/archive/refs/heads/main.zip)するか、リポジトリを clone します。
 2. ルートの `index.html`、または `works/<作品名>/index.html` を開きます。
 3. デモを眺めてから、各ページの操作説明に沿って遊んでください。
 
@@ -53,7 +71,7 @@ README、改造ガイド、作品の操作説明は4言語で読めます。作�
 
 ## 作品一覧
 
-図をクリックすると日本語の操作説明とソースへのリンクが開きます。全26作品に編集可能な `source.js` を付属。実行するには作品集をダウンロードしてください。
+図をクリックすると日本語の操作説明とソースへのリンクが開きます。全31作品に編集可能な `source.js` を付属。実行するには作品集をダウンロードしてください。
 
 ### 触れて遊ぶ・質感
 
@@ -155,7 +173,7 @@ source.js を読み、初期化、フレーム更新、描画の処理を特定�
 
 ## 更新と参加
 
-第1集では26作品を公開しました。今後も新しい表現を不定期に公開する予定です。操作性、見た目、パフォーマンスの改善を歓迎します。問題の報告には作品名、ブラウザ、再現手順を記載してください。Pull Request には変更内容と、デモ・手動操作の確認結果を添えてください。原文の参加案内は [CONTRIBUTING.md](CONTRIBUTING.md) にあります。
+2回の公開で、現在は全31作品です。今後も新しい表現を不定期に公開する予定です。操作性、見た目、パフォーマンスの改善を歓迎します。問題の報告には作品名、ブラウザ、再現手順を記載してください。Pull Request には変更内容と、デモ・手動操作の確認結果を添えてください。原文の参加案内は [CONTRIBUTING.md](CONTRIBUTING.md) にあります。
 
 ## 作者とライセンス
 

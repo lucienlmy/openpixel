@@ -32,3 +32,15 @@
 | 清明上河图·虹桥 | `world-styles/east-asia/index.html` | `ace6d961c82528c94b7607f3cffea19de0e3aad52226a64a20b4f6ae44128778` |
 | 哥特玫瑰窗 | `world-styles/europe/index.html` | `5c8e58dee789039ebcdeda054dfac98a7bd1b132f72b64b81348a3b4620ba25e` |
 | 光绘 | `pixel-explore/interactive-art-2/index.html` | `49e8a9293072efd4904e417f4aa8b15aa9f0e4a35f2735427cfd7b5ee04088d4` |
+
+## 第二批 · 2026-11-17
+
+从当前主线页面提取以下5个已确认作品，沿用单作品注册块及依赖裁剪；未加入新完整游戏。
+
+| 作品 | 原文件 | 原文件 SHA-256 |
+|---|---|---|
+| 打铁花 | `pixel-explore/showcase/index.html` | `f5000a60446fbad8f2a606edd5d167296cebb7f5b788fb558cfef6f21aac3c0a` |
+| 水彩晕染 | `pixel-explore/interactive-art-4/index.html` | `c956e2f54eda001f76455613bca4494e3a0ef95191720eab4dec513627c0f409` |
+| 珊瑚礁 | `pixel-explore/interactive-art-4/index.html` | `c956e2f54eda001f76455613bca4494e3a0ef95191720eab4dec513627c0f409` |
+| 蒲公英 | `pixel-explore/interactive-art-3/index.html` | `fe1354c613e260ea0c6b905148cbd637c0db5706dbf98b1fb574c3c69af4821d` |
+| 万花筒 | `pixel-explore/interactive-art-3/index.html` | `fe1354c613e260ea0c6b905148cbd637c0db5706dbf98b1fb574c3c69af4821d` |

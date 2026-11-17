@@ -8,21 +8,39 @@
 
 **Make these pixel worlds your own.**
 
-26 pixel experiments rendered in real time in your browser, from ripples on a pond to colliding galaxies.
+31 pixel experiments rendered in real time in your browser, from ripples on a pond to colliding galaxies.
 
 <img src="docs/assets/badge-works.en.svg" alt="Artworks"> <img src="docs/assets/badge-runtime.en.svg" alt="Runs in"> <img src="docs/assets/badge-license.en.svg" alt="License">
 
-[Download Volume 1](https://github.com/ma1902056219-coder/openpixel/archive/refs/heads/main.zip) · [Gallery](#gallery) · [Run locally](#start) · [Remix guide](docs/guide.en.md)
+[Download the collection](https://github.com/ma1902056219-coder/openpixel/archive/refs/heads/main.zip) · [Gallery](#gallery) · [Run locally](#start) · [Remix guide](docs/guide.en.md)
 
 </div>
+
+## Batch 02 · Five more experiments to remix
+
+From molten sparks to seeds: each folder runs independently, with editable code and practical controls.
+
+<table>
+<tr>
+<td width="33%" valign="top"><a href="docs/works.en.md#iron-flower"><img src="works/iron-flower/poster.webp" alt="Molten Iron Flowers" width="100%"><br><strong>Molten Iron Flowers</strong></a><br><sub>Strike molten iron into a shower of sparks that lights the village.</sub><br><a href="works/iron-flower/source.js">View source</a></td>
+<td width="33%" valign="top"><a href="docs/works.en.md#watercolor"><img src="works/watercolor/poster.webp" alt="Watercolor Bloom" width="100%"><br><strong>Watercolor Bloom</strong></a><br><sub>Paint on wet paper and watch pigments spread and mix.</sub><br><a href="works/watercolor/source.js">View source</a></td>
+<td width="33%" valign="top"><a href="docs/works.en.md#coral-reef"><img src="works/coral-reef/poster.webp" alt="Coral Reef" width="100%"><br><strong>Coral Reef</strong></a><br><sub>Touch coral, push a current and watch a small underwater ecosystem respond.</sub><br><a href="works/coral-reef/source.js">View source</a></td>
+</tr>
+<tr>
+<td width="33%" valign="top"><a href="docs/works.en.md#dandelion"><img src="works/dandelion/poster.webp" alt="Dandelion" width="100%"><br><strong>Dandelion</strong></a><br><sub>Scatter seeds in the wind and watch new plants grow.</sub><br><a href="works/dandelion/source.js">View source</a></td>
+<td width="33%" valign="top"><a href="docs/works.en.md#kaleidoscope"><img src="works/kaleidoscope/poster.webp" alt="Kaleidoscope" width="100%"><br><strong>Kaleidoscope</strong></a><br><sub>Turn colored fragments into changing mirrored patterns.</sub><br><a href="works/kaleidoscope/source.js">View source</a></td>
+<td width="33%"></td>
+</tr>
+</table>
+
 
 ## See them in motion
 
 <div align="center">
-<img src="docs/assets/showcase.gif" alt="Actual runtime footage: ripples, schooling fish and colliding galaxies" width="850">
+<img src="docs/assets/batch-02.gif" alt="Actual runtime footage of molten iron flowers, watercolor, coral, dandelions and a kaleidoscope" width="850">
 </div>
 
-These previews are captured from the running artworks. [Watch or download the full 44-second film](https://github.com/ma1902056219-coder/openpixel/releases/download/v0.1.0/openpixel-vol01-promo.mp4).
+Actual runtime footage from the five new experiments. The collection now contains 31 works, including all 26 from the first batch.
 
 - **Reach in:** feed koi, move a magnetic field, wipe frost and rake sand.
 - **Watch it evolve:** moons form rings, fish avoid a dolphin and stars draw long tails.
@@ -33,7 +51,7 @@ These previews are captured from the running artworks. [Watch or download the fu
 
 ## Run locally
 
-1. [Download and extract Volume 1](https://github.com/ma1902056219-coder/openpixel/archive/refs/heads/main.zip), or clone the repository.
+1. [Download and extract the collection](https://github.com/ma1902056219-coder/openpixel/archive/refs/heads/main.zip), or clone the repository.
 2. Open the root `index.html`, or any `works/<artwork>/index.html`.
 3. Watch the demonstration, then use the controls described on the page.
 
@@ -53,7 +71,7 @@ The README, remix guide and artwork controls are available in four languages. In
 
 ## Gallery
 
-Click a card for its English controls and source links. All 26 artworks include an editable `source.js`; download the collection to run them locally.
+Click a card for its English controls and source links. All 31 artworks include an editable `source.js`; download the collection to run them locally.
 
 ### Materials and interaction
 
@@ -155,7 +173,7 @@ These are pixel-art and small gameplay experiments. Combat and driving retain si
 
 ## Updates and contributions
 
-Volume 1 opens 26 artworks. More effects will be shared from time to time. Improvements to interaction, visuals and performance are welcome. For issues, include the artwork name, browser and steps to reproduce. For a pull request, explain your change and check both demo and manual modes. See [CONTRIBUTING.md](CONTRIBUTING.md) for the original Chinese guidelines.
+The collection now includes 31 artworks across two batches. More effects will be shared from time to time. Improvements to interaction, visuals and performance are welcome. For issues, include the artwork name, browser and steps to reproduce. For a pull request, explain your change and check both demo and manual modes. See [CONTRIBUTING.md](CONTRIBUTING.md) for the original Chinese guidelines.
 
 ## Author and license
 

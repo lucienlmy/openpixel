@@ -291,3 +291,54 @@ Hold and drag to draw with light. Hold still for a spinning steel-wool effect. T
 - [Editable source](../works/light-painting/source.js)
 
 [Back to the gallery](../README.en.md#gallery)
+
+
+<a id="iron-flower"></a>
+
+## Molten Iron Flowers / 打铁花
+
+Strike molten iron into a shower of sparks that lights the village.
+
+Choose the manual-play button. Hold J to raise the ladle, then release J to strike. Left and Right aim the throw. The metal cools as you wait.
+
+`works/iron-flower/index.html` · [source.js](../works/iron-flower/source.js)
+
+<a id="watercolor"></a>
+
+## Watercolor Bloom / 水彩晕染
+
+Paint on wet paper and watch pigments spread and mix.
+
+Drag on the paper to paint. Click a color pan to change pigment. Tap a wet area to add concentrated color; hold still to add water. The reset-paper button clears the canvas.
+
+`works/watercolor/index.html` · [source.js](../works/watercolor/source.js)
+
+<a id="coral-reef"></a>
+
+## Coral Reef / 珊瑚礁
+
+Touch coral, push a current and watch a small underwater ecosystem respond.
+
+Tap coral to send a contraction wave, or hold to keep a nearby patch closed. Drag to push water past the sea fan and fish. Move close to the anemone while holding to make clownfish hide.
+
+`works/coral-reef/index.html` · [source.js](../works/coral-reef/source.js)
+
+<a id="dandelion"></a>
+
+## Dandelion / 蒲公英
+
+Scatter seeds in the wind and watch new plants grow.
+
+Drag across a seed head, or hold beside it to blow. Seeds that land may grow leaves, yellow flowers and new seed heads. The fast-growth button accelerates plant growth.
+
+`works/dandelion/index.html` · [source.js](../works/dandelion/source.js)
+
+<a id="kaleidoscope"></a>
+
+## Kaleidoscope / 万花筒
+
+Turn colored fragments into changing mirrored patterns.
+
+Hold and drag in a circle to turn the tube; click the center to shake it. The buttons cycle between 8, 12, 16 and 24 petals, and glass, beads or pressed flowers.
+
+`works/kaleidoscope/index.html` · [source.js](../works/kaleidoscope/source.js)

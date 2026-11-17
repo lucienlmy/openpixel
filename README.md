@@ -2,38 +2,56 @@
 
 [中文](README.md) · [English](README.en.md) · [日本語](README.ja.md) · [한국어](README.ko.md)
 
-<img src="docs/assets/openpixel-banner.png" alt="OpenPixel：26个可以运行、探索和修改的像素小世界" width="100%">
+<img src="docs/assets/openpixel-banner.png" alt="OpenPixel：31个可以运行、探索和修改的像素小世界" width="100%">
 
 # OpenPixel · 像素万象
 
 **把像素世界，变成你的作品。**
 
-26 个浏览器实时绘制的像素实验：从一滴水的涟漪，到两座星系的相撞。
+31 个浏览器实时绘制的像素实验：从一滴水的涟漪，到两座星系的相撞。
 
-<img src="docs/assets/badge-works.svg" alt="26件作品"> <img src="docs/assets/badge-runtime.svg" alt="浏览器运行"> <a href="LICENSE"><img src="docs/assets/badge-license.svg" alt="MIT许可"></a>
+<img src="docs/assets/badge-works.svg" alt="31件作品"> <img src="docs/assets/badge-runtime.svg" alt="浏览器运行"> <a href="LICENSE"><img src="docs/assets/badge-license.svg" alt="MIT许可"></a>
 
 [下载当前源码](https://github.com/ma1902056219-coder/openpixel/archive/refs/heads/main.zip) · [作品目录](#作品目录) · [开始运行](#开始运行) · [修改指南](docs/guide.md)
 
 </div>
 
+## 第二批新增 · 5 个可拆解的像素实验
+
+从一棒铁花到一颗种子：每个目录都能独立运行，附源码、操作方法与修改方向。
+
+<table>
+<tr>
+<td width="33%" valign="top"><a href="works/iron-flower/README.md"><img src="works/iron-flower/poster.webp" alt="打铁花" width="100%"><br><strong>打铁花</strong></a><br><sub>雪夜里，一棒打出满天铁花</sub><br><a href="works/iron-flower/source.js">查看源码</a></td>
+<td width="33%" valign="top"><a href="works/watercolor/README.md"><img src="works/watercolor/poster.webp" alt="水彩晕染" width="100%"><br><strong>水彩晕染</strong></a><br><sub>让颜色在湿纸上自己生长</sub><br><a href="works/watercolor/source.js">查看源码</a></td>
+<td width="33%" valign="top"><a href="works/coral-reef/README.md"><img src="works/coral-reef/poster.webp" alt="珊瑚礁" width="100%"><br><strong>珊瑚礁</strong></a><br><sub>碰一下，整片珊瑚依次收起</sub><br><a href="works/coral-reef/source.js">查看源码</a></td>
+</tr>
+<tr>
+<td width="33%" valign="top"><a href="works/dandelion/README.md"><img src="works/dandelion/poster.webp" alt="蒲公英" width="100%"><br><strong>蒲公英</strong></a><br><sub>吹散一朵，再长出一片</sub><br><a href="works/dandelion/source.js">查看源码</a></td>
+<td width="33%" valign="top"><a href="works/kaleidoscope/README.md"><img src="works/kaleidoscope/poster.webp" alt="万花筒" width="100%"><br><strong>万花筒</strong></a><br><sub>转一下，就得到一朵新图案</sub><br><a href="works/kaleidoscope/source.js">查看源码</a></td>
+<td width="33%"></td>
+</tr>
+</table>
+
+
 ## 先看它们动起来
 
 <div align="center">
-<img src="docs/assets/showcase.gif" alt="实际运行画面：点水产生涟漪、鱼群避让、星系相撞" width="850">
+<img src="docs/assets/batch-02.gif" alt="打铁花、水彩、珊瑚、蒲公英与万花筒的实际运行画面" width="850">
 </div>
 
-预览来自真实运行画面。[观看或下载 44 秒完整宣传片](https://github.com/ma1902056219-coder/openpixel/releases/download/v0.1.0/openpixel-vol01-promo.mp4)。
+本次新增作品的实际运行预览。当前合集共 31 件；首批 26 件仍完整保留。
 
 - **伸手触碰**：点水喂鱼、移动磁场、擦去霜花、在砂面留下耙痕。
 - **观察变化**：卫星碎裂成环、鱼群躲避海豚、恒星轨迹拉出长尾。
 - **走进场景**：首领战、落日驾驶、拼好后开始运动的微型世界。
 - **直接改源码**：每件作品独立成目录，附实际画面和中文说明，无需构建或 AI 接口。
 
-仓库首页、修改指南和26件作品的操作说明现提供中文、英文、日文、韩文。作品内界面及源码注释仍以中文为主。
+仓库首页、修改指南和31件作品的操作说明现提供中文、英文、日文、韩文。作品内界面及源码注释仍以中文为主。
 
 ## 开始运行
 
-1. [下载并解压第一辑](https://github.com/ma1902056219-coder/openpixel/archive/refs/heads/main.zip)，或克隆此仓库。
+1. [下载并解压合集](https://github.com/ma1902056219-coder/openpixel/archive/refs/heads/main.zip)，或克隆此仓库。
 2. 双击根目录 `index.html` 进入合集，也可以直接打开任一 `works/<作品目录>/index.html`。
 3. 先看演示，再点击画面接管操作；每件作品的按键和玩法写在对应页面里。
 
@@ -51,7 +69,7 @@ python -m http.server 8080 --bind 127.0.0.1
 
 ## 作品目录
 
-**点击图卡查看对应操作说明；下载后在本地运行作品。** 第一辑共 26 件，每件都附可编辑的 `source.js`。
+**点击图卡查看对应操作说明；下载后在本地运行作品。** 当前合集共 31 件，每件都附可编辑的 `source.js`。
 
 ### 互动与材质
 
@@ -169,7 +187,7 @@ openpixel/
 
 ## 参与与更新
 
-第一辑先开放这 26 件，后续按批次补充。欢迎提交交互改进、性能优化和你的新版本，详见 [CONTRIBUTING.md](CONTRIBUTING.md)。
+当前已分两批开放 31 件，后续继续按批次补充。欢迎提交交互改进、性能优化和你的新版本，详见 [CONTRIBUTING.md](CONTRIBUTING.md)。
 
 遇到问题时，请在 [Issues](https://github.com/ma1902056219-coder/openpixel/issues) 写清作品名、浏览器和复现步骤。
 

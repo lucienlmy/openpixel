@@ -291,3 +291,54 @@
 - [編集するソース](../works/light-painting/source.js)
 
 [作品一覧へ戻る](../README.ja.md#gallery)
+
+
+<a id="iron-flower"></a>
+
+## 打鉄花 / 打铁花
+
+溶けた鉄を打ち上げ、村を照らす金色の火花に。
+
+手動操作に切り替え、J を押し続けて棒を持ち上げ、離すと打ち上げます。左右キーで狙いを調整します。待つほど鉄は冷めていきます。
+
+`works/iron-flower/index.html` · [source.js](../works/iron-flower/source.js)
+
+<a id="watercolor"></a>
+
+## 水彩のにじみ / 水彩晕染
+
+濡れた紙で絵の具が広がり、混ざり合う。
+
+紙の上をドラッグして描き、下の絵の具をクリックして色を変更します。濡れた部分を短く押すと濃い色、押し続けると水を加えます。用紙のリセットボタンで描き直せます。
+
+`works/watercolor/index.html` · [source.js](../works/watercolor/source.js)
+
+<a id="coral-reef"></a>
+
+## サンゴ礁 / 珊瑚礁
+
+サンゴへのタッチや水流に、小さな海の世界が反応する。
+
+サンゴを短く押すと収縮が波のように伝わり、押し続けると近くの部分が閉じたままになります。ドラッグで水流を作り、イソギンチャク付近を押すとクマノミが隠れます。
+
+`works/coral-reef/index.html` · [source.js](../works/coral-reef/source.js)
+
+<a id="dandelion"></a>
+
+## タンポポ / 蒲公英
+
+綿毛を飛ばし、落ちた種から新しい株を育てる。
+
+綿毛の上をドラッグするか、そばで押し続けて風を送ります。落ちた種の一部は葉、黄色い花、新しい綿毛へと育ちます。成長の早送りボタンも使えます。
+
+`works/dandelion/index.html` · [source.js](../works/dandelion/source.js)
+
+<a id="kaleidoscope"></a>
+
+## 万華鏡 / 万花筒
+
+鏡筒を回すたび、色のかけらが新しい模様になる。
+
+押したまま円を描くようにドラッグして鏡筒を回し、中央をクリックして揺らします。ボタンで花弁数を 8・12・16・24 に、素材をガラス・ビーズ・押し花に切り替えられます。
+
+`works/kaleidoscope/index.html` · [source.js](../works/kaleidoscope/source.js)
