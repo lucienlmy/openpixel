@@ -2,6 +2,8 @@
 
 # 珊瑚礁
 
+[▶ 在线体验](https://ma1902056219-coder.github.io/openpixel/works/coral-reef/) · [源码文件](source.js)
+
 碰一下，整片珊瑚依次收起。
 
 ![实际运行画面](poster.webp)

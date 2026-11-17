@@ -2,6 +2,8 @@
 
 # 活拼图
 
+[▶ 在线体验](https://ma1902056219-coder.github.io/openpixel/works/living-jigsaw/) · [源码文件](source.js)
+
 从多块拼装到画面活过来，路通后车辆前进。
 
 ## 打开和操作

@@ -8,6 +8,8 @@
 
 ## 夜の池 / 夜池
 
+[▶ オンラインで体験](https://ma1902056219-coder.github.io/openpixel/works/night-pond/)
+
 波紋で映り込みを揺らし、錦鯉に餌をあげる。
 
 水面にポインターを置くと錦鯉が寄ってきます。クリックで餌と波紋、押したままドラッグすると水をかき混ぜられます。
@@ -18,6 +20,8 @@
 <a id="sardine-storm"></a>
 
 ## イワシの嵐 / 沙丁鱼风暴
+
+[▶ オンラインで体験](https://ma1902056219-coder.github.io/openpixel/works/sardine-storm/)
 
 イルカを動かして、渦を巻く魚群をかき分ける。
 
@@ -30,6 +34,8 @@
 
 ## 無限の窓 / 无尽之窗
 
+[▶ オンラインで体験](https://ma1902056219-coder.github.io/openpixel/works/endless-window/)
+
 六つの世界が入れ子になり、最初の景色へ戻る。
 
 自動ズームを眺めるほか、画面を左右にドラッグしてカメラを進めたり戻したりできます。
@@ -40,6 +46,8 @@
 <a id="crown-knight"></a>
 
 ## 失冠の騎士 / 断冠骑士
+
+[▶ オンラインで体験](https://ma1902056219-coder.github.io/openpixel/works/crown-knight/)
 
 回避、体勢崩し、視点切り替えのあるボス戦。
 
@@ -52,6 +60,8 @@
 
 ## サンセット・ループ / 落日环线
 
+[▶ オンラインで体験](https://ma1902056219-coder.github.io/openpixel/works/sunset-loop/)
+
 夕日へ向かって走る、後方視点のドライブ。
 
 ↑：アクセル、↓：ブレーキ、← →：ハンドル。K または Space：ハンドブレーキでドリフト。V：カメラ切り替え。
@@ -62,6 +72,8 @@
 <a id="jellyfish"></a>
 
 ## クラゲ / 水母
+
+[▶ オンラインで体験](https://ma1902056219-coder.github.io/openpixel/works/jellyfish/)
 
 透ける傘、柔らかな触手、触れると広がる光。
 
@@ -74,6 +86,8 @@
 
 ## 土星の環 / 土星环
 
+[▶ オンラインで体験](https://ma1902056219-coder.github.io/openpixel/works/saturn-rings/)
+
 衛星を投げ込み、砕けて環になる様子を眺める。
 
 押してドラッグし、離すと衛星を投げられます。方向と距離が初速になります。クリックで円軌道の小さな衛星を追加。破線はロッシュ限界です。
@@ -84,6 +98,8 @@
 <a id="galaxy-collision"></a>
 
 ## 銀河の衝突 / 星系相撞
+
+[▶ オンラインで体験](https://ma1902056219-coder.github.io/openpixel/works/galaxy-collision/)
 
 二つの銀河が接近し、星の軌跡が長い尾になる。
 
@@ -96,6 +112,8 @@
 
 ## ブラックホール / 黑洞
 
+[▶ オンラインで体験](https://ma1902056219-coder.github.io/openpixel/works/black-hole/)
+
 降着円盤とレンズ効果、背景の星の変化。
 
 自動で動く円盤と背景を眺め、再生コントロールで変化を確認してください。
@@ -106,6 +124,8 @@
 <a id="solar-limb"></a>
 
 ## 太陽の縁 / 太阳边缘
+
+[▶ オンラインで体験](https://ma1902056219-coder.github.io/openpixel/works/solar-limb/)
 
 プロミネンス、粒状斑、比較用の小さな地球。
 
@@ -118,6 +138,8 @@
 
 ## プラズマボール / 等离子球
 
+[▶ オンラインで体験](https://ma1902056219-coder.github.io/openpixel/works/plasma-globe/)
+
 指先へ電光を集めて動かす。
 
 ガラスを押すと電光が集まります。押したままドラッグすると追いかけ、クリックで閃光が走ります。色のボタンで配色を変えられます。
@@ -128,6 +150,8 @@
 <a id="chladni-plate"></a>
 
 ## クラドニ図形 / 克拉尼板
+
+[▶ オンラインで体験](https://ma1902056219-coder.github.io/openpixel/works/chladni-plate/)
 
 振動に合わせて、砂がさまざまな模様に集まる。
 
@@ -140,6 +164,8 @@
 
 ## 磁性流体 / 磁流体
 
+[▶ オンラインで体験](https://ma1902056219-coder.github.io/openpixel/works/ferrofluid/)
+
 磁場を動かして、液体の突起と反射を変える。
 
 ポインターで磁石を動かします。押すと磁場が強まり突起が立ち、離すと液面が落ち着きます。
@@ -150,6 +176,8 @@
 <a id="cracking-ice"></a>
 
 ## 氷の亀裂 / 冰裂
+
+[▶ オンラインで体験](https://ma1902056219-coder.github.io/openpixel/works/cracking-ice/)
 
 力を加えると、凍った表面に亀裂が広がる。
 
@@ -162,6 +190,8 @@
 
 ## 霜の窓 / 霜窗
 
+[▶ オンラインで体験](https://ma1902056219-coder.github.io/openpixel/works/frost-window/)
+
 指で霜を拭い、再び育つ様子を眺める。
 
 押したままドラッグして、ガラスを拭いたり文字を描いたりできます。ボタンで息を吹きかけ、霜の成長速度を変えられます。
@@ -172,6 +202,8 @@
 <a id="zen-garden"></a>
 
 ## 枯山水 / 枯山水
+
+[▶ オンラインで体験](https://ma1902056219-coder.github.io/openpixel/works/zen-garden/)
 
 砂紋を描き、時間帯と天気を変える。
 
@@ -184,6 +216,8 @@
 
 ## オーロラ / 极光
 
+[▶ オンラインで体験](https://ma1902056219-coder.github.io/openpixel/works/aurora/)
+
 雪山と小屋、水面の上に揺れる光のカーテン。
 
 空に線を描くと、その線へオーロラの幕が流れます。クリックすると明るい光の変化が起こります。
@@ -194,6 +228,8 @@
 <a id="penrose-tower"></a>
 
 ## 終わらない階段 / 永登之塔
+
+[▶ オンラインで体験](https://ma1902056219-coder.github.io/openpixel/works/penrose-tower/)
 
 視点を回し、不可能な階段の仕組みを確かめる。
 
@@ -206,6 +242,8 @@
 
 ## 動き出すパズル / 活拼图
 
+[▶ オンラインで体験](https://ma1902056219-coder.github.io/openpixel/works/living-jigsaw/)
+
 はまったピースが動き出し、最後の一片でバスが走る。
 
 ピースが組み上がり、町が動き出す自動デモです。ピースはデモが配置します。再生コントロールで流れを確認してください。
@@ -216,6 +254,8 @@
 <a id="ocean-in-a-tank"></a>
 
 ## 水槽の中の海 / 鱼缸里的海
+
+[▶ オンラインで体験](https://ma1902056219-coder.github.io/openpixel/works/ocean-in-a-tank/)
 
 机の上の小さな水槽に、広い海が隠れている。
 
@@ -228,6 +268,8 @@
 
 ## ろくろ / 拉坯
 
+[▶ オンラインで体験](https://ma1902056219-coder.github.io/openpixel/works/pottery/)
+
 回るろくろの上で、粘土の形を整える。
 
 ポインターで手の位置を動かし、押して粘土に触れます。上へ引くと高く薄くなり、左右で形を整えます。矢印キーでも移動でき、J を押して粘土に触れます。K は手が口縁より下なら切り離し、上なら焼成へ進みます。
@@ -238,6 +280,8 @@
 <a id="kintsugi"></a>
 
 ## 金継ぎ / 金缮
+
+[▶ オンラインで体験](https://ma1902056219-coder.github.io/openpixel/works/kintsugi/)
 
 欠片を合わせ、漆、金粉、磨きの工程を進める。
 
@@ -250,6 +294,8 @@
 
 ## 千里江山 / 千里江山
 
+[▶ オンラインで体験](https://ma1902056219-coder.github.io/openpixel/works/thousand-li/)
+
 青と緑の山水画が、動く絵巻として広がる。
 
 押したまま左右にドラッグして絵巻を広げられます。自動スクロールでも鑑賞できます。
@@ -260,6 +306,8 @@
 <a id="rainbow-bridge"></a>
 
 ## 清明上河図・虹橋 / 清明上河图·虹桥
+
+[▶ オンラインで体験](https://ma1902056219-coder.github.io/openpixel/works/rainbow-bridge/)
 
 船、露店、人々が行き交う小さな絵巻。
 
@@ -272,6 +320,8 @@
 
 ## ゴシックのバラ窓 / 哥特玫瑰窗
 
+[▶ オンラインで体験](https://ma1902056219-coder.github.io/openpixel/works/rose-window/)
+
 ステンドグラスの光が、大聖堂の床をゆっくり移る。
 
 光、雲、訪問者が変化する自動シーンです。再生コントロールで一時停止や再開ができます。
@@ -282,6 +332,8 @@
 <a id="light-painting"></a>
 
 ## 光のペインティング / 光绘
+
+[▶ オンラインで体験](https://ma1902056219-coder.github.io/openpixel/works/light-painting/)
 
 光跡を重ね、渦や光の層を描く。
 
@@ -297,6 +349,8 @@
 
 ## 打鉄花 / 打铁花
 
+[▶ オンラインで体験](https://ma1902056219-coder.github.io/openpixel/works/iron-flower/)
+
 溶けた鉄を打ち上げ、村を照らす金色の火花に。
 
 手動操作に切り替え、J を押し続けて棒を持ち上げ、離すと打ち上げます。左右キーで狙いを調整します。待つほど鉄は冷めていきます。
@@ -306,6 +360,8 @@
 <a id="watercolor"></a>
 
 ## 水彩のにじみ / 水彩晕染
+
+[▶ オンラインで体験](https://ma1902056219-coder.github.io/openpixel/works/watercolor/)
 
 濡れた紙で絵の具が広がり、混ざり合う。
 
@@ -317,6 +373,8 @@
 
 ## サンゴ礁 / 珊瑚礁
 
+[▶ オンラインで体験](https://ma1902056219-coder.github.io/openpixel/works/coral-reef/)
+
 サンゴへのタッチや水流に、小さな海の世界が反応する。
 
 サンゴを短く押すと収縮が波のように伝わり、押し続けると近くの部分が閉じたままになります。ドラッグで水流を作り、イソギンチャク付近を押すとクマノミが隠れます。
@@ -327,6 +385,8 @@
 
 ## タンポポ / 蒲公英
 
+[▶ オンラインで体験](https://ma1902056219-coder.github.io/openpixel/works/dandelion/)
+
 綿毛を飛ばし、落ちた種から新しい株を育てる。
 
 綿毛の上をドラッグするか、そばで押し続けて風を送ります。落ちた種の一部は葉、黄色い花、新しい綿毛へと育ちます。成長の早送りボタンも使えます。
@@ -336,6 +396,8 @@
 <a id="kaleidoscope"></a>
 
 ## 万華鏡 / 万花筒
+
+[▶ オンラインで体験](https://ma1902056219-coder.github.io/openpixel/works/kaleidoscope/)
 
 鏡筒を回すたび、色のかけらが新しい模様になる。
 

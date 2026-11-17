@@ -2,6 +2,8 @@
 
 # 万花筒
 
+[▶ 在线体验](https://ma1902056219-coder.github.io/openpixel/works/kaleidoscope/) · [源码文件](source.js)
+
 转一下，就得到一朵新图案。
 
 ![实际运行画面](poster.webp)

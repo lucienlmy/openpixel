@@ -2,6 +2,8 @@
 
 # 克拉尼板
 
+[▶ 在线体验](https://ma1902056219-coder.github.io/openpixel/works/chladni-plate/) · [源码文件](source.js)
+
 振动频率改变粒子形成的结线图案。
 
 ## 打开和操作

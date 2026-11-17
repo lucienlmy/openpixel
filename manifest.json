@@ -16,7 +16,8 @@
     "poster_capture": {
       "method": "native-runtime",
       "time_seconds": 5
-    }
+    },
+    "preview": "https://ma1902056219-coder.github.io/openpixel/works/night-pond/"
   },
   {
     "order": 2,
@@ -35,7 +36,8 @@
     "poster_capture": {
       "method": "native-runtime",
       "time_seconds": 5
-    }
+    },
+    "preview": "https://ma1902056219-coder.github.io/openpixel/works/sardine-storm/"
   },
   {
     "order": 3,
@@ -54,7 +56,8 @@
     "poster_capture": {
       "method": "native-runtime",
       "time_seconds": 5
-    }
+    },
+    "preview": "https://ma1902056219-coder.github.io/openpixel/works/endless-window/"
   },
   {
     "order": 4,
@@ -73,7 +76,8 @@
     "poster_capture": {
       "method": "native-runtime",
       "time_seconds": 12
-    }
+    },
+    "preview": "https://ma1902056219-coder.github.io/openpixel/works/crown-knight/"
   },
   {
     "order": 5,
@@ -92,7 +96,8 @@
     "poster_capture": {
       "method": "native-runtime",
       "time_seconds": 12
-    }
+    },
+    "preview": "https://ma1902056219-coder.github.io/openpixel/works/sunset-loop/"
   },
   {
     "order": 6,
@@ -111,7 +116,8 @@
     "poster_capture": {
       "method": "native-runtime",
       "time_seconds": 5
-    }
+    },
+    "preview": "https://ma1902056219-coder.github.io/openpixel/works/jellyfish/"
   },
   {
     "order": 7,
@@ -130,7 +136,8 @@
     "poster_capture": {
       "method": "native-runtime",
       "time_seconds": 90
-    }
+    },
+    "preview": "https://ma1902056219-coder.github.io/openpixel/works/saturn-rings/"
   },
   {
     "order": 8,
@@ -149,7 +156,8 @@
     "poster_capture": {
       "method": "native-gallery-preview",
       "time_seconds": null
-    }
+    },
+    "preview": "https://ma1902056219-coder.github.io/openpixel/works/galaxy-collision/"
   },
   {
     "order": 9,
@@ -168,7 +176,8 @@
     "poster_capture": {
       "method": "native-runtime",
       "time_seconds": 12
-    }
+    },
+    "preview": "https://ma1902056219-coder.github.io/openpixel/works/black-hole/"
   },
   {
     "order": 10,
@@ -187,7 +196,8 @@
     "poster_capture": {
       "method": "native-runtime",
       "time_seconds": 5
-    }
+    },
+    "preview": "https://ma1902056219-coder.github.io/openpixel/works/solar-limb/"
   },
   {
     "order": 11,
@@ -206,7 +216,8 @@
     "poster_capture": {
       "method": "native-runtime",
       "time_seconds": 5
-    }
+    },
+    "preview": "https://ma1902056219-coder.github.io/openpixel/works/plasma-globe/"
   },
   {
     "order": 12,
@@ -225,7 +236,8 @@
     "poster_capture": {
       "method": "native-runtime",
       "time_seconds": 5
-    }
+    },
+    "preview": "https://ma1902056219-coder.github.io/openpixel/works/chladni-plate/"
   },
   {
     "order": 13,
@@ -244,7 +256,8 @@
     "poster_capture": {
       "method": "native-runtime",
       "time_seconds": 1
-    }
+    },
+    "preview": "https://ma1902056219-coder.github.io/openpixel/works/ferrofluid/"
   },
   {
     "order": 14,
@@ -263,7 +276,8 @@
     "poster_capture": {
       "method": "native-runtime",
       "time_seconds": 5
-    }
+    },
+    "preview": "https://ma1902056219-coder.github.io/openpixel/works/cracking-ice/"
   },
   {
     "order": 15,
@@ -282,7 +296,8 @@
     "poster_capture": {
       "method": "native-runtime",
       "time_seconds": 5
-    }
+    },
+    "preview": "https://ma1902056219-coder.github.io/openpixel/works/frost-window/"
   },
   {
     "order": 16,
@@ -301,7 +316,8 @@
     "poster_capture": {
       "method": "native-runtime",
       "time_seconds": 5
-    }
+    },
+    "preview": "https://ma1902056219-coder.github.io/openpixel/works/zen-garden/"
   },
   {
     "order": 17,
@@ -320,7 +336,8 @@
     "poster_capture": {
       "method": "native-runtime",
       "time_seconds": 5
-    }
+    },
+    "preview": "https://ma1902056219-coder.github.io/openpixel/works/aurora/"
   },
   {
     "order": 18,
@@ -339,7 +356,8 @@
     "poster_capture": {
       "method": "native-runtime",
       "time_seconds": 5
-    }
+    },
+    "preview": "https://ma1902056219-coder.github.io/openpixel/works/penrose-tower/"
   },
   {
     "order": 19,
@@ -358,7 +376,8 @@
     "poster_capture": {
       "method": "native-runtime",
       "time_seconds": 24
-    }
+    },
+    "preview": "https://ma1902056219-coder.github.io/openpixel/works/living-jigsaw/"
   },
   {
     "order": 20,
@@ -377,7 +396,8 @@
     "poster_capture": {
       "method": "native-runtime",
       "time_seconds": 5
-    }
+    },
+    "preview": "https://ma1902056219-coder.github.io/openpixel/works/ocean-in-a-tank/"
   },
   {
     "order": 21,
@@ -396,7 +416,8 @@
     "poster_capture": {
       "method": "native-runtime",
       "time_seconds": 40
-    }
+    },
+    "preview": "https://ma1902056219-coder.github.io/openpixel/works/pottery/"
   },
   {
     "order": 22,
@@ -415,7 +436,8 @@
     "poster_capture": {
       "method": "native-runtime",
       "time_seconds": 40
-    }
+    },
+    "preview": "https://ma1902056219-coder.github.io/openpixel/works/kintsugi/"
   },
   {
     "order": 23,
@@ -434,7 +456,8 @@
     "poster_capture": {
       "method": "native-runtime",
       "time_seconds": 12
-    }
+    },
+    "preview": "https://ma1902056219-coder.github.io/openpixel/works/thousand-li/"
   },
   {
     "order": 24,
@@ -453,7 +476,8 @@
     "poster_capture": {
       "method": "native-runtime",
       "time_seconds": 5
-    }
+    },
+    "preview": "https://ma1902056219-coder.github.io/openpixel/works/rainbow-bridge/"
   },
   {
     "order": 25,
@@ -472,7 +496,8 @@
     "poster_capture": {
       "method": "native-runtime",
       "time_seconds": 5
-    }
+    },
+    "preview": "https://ma1902056219-coder.github.io/openpixel/works/rose-window/"
   },
   {
     "order": 26,
@@ -491,7 +516,8 @@
     "poster_capture": {
       "method": "native-runtime",
       "time_seconds": 5
-    }
+    },
+    "preview": "https://ma1902056219-coder.github.io/openpixel/works/light-painting/"
   },
   {
     "order": 27,
@@ -510,7 +536,8 @@
     "poster_capture": {
       "method": "native-runtime"
     },
-    "batch": 2
+    "batch": 2,
+    "preview": "https://ma1902056219-coder.github.io/openpixel/works/iron-flower/"
   },
   {
     "order": 28,
@@ -529,7 +556,8 @@
     "poster_capture": {
       "method": "native-runtime"
     },
-    "batch": 2
+    "batch": 2,
+    "preview": "https://ma1902056219-coder.github.io/openpixel/works/watercolor/"
   },
   {
     "order": 29,
@@ -548,7 +576,8 @@
     "poster_capture": {
       "method": "native-runtime"
     },
-    "batch": 2
+    "batch": 2,
+    "preview": "https://ma1902056219-coder.github.io/openpixel/works/coral-reef/"
   },
   {
     "order": 30,
@@ -567,7 +596,8 @@
     "poster_capture": {
       "method": "native-runtime"
     },
-    "batch": 2
+    "batch": 2,
+    "preview": "https://ma1902056219-coder.github.io/openpixel/works/dandelion/"
   },
   {
     "order": 31,
@@ -586,6 +616,7 @@
     "poster_capture": {
       "method": "native-runtime"
     },
-    "batch": 2
+    "batch": 2,
+    "preview": "https://ma1902056219-coder.github.io/openpixel/works/kaleidoscope/"
   }
 ]

@@ -2,6 +2,8 @@
 
 # 黑洞
 
+[▶ 在线体验](https://ma1902056219-coder.github.io/openpixel/works/black-hole/) · [源码文件](source.js)
+
 吸积盘与透镜视觉，参数化生成宇宙场景。
 
 ## 打开和操作

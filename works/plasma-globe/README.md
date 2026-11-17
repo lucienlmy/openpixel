@@ -2,6 +2,8 @@
 
 # 等离子球
 
+[▶ 在线体验](https://ma1902056219-coder.github.io/openpixel/works/plasma-globe/) · [源码文件](source.js)
+
 手指聚拢电弧，切换电光颜色。
 
 ## 打开和操作

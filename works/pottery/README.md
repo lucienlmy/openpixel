@@ -2,6 +2,8 @@
 
 # 拉坯
 
+[▶ 在线体验](https://ma1902056219-coder.github.io/openpixel/works/pottery/) · [源码文件](source.js)
+
 拉坯塑形，观察轮廓、旋转与材质。
 
 ## 打开和操作

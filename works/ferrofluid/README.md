@@ -2,6 +2,8 @@
 
 # 磁流体
 
+[▶ 在线体验](https://ma1902056219-coder.github.io/openpixel/works/ferrofluid/) · [源码文件](source.js)
+
 移动磁场，控制黑色液体的尖峰与反光。
 
 ## 打开和操作

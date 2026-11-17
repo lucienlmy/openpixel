@@ -2,6 +2,8 @@
 
 # 夜池
 
+[▶ 在线体验](https://ma1902056219-coder.github.io/openpixel/works/night-pond/) · [源码文件](source.js)
+
 点水扭曲倒影，投食让锦鲤靠近。
 
 ## 打开和操作

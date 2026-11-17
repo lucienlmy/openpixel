@@ -2,6 +2,8 @@
 
 # 千里江山
 
+[▶ 在线体验](https://ma1902056219-coder.github.io/openpixel/works/thousand-li/) · [源码文件](source.js)
+
 青绿山水长卷、舟桥与云雾的层次。
 
 ## 打开和操作

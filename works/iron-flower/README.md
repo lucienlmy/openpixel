@@ -2,6 +2,8 @@
 
 # 打铁花
 
+[▶ 在线体验](https://ma1902056219-coder.github.io/openpixel/works/iron-flower/) · [源码文件](source.js)
+
 雪夜里，一棒打出满天铁花。
 
 ![实际运行画面](poster.webp)

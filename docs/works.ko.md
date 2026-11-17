@@ -8,6 +8,8 @@
 
 ## 밤의 연못 / 夜池
 
+[▶ 온라인 체험](https://ma1902056219-coder.github.io/openpixel/works/night-pond/)
+
 물결로 반사상을 흔들고 비단잉어에게 먹이를 주세요.
 
 수면 위에 포인터를 두면 비단잉어가 다가옵니다. 클릭하면 먹이와 물결이 생기고, 누른 채 드래그하면 물을 휘저을 수 있습니다.
@@ -18,6 +20,8 @@
 <a id="sardine-storm"></a>
 
 ## 정어리 폭풍 / 沙丁鱼风暴
+
+[▶ 온라인 체험](https://ma1902056219-coder.github.io/openpixel/works/sardine-storm/)
 
 소용돌이치는 물고기 떼 사이로 돌고래를 움직여 보세요.
 
@@ -30,6 +34,8 @@
 
 ## 끝없는 창 / 无尽之窗
 
+[▶ 온라인 체험](https://ma1902056219-coder.github.io/openpixel/works/endless-window/)
+
 여섯 겹의 세계가 이어져 처음 풍경으로 돌아옵니다.
 
 자동 확대를 감상하거나 화면을 좌우로 드래그해 카메라를 직접 앞뒤로 움직일 수 있습니다.
@@ -40,6 +46,8 @@
 <a id="crown-knight"></a>
 
 ## 왕관을 잃은 기사 / 断冠骑士
+
+[▶ 온라인 체험](https://ma1902056219-coder.github.io/openpixel/works/crown-knight/)
 
 회피, 경직, 카메라 전환이 있는 보스 전투.
 
@@ -52,6 +60,8 @@
 
 ## 노을 순환도로 / 落日环线
 
+[▶ 온라인 체험](https://ma1902056219-coder.github.io/openpixel/works/sunset-loop/)
+
 차량 뒤에서 바라보며 노을을 향해 달립니다.
 
 ↑: 가속, ↓: 브레이크, ← →: 조향. K 또는 Space: 핸드브레이크 드리프트. V: 카메라 전환.
@@ -62,6 +72,8 @@
 <a id="jellyfish"></a>
 
 ## 해파리 / 水母
+
+[▶ 온라인 체험](https://ma1902056219-coder.github.io/openpixel/works/jellyfish/)
 
 반투명한 몸과 부드러운 촉수, 연달아 퍼지는 빛.
 
@@ -74,6 +86,8 @@
 
 ## 토성의 고리 / 土星环
 
+[▶ 온라인 체험](https://ma1902056219-coder.github.io/openpixel/works/saturn-rings/)
+
 위성을 던져 넣고 부서져 고리가 되는 모습을 관찰하세요.
 
 누르고 드래그한 뒤 놓으면 위성을 던집니다. 방향과 거리가 초기 속도를 정합니다. 클릭하면 작은 위성이 원궤도에 추가됩니다. 점선은 로슈 한계입니다.
@@ -84,6 +98,8 @@
 <a id="galaxy-collision"></a>
 
 ## 은하 충돌 / 星系相撞
+
+[▶ 온라인 체험](https://ma1902056219-coder.github.io/openpixel/works/galaxy-collision/)
 
 두 은하가 만나며 별의 궤적이 긴 꼬리를 만듭니다.
 
@@ -96,6 +112,8 @@
 
 ## 블랙홀 / 黑洞
 
+[▶ 온라인 체험](https://ma1902056219-coder.github.io/openpixel/works/black-hole/)
+
 강착 원반과 렌즈 효과, 움직이는 별빛.
 
 자동으로 변하는 원반과 배경을 감상하고 재생 컨트롤로 변화를 확인하세요.
@@ -106,6 +124,8 @@
 <a id="solar-limb"></a>
 
 ## 태양의 가장자리 / 太阳边缘
+
+[▶ 온라인 체험](https://ma1902056219-coder.github.io/openpixel/works/solar-limb/)
 
 홍염, 태양의 쌀알무늬, 크기 비교용 지구.
 
@@ -118,6 +138,8 @@
 
 ## 플라즈마 볼 / 等离子球
 
+[▶ 온라인 체험](https://ma1902056219-coder.github.io/openpixel/works/plasma-globe/)
+
 전기 아크를 손끝으로 모아 움직여 보세요.
 
 유리를 누르면 전기 아크가 모입니다. 누른 채 드래그하면 손을 따라 움직이고, 클릭하면 섬광이 생깁니다. 색상 버튼으로 팔레트를 바꿀 수 있습니다.
@@ -128,6 +150,8 @@
 <a id="chladni-plate"></a>
 
 ## 클라드니 판 / 克拉尼板
+
+[▶ 온라인 체험](https://ma1902056219-coder.github.io/openpixel/works/chladni-plate/)
 
 진동에 따라 모래가 다양한 무늬로 모입니다.
 
@@ -140,6 +164,8 @@
 
 ## 자성유체 / 磁流体
 
+[▶ 온라인 체험](https://ma1902056219-coder.github.io/openpixel/works/ferrofluid/)
+
 자기장을 움직여 액체의 뾰족한 형태와 반사를 바꿉니다.
 
 포인터로 자석을 움직입니다. 누르면 자기장이 강해져 돌기가 솟고, 놓으면 액체가 가라앉습니다.
@@ -150,6 +176,8 @@
 <a id="cracking-ice"></a>
 
 ## 갈라지는 얼음 / 冰裂
+
+[▶ 온라인 체험](https://ma1902056219-coder.github.io/openpixel/works/cracking-ice/)
 
 힘을 가하면 얼어붙은 표면에 균열이 퍼집니다.
 
@@ -162,6 +190,8 @@
 
 ## 성에 낀 창 / 霜窗
 
+[▶ 온라인 체험](https://ma1902056219-coder.github.io/openpixel/works/frost-window/)
+
 성에를 닦아 내고 다시 자라는 모습을 관찰하세요.
 
 누른 채 드래그해 유리를 닦거나 글씨를 쓸 수 있습니다. 버튼으로 입김을 불고 성에가 자라는 속도를 바꿀 수 있습니다.
@@ -172,6 +202,8 @@
 <a id="zen-garden"></a>
 
 ## 젠 가든 / 枯山水
+
+[▶ 온라인 체험](https://ma1902056219-coder.github.io/openpixel/works/zen-garden/)
 
 모래에 무늬를 남기고 시간대와 날씨를 바꿉니다.
 
@@ -184,6 +216,8 @@
 
 ## 오로라 / 极光
 
+[▶ 온라인 체험](https://ma1902056219-coder.github.io/openpixel/works/aurora/)
+
 설산과 오두막, 수면 위로 흔들리는 빛의 커튼.
 
 하늘에 선을 그리면 오로라가 그 선을 따라 흐릅니다. 클릭하면 더 밝은 빛의 변화가 일어납니다.
@@ -194,6 +228,8 @@
 <a id="penrose-tower"></a>
 
 ## 끝없이 오르는 탑 / 永登之塔
+
+[▶ 온라인 체험](https://ma1902056219-coder.github.io/openpixel/works/penrose-tower/)
 
 시점을 돌려 불가능한 계단의 구조를 확인하세요.
 
@@ -206,6 +242,8 @@
 
 ## 살아 움직이는 퍼즐 / 活拼图
 
+[▶ 온라인 체험](https://ma1902056219-coder.github.io/openpixel/works/living-jigsaw/)
+
 맞춰진 조각이 움직이고 마지막 조각이 놓이면 버스가 출발합니다.
 
 퍼즐이 맞춰지고 마을이 살아나는 자동 데모입니다. 조각은 데모가 배치하며, 재생 컨트롤로 과정을 살펴볼 수 있습니다.
@@ -216,6 +254,8 @@
 <a id="ocean-in-a-tank"></a>
 
 ## 어항 속 바다 / 鱼缸里的海
+
+[▶ 온라인 체험](https://ma1902056219-coder.github.io/openpixel/works/ocean-in-a-tank/)
 
 책상 위 작은 어항 속에 훨씬 넓은 바다가 숨어 있습니다.
 
@@ -228,6 +268,8 @@
 
 ## 물레 빚기 / 拉坯
 
+[▶ 온라인 체험](https://ma1902056219-coder.github.io/openpixel/works/pottery/)
+
 돌아가는 물레 위에서 흙의 형태를 만듭니다.
 
 포인터로 손을 움직이고 눌러 흙에 댑니다. 위로 당기면 높고 얇아지며 좌우로 움직여 형태를 만듭니다. 방향키로도 손을 움직이고 J를 눌러 흙에 댈 수 있습니다. K는 손이 입구 아래에 있으면 자르고, 위에 있으면 가마로 보냅니다.
@@ -238,6 +280,8 @@
 <a id="kintsugi"></a>
 
 ## 긴츠기 / 金缮
+
+[▶ 온라인 체험](https://ma1902056219-coder.github.io/openpixel/works/kintsugi/)
 
 깨진 도자기를 맞추고 옻칠, 금가루, 연마를 진행합니다.
 
@@ -250,6 +294,8 @@
 
 ## 천리강산 / 千里江山
 
+[▶ 온라인 체험](https://ma1902056219-coder.github.io/openpixel/works/thousand-li/)
+
 청록 산수화가 움직이는 두루마리로 펼쳐집니다.
 
 누른 채 좌우로 드래그해 두루마리를 직접 펼치거나 자동 스크롤을 감상할 수 있습니다.
@@ -260,6 +306,8 @@
 <a id="rainbow-bridge"></a>
 
 ## 청명상하도 · 무지개다리 / 清明上河图·虹桥
+
+[▶ 온라인 체험](https://ma1902056219-coder.github.io/openpixel/works/rainbow-bridge/)
 
 배, 노점, 행인이 오가는 작은 두루마리 풍경.
 
@@ -272,6 +320,8 @@
 
 ## 고딕 장미창 / 哥特玫瑰窗
 
+[▶ 온라인 체험](https://ma1902056219-coder.github.io/openpixel/works/rose-window/)
+
 스테인드글라스의 빛이 성당 바닥을 천천히 움직입니다.
 
 빛, 구름, 방문객이 변하는 자동 장면입니다. 재생 컨트롤로 일시 정지하거나 다시 시작할 수 있습니다.
@@ -282,6 +332,8 @@
 <a id="light-painting"></a>
 
 ## 라이트 페인팅 / 光绘
+
+[▶ 온라인 체험](https://ma1902056219-coder.github.io/openpixel/works/light-painting/)
 
 빛의 궤적을 겹쳐 소용돌이와 빛의 층을 만듭니다.
 
@@ -297,6 +349,8 @@
 
 ## 쇳물 꽃불 / 打铁花
 
+[▶ 온라인 체험](https://ma1902056219-coder.github.io/openpixel/works/iron-flower/)
+
 쇳물을 쳐 올려 마을을 비추는 금빛 불꽃을 만듭니다.
 
 수동 조작으로 바꾼 뒤 J를 길게 눌러 막대를 올리고, 놓아서 쳐 올립니다. 좌우 방향키로 조준합니다. 기다릴수록 쇳물은 식습니다.
@@ -306,6 +360,8 @@
 <a id="watercolor"></a>
 
 ## 수채화 번짐 / 水彩晕染
+
+[▶ 온라인 체험](https://ma1902056219-coder.github.io/openpixel/works/watercolor/)
 
 젖은 종이에서 물감이 퍼지고 섞이는 모습을 그립니다.
 
@@ -317,6 +373,8 @@
 
 ## 산호초 / 珊瑚礁
 
+[▶ 온라인 체험](https://ma1902056219-coder.github.io/openpixel/works/coral-reef/)
+
 산호를 건드리거나 물살을 만들면 작은 바닷속 세계가 반응합니다.
 
 산호를 짧게 누르면 수축이 퍼지고, 길게 누르면 가까운 부분이 닫힌 채 유지됩니다. 드래그해 물살을 만들고 말미잘 가까이를 누르면 흰동가리가 숨습니다.
@@ -327,6 +385,8 @@
 
 ## 민들레 / 蒲公英
 
+[▶ 온라인 체험](https://ma1902056219-coder.github.io/openpixel/works/dandelion/)
+
 씨앗을 날리고 땅에 떨어진 씨앗이 새로 자라는 모습을 봅니다.
 
 씨앗 머리 위를 드래그하거나 옆을 길게 눌러 바람을 붑니다. 떨어진 씨앗 일부는 잎, 노란 꽃, 새 씨앗 머리로 자랍니다. 성장 빠르게 버튼도 사용할 수 있습니다.
@@ -336,6 +396,8 @@
 <a id="kaleidoscope"></a>
 
 ## 만화경 / 万花筒
+
+[▶ 온라인 체험](https://ma1902056219-coder.github.io/openpixel/works/kaleidoscope/)
 
 통을 돌릴 때마다 색 조각이 새로운 대칭 무늬를 만듭니다.
 

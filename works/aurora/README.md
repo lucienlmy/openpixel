@@ -2,6 +2,8 @@
 
 # 极光
 
+[▶ 在线体验](https://ma1902056219-coder.github.io/openpixel/works/aurora/) · [源码文件](source.js)
+
 极光带、雪山、木屋与水面倒影。
 
 ## 打开和操作

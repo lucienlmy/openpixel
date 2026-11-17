@@ -2,6 +2,8 @@
 
 # 水彩晕染
 
+[▶ 在线体验](https://ma1902056219-coder.github.io/openpixel/works/watercolor/) · [源码文件](source.js)
+
 让颜色在湿纸上自己生长。
 
 ![实际运行画面](poster.webp)

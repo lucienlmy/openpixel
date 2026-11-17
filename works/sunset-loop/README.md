@@ -2,6 +2,8 @@
 
 # 落日环线
 
+[▶ 在线体验](https://ma1902056219-coder.github.io/openpixel/works/sunset-loop/) · [源码文件](source.js)
+
 追尾视角、道路透视与落日光照。
 
 ## 打开和操作

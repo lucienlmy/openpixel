@@ -2,6 +2,8 @@
 
 # 鱼缸里的海
 
+[▶ 在线体验](https://ma1902056219-coder.github.io/openpixel/works/ocean-in-a-tank/) · [源码文件](source.js)
+
 普通鱼缸逐渐展现深海尺度。
 
 ## 打开和操作

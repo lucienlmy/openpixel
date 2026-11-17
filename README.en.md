@@ -14,6 +14,9 @@
 
 [Download the collection](https://github.com/ma1902056219-coder/openpixel/archive/refs/heads/main.zip) · [Gallery](#gallery) · [Run locally](#start) · [Remix guide](docs/guide.en.md)
 
+
+**[▶ Try all artworks online](https://ma1902056219-coder.github.io/openpixel/)**
+
 </div>
 
 ## Batch 02 · Five more experiments to remix
@@ -22,13 +25,13 @@ From molten sparks to seeds: each folder runs independently, with editable code 
 
 <table>
 <tr>
-<td width="33%" valign="top"><a href="docs/works.en.md#iron-flower"><img src="works/iron-flower/poster.webp" alt="Molten Iron Flowers" width="100%"><br><strong>Molten Iron Flowers</strong></a><br><sub>Strike molten iron into a shower of sparks that lights the village.</sub><br><a href="works/iron-flower/source.js">View source</a></td>
-<td width="33%" valign="top"><a href="docs/works.en.md#watercolor"><img src="works/watercolor/poster.webp" alt="Watercolor Bloom" width="100%"><br><strong>Watercolor Bloom</strong></a><br><sub>Paint on wet paper and watch pigments spread and mix.</sub><br><a href="works/watercolor/source.js">View source</a></td>
-<td width="33%" valign="top"><a href="docs/works.en.md#coral-reef"><img src="works/coral-reef/poster.webp" alt="Coral Reef" width="100%"><br><strong>Coral Reef</strong></a><br><sub>Touch coral, push a current and watch a small underwater ecosystem respond.</sub><br><a href="works/coral-reef/source.js">View source</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/iron-flower/"><img src="works/iron-flower/poster.webp" alt="Molten Iron Flowers" width="100%"><br><strong>Molten Iron Flowers</strong></a><br><sub>Strike molten iron into a shower of sparks that lights the village.</sub><br><a href="works/iron-flower/source.js">View source</a> · <a href="docs/works.en.md#iron-flower">Controls</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/watercolor/"><img src="works/watercolor/poster.webp" alt="Watercolor Bloom" width="100%"><br><strong>Watercolor Bloom</strong></a><br><sub>Paint on wet paper and watch pigments spread and mix.</sub><br><a href="works/watercolor/source.js">View source</a> · <a href="docs/works.en.md#watercolor">Controls</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/coral-reef/"><img src="works/coral-reef/poster.webp" alt="Coral Reef" width="100%"><br><strong>Coral Reef</strong></a><br><sub>Touch coral, push a current and watch a small underwater ecosystem respond.</sub><br><a href="works/coral-reef/source.js">View source</a> · <a href="docs/works.en.md#coral-reef">Controls</a></td>
 </tr>
 <tr>
-<td width="33%" valign="top"><a href="docs/works.en.md#dandelion"><img src="works/dandelion/poster.webp" alt="Dandelion" width="100%"><br><strong>Dandelion</strong></a><br><sub>Scatter seeds in the wind and watch new plants grow.</sub><br><a href="works/dandelion/source.js">View source</a></td>
-<td width="33%" valign="top"><a href="docs/works.en.md#kaleidoscope"><img src="works/kaleidoscope/poster.webp" alt="Kaleidoscope" width="100%"><br><strong>Kaleidoscope</strong></a><br><sub>Turn colored fragments into changing mirrored patterns.</sub><br><a href="works/kaleidoscope/source.js">View source</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/dandelion/"><img src="works/dandelion/poster.webp" alt="Dandelion" width="100%"><br><strong>Dandelion</strong></a><br><sub>Scatter seeds in the wind and watch new plants grow.</sub><br><a href="works/dandelion/source.js">View source</a> · <a href="docs/works.en.md#dandelion">Controls</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/kaleidoscope/"><img src="works/kaleidoscope/poster.webp" alt="Kaleidoscope" width="100%"><br><strong>Kaleidoscope</strong></a><br><sub>Turn colored fragments into changing mirrored patterns.</sub><br><a href="works/kaleidoscope/source.js">View source</a> · <a href="docs/works.en.md#kaleidoscope">Controls</a></td>
 <td width="33%"></td>
 </tr>
 </table>
@@ -71,28 +74,28 @@ The README, remix guide and artwork controls are available in four languages. In
 
 ## Gallery
 
-Click a card for its English controls and source links. All 31 artworks include an editable `source.js`; download the collection to run them locally.
+Click a card to try the artwork online. Each work also links to controls and editable source; download the collection for offline use.
 
 ### Materials and interaction
 
 <table>
 <tr>
-<td width="33%" valign="top"><a href="docs/works.en.md#night-pond"><img src="works/night-pond/poster.webp" alt="Night Pond" width="100%"><br><strong>Night Pond</strong></a><br><sub>Ripple the reflections and feed the koi.</sub><br><a href="works/night-pond/source.js">Source</a></td>
-<td width="33%" valign="top"><a href="docs/works.en.md#plasma-globe"><img src="works/plasma-globe/poster.webp" alt="Plasma Globe" width="100%"><br><strong>Plasma Globe</strong></a><br><sub>Gather electric arcs at your fingertip.</sub><br><a href="works/plasma-globe/source.js">Source</a></td>
-<td width="33%" valign="top"><a href="docs/works.en.md#chladni-plate"><img src="works/chladni-plate/poster.webp" alt="Chladni Plate" width="100%"><br><strong>Chladni Plate</strong></a><br><sub>Vibrations gather sand into changing patterns.</sub><br><a href="works/chladni-plate/source.js">Source</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/night-pond/"><img src="works/night-pond/poster.webp" alt="Night Pond" width="100%"><br><strong>Night Pond</strong></a><br><sub>Ripple the reflections and feed the koi.</sub><br><a href="works/night-pond/source.js">Source</a> · <a href="docs/works.en.md#night-pond">Controls</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/plasma-globe/"><img src="works/plasma-globe/poster.webp" alt="Plasma Globe" width="100%"><br><strong>Plasma Globe</strong></a><br><sub>Gather electric arcs at your fingertip.</sub><br><a href="works/plasma-globe/source.js">Source</a> · <a href="docs/works.en.md#plasma-globe">Controls</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/chladni-plate/"><img src="works/chladni-plate/poster.webp" alt="Chladni Plate" width="100%"><br><strong>Chladni Plate</strong></a><br><sub>Vibrations gather sand into changing patterns.</sub><br><a href="works/chladni-plate/source.js">Source</a> · <a href="docs/works.en.md#chladni-plate">Controls</a></td>
 </tr>
 <tr>
-<td width="33%" valign="top"><a href="docs/works.en.md#ferrofluid"><img src="works/ferrofluid/poster.webp" alt="Ferrofluid" width="100%"><br><strong>Ferrofluid</strong></a><br><sub>Move a magnetic field to shape spikes and reflections.</sub><br><a href="works/ferrofluid/source.js">Source</a></td>
-<td width="33%" valign="top"><a href="docs/works.en.md#cracking-ice"><img src="works/cracking-ice/poster.webp" alt="Cracking Ice" width="100%"><br><strong>Cracking Ice</strong></a><br><sub>Pressure sends cracks across a frozen surface.</sub><br><a href="works/cracking-ice/source.js">Source</a></td>
-<td width="33%" valign="top"><a href="docs/works.en.md#frost-window"><img src="works/frost-window/poster.webp" alt="Frosted Window" width="100%"><br><strong>Frosted Window</strong></a><br><sub>Wipe frost away and watch it grow back.</sub><br><a href="works/frost-window/source.js">Source</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/ferrofluid/"><img src="works/ferrofluid/poster.webp" alt="Ferrofluid" width="100%"><br><strong>Ferrofluid</strong></a><br><sub>Move a magnetic field to shape spikes and reflections.</sub><br><a href="works/ferrofluid/source.js">Source</a> · <a href="docs/works.en.md#ferrofluid">Controls</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/cracking-ice/"><img src="works/cracking-ice/poster.webp" alt="Cracking Ice" width="100%"><br><strong>Cracking Ice</strong></a><br><sub>Pressure sends cracks across a frozen surface.</sub><br><a href="works/cracking-ice/source.js">Source</a> · <a href="docs/works.en.md#cracking-ice">Controls</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/frost-window/"><img src="works/frost-window/poster.webp" alt="Frosted Window" width="100%"><br><strong>Frosted Window</strong></a><br><sub>Wipe frost away and watch it grow back.</sub><br><a href="works/frost-window/source.js">Source</a> · <a href="docs/works.en.md#frost-window">Controls</a></td>
 </tr>
 <tr>
-<td width="33%" valign="top"><a href="docs/works.en.md#zen-garden"><img src="works/zen-garden/poster.webp" alt="Zen Garden" width="100%"><br><strong>Zen Garden</strong></a><br><sub>Rake sand and change the light and weather.</sub><br><a href="works/zen-garden/source.js">Source</a></td>
-<td width="33%" valign="top"><a href="docs/works.en.md#pottery"><img src="works/pottery/poster.webp" alt="Pottery Wheel" width="100%"><br><strong>Pottery Wheel</strong></a><br><sub>Shape clay on a spinning wheel.</sub><br><a href="works/pottery/source.js">Source</a></td>
-<td width="33%" valign="top"><a href="docs/works.en.md#kintsugi"><img src="works/kintsugi/poster.webp" alt="Kintsugi" width="100%"><br><strong>Kintsugi</strong></a><br><sub>Reassemble broken pottery, then lacquer, gild and polish it.</sub><br><a href="works/kintsugi/source.js">Source</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/zen-garden/"><img src="works/zen-garden/poster.webp" alt="Zen Garden" width="100%"><br><strong>Zen Garden</strong></a><br><sub>Rake sand and change the light and weather.</sub><br><a href="works/zen-garden/source.js">Source</a> · <a href="docs/works.en.md#zen-garden">Controls</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/pottery/"><img src="works/pottery/poster.webp" alt="Pottery Wheel" width="100%"><br><strong>Pottery Wheel</strong></a><br><sub>Shape clay on a spinning wheel.</sub><br><a href="works/pottery/source.js">Source</a> · <a href="docs/works.en.md#pottery">Controls</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/kintsugi/"><img src="works/kintsugi/poster.webp" alt="Kintsugi" width="100%"><br><strong>Kintsugi</strong></a><br><sub>Reassemble broken pottery, then lacquer, gild and polish it.</sub><br><a href="works/kintsugi/source.js">Source</a> · <a href="docs/works.en.md#kintsugi">Controls</a></td>
 </tr>
 <tr>
-<td width="33%" valign="top"><a href="docs/works.en.md#light-painting"><img src="works/light-painting/poster.webp" alt="Light Painting" width="100%"><br><strong>Light Painting</strong></a><br><sub>Build trails, spirals and glowing layers of light.</sub><br><a href="works/light-painting/source.js">Source</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/light-painting/"><img src="works/light-painting/poster.webp" alt="Light Painting" width="100%"><br><strong>Light Painting</strong></a><br><sub>Build trails, spirals and glowing layers of light.</sub><br><a href="works/light-painting/source.js">Source</a> · <a href="docs/works.en.md#light-painting">Controls</a></td>
 <td width="33%"></td>
 <td width="33%"></td>
 </tr>
@@ -102,17 +105,17 @@ Click a card for its English controls and source links. All 31 artworks include 
 
 <table>
 <tr>
-<td width="33%" valign="top"><a href="docs/works.en.md#sardine-storm"><img src="works/sardine-storm/poster.webp" alt="Sardine Storm" width="100%"><br><strong>Sardine Storm</strong></a><br><sub>Guide a dolphin through a swirling school of fish.</sub><br><a href="works/sardine-storm/source.js">Source</a></td>
-<td width="33%" valign="top"><a href="docs/works.en.md#jellyfish"><img src="works/jellyfish/poster.webp" alt="Jellyfish" width="100%"><br><strong>Jellyfish</strong></a><br><sub>Translucent bodies, soft tentacles and a chain of light.</sub><br><a href="works/jellyfish/source.js">Source</a></td>
-<td width="33%" valign="top"><a href="docs/works.en.md#saturn-rings"><img src="works/saturn-rings/poster.webp" alt="Saturn&#x27;s Rings" width="100%"><br><strong>Saturn&#x27;s Rings</strong></a><br><sub>Launch moons and watch them break into rings.</sub><br><a href="works/saturn-rings/source.js">Source</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/sardine-storm/"><img src="works/sardine-storm/poster.webp" alt="Sardine Storm" width="100%"><br><strong>Sardine Storm</strong></a><br><sub>Guide a dolphin through a swirling school of fish.</sub><br><a href="works/sardine-storm/source.js">Source</a> · <a href="docs/works.en.md#sardine-storm">Controls</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/jellyfish/"><img src="works/jellyfish/poster.webp" alt="Jellyfish" width="100%"><br><strong>Jellyfish</strong></a><br><sub>Translucent bodies, soft tentacles and a chain of light.</sub><br><a href="works/jellyfish/source.js">Source</a> · <a href="docs/works.en.md#jellyfish">Controls</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/saturn-rings/"><img src="works/saturn-rings/poster.webp" alt="Saturn&#x27;s Rings" width="100%"><br><strong>Saturn&#x27;s Rings</strong></a><br><sub>Launch moons and watch them break into rings.</sub><br><a href="works/saturn-rings/source.js">Source</a> · <a href="docs/works.en.md#saturn-rings">Controls</a></td>
 </tr>
 <tr>
-<td width="33%" valign="top"><a href="docs/works.en.md#galaxy-collision"><img src="works/galaxy-collision/poster.webp" alt="Galaxy Collision" width="100%"><br><strong>Galaxy Collision</strong></a><br><sub>Two galaxies draw long tidal tails as they meet.</sub><br><a href="works/galaxy-collision/source.js">Source</a></td>
-<td width="33%" valign="top"><a href="docs/works.en.md#black-hole"><img src="works/black-hole/poster.webp" alt="Black Hole" width="100%"><br><strong>Black Hole</strong></a><br><sub>An accretion disk, lensing and moving starlight.</sub><br><a href="works/black-hole/source.js">Source</a></td>
-<td width="33%" valign="top"><a href="docs/works.en.md#solar-limb"><img src="works/solar-limb/poster.webp" alt="Solar Limb" width="100%"><br><strong>Solar Limb</strong></a><br><sub>Prominences, solar granules and Earth shown for scale.</sub><br><a href="works/solar-limb/source.js">Source</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/galaxy-collision/"><img src="works/galaxy-collision/poster.webp" alt="Galaxy Collision" width="100%"><br><strong>Galaxy Collision</strong></a><br><sub>Two galaxies draw long tidal tails as they meet.</sub><br><a href="works/galaxy-collision/source.js">Source</a> · <a href="docs/works.en.md#galaxy-collision">Controls</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/black-hole/"><img src="works/black-hole/poster.webp" alt="Black Hole" width="100%"><br><strong>Black Hole</strong></a><br><sub>An accretion disk, lensing and moving starlight.</sub><br><a href="works/black-hole/source.js">Source</a> · <a href="docs/works.en.md#black-hole">Controls</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/solar-limb/"><img src="works/solar-limb/poster.webp" alt="Solar Limb" width="100%"><br><strong>Solar Limb</strong></a><br><sub>Prominences, solar granules and Earth shown for scale.</sub><br><a href="works/solar-limb/source.js">Source</a> · <a href="docs/works.en.md#solar-limb">Controls</a></td>
 </tr>
 <tr>
-<td width="33%" valign="top"><a href="docs/works.en.md#aurora"><img src="works/aurora/poster.webp" alt="Aurora" width="100%"><br><strong>Aurora</strong></a><br><sub>Curtains of light over snow, a cabin and reflected water.</sub><br><a href="works/aurora/source.js">Source</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/aurora/"><img src="works/aurora/poster.webp" alt="Aurora" width="100%"><br><strong>Aurora</strong></a><br><sub>Curtains of light over snow, a cabin and reflected water.</sub><br><a href="works/aurora/source.js">Source</a> · <a href="docs/works.en.md#aurora">Controls</a></td>
 <td width="33%"></td>
 <td width="33%"></td>
 </tr>
@@ -122,12 +125,12 @@ Click a card for its English controls and source links. All 31 artworks include 
 
 <table>
 <tr>
-<td width="33%" valign="top"><a href="docs/works.en.md#endless-window"><img src="works/endless-window/poster.webp" alt="Endless Window" width="100%"><br><strong>Endless Window</strong></a><br><sub>Six nested worlds lead back to the beginning.</sub><br><a href="works/endless-window/source.js">Source</a></td>
-<td width="33%" valign="top"><a href="docs/works.en.md#penrose-tower"><img src="works/penrose-tower/poster.webp" alt="Endless Ascent" width="100%"><br><strong>Endless Ascent</strong></a><br><sub>Rotate the view to reveal an impossible staircase.</sub><br><a href="works/penrose-tower/source.js">Source</a></td>
-<td width="33%" valign="top"><a href="docs/works.en.md#living-jigsaw"><img src="works/living-jigsaw/poster.webp" alt="Living Jigsaw" width="100%"><br><strong>Living Jigsaw</strong></a><br><sub>Assembled pieces come alive; the bus waits for the final piece.</sub><br><a href="works/living-jigsaw/source.js">Source</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/endless-window/"><img src="works/endless-window/poster.webp" alt="Endless Window" width="100%"><br><strong>Endless Window</strong></a><br><sub>Six nested worlds lead back to the beginning.</sub><br><a href="works/endless-window/source.js">Source</a> · <a href="docs/works.en.md#endless-window">Controls</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/penrose-tower/"><img src="works/penrose-tower/poster.webp" alt="Endless Ascent" width="100%"><br><strong>Endless Ascent</strong></a><br><sub>Rotate the view to reveal an impossible staircase.</sub><br><a href="works/penrose-tower/source.js">Source</a> · <a href="docs/works.en.md#penrose-tower">Controls</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/living-jigsaw/"><img src="works/living-jigsaw/poster.webp" alt="Living Jigsaw" width="100%"><br><strong>Living Jigsaw</strong></a><br><sub>Assembled pieces come alive; the bus waits for the final piece.</sub><br><a href="works/living-jigsaw/source.js">Source</a> · <a href="docs/works.en.md#living-jigsaw">Controls</a></td>
 </tr>
 <tr>
-<td width="33%" valign="top"><a href="docs/works.en.md#ocean-in-a-tank"><img src="works/ocean-in-a-tank/poster.webp" alt="Ocean in a Tank" width="100%"><br><strong>Ocean in a Tank</strong></a><br><sub>A desk-sized aquarium hides a much larger sea.</sub><br><a href="works/ocean-in-a-tank/source.js">Source</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/ocean-in-a-tank/"><img src="works/ocean-in-a-tank/poster.webp" alt="Ocean in a Tank" width="100%"><br><strong>Ocean in a Tank</strong></a><br><sub>A desk-sized aquarium hides a much larger sea.</sub><br><a href="works/ocean-in-a-tank/source.js">Source</a> · <a href="docs/works.en.md#ocean-in-a-tank">Controls</a></td>
 <td width="33%"></td>
 <td width="33%"></td>
 </tr>
@@ -137,8 +140,8 @@ Click a card for its English controls and source links. All 31 artworks include 
 
 <table>
 <tr>
-<td width="33%" valign="top"><a href="docs/works.en.md#crown-knight"><img src="works/crown-knight/poster.webp" alt="The Crownless Knight" width="100%"><br><strong>The Crownless Knight</strong></a><br><sub>A boss encounter with dodges, stagger and changing camera angles.</sub><br><a href="works/crown-knight/source.js">Source</a></td>
-<td width="33%" valign="top"><a href="docs/works.en.md#sunset-loop"><img src="works/sunset-loop/poster.webp" alt="Sunset Loop" width="100%"><br><strong>Sunset Loop</strong></a><br><sub>Drive toward the sunset with a rear-view camera.</sub><br><a href="works/sunset-loop/source.js">Source</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/crown-knight/"><img src="works/crown-knight/poster.webp" alt="The Crownless Knight" width="100%"><br><strong>The Crownless Knight</strong></a><br><sub>A boss encounter with dodges, stagger and changing camera angles.</sub><br><a href="works/crown-knight/source.js">Source</a> · <a href="docs/works.en.md#crown-knight">Controls</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/sunset-loop/"><img src="works/sunset-loop/poster.webp" alt="Sunset Loop" width="100%"><br><strong>Sunset Loop</strong></a><br><sub>Drive toward the sunset with a rear-view camera.</sub><br><a href="works/sunset-loop/source.js">Source</a> · <a href="docs/works.en.md#sunset-loop">Controls</a></td>
 <td width="33%"></td>
 </tr>
 </table>
@@ -147,9 +150,9 @@ Click a card for its English controls and source links. All 31 artworks include 
 
 <table>
 <tr>
-<td width="33%" valign="top"><a href="docs/works.en.md#thousand-li"><img src="works/thousand-li/poster.webp" alt="A Thousand Li of Rivers and Mountains" width="100%"><br><strong>A Thousand Li of Rivers and Mountains</strong></a><br><sub>A moving blue-green landscape scroll.</sub><br><a href="works/thousand-li/source.js">Source</a></td>
-<td width="33%" valign="top"><a href="docs/works.en.md#rainbow-bridge"><img src="works/rainbow-bridge/poster.webp" alt="Qingming Scroll: Rainbow Bridge" width="100%"><br><strong>Qingming Scroll: Rainbow Bridge</strong></a><br><sub>Boats, vendors and pedestrians bring a scroll to life.</sub><br><a href="works/rainbow-bridge/source.js">Source</a></td>
-<td width="33%" valign="top"><a href="docs/works.en.md#rose-window"><img src="works/rose-window/poster.webp" alt="Gothic Rose Window" width="100%"><br><strong>Gothic Rose Window</strong></a><br><sub>Colored glass casts shifting patterns across a cathedral floor.</sub><br><a href="works/rose-window/source.js">Source</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/thousand-li/"><img src="works/thousand-li/poster.webp" alt="A Thousand Li of Rivers and Mountains" width="100%"><br><strong>A Thousand Li of Rivers and Mountains</strong></a><br><sub>A moving blue-green landscape scroll.</sub><br><a href="works/thousand-li/source.js">Source</a> · <a href="docs/works.en.md#thousand-li">Controls</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/rainbow-bridge/"><img src="works/rainbow-bridge/poster.webp" alt="Qingming Scroll: Rainbow Bridge" width="100%"><br><strong>Qingming Scroll: Rainbow Bridge</strong></a><br><sub>Boats, vendors and pedestrians bring a scroll to life.</sub><br><a href="works/rainbow-bridge/source.js">Source</a> · <a href="docs/works.en.md#rainbow-bridge">Controls</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/rose-window/"><img src="works/rose-window/poster.webp" alt="Gothic Rose Window" width="100%"><br><strong>Gothic Rose Window</strong></a><br><sub>Colored glass casts shifting patterns across a cathedral floor.</sub><br><a href="works/rose-window/source.js">Source</a> · <a href="docs/works.en.md#rose-window">Controls</a></td>
 </tr>
 </table>
 

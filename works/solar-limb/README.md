@@ -2,6 +2,8 @@
 
 # 太阳边缘
 
+[▶ 在线体验](https://ma1902056219-coder.github.io/openpixel/works/solar-limb/) · [源码文件](source.js)
+
 日珥、太阳颗粒和地球比例尺。
 
 ## 打开和操作

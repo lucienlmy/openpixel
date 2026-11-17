@@ -2,6 +2,8 @@
 
 # 无尽之窗
 
+[▶ 在线体验](https://ma1902056219-coder.github.io/openpixel/works/endless-window/) · [源码文件](source.js)
+
 六层嵌套首尾相连，连续推进回到起点。
 
 ## 打开和操作

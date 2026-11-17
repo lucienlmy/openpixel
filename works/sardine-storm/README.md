@@ -2,6 +2,8 @@
 
 # 沙丁鱼风暴
 
+[▶ 在线体验](https://ma1902056219-coder.github.io/openpixel/works/sardine-storm/) · [源码文件](source.js)
+
 鱼群受海豚扰动聚合，观察整体运动。
 
 ## 打开和操作

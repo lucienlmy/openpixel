@@ -2,6 +2,8 @@
 
 # 金缮
 
+[▶ 在线体验](https://ma1902056219-coder.github.io/openpixel/works/kintsugi/) · [源码文件](source.js)
+
 碎片拼合、修补与金色接缝。
 
 ## 打开和操作

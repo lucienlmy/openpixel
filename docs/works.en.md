@@ -8,6 +8,8 @@ Use the root gallery or open the indicated file locally. Original Chinese titles
 
 ## Night Pond / 夜池
 
+[▶ Try it online](https://ma1902056219-coder.github.io/openpixel/works/night-pond/)
+
 Ripple the reflections and feed the koi.
 
 Hover over the water to attract koi. Click to feed them and create ripples; hold and drag to stir the water.
@@ -18,6 +20,8 @@ Hover over the water to attract koi. Click to feed them and create ripples; hold
 <a id="sardine-storm"></a>
 
 ## Sardine Storm / 沙丁鱼风暴
+
+[▶ Try it online](https://ma1902056219-coder.github.io/openpixel/works/sardine-storm/)
 
 Guide a dolphin through a swirling school of fish.
 
@@ -30,6 +34,8 @@ Hold and drag to guide the dolphin. Circle the school to gather the fish; click 
 
 ## Endless Window / 无尽之窗
 
+[▶ Try it online](https://ma1902056219-coder.github.io/openpixel/works/endless-window/)
+
 Six nested worlds lead back to the beginning.
 
 Watch the continuous zoom, or drag horizontally on the image to move the camera yourself.
@@ -40,6 +46,8 @@ Watch the continuous zoom, or drag horizontally on the image to move the camera 
 <a id="crown-knight"></a>
 
 ## The Crownless Knight / 断冠骑士
+
+[▶ Try it online](https://ma1902056219-coder.github.io/openpixel/works/crown-knight/)
 
 A boss encounter with dodges, stagger and changing camera angles.
 
@@ -52,6 +60,8 @@ Arrow keys: move. J: light attack; L: heavy attack; K or Space: dodge; U: heal; 
 
 ## Sunset Loop / 落日环线
 
+[▶ Try it online](https://ma1902056219-coder.github.io/openpixel/works/sunset-loop/)
+
 Drive toward the sunset with a rear-view camera.
 
 Up: accelerate; Down: brake; Left and Right: steer. K or Space: handbrake drift. V: change camera.
@@ -62,6 +72,8 @@ Up: accelerate; Down: brake; Left and Right: steer. K or Space: handbrake drift.
 <a id="jellyfish"></a>
 
 ## Jellyfish / 水母
+
+[▶ Try it online](https://ma1902056219-coder.github.io/openpixel/works/jellyfish/)
 
 Translucent bodies, soft tentacles and a chain of light.
 
@@ -74,6 +86,8 @@ Hold and drag to stir the water. Click a jellyfish to make it flash and retreat;
 
 ## Saturn's Rings / 土星环
 
+[▶ Try it online](https://ma1902056219-coder.github.io/openpixel/works/saturn-rings/)
+
 Launch moons and watch them break into rings.
 
 Hold, drag and release to launch a moon; the drag sets its velocity. Click to add a small moon in a circular orbit. The dashed line marks the Roche limit.
@@ -84,6 +98,8 @@ Hold, drag and release to launch a moon; the drag sets its velocity. Click to ad
 <a id="galaxy-collision"></a>
 
 ## Galaxy Collision / 星系相撞
+
+[▶ Try it online](https://ma1902056219-coder.github.io/openpixel/works/galaxy-collision/)
 
 Two galaxies draw long tidal tails as they meet.
 
@@ -96,6 +112,8 @@ Watch the animated encounter. Use the playback controls on the page to pause or 
 
 ## Black Hole / 黑洞
 
+[▶ Try it online](https://ma1902056219-coder.github.io/openpixel/works/black-hole/)
+
 An accretion disk, lensing and moving starlight.
 
 Watch the animated scene and use its playback controls to inspect the changing disk and background.
@@ -106,6 +124,8 @@ Watch the animated scene and use its playback controls to inspect the changing d
 <a id="solar-limb"></a>
 
 ## Solar Limb / 太阳边缘
+
+[▶ Try it online](https://ma1902056219-coder.github.io/openpixel/works/solar-limb/)
 
 Prominences, solar granules and Earth shown for scale.
 
@@ -118,6 +138,8 @@ Watch the surface and magnetic loops evolve. Use the page playback controls to p
 
 ## Plasma Globe / 等离子球
 
+[▶ Try it online](https://ma1902056219-coder.github.io/openpixel/works/plasma-globe/)
+
 Gather electric arcs at your fingertip.
 
 Hold on the glass to gather the arcs. Drag while holding to move them, or click for a flash. The color button changes the palette.
@@ -128,6 +150,8 @@ Hold on the glass to gather the arcs. Drag while holding to move them, or click 
 <a id="chladni-plate"></a>
 
 ## Chladni Plate / 克拉尼板
+
+[▶ Try it online](https://ma1902056219-coder.github.io/openpixel/works/chladni-plate/)
 
 Vibrations gather sand into changing patterns.
 
@@ -140,6 +164,8 @@ Hold on the plate to excite it; position controls pitch. Slide while holding to 
 
 ## Ferrofluid / 磁流体
 
+[▶ Try it online](https://ma1902056219-coder.github.io/openpixel/works/ferrofluid/)
+
 Move a magnetic field to shape spikes and reflections.
 
 Move the pointer to move the magnet. Hold to strengthen the field and raise spikes; release to let the liquid settle.
@@ -150,6 +176,8 @@ Move the pointer to move the magnet. Hold to strengthen the field and raise spik
 <a id="cracking-ice"></a>
 
 ## Cracking Ice / 冰裂
+
+[▶ Try it online](https://ma1902056219-coder.github.io/openpixel/works/cracking-ice/)
 
 Pressure sends cracks across a frozen surface.
 
@@ -162,6 +190,8 @@ Drag to sweep away snow. Click to tap the ice, or hold to extend the cracks and 
 
 ## Frosted Window / 霜窗
 
+[▶ Try it online](https://ma1902056219-coder.github.io/openpixel/works/frost-window/)
+
 Wipe frost away and watch it grow back.
 
 Hold and drag to wipe or write on the glass. The page buttons add a breath of mist and change frost growth speed.
@@ -172,6 +202,8 @@ Hold and drag to wipe or write on the glass. The page buttons add a breath of mi
 <a id="zen-garden"></a>
 
 ## Zen Garden / 枯山水
+
+[▶ Try it online](https://ma1902056219-coder.github.io/openpixel/works/zen-garden/)
 
 Rake sand and change the light and weather.
 
@@ -184,6 +216,8 @@ Hold and drag to rake the sand. Tap a stone to draw circles around it; use the l
 
 ## Aurora / 极光
 
+[▶ Try it online](https://ma1902056219-coder.github.io/openpixel/works/aurora/)
+
 Curtains of light over snow, a cabin and reflected water.
 
 Draw a line in the sky to guide the aurora curtain. Click to trigger a brighter burst.
@@ -194,6 +228,8 @@ Draw a line in the sky to guide the aurora curtain. Click to trigger a brighter 
 <a id="penrose-tower"></a>
 
 ## Endless Ascent / 永登之塔
+
+[▶ Try it online](https://ma1902056219-coder.github.io/openpixel/works/penrose-tower/)
 
 Rotate the view to reveal an impossible staircase.
 
@@ -206,6 +242,8 @@ Drag the camera-angle control below the image. Off-axis views reveal the spiral;
 
 ## Living Jigsaw / 活拼图
 
+[▶ Try it online](https://ma1902056219-coder.github.io/openpixel/works/living-jigsaw/)
+
 Assembled pieces come alive; the bus waits for the final piece.
 
 Watch the automatic assembly and the town coming to life. The pieces are placed by the demonstration; use playback controls to inspect the sequence.
@@ -216,6 +254,8 @@ Watch the automatic assembly and the town coming to life. The pieces are placed 
 <a id="ocean-in-a-tank"></a>
 
 ## Ocean in a Tank / 鱼缸里的海
+
+[▶ Try it online](https://ma1902056219-coder.github.io/openpixel/works/ocean-in-a-tank/)
 
 A desk-sized aquarium hides a much larger sea.
 
@@ -228,6 +268,8 @@ Watch the automatic scene as a whale approaches the glass and retreats. Use the 
 
 ## Pottery Wheel / 拉坯
 
+[▶ Try it online](https://ma1902056219-coder.github.io/openpixel/works/pottery/)
+
 Shape clay on a spinning wheel.
 
 Move the pointer to position your hands; hold to touch the clay. Pull upward to lift and thin it, and sideways to shape it. Arrow keys move the hands; hold J to touch the clay. K cuts below the rim or sends the finished piece to the kiln when the hands are above it.
@@ -238,6 +280,8 @@ Move the pointer to position your hands; hold to touch the clay. Pull upward to 
 <a id="kintsugi"></a>
 
 ## Kintsugi / 金缮
+
+[▶ Try it online](https://ma1902056219-coder.github.io/openpixel/works/kintsugi/)
 
 Reassemble broken pottery, then lacquer, gild and polish it.
 
@@ -250,6 +294,8 @@ Use the pointer or arrow keys to move. J picks up or sets down fragments; hold K
 
 ## A Thousand Li of Rivers and Mountains / 千里江山
 
+[▶ Try it online](https://ma1902056219-coder.github.io/openpixel/works/thousand-li/)
+
 A moving blue-green landscape scroll.
 
 Hold and drag horizontally to unroll the landscape yourself, or watch the automatic scroll.
@@ -260,6 +306,8 @@ Hold and drag horizontally to unroll the landscape yourself, or watch the automa
 <a id="rainbow-bridge"></a>
 
 ## Qingming Scroll: Rainbow Bridge / 清明上河图·虹桥
+
+[▶ Try it online](https://ma1902056219-coder.github.io/openpixel/works/rainbow-bridge/)
 
 Boats, vendors and pedestrians bring a scroll to life.
 
@@ -272,6 +320,8 @@ Watch the automatic scene as the boat approaches the bridge. Use the playback co
 
 ## Gothic Rose Window / 哥特玫瑰窗
 
+[▶ Try it online](https://ma1902056219-coder.github.io/openpixel/works/rose-window/)
+
 Colored glass casts shifting patterns across a cathedral floor.
 
 Watch the light, clouds and visitor change through the automatic scene. Use playback controls to pause or restart.
@@ -282,6 +332,8 @@ Watch the light, clouds and visitor change through the automatic scene. Use play
 <a id="light-painting"></a>
 
 ## Light Painting / 光绘
+
+[▶ Try it online](https://ma1902056219-coder.github.io/openpixel/works/light-painting/)
 
 Build trails, spirals and glowing layers of light.
 
@@ -297,6 +349,8 @@ Hold and drag to draw with light. Hold still for a spinning steel-wool effect. T
 
 ## Molten Iron Flowers / 打铁花
 
+[▶ Try it online](https://ma1902056219-coder.github.io/openpixel/works/iron-flower/)
+
 Strike molten iron into a shower of sparks that lights the village.
 
 Choose the manual-play button. Hold J to raise the ladle, then release J to strike. Left and Right aim the throw. The metal cools as you wait.
@@ -306,6 +360,8 @@ Choose the manual-play button. Hold J to raise the ladle, then release J to stri
 <a id="watercolor"></a>
 
 ## Watercolor Bloom / 水彩晕染
+
+[▶ Try it online](https://ma1902056219-coder.github.io/openpixel/works/watercolor/)
 
 Paint on wet paper and watch pigments spread and mix.
 
@@ -317,6 +373,8 @@ Drag on the paper to paint. Click a color pan to change pigment. Tap a wet area 
 
 ## Coral Reef / 珊瑚礁
 
+[▶ Try it online](https://ma1902056219-coder.github.io/openpixel/works/coral-reef/)
+
 Touch coral, push a current and watch a small underwater ecosystem respond.
 
 Tap coral to send a contraction wave, or hold to keep a nearby patch closed. Drag to push water past the sea fan and fish. Move close to the anemone while holding to make clownfish hide.
@@ -327,6 +385,8 @@ Tap coral to send a contraction wave, or hold to keep a nearby patch closed. Dra
 
 ## Dandelion / 蒲公英
 
+[▶ Try it online](https://ma1902056219-coder.github.io/openpixel/works/dandelion/)
+
 Scatter seeds in the wind and watch new plants grow.
 
 Drag across a seed head, or hold beside it to blow. Seeds that land may grow leaves, yellow flowers and new seed heads. The fast-growth button accelerates plant growth.
@@ -336,6 +396,8 @@ Drag across a seed head, or hold beside it to blow. Seeds that land may grow lea
 <a id="kaleidoscope"></a>
 
 ## Kaleidoscope / 万花筒
+
+[▶ Try it online](https://ma1902056219-coder.github.io/openpixel/works/kaleidoscope/)
 
 Turn colored fragments into changing mirrored patterns.
 

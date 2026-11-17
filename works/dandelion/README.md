@@ -2,6 +2,8 @@
 
 # 蒲公英
 
+[▶ 在线体验](https://ma1902056219-coder.github.io/openpixel/works/dandelion/) · [源码文件](source.js)
+
 吹散一朵，再长出一片。
 
 ![实际运行画面](poster.webp)

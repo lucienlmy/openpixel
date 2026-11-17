@@ -14,6 +14,9 @@
 
 [作品集をダウンロード](https://github.com/ma1902056219-coder/openpixel/archive/refs/heads/main.zip) · [作品一覧](#gallery) · [ローカルで動かす](#start) · [改造ガイド](docs/guide.ja.md)
 
+
+**[▶ 全作品をオンラインで体験](https://ma1902056219-coder.github.io/openpixel/)**
+
 </div>
 
 ## 第2弾 · 改造して学べる5つの実験
@@ -22,13 +25,13 @@
 
 <table>
 <tr>
-<td width="33%" valign="top"><a href="docs/works.ja.md#iron-flower"><img src="works/iron-flower/poster.webp" alt="打鉄花" width="100%"><br><strong>打鉄花</strong></a><br><sub>溶けた鉄を打ち上げ、村を照らす金色の火花に。</sub><br><a href="works/iron-flower/source.js">ソースを見る</a></td>
-<td width="33%" valign="top"><a href="docs/works.ja.md#watercolor"><img src="works/watercolor/poster.webp" alt="水彩のにじみ" width="100%"><br><strong>水彩のにじみ</strong></a><br><sub>濡れた紙で絵の具が広がり、混ざり合う。</sub><br><a href="works/watercolor/source.js">ソースを見る</a></td>
-<td width="33%" valign="top"><a href="docs/works.ja.md#coral-reef"><img src="works/coral-reef/poster.webp" alt="サンゴ礁" width="100%"><br><strong>サンゴ礁</strong></a><br><sub>サンゴへのタッチや水流に、小さな海の世界が反応する。</sub><br><a href="works/coral-reef/source.js">ソースを見る</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/iron-flower/"><img src="works/iron-flower/poster.webp" alt="打鉄花" width="100%"><br><strong>打鉄花</strong></a><br><sub>溶けた鉄を打ち上げ、村を照らす金色の火花に。</sub><br><a href="works/iron-flower/source.js">ソースを見る</a> · <a href="docs/works.ja.md#iron-flower">操作説明</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/watercolor/"><img src="works/watercolor/poster.webp" alt="水彩のにじみ" width="100%"><br><strong>水彩のにじみ</strong></a><br><sub>濡れた紙で絵の具が広がり、混ざり合う。</sub><br><a href="works/watercolor/source.js">ソースを見る</a> · <a href="docs/works.ja.md#watercolor">操作説明</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/coral-reef/"><img src="works/coral-reef/poster.webp" alt="サンゴ礁" width="100%"><br><strong>サンゴ礁</strong></a><br><sub>サンゴへのタッチや水流に、小さな海の世界が反応する。</sub><br><a href="works/coral-reef/source.js">ソースを見る</a> · <a href="docs/works.ja.md#coral-reef">操作説明</a></td>
 </tr>
 <tr>
-<td width="33%" valign="top"><a href="docs/works.ja.md#dandelion"><img src="works/dandelion/poster.webp" alt="タンポポ" width="100%"><br><strong>タンポポ</strong></a><br><sub>綿毛を飛ばし、落ちた種から新しい株を育てる。</sub><br><a href="works/dandelion/source.js">ソースを見る</a></td>
-<td width="33%" valign="top"><a href="docs/works.ja.md#kaleidoscope"><img src="works/kaleidoscope/poster.webp" alt="万華鏡" width="100%"><br><strong>万華鏡</strong></a><br><sub>鏡筒を回すたび、色のかけらが新しい模様になる。</sub><br><a href="works/kaleidoscope/source.js">ソースを見る</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/dandelion/"><img src="works/dandelion/poster.webp" alt="タンポポ" width="100%"><br><strong>タンポポ</strong></a><br><sub>綿毛を飛ばし、落ちた種から新しい株を育てる。</sub><br><a href="works/dandelion/source.js">ソースを見る</a> · <a href="docs/works.ja.md#dandelion">操作説明</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/kaleidoscope/"><img src="works/kaleidoscope/poster.webp" alt="万華鏡" width="100%"><br><strong>万華鏡</strong></a><br><sub>鏡筒を回すたび、色のかけらが新しい模様になる。</sub><br><a href="works/kaleidoscope/source.js">ソースを見る</a> · <a href="docs/works.ja.md#kaleidoscope">操作説明</a></td>
 <td width="33%"></td>
 </tr>
 </table>
@@ -71,28 +74,28 @@ README、改造ガイド、作品の操作説明は4言語で読めます。作�
 
 ## 作品一覧
 
-図をクリックすると日本語の操作説明とソースへのリンクが開きます。全31作品に編集可能な `source.js` を付属。実行するには作品集をダウンロードしてください。
+図をクリックするとブラウザーで直接体験できます。操作説明とソースも付属し、ダウンロードしてオフラインでも実行できます。
 
 ### 触れて遊ぶ・質感
 
 <table>
 <tr>
-<td width="33%" valign="top"><a href="docs/works.ja.md#night-pond"><img src="works/night-pond/poster.webp" alt="夜の池" width="100%"><br><strong>夜の池</strong></a><br><sub>波紋で映り込みを揺らし、錦鯉に餌をあげる。</sub><br><a href="works/night-pond/source.js">ソースを見る</a></td>
-<td width="33%" valign="top"><a href="docs/works.ja.md#plasma-globe"><img src="works/plasma-globe/poster.webp" alt="プラズマボール" width="100%"><br><strong>プラズマボール</strong></a><br><sub>指先へ電光を集めて動かす。</sub><br><a href="works/plasma-globe/source.js">ソースを見る</a></td>
-<td width="33%" valign="top"><a href="docs/works.ja.md#chladni-plate"><img src="works/chladni-plate/poster.webp" alt="クラドニ図形" width="100%"><br><strong>クラドニ図形</strong></a><br><sub>振動に合わせて、砂がさまざまな模様に集まる。</sub><br><a href="works/chladni-plate/source.js">ソースを見る</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/night-pond/"><img src="works/night-pond/poster.webp" alt="夜の池" width="100%"><br><strong>夜の池</strong></a><br><sub>波紋で映り込みを揺らし、錦鯉に餌をあげる。</sub><br><a href="works/night-pond/source.js">ソースを見る</a> · <a href="docs/works.ja.md#night-pond">操作説明</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/plasma-globe/"><img src="works/plasma-globe/poster.webp" alt="プラズマボール" width="100%"><br><strong>プラズマボール</strong></a><br><sub>指先へ電光を集めて動かす。</sub><br><a href="works/plasma-globe/source.js">ソースを見る</a> · <a href="docs/works.ja.md#plasma-globe">操作説明</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/chladni-plate/"><img src="works/chladni-plate/poster.webp" alt="クラドニ図形" width="100%"><br><strong>クラドニ図形</strong></a><br><sub>振動に合わせて、砂がさまざまな模様に集まる。</sub><br><a href="works/chladni-plate/source.js">ソースを見る</a> · <a href="docs/works.ja.md#chladni-plate">操作説明</a></td>
 </tr>
 <tr>
-<td width="33%" valign="top"><a href="docs/works.ja.md#ferrofluid"><img src="works/ferrofluid/poster.webp" alt="磁性流体" width="100%"><br><strong>磁性流体</strong></a><br><sub>磁場を動かして、液体の突起と反射を変える。</sub><br><a href="works/ferrofluid/source.js">ソースを見る</a></td>
-<td width="33%" valign="top"><a href="docs/works.ja.md#cracking-ice"><img src="works/cracking-ice/poster.webp" alt="氷の亀裂" width="100%"><br><strong>氷の亀裂</strong></a><br><sub>力を加えると、凍った表面に亀裂が広がる。</sub><br><a href="works/cracking-ice/source.js">ソースを見る</a></td>
-<td width="33%" valign="top"><a href="docs/works.ja.md#frost-window"><img src="works/frost-window/poster.webp" alt="霜の窓" width="100%"><br><strong>霜の窓</strong></a><br><sub>指で霜を拭い、再び育つ様子を眺める。</sub><br><a href="works/frost-window/source.js">ソースを見る</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/ferrofluid/"><img src="works/ferrofluid/poster.webp" alt="磁性流体" width="100%"><br><strong>磁性流体</strong></a><br><sub>磁場を動かして、液体の突起と反射を変える。</sub><br><a href="works/ferrofluid/source.js">ソースを見る</a> · <a href="docs/works.ja.md#ferrofluid">操作説明</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/cracking-ice/"><img src="works/cracking-ice/poster.webp" alt="氷の亀裂" width="100%"><br><strong>氷の亀裂</strong></a><br><sub>力を加えると、凍った表面に亀裂が広がる。</sub><br><a href="works/cracking-ice/source.js">ソースを見る</a> · <a href="docs/works.ja.md#cracking-ice">操作説明</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/frost-window/"><img src="works/frost-window/poster.webp" alt="霜の窓" width="100%"><br><strong>霜の窓</strong></a><br><sub>指で霜を拭い、再び育つ様子を眺める。</sub><br><a href="works/frost-window/source.js">ソースを見る</a> · <a href="docs/works.ja.md#frost-window">操作説明</a></td>
 </tr>
 <tr>
-<td width="33%" valign="top"><a href="docs/works.ja.md#zen-garden"><img src="works/zen-garden/poster.webp" alt="枯山水" width="100%"><br><strong>枯山水</strong></a><br><sub>砂紋を描き、時間帯と天気を変える。</sub><br><a href="works/zen-garden/source.js">ソースを見る</a></td>
-<td width="33%" valign="top"><a href="docs/works.ja.md#pottery"><img src="works/pottery/poster.webp" alt="ろくろ" width="100%"><br><strong>ろくろ</strong></a><br><sub>回るろくろの上で、粘土の形を整える。</sub><br><a href="works/pottery/source.js">ソースを見る</a></td>
-<td width="33%" valign="top"><a href="docs/works.ja.md#kintsugi"><img src="works/kintsugi/poster.webp" alt="金継ぎ" width="100%"><br><strong>金継ぎ</strong></a><br><sub>欠片を合わせ、漆、金粉、磨きの工程を進める。</sub><br><a href="works/kintsugi/source.js">ソースを見る</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/zen-garden/"><img src="works/zen-garden/poster.webp" alt="枯山水" width="100%"><br><strong>枯山水</strong></a><br><sub>砂紋を描き、時間帯と天気を変える。</sub><br><a href="works/zen-garden/source.js">ソースを見る</a> · <a href="docs/works.ja.md#zen-garden">操作説明</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/pottery/"><img src="works/pottery/poster.webp" alt="ろくろ" width="100%"><br><strong>ろくろ</strong></a><br><sub>回るろくろの上で、粘土の形を整える。</sub><br><a href="works/pottery/source.js">ソースを見る</a> · <a href="docs/works.ja.md#pottery">操作説明</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/kintsugi/"><img src="works/kintsugi/poster.webp" alt="金継ぎ" width="100%"><br><strong>金継ぎ</strong></a><br><sub>欠片を合わせ、漆、金粉、磨きの工程を進める。</sub><br><a href="works/kintsugi/source.js">ソースを見る</a> · <a href="docs/works.ja.md#kintsugi">操作説明</a></td>
 </tr>
 <tr>
-<td width="33%" valign="top"><a href="docs/works.ja.md#light-painting"><img src="works/light-painting/poster.webp" alt="光のペインティング" width="100%"><br><strong>光のペインティング</strong></a><br><sub>光跡を重ね、渦や光の層を描く。</sub><br><a href="works/light-painting/source.js">ソースを見る</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/light-painting/"><img src="works/light-painting/poster.webp" alt="光のペインティング" width="100%"><br><strong>光のペインティング</strong></a><br><sub>光跡を重ね、渦や光の層を描く。</sub><br><a href="works/light-painting/source.js">ソースを見る</a> · <a href="docs/works.ja.md#light-painting">操作説明</a></td>
 <td width="33%"></td>
 <td width="33%"></td>
 </tr>
@@ -102,17 +105,17 @@ README、改造ガイド、作品の操作説明は4言語で読めます。作�
 
 <table>
 <tr>
-<td width="33%" valign="top"><a href="docs/works.ja.md#sardine-storm"><img src="works/sardine-storm/poster.webp" alt="イワシの嵐" width="100%"><br><strong>イワシの嵐</strong></a><br><sub>イルカを動かして、渦を巻く魚群をかき分ける。</sub><br><a href="works/sardine-storm/source.js">ソースを見る</a></td>
-<td width="33%" valign="top"><a href="docs/works.ja.md#jellyfish"><img src="works/jellyfish/poster.webp" alt="クラゲ" width="100%"><br><strong>クラゲ</strong></a><br><sub>透ける傘、柔らかな触手、触れると広がる光。</sub><br><a href="works/jellyfish/source.js">ソースを見る</a></td>
-<td width="33%" valign="top"><a href="docs/works.ja.md#saturn-rings"><img src="works/saturn-rings/poster.webp" alt="土星の環" width="100%"><br><strong>土星の環</strong></a><br><sub>衛星を投げ込み、砕けて環になる様子を眺める。</sub><br><a href="works/saturn-rings/source.js">ソースを見る</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/sardine-storm/"><img src="works/sardine-storm/poster.webp" alt="イワシの嵐" width="100%"><br><strong>イワシの嵐</strong></a><br><sub>イルカを動かして、渦を巻く魚群をかき分ける。</sub><br><a href="works/sardine-storm/source.js">ソースを見る</a> · <a href="docs/works.ja.md#sardine-storm">操作説明</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/jellyfish/"><img src="works/jellyfish/poster.webp" alt="クラゲ" width="100%"><br><strong>クラゲ</strong></a><br><sub>透ける傘、柔らかな触手、触れると広がる光。</sub><br><a href="works/jellyfish/source.js">ソースを見る</a> · <a href="docs/works.ja.md#jellyfish">操作説明</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/saturn-rings/"><img src="works/saturn-rings/poster.webp" alt="土星の環" width="100%"><br><strong>土星の環</strong></a><br><sub>衛星を投げ込み、砕けて環になる様子を眺める。</sub><br><a href="works/saturn-rings/source.js">ソースを見る</a> · <a href="docs/works.ja.md#saturn-rings">操作説明</a></td>
 </tr>
 <tr>
-<td width="33%" valign="top"><a href="docs/works.ja.md#galaxy-collision"><img src="works/galaxy-collision/poster.webp" alt="銀河の衝突" width="100%"><br><strong>銀河の衝突</strong></a><br><sub>二つの銀河が接近し、星の軌跡が長い尾になる。</sub><br><a href="works/galaxy-collision/source.js">ソースを見る</a></td>
-<td width="33%" valign="top"><a href="docs/works.ja.md#black-hole"><img src="works/black-hole/poster.webp" alt="ブラックホール" width="100%"><br><strong>ブラックホール</strong></a><br><sub>降着円盤とレンズ効果、背景の星の変化。</sub><br><a href="works/black-hole/source.js">ソースを見る</a></td>
-<td width="33%" valign="top"><a href="docs/works.ja.md#solar-limb"><img src="works/solar-limb/poster.webp" alt="太陽の縁" width="100%"><br><strong>太陽の縁</strong></a><br><sub>プロミネンス、粒状斑、比較用の小さな地球。</sub><br><a href="works/solar-limb/source.js">ソースを見る</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/galaxy-collision/"><img src="works/galaxy-collision/poster.webp" alt="銀河の衝突" width="100%"><br><strong>銀河の衝突</strong></a><br><sub>二つの銀河が接近し、星の軌跡が長い尾になる。</sub><br><a href="works/galaxy-collision/source.js">ソースを見る</a> · <a href="docs/works.ja.md#galaxy-collision">操作説明</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/black-hole/"><img src="works/black-hole/poster.webp" alt="ブラックホール" width="100%"><br><strong>ブラックホール</strong></a><br><sub>降着円盤とレンズ効果、背景の星の変化。</sub><br><a href="works/black-hole/source.js">ソースを見る</a> · <a href="docs/works.ja.md#black-hole">操作説明</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/solar-limb/"><img src="works/solar-limb/poster.webp" alt="太陽の縁" width="100%"><br><strong>太陽の縁</strong></a><br><sub>プロミネンス、粒状斑、比較用の小さな地球。</sub><br><a href="works/solar-limb/source.js">ソースを見る</a> · <a href="docs/works.ja.md#solar-limb">操作説明</a></td>
 </tr>
 <tr>
-<td width="33%" valign="top"><a href="docs/works.ja.md#aurora"><img src="works/aurora/poster.webp" alt="オーロラ" width="100%"><br><strong>オーロラ</strong></a><br><sub>雪山と小屋、水面の上に揺れる光のカーテン。</sub><br><a href="works/aurora/source.js">ソースを見る</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/aurora/"><img src="works/aurora/poster.webp" alt="オーロラ" width="100%"><br><strong>オーロラ</strong></a><br><sub>雪山と小屋、水面の上に揺れる光のカーテン。</sub><br><a href="works/aurora/source.js">ソースを見る</a> · <a href="docs/works.ja.md#aurora">操作説明</a></td>
 <td width="33%"></td>
 <td width="33%"></td>
 </tr>
@@ -122,12 +125,12 @@ README、改造ガイド、作品の操作説明は4言語で読めます。作�
 
 <table>
 <tr>
-<td width="33%" valign="top"><a href="docs/works.ja.md#endless-window"><img src="works/endless-window/poster.webp" alt="無限の窓" width="100%"><br><strong>無限の窓</strong></a><br><sub>六つの世界が入れ子になり、最初の景色へ戻る。</sub><br><a href="works/endless-window/source.js">ソースを見る</a></td>
-<td width="33%" valign="top"><a href="docs/works.ja.md#penrose-tower"><img src="works/penrose-tower/poster.webp" alt="終わらない階段" width="100%"><br><strong>終わらない階段</strong></a><br><sub>視点を回し、不可能な階段の仕組みを確かめる。</sub><br><a href="works/penrose-tower/source.js">ソースを見る</a></td>
-<td width="33%" valign="top"><a href="docs/works.ja.md#living-jigsaw"><img src="works/living-jigsaw/poster.webp" alt="動き出すパズル" width="100%"><br><strong>動き出すパズル</strong></a><br><sub>はまったピースが動き出し、最後の一片でバスが走る。</sub><br><a href="works/living-jigsaw/source.js">ソースを見る</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/endless-window/"><img src="works/endless-window/poster.webp" alt="無限の窓" width="100%"><br><strong>無限の窓</strong></a><br><sub>六つの世界が入れ子になり、最初の景色へ戻る。</sub><br><a href="works/endless-window/source.js">ソースを見る</a> · <a href="docs/works.ja.md#endless-window">操作説明</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/penrose-tower/"><img src="works/penrose-tower/poster.webp" alt="終わらない階段" width="100%"><br><strong>終わらない階段</strong></a><br><sub>視点を回し、不可能な階段の仕組みを確かめる。</sub><br><a href="works/penrose-tower/source.js">ソースを見る</a> · <a href="docs/works.ja.md#penrose-tower">操作説明</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/living-jigsaw/"><img src="works/living-jigsaw/poster.webp" alt="動き出すパズル" width="100%"><br><strong>動き出すパズル</strong></a><br><sub>はまったピースが動き出し、最後の一片でバスが走る。</sub><br><a href="works/living-jigsaw/source.js">ソースを見る</a> · <a href="docs/works.ja.md#living-jigsaw">操作説明</a></td>
 </tr>
 <tr>
-<td width="33%" valign="top"><a href="docs/works.ja.md#ocean-in-a-tank"><img src="works/ocean-in-a-tank/poster.webp" alt="水槽の中の海" width="100%"><br><strong>水槽の中の海</strong></a><br><sub>机の上の小さな水槽に、広い海が隠れている。</sub><br><a href="works/ocean-in-a-tank/source.js">ソースを見る</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/ocean-in-a-tank/"><img src="works/ocean-in-a-tank/poster.webp" alt="水槽の中の海" width="100%"><br><strong>水槽の中の海</strong></a><br><sub>机の上の小さな水槽に、広い海が隠れている。</sub><br><a href="works/ocean-in-a-tank/source.js">ソースを見る</a> · <a href="docs/works.ja.md#ocean-in-a-tank">操作説明</a></td>
 <td width="33%"></td>
 <td width="33%"></td>
 </tr>
@@ -137,8 +140,8 @@ README、改造ガイド、作品の操作説明は4言語で読めます。作�
 
 <table>
 <tr>
-<td width="33%" valign="top"><a href="docs/works.ja.md#crown-knight"><img src="works/crown-knight/poster.webp" alt="失冠の騎士" width="100%"><br><strong>失冠の騎士</strong></a><br><sub>回避、体勢崩し、視点切り替えのあるボス戦。</sub><br><a href="works/crown-knight/source.js">ソースを見る</a></td>
-<td width="33%" valign="top"><a href="docs/works.ja.md#sunset-loop"><img src="works/sunset-loop/poster.webp" alt="サンセット・ループ" width="100%"><br><strong>サンセット・ループ</strong></a><br><sub>夕日へ向かって走る、後方視点のドライブ。</sub><br><a href="works/sunset-loop/source.js">ソースを見る</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/crown-knight/"><img src="works/crown-knight/poster.webp" alt="失冠の騎士" width="100%"><br><strong>失冠の騎士</strong></a><br><sub>回避、体勢崩し、視点切り替えのあるボス戦。</sub><br><a href="works/crown-knight/source.js">ソースを見る</a> · <a href="docs/works.ja.md#crown-knight">操作説明</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/sunset-loop/"><img src="works/sunset-loop/poster.webp" alt="サンセット・ループ" width="100%"><br><strong>サンセット・ループ</strong></a><br><sub>夕日へ向かって走る、後方視点のドライブ。</sub><br><a href="works/sunset-loop/source.js">ソースを見る</a> · <a href="docs/works.ja.md#sunset-loop">操作説明</a></td>
 <td width="33%"></td>
 </tr>
 </table>
@@ -147,9 +150,9 @@ README、改造ガイド、作品の操作説明は4言語で読めます。作�
 
 <table>
 <tr>
-<td width="33%" valign="top"><a href="docs/works.ja.md#thousand-li"><img src="works/thousand-li/poster.webp" alt="千里江山" width="100%"><br><strong>千里江山</strong></a><br><sub>青と緑の山水画が、動く絵巻として広がる。</sub><br><a href="works/thousand-li/source.js">ソースを見る</a></td>
-<td width="33%" valign="top"><a href="docs/works.ja.md#rainbow-bridge"><img src="works/rainbow-bridge/poster.webp" alt="清明上河図・虹橋" width="100%"><br><strong>清明上河図・虹橋</strong></a><br><sub>船、露店、人々が行き交う小さな絵巻。</sub><br><a href="works/rainbow-bridge/source.js">ソースを見る</a></td>
-<td width="33%" valign="top"><a href="docs/works.ja.md#rose-window"><img src="works/rose-window/poster.webp" alt="ゴシックのバラ窓" width="100%"><br><strong>ゴシックのバラ窓</strong></a><br><sub>ステンドグラスの光が、大聖堂の床をゆっくり移る。</sub><br><a href="works/rose-window/source.js">ソースを見る</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/thousand-li/"><img src="works/thousand-li/poster.webp" alt="千里江山" width="100%"><br><strong>千里江山</strong></a><br><sub>青と緑の山水画が、動く絵巻として広がる。</sub><br><a href="works/thousand-li/source.js">ソースを見る</a> · <a href="docs/works.ja.md#thousand-li">操作説明</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/rainbow-bridge/"><img src="works/rainbow-bridge/poster.webp" alt="清明上河図・虹橋" width="100%"><br><strong>清明上河図・虹橋</strong></a><br><sub>船、露店、人々が行き交う小さな絵巻。</sub><br><a href="works/rainbow-bridge/source.js">ソースを見る</a> · <a href="docs/works.ja.md#rainbow-bridge">操作説明</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/rose-window/"><img src="works/rose-window/poster.webp" alt="ゴシックのバラ窓" width="100%"><br><strong>ゴシックのバラ窓</strong></a><br><sub>ステンドグラスの光が、大聖堂の床をゆっくり移る。</sub><br><a href="works/rose-window/source.js">ソースを見る</a> · <a href="docs/works.ja.md#rose-window">操作説明</a></td>
 </tr>
 </table>
 

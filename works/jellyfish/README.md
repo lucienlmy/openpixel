@@ -2,6 +2,8 @@
 
 # 水母
 
+[▶ 在线体验](https://ma1902056219-coder.github.io/openpixel/works/jellyfish/) · [源码文件](source.js)
+
 半透明水母、柔软触须与触碰后的发光。
 
 ## 打开和操作

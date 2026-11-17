@@ -2,6 +2,8 @@
 
 # 霜窗
 
+[▶ 在线体验](https://ma1902056219-coder.github.io/openpixel/works/frost-window/) · [源码文件](source.js)
+
 擦除霜花，观察玻璃水珠与霜的再生。
 
 ## 打开和操作

@@ -2,6 +2,8 @@
 
 # 清明上河图·虹桥
 
+[▶ 在线体验](https://ma1902056219-coder.github.io/openpixel/works/rainbow-bridge/) · [源码文件](source.js)
+
 虹桥、行人、船只组成可运行的微型长卷。
 
 ## 打开和操作

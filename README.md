@@ -14,6 +14,9 @@
 
 [下载当前源码](https://github.com/ma1902056219-coder/openpixel/archive/refs/heads/main.zip) · [作品目录](#作品目录) · [开始运行](#开始运行) · [修改指南](docs/guide.md)
 
+
+**[▶ 在线体验全部作品](https://ma1902056219-coder.github.io/openpixel/)**
+
 </div>
 
 ## 第二批新增 · 5 个可拆解的像素实验
@@ -22,13 +25,13 @@
 
 <table>
 <tr>
-<td width="33%" valign="top"><a href="works/iron-flower/README.md"><img src="works/iron-flower/poster.webp" alt="打铁花" width="100%"><br><strong>打铁花</strong></a><br><sub>雪夜里，一棒打出满天铁花</sub><br><a href="works/iron-flower/source.js">查看源码</a></td>
-<td width="33%" valign="top"><a href="works/watercolor/README.md"><img src="works/watercolor/poster.webp" alt="水彩晕染" width="100%"><br><strong>水彩晕染</strong></a><br><sub>让颜色在湿纸上自己生长</sub><br><a href="works/watercolor/source.js">查看源码</a></td>
-<td width="33%" valign="top"><a href="works/coral-reef/README.md"><img src="works/coral-reef/poster.webp" alt="珊瑚礁" width="100%"><br><strong>珊瑚礁</strong></a><br><sub>碰一下，整片珊瑚依次收起</sub><br><a href="works/coral-reef/source.js">查看源码</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/iron-flower/"><img src="works/iron-flower/poster.webp" alt="打铁花" width="100%"><br><strong>打铁花</strong></a><br><sub>雪夜里，一棒打出满天铁花</sub><br><a href="works/iron-flower/source.js">查看源码</a> · <a href="works/iron-flower/README.md">操作说明</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/watercolor/"><img src="works/watercolor/poster.webp" alt="水彩晕染" width="100%"><br><strong>水彩晕染</strong></a><br><sub>让颜色在湿纸上自己生长</sub><br><a href="works/watercolor/source.js">查看源码</a> · <a href="works/watercolor/README.md">操作说明</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/coral-reef/"><img src="works/coral-reef/poster.webp" alt="珊瑚礁" width="100%"><br><strong>珊瑚礁</strong></a><br><sub>碰一下，整片珊瑚依次收起</sub><br><a href="works/coral-reef/source.js">查看源码</a> · <a href="works/coral-reef/README.md">操作说明</a></td>
 </tr>
 <tr>
-<td width="33%" valign="top"><a href="works/dandelion/README.md"><img src="works/dandelion/poster.webp" alt="蒲公英" width="100%"><br><strong>蒲公英</strong></a><br><sub>吹散一朵，再长出一片</sub><br><a href="works/dandelion/source.js">查看源码</a></td>
-<td width="33%" valign="top"><a href="works/kaleidoscope/README.md"><img src="works/kaleidoscope/poster.webp" alt="万花筒" width="100%"><br><strong>万花筒</strong></a><br><sub>转一下，就得到一朵新图案</sub><br><a href="works/kaleidoscope/source.js">查看源码</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/dandelion/"><img src="works/dandelion/poster.webp" alt="蒲公英" width="100%"><br><strong>蒲公英</strong></a><br><sub>吹散一朵，再长出一片</sub><br><a href="works/dandelion/source.js">查看源码</a> · <a href="works/dandelion/README.md">操作说明</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/kaleidoscope/"><img src="works/kaleidoscope/poster.webp" alt="万花筒" width="100%"><br><strong>万花筒</strong></a><br><sub>转一下，就得到一朵新图案</sub><br><a href="works/kaleidoscope/source.js">查看源码</a> · <a href="works/kaleidoscope/README.md">操作说明</a></td>
 <td width="33%"></td>
 </tr>
 </table>
@@ -69,28 +72,28 @@ python -m http.server 8080 --bind 127.0.0.1
 
 ## 作品目录
 
-**点击图卡查看对应操作说明；下载后在本地运行作品。** 当前合集共 31 件，每件都附可编辑的 `source.js`。
+**点击图卡直接在线体验；每件作品另附操作说明与源码，也可下载后离线运行。** 当前合集共 31 件，每件都附可编辑的 `source.js`。
 
 ### 互动与材质
 
 <table>
 <tr>
-<td width="33%" valign="top"><a href="works/night-pond/README.md"><img src="works/night-pond/poster.webp" alt="夜池的实际运行画面" width="100%"><br><strong>夜池</strong></a><br><sub>点水扭曲倒影，投食让锦鲤靠近</sub><br><a href="works/night-pond/source.js">查看源码</a></td>
-<td width="33%" valign="top"><a href="works/plasma-globe/README.md"><img src="works/plasma-globe/poster.webp" alt="等离子球的实际运行画面" width="100%"><br><strong>等离子球</strong></a><br><sub>手指聚拢电弧，切换电光颜色</sub><br><a href="works/plasma-globe/source.js">查看源码</a></td>
-<td width="33%" valign="top"><a href="works/chladni-plate/README.md"><img src="works/chladni-plate/poster.webp" alt="克拉尼板的实际运行画面" width="100%"><br><strong>克拉尼板</strong></a><br><sub>振动频率改变粒子形成的结线图案</sub><br><a href="works/chladni-plate/source.js">查看源码</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/night-pond/"><img src="works/night-pond/poster.webp" alt="夜池的实际运行画面" width="100%"><br><strong>夜池</strong></a><br><sub>点水扭曲倒影，投食让锦鲤靠近</sub><br><a href="works/night-pond/source.js">查看源码</a> · <a href="works/night-pond/README.md">操作说明</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/plasma-globe/"><img src="works/plasma-globe/poster.webp" alt="等离子球的实际运行画面" width="100%"><br><strong>等离子球</strong></a><br><sub>手指聚拢电弧，切换电光颜色</sub><br><a href="works/plasma-globe/source.js">查看源码</a> · <a href="works/plasma-globe/README.md">操作说明</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/chladni-plate/"><img src="works/chladni-plate/poster.webp" alt="克拉尼板的实际运行画面" width="100%"><br><strong>克拉尼板</strong></a><br><sub>振动频率改变粒子形成的结线图案</sub><br><a href="works/chladni-plate/source.js">查看源码</a> · <a href="works/chladni-plate/README.md">操作说明</a></td>
 </tr>
 <tr>
-<td width="33%" valign="top"><a href="works/ferrofluid/README.md"><img src="works/ferrofluid/poster.webp" alt="磁流体的实际运行画面" width="100%"><br><strong>磁流体</strong></a><br><sub>移动磁场，控制黑色液体的尖峰与反光</sub><br><a href="works/ferrofluid/source.js">查看源码</a></td>
-<td width="33%" valign="top"><a href="works/cracking-ice/README.md"><img src="works/cracking-ice/poster.webp" alt="冰裂的实际运行画面" width="100%"><br><strong>冰裂</strong></a><br><sub>按压裂冰，观察应力线与碎裂传播</sub><br><a href="works/cracking-ice/source.js">查看源码</a></td>
-<td width="33%" valign="top"><a href="works/frost-window/README.md"><img src="works/frost-window/poster.webp" alt="霜窗的实际运行画面" width="100%"><br><strong>霜窗</strong></a><br><sub>擦除霜花，观察玻璃水珠与霜的再生</sub><br><a href="works/frost-window/source.js">查看源码</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/ferrofluid/"><img src="works/ferrofluid/poster.webp" alt="磁流体的实际运行画面" width="100%"><br><strong>磁流体</strong></a><br><sub>移动磁场，控制黑色液体的尖峰与反光</sub><br><a href="works/ferrofluid/source.js">查看源码</a> · <a href="works/ferrofluid/README.md">操作说明</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/cracking-ice/"><img src="works/cracking-ice/poster.webp" alt="冰裂的实际运行画面" width="100%"><br><strong>冰裂</strong></a><br><sub>按压裂冰，观察应力线与碎裂传播</sub><br><a href="works/cracking-ice/source.js">查看源码</a> · <a href="works/cracking-ice/README.md">操作说明</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/frost-window/"><img src="works/frost-window/poster.webp" alt="霜窗的实际运行画面" width="100%"><br><strong>霜窗</strong></a><br><sub>擦除霜花，观察玻璃水珠与霜的再生</sub><br><a href="works/frost-window/source.js">查看源码</a> · <a href="works/frost-window/README.md">操作说明</a></td>
 </tr>
 <tr>
-<td width="33%" valign="top"><a href="works/zen-garden/README.md"><img src="works/zen-garden/poster.webp" alt="枯山水的实际运行画面" width="100%"><br><strong>枯山水</strong></a><br><sub>拖动耙砂，保留高度场与光影的变化</sub><br><a href="works/zen-garden/source.js">查看源码</a></td>
-<td width="33%" valign="top"><a href="works/pottery/README.md"><img src="works/pottery/poster.webp" alt="拉坯的实际运行画面" width="100%"><br><strong>拉坯</strong></a><br><sub>拉坯塑形，观察轮廓、旋转与材质</sub><br><a href="works/pottery/source.js">查看源码</a></td>
-<td width="33%" valign="top"><a href="works/kintsugi/README.md"><img src="works/kintsugi/poster.webp" alt="金缮的实际运行画面" width="100%"><br><strong>金缮</strong></a><br><sub>碎片拼合、修补与金色接缝</sub><br><a href="works/kintsugi/source.js">查看源码</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/zen-garden/"><img src="works/zen-garden/poster.webp" alt="枯山水的实际运行画面" width="100%"><br><strong>枯山水</strong></a><br><sub>拖动耙砂，保留高度场与光影的变化</sub><br><a href="works/zen-garden/source.js">查看源码</a> · <a href="works/zen-garden/README.md">操作说明</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/pottery/"><img src="works/pottery/poster.webp" alt="拉坯的实际运行画面" width="100%"><br><strong>拉坯</strong></a><br><sub>拉坯塑形，观察轮廓、旋转与材质</sub><br><a href="works/pottery/source.js">查看源码</a> · <a href="works/pottery/README.md">操作说明</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/kintsugi/"><img src="works/kintsugi/poster.webp" alt="金缮的实际运行画面" width="100%"><br><strong>金缮</strong></a><br><sub>碎片拼合、修补与金色接缝</sub><br><a href="works/kintsugi/source.js">查看源码</a> · <a href="works/kintsugi/README.md">操作说明</a></td>
 </tr>
 <tr>
-<td width="33%" valign="top"><a href="works/light-painting/README.md"><img src="works/light-painting/poster.webp" alt="光绘的实际运行画面" width="100%"><br><strong>光绘</strong></a><br><sub>光轨累积、空间旋涡与加色光晕</sub><br><a href="works/light-painting/source.js">查看源码</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/light-painting/"><img src="works/light-painting/poster.webp" alt="光绘的实际运行画面" width="100%"><br><strong>光绘</strong></a><br><sub>光轨累积、空间旋涡与加色光晕</sub><br><a href="works/light-painting/source.js">查看源码</a> · <a href="works/light-painting/README.md">操作说明</a></td>
 <td width="33%"></td>
 <td width="33%"></td>
 </tr>
@@ -100,17 +103,17 @@ python -m http.server 8080 --bind 127.0.0.1
 
 <table>
 <tr>
-<td width="33%" valign="top"><a href="works/sardine-storm/README.md"><img src="works/sardine-storm/poster.webp" alt="沙丁鱼风暴的实际运行画面" width="100%"><br><strong>沙丁鱼风暴</strong></a><br><sub>鱼群受海豚扰动聚合，观察整体运动</sub><br><a href="works/sardine-storm/source.js">查看源码</a></td>
-<td width="33%" valign="top"><a href="works/jellyfish/README.md"><img src="works/jellyfish/poster.webp" alt="水母的实际运行画面" width="100%"><br><strong>水母</strong></a><br><sub>半透明水母、柔软触须与触碰后的发光</sub><br><a href="works/jellyfish/source.js">查看源码</a></td>
-<td width="33%" valign="top"><a href="works/saturn-rings/README.md"><img src="works/saturn-rings/poster.webp" alt="土星环的实际运行画面" width="100%"><br><strong>土星环</strong></a><br><sub>投放卫星，观察近轨道碎裂与成环</sub><br><a href="works/saturn-rings/source.js">查看源码</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/sardine-storm/"><img src="works/sardine-storm/poster.webp" alt="沙丁鱼风暴的实际运行画面" width="100%"><br><strong>沙丁鱼风暴</strong></a><br><sub>鱼群受海豚扰动聚合，观察整体运动</sub><br><a href="works/sardine-storm/source.js">查看源码</a> · <a href="works/sardine-storm/README.md">操作说明</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/jellyfish/"><img src="works/jellyfish/poster.webp" alt="水母的实际运行画面" width="100%"><br><strong>水母</strong></a><br><sub>半透明水母、柔软触须与触碰后的发光</sub><br><a href="works/jellyfish/source.js">查看源码</a> · <a href="works/jellyfish/README.md">操作说明</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/saturn-rings/"><img src="works/saturn-rings/poster.webp" alt="土星环的实际运行画面" width="100%"><br><strong>土星环</strong></a><br><sub>投放卫星，观察近轨道碎裂与成环</sub><br><a href="works/saturn-rings/source.js">查看源码</a> · <a href="works/saturn-rings/README.md">操作说明</a></td>
 </tr>
 <tr>
-<td width="33%" valign="top"><a href="works/galaxy-collision/README.md"><img src="works/galaxy-collision/poster.webp" alt="星系相撞的实际运行画面" width="100%"><br><strong>星系相撞</strong></a><br><sub>双星系接近，恒星轨迹拉成长尾</sub><br><a href="works/galaxy-collision/source.js">查看源码</a></td>
-<td width="33%" valign="top"><a href="works/black-hole/README.md"><img src="works/black-hole/poster.webp" alt="黑洞的实际运行画面" width="100%"><br><strong>黑洞</strong></a><br><sub>吸积盘与透镜视觉，参数化生成宇宙场景</sub><br><a href="works/black-hole/source.js">查看源码</a></td>
-<td width="33%" valign="top"><a href="works/solar-limb/README.md"><img src="works/solar-limb/poster.webp" alt="太阳边缘的实际运行画面" width="100%"><br><strong>太阳边缘</strong></a><br><sub>日珥、太阳颗粒和地球比例尺</sub><br><a href="works/solar-limb/source.js">查看源码</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/galaxy-collision/"><img src="works/galaxy-collision/poster.webp" alt="星系相撞的实际运行画面" width="100%"><br><strong>星系相撞</strong></a><br><sub>双星系接近，恒星轨迹拉成长尾</sub><br><a href="works/galaxy-collision/source.js">查看源码</a> · <a href="works/galaxy-collision/README.md">操作说明</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/black-hole/"><img src="works/black-hole/poster.webp" alt="黑洞的实际运行画面" width="100%"><br><strong>黑洞</strong></a><br><sub>吸积盘与透镜视觉，参数化生成宇宙场景</sub><br><a href="works/black-hole/source.js">查看源码</a> · <a href="works/black-hole/README.md">操作说明</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/solar-limb/"><img src="works/solar-limb/poster.webp" alt="太阳边缘的实际运行画面" width="100%"><br><strong>太阳边缘</strong></a><br><sub>日珥、太阳颗粒和地球比例尺</sub><br><a href="works/solar-limb/source.js">查看源码</a> · <a href="works/solar-limb/README.md">操作说明</a></td>
 </tr>
 <tr>
-<td width="33%" valign="top"><a href="works/aurora/README.md"><img src="works/aurora/poster.webp" alt="极光的实际运行画面" width="100%"><br><strong>极光</strong></a><br><sub>极光带、雪山、木屋与水面倒影</sub><br><a href="works/aurora/source.js">查看源码</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/aurora/"><img src="works/aurora/poster.webp" alt="极光的实际运行画面" width="100%"><br><strong>极光</strong></a><br><sub>极光带、雪山、木屋与水面倒影</sub><br><a href="works/aurora/source.js">查看源码</a> · <a href="works/aurora/README.md">操作说明</a></td>
 <td width="33%"></td>
 <td width="33%"></td>
 </tr>
@@ -120,12 +123,12 @@ python -m http.server 8080 --bind 127.0.0.1
 
 <table>
 <tr>
-<td width="33%" valign="top"><a href="works/endless-window/README.md"><img src="works/endless-window/poster.webp" alt="无尽之窗的实际运行画面" width="100%"><br><strong>无尽之窗</strong></a><br><sub>六层嵌套首尾相连，连续推进回到起点</sub><br><a href="works/endless-window/source.js">查看源码</a></td>
-<td width="33%" valign="top"><a href="works/penrose-tower/README.md"><img src="works/penrose-tower/poster.webp" alt="永登之塔的实际运行画面" width="100%"><br><strong>永登之塔</strong></a><br><sub>转动视角，揭示看似无限上升的楼梯</sub><br><a href="works/penrose-tower/source.js">查看源码</a></td>
-<td width="33%" valign="top"><a href="works/living-jigsaw/README.md"><img src="works/living-jigsaw/poster.webp" alt="活拼图的实际运行画面" width="100%"><br><strong>活拼图</strong></a><br><sub>从多块拼装到画面活过来，路通后车辆前进</sub><br><a href="works/living-jigsaw/source.js">查看源码</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/endless-window/"><img src="works/endless-window/poster.webp" alt="无尽之窗的实际运行画面" width="100%"><br><strong>无尽之窗</strong></a><br><sub>六层嵌套首尾相连，连续推进回到起点</sub><br><a href="works/endless-window/source.js">查看源码</a> · <a href="works/endless-window/README.md">操作说明</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/penrose-tower/"><img src="works/penrose-tower/poster.webp" alt="永登之塔的实际运行画面" width="100%"><br><strong>永登之塔</strong></a><br><sub>转动视角，揭示看似无限上升的楼梯</sub><br><a href="works/penrose-tower/source.js">查看源码</a> · <a href="works/penrose-tower/README.md">操作说明</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/living-jigsaw/"><img src="works/living-jigsaw/poster.webp" alt="活拼图的实际运行画面" width="100%"><br><strong>活拼图</strong></a><br><sub>从多块拼装到画面活过来，路通后车辆前进</sub><br><a href="works/living-jigsaw/source.js">查看源码</a> · <a href="works/living-jigsaw/README.md">操作说明</a></td>
 </tr>
 <tr>
-<td width="33%" valign="top"><a href="works/ocean-in-a-tank/README.md"><img src="works/ocean-in-a-tank/poster.webp" alt="鱼缸里的海的实际运行画面" width="100%"><br><strong>鱼缸里的海</strong></a><br><sub>普通鱼缸逐渐展现深海尺度</sub><br><a href="works/ocean-in-a-tank/source.js">查看源码</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/ocean-in-a-tank/"><img src="works/ocean-in-a-tank/poster.webp" alt="鱼缸里的海的实际运行画面" width="100%"><br><strong>鱼缸里的海</strong></a><br><sub>普通鱼缸逐渐展现深海尺度</sub><br><a href="works/ocean-in-a-tank/source.js">查看源码</a> · <a href="works/ocean-in-a-tank/README.md">操作说明</a></td>
 <td width="33%"></td>
 <td width="33%"></td>
 </tr>
@@ -135,8 +138,8 @@ python -m http.server 8080 --bind 127.0.0.1
 
 <table>
 <tr>
-<td width="33%" valign="top"><a href="works/crown-knight/README.md"><img src="works/crown-knight/poster.webp" alt="断冠骑士的实际运行画面" width="100%"><br><strong>断冠骑士</strong></a><br><sub>多机位首领战，翻滚、硬直、处决与布料</sub><br><a href="works/crown-knight/source.js">查看源码</a></td>
-<td width="33%" valign="top"><a href="works/sunset-loop/README.md"><img src="works/sunset-loop/poster.webp" alt="落日环线的实际运行画面" width="100%"><br><strong>落日环线</strong></a><br><sub>追尾视角、道路透视与落日光照</sub><br><a href="works/sunset-loop/source.js">查看源码</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/crown-knight/"><img src="works/crown-knight/poster.webp" alt="断冠骑士的实际运行画面" width="100%"><br><strong>断冠骑士</strong></a><br><sub>多机位首领战，翻滚、硬直、处决与布料</sub><br><a href="works/crown-knight/source.js">查看源码</a> · <a href="works/crown-knight/README.md">操作说明</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/sunset-loop/"><img src="works/sunset-loop/poster.webp" alt="落日环线的实际运行画面" width="100%"><br><strong>落日环线</strong></a><br><sub>追尾视角、道路透视与落日光照</sub><br><a href="works/sunset-loop/source.js">查看源码</a> · <a href="works/sunset-loop/README.md">操作说明</a></td>
 <td width="33%"></td>
 </tr>
 </table>
@@ -145,9 +148,9 @@ python -m http.server 8080 --bind 127.0.0.1
 
 <table>
 <tr>
-<td width="33%" valign="top"><a href="works/thousand-li/README.md"><img src="works/thousand-li/poster.webp" alt="千里江山的实际运行画面" width="100%"><br><strong>千里江山</strong></a><br><sub>青绿山水长卷、舟桥与云雾的层次</sub><br><a href="works/thousand-li/source.js">查看源码</a></td>
-<td width="33%" valign="top"><a href="works/rainbow-bridge/README.md"><img src="works/rainbow-bridge/poster.webp" alt="清明上河图·虹桥的实际运行画面" width="100%"><br><strong>清明上河图·虹桥</strong></a><br><sub>虹桥、行人、船只组成可运行的微型长卷</sub><br><a href="works/rainbow-bridge/source.js">查看源码</a></td>
-<td width="33%" valign="top"><a href="works/rose-window/README.md"><img src="works/rose-window/poster.webp" alt="哥特玫瑰窗的实际运行画面" width="100%"><br><strong>哥特玫瑰窗</strong></a><br><sub>彩色玻璃和地面的投影随光变化</sub><br><a href="works/rose-window/source.js">查看源码</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/thousand-li/"><img src="works/thousand-li/poster.webp" alt="千里江山的实际运行画面" width="100%"><br><strong>千里江山</strong></a><br><sub>青绿山水长卷、舟桥与云雾的层次</sub><br><a href="works/thousand-li/source.js">查看源码</a> · <a href="works/thousand-li/README.md">操作说明</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/rainbow-bridge/"><img src="works/rainbow-bridge/poster.webp" alt="清明上河图·虹桥的实际运行画面" width="100%"><br><strong>清明上河图·虹桥</strong></a><br><sub>虹桥、行人、船只组成可运行的微型长卷</sub><br><a href="works/rainbow-bridge/source.js">查看源码</a> · <a href="works/rainbow-bridge/README.md">操作说明</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/rose-window/"><img src="works/rose-window/poster.webp" alt="哥特玫瑰窗的实际运行画面" width="100%"><br><strong>哥特玫瑰窗</strong></a><br><sub>彩色玻璃和地面的投影随光变化</sub><br><a href="works/rose-window/source.js">查看源码</a> · <a href="works/rose-window/README.md">操作说明</a></td>
 </tr>
 </table>
 

@@ -2,6 +2,8 @@
 
 # 断冠骑士
 
+[▶ 在线体验](https://ma1902056219-coder.github.io/openpixel/works/crown-knight/) · [源码文件](source.js)
+
 多机位首领战，翻滚、硬直、处决与布料。
 
 ## 打开和操作

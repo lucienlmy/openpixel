@@ -2,6 +2,8 @@
 
 # 冰裂
 
+[▶ 在线体验](https://ma1902056219-coder.github.io/openpixel/works/cracking-ice/) · [源码文件](source.js)
+
 按压裂冰，观察应力线与碎裂传播。
 
 ## 打开和操作

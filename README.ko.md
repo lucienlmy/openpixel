@@ -14,6 +14,9 @@
 
 [작품 모음 다운로드](https://github.com/ma1902056219-coder/openpixel/archive/refs/heads/main.zip) · [작품 목록](#gallery) · [로컬에서 실행하기](#start) · [수정 가이드](docs/guide.ko.md)
 
+
+**[▶ 모든 작품 온라인 체험](https://ma1902056219-coder.github.io/openpixel/)**
+
 </div>
 
 ## 두 번째 공개 · 직접 바꿔 볼 다섯 실험
@@ -22,13 +25,13 @@
 
 <table>
 <tr>
-<td width="33%" valign="top"><a href="docs/works.ko.md#iron-flower"><img src="works/iron-flower/poster.webp" alt="쇳물 꽃불" width="100%"><br><strong>쇳물 꽃불</strong></a><br><sub>쇳물을 쳐 올려 마을을 비추는 금빛 불꽃을 만듭니다.</sub><br><a href="works/iron-flower/source.js">소스 보기</a></td>
-<td width="33%" valign="top"><a href="docs/works.ko.md#watercolor"><img src="works/watercolor/poster.webp" alt="수채화 번짐" width="100%"><br><strong>수채화 번짐</strong></a><br><sub>젖은 종이에서 물감이 퍼지고 섞이는 모습을 그립니다.</sub><br><a href="works/watercolor/source.js">소스 보기</a></td>
-<td width="33%" valign="top"><a href="docs/works.ko.md#coral-reef"><img src="works/coral-reef/poster.webp" alt="산호초" width="100%"><br><strong>산호초</strong></a><br><sub>산호를 건드리거나 물살을 만들면 작은 바닷속 세계가 반응합니다.</sub><br><a href="works/coral-reef/source.js">소스 보기</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/iron-flower/"><img src="works/iron-flower/poster.webp" alt="쇳물 꽃불" width="100%"><br><strong>쇳물 꽃불</strong></a><br><sub>쇳물을 쳐 올려 마을을 비추는 금빛 불꽃을 만듭니다.</sub><br><a href="works/iron-flower/source.js">소스 보기</a> · <a href="docs/works.ko.md#iron-flower">조작 안내</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/watercolor/"><img src="works/watercolor/poster.webp" alt="수채화 번짐" width="100%"><br><strong>수채화 번짐</strong></a><br><sub>젖은 종이에서 물감이 퍼지고 섞이는 모습을 그립니다.</sub><br><a href="works/watercolor/source.js">소스 보기</a> · <a href="docs/works.ko.md#watercolor">조작 안내</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/coral-reef/"><img src="works/coral-reef/poster.webp" alt="산호초" width="100%"><br><strong>산호초</strong></a><br><sub>산호를 건드리거나 물살을 만들면 작은 바닷속 세계가 반응합니다.</sub><br><a href="works/coral-reef/source.js">소스 보기</a> · <a href="docs/works.ko.md#coral-reef">조작 안내</a></td>
 </tr>
 <tr>
-<td width="33%" valign="top"><a href="docs/works.ko.md#dandelion"><img src="works/dandelion/poster.webp" alt="민들레" width="100%"><br><strong>민들레</strong></a><br><sub>씨앗을 날리고 땅에 떨어진 씨앗이 새로 자라는 모습을 봅니다.</sub><br><a href="works/dandelion/source.js">소스 보기</a></td>
-<td width="33%" valign="top"><a href="docs/works.ko.md#kaleidoscope"><img src="works/kaleidoscope/poster.webp" alt="만화경" width="100%"><br><strong>만화경</strong></a><br><sub>통을 돌릴 때마다 색 조각이 새로운 대칭 무늬를 만듭니다.</sub><br><a href="works/kaleidoscope/source.js">소스 보기</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/dandelion/"><img src="works/dandelion/poster.webp" alt="민들레" width="100%"><br><strong>민들레</strong></a><br><sub>씨앗을 날리고 땅에 떨어진 씨앗이 새로 자라는 모습을 봅니다.</sub><br><a href="works/dandelion/source.js">소스 보기</a> · <a href="docs/works.ko.md#dandelion">조작 안내</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/kaleidoscope/"><img src="works/kaleidoscope/poster.webp" alt="만화경" width="100%"><br><strong>만화경</strong></a><br><sub>통을 돌릴 때마다 색 조각이 새로운 대칭 무늬를 만듭니다.</sub><br><a href="works/kaleidoscope/source.js">소스 보기</a> · <a href="docs/works.ko.md#kaleidoscope">조작 안내</a></td>
 <td width="33%"></td>
 </tr>
 </table>
@@ -71,28 +74,28 @@ README, 수정 가이드, 작품 조작 안내는 네 가지 언어로 제공됩
 
 ## 작품 목록
 
-카드를 클릭하면 한국어 조작 안내와 소스 링크가 열립니다. 31개 작품 모두 수정 가능한 `source.js`가 있습니다. 작품을 실행하려면 모음을 다운로드하세요.
+카드를 클릭하면 브라우저에서 바로 체험할 수 있습니다. 조작 안내와 소스도 제공하며, 다운로드해 오프라인으로 실행할 수도 있습니다.
 
 ### 상호작용과 질감
 
 <table>
 <tr>
-<td width="33%" valign="top"><a href="docs/works.ko.md#night-pond"><img src="works/night-pond/poster.webp" alt="밤의 연못" width="100%"><br><strong>밤의 연못</strong></a><br><sub>물결로 반사상을 흔들고 비단잉어에게 먹이를 주세요.</sub><br><a href="works/night-pond/source.js">소스 보기</a></td>
-<td width="33%" valign="top"><a href="docs/works.ko.md#plasma-globe"><img src="works/plasma-globe/poster.webp" alt="플라즈마 볼" width="100%"><br><strong>플라즈마 볼</strong></a><br><sub>전기 아크를 손끝으로 모아 움직여 보세요.</sub><br><a href="works/plasma-globe/source.js">소스 보기</a></td>
-<td width="33%" valign="top"><a href="docs/works.ko.md#chladni-plate"><img src="works/chladni-plate/poster.webp" alt="클라드니 판" width="100%"><br><strong>클라드니 판</strong></a><br><sub>진동에 따라 모래가 다양한 무늬로 모입니다.</sub><br><a href="works/chladni-plate/source.js">소스 보기</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/night-pond/"><img src="works/night-pond/poster.webp" alt="밤의 연못" width="100%"><br><strong>밤의 연못</strong></a><br><sub>물결로 반사상을 흔들고 비단잉어에게 먹이를 주세요.</sub><br><a href="works/night-pond/source.js">소스 보기</a> · <a href="docs/works.ko.md#night-pond">조작 안내</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/plasma-globe/"><img src="works/plasma-globe/poster.webp" alt="플라즈마 볼" width="100%"><br><strong>플라즈마 볼</strong></a><br><sub>전기 아크를 손끝으로 모아 움직여 보세요.</sub><br><a href="works/plasma-globe/source.js">소스 보기</a> · <a href="docs/works.ko.md#plasma-globe">조작 안내</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/chladni-plate/"><img src="works/chladni-plate/poster.webp" alt="클라드니 판" width="100%"><br><strong>클라드니 판</strong></a><br><sub>진동에 따라 모래가 다양한 무늬로 모입니다.</sub><br><a href="works/chladni-plate/source.js">소스 보기</a> · <a href="docs/works.ko.md#chladni-plate">조작 안내</a></td>
 </tr>
 <tr>
-<td width="33%" valign="top"><a href="docs/works.ko.md#ferrofluid"><img src="works/ferrofluid/poster.webp" alt="자성유체" width="100%"><br><strong>자성유체</strong></a><br><sub>자기장을 움직여 액체의 뾰족한 형태와 반사를 바꿉니다.</sub><br><a href="works/ferrofluid/source.js">소스 보기</a></td>
-<td width="33%" valign="top"><a href="docs/works.ko.md#cracking-ice"><img src="works/cracking-ice/poster.webp" alt="갈라지는 얼음" width="100%"><br><strong>갈라지는 얼음</strong></a><br><sub>힘을 가하면 얼어붙은 표면에 균열이 퍼집니다.</sub><br><a href="works/cracking-ice/source.js">소스 보기</a></td>
-<td width="33%" valign="top"><a href="docs/works.ko.md#frost-window"><img src="works/frost-window/poster.webp" alt="성에 낀 창" width="100%"><br><strong>성에 낀 창</strong></a><br><sub>성에를 닦아 내고 다시 자라는 모습을 관찰하세요.</sub><br><a href="works/frost-window/source.js">소스 보기</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/ferrofluid/"><img src="works/ferrofluid/poster.webp" alt="자성유체" width="100%"><br><strong>자성유체</strong></a><br><sub>자기장을 움직여 액체의 뾰족한 형태와 반사를 바꿉니다.</sub><br><a href="works/ferrofluid/source.js">소스 보기</a> · <a href="docs/works.ko.md#ferrofluid">조작 안내</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/cracking-ice/"><img src="works/cracking-ice/poster.webp" alt="갈라지는 얼음" width="100%"><br><strong>갈라지는 얼음</strong></a><br><sub>힘을 가하면 얼어붙은 표면에 균열이 퍼집니다.</sub><br><a href="works/cracking-ice/source.js">소스 보기</a> · <a href="docs/works.ko.md#cracking-ice">조작 안내</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/frost-window/"><img src="works/frost-window/poster.webp" alt="성에 낀 창" width="100%"><br><strong>성에 낀 창</strong></a><br><sub>성에를 닦아 내고 다시 자라는 모습을 관찰하세요.</sub><br><a href="works/frost-window/source.js">소스 보기</a> · <a href="docs/works.ko.md#frost-window">조작 안내</a></td>
 </tr>
 <tr>
-<td width="33%" valign="top"><a href="docs/works.ko.md#zen-garden"><img src="works/zen-garden/poster.webp" alt="젠 가든" width="100%"><br><strong>젠 가든</strong></a><br><sub>모래에 무늬를 남기고 시간대와 날씨를 바꿉니다.</sub><br><a href="works/zen-garden/source.js">소스 보기</a></td>
-<td width="33%" valign="top"><a href="docs/works.ko.md#pottery"><img src="works/pottery/poster.webp" alt="물레 빚기" width="100%"><br><strong>물레 빚기</strong></a><br><sub>돌아가는 물레 위에서 흙의 형태를 만듭니다.</sub><br><a href="works/pottery/source.js">소스 보기</a></td>
-<td width="33%" valign="top"><a href="docs/works.ko.md#kintsugi"><img src="works/kintsugi/poster.webp" alt="긴츠기" width="100%"><br><strong>긴츠기</strong></a><br><sub>깨진 도자기를 맞추고 옻칠, 금가루, 연마를 진행합니다.</sub><br><a href="works/kintsugi/source.js">소스 보기</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/zen-garden/"><img src="works/zen-garden/poster.webp" alt="젠 가든" width="100%"><br><strong>젠 가든</strong></a><br><sub>모래에 무늬를 남기고 시간대와 날씨를 바꿉니다.</sub><br><a href="works/zen-garden/source.js">소스 보기</a> · <a href="docs/works.ko.md#zen-garden">조작 안내</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/pottery/"><img src="works/pottery/poster.webp" alt="물레 빚기" width="100%"><br><strong>물레 빚기</strong></a><br><sub>돌아가는 물레 위에서 흙의 형태를 만듭니다.</sub><br><a href="works/pottery/source.js">소스 보기</a> · <a href="docs/works.ko.md#pottery">조작 안내</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/kintsugi/"><img src="works/kintsugi/poster.webp" alt="긴츠기" width="100%"><br><strong>긴츠기</strong></a><br><sub>깨진 도자기를 맞추고 옻칠, 금가루, 연마를 진행합니다.</sub><br><a href="works/kintsugi/source.js">소스 보기</a> · <a href="docs/works.ko.md#kintsugi">조작 안내</a></td>
 </tr>
 <tr>
-<td width="33%" valign="top"><a href="docs/works.ko.md#light-painting"><img src="works/light-painting/poster.webp" alt="라이트 페인팅" width="100%"><br><strong>라이트 페인팅</strong></a><br><sub>빛의 궤적을 겹쳐 소용돌이와 빛의 층을 만듭니다.</sub><br><a href="works/light-painting/source.js">소스 보기</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/light-painting/"><img src="works/light-painting/poster.webp" alt="라이트 페인팅" width="100%"><br><strong>라이트 페인팅</strong></a><br><sub>빛의 궤적을 겹쳐 소용돌이와 빛의 층을 만듭니다.</sub><br><a href="works/light-painting/source.js">소스 보기</a> · <a href="docs/works.ko.md#light-painting">조작 안내</a></td>
 <td width="33%"></td>
 <td width="33%"></td>
 </tr>
@@ -102,17 +105,17 @@ README, 수정 가이드, 작품 조작 안내는 네 가지 언어로 제공됩
 
 <table>
 <tr>
-<td width="33%" valign="top"><a href="docs/works.ko.md#sardine-storm"><img src="works/sardine-storm/poster.webp" alt="정어리 폭풍" width="100%"><br><strong>정어리 폭풍</strong></a><br><sub>소용돌이치는 물고기 떼 사이로 돌고래를 움직여 보세요.</sub><br><a href="works/sardine-storm/source.js">소스 보기</a></td>
-<td width="33%" valign="top"><a href="docs/works.ko.md#jellyfish"><img src="works/jellyfish/poster.webp" alt="해파리" width="100%"><br><strong>해파리</strong></a><br><sub>반투명한 몸과 부드러운 촉수, 연달아 퍼지는 빛.</sub><br><a href="works/jellyfish/source.js">소스 보기</a></td>
-<td width="33%" valign="top"><a href="docs/works.ko.md#saturn-rings"><img src="works/saturn-rings/poster.webp" alt="토성의 고리" width="100%"><br><strong>토성의 고리</strong></a><br><sub>위성을 던져 넣고 부서져 고리가 되는 모습을 관찰하세요.</sub><br><a href="works/saturn-rings/source.js">소스 보기</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/sardine-storm/"><img src="works/sardine-storm/poster.webp" alt="정어리 폭풍" width="100%"><br><strong>정어리 폭풍</strong></a><br><sub>소용돌이치는 물고기 떼 사이로 돌고래를 움직여 보세요.</sub><br><a href="works/sardine-storm/source.js">소스 보기</a> · <a href="docs/works.ko.md#sardine-storm">조작 안내</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/jellyfish/"><img src="works/jellyfish/poster.webp" alt="해파리" width="100%"><br><strong>해파리</strong></a><br><sub>반투명한 몸과 부드러운 촉수, 연달아 퍼지는 빛.</sub><br><a href="works/jellyfish/source.js">소스 보기</a> · <a href="docs/works.ko.md#jellyfish">조작 안내</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/saturn-rings/"><img src="works/saturn-rings/poster.webp" alt="토성의 고리" width="100%"><br><strong>토성의 고리</strong></a><br><sub>위성을 던져 넣고 부서져 고리가 되는 모습을 관찰하세요.</sub><br><a href="works/saturn-rings/source.js">소스 보기</a> · <a href="docs/works.ko.md#saturn-rings">조작 안내</a></td>
 </tr>
 <tr>
-<td width="33%" valign="top"><a href="docs/works.ko.md#galaxy-collision"><img src="works/galaxy-collision/poster.webp" alt="은하 충돌" width="100%"><br><strong>은하 충돌</strong></a><br><sub>두 은하가 만나며 별의 궤적이 긴 꼬리를 만듭니다.</sub><br><a href="works/galaxy-collision/source.js">소스 보기</a></td>
-<td width="33%" valign="top"><a href="docs/works.ko.md#black-hole"><img src="works/black-hole/poster.webp" alt="블랙홀" width="100%"><br><strong>블랙홀</strong></a><br><sub>강착 원반과 렌즈 효과, 움직이는 별빛.</sub><br><a href="works/black-hole/source.js">소스 보기</a></td>
-<td width="33%" valign="top"><a href="docs/works.ko.md#solar-limb"><img src="works/solar-limb/poster.webp" alt="태양의 가장자리" width="100%"><br><strong>태양의 가장자리</strong></a><br><sub>홍염, 태양의 쌀알무늬, 크기 비교용 지구.</sub><br><a href="works/solar-limb/source.js">소스 보기</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/galaxy-collision/"><img src="works/galaxy-collision/poster.webp" alt="은하 충돌" width="100%"><br><strong>은하 충돌</strong></a><br><sub>두 은하가 만나며 별의 궤적이 긴 꼬리를 만듭니다.</sub><br><a href="works/galaxy-collision/source.js">소스 보기</a> · <a href="docs/works.ko.md#galaxy-collision">조작 안내</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/black-hole/"><img src="works/black-hole/poster.webp" alt="블랙홀" width="100%"><br><strong>블랙홀</strong></a><br><sub>강착 원반과 렌즈 효과, 움직이는 별빛.</sub><br><a href="works/black-hole/source.js">소스 보기</a> · <a href="docs/works.ko.md#black-hole">조작 안내</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/solar-limb/"><img src="works/solar-limb/poster.webp" alt="태양의 가장자리" width="100%"><br><strong>태양의 가장자리</strong></a><br><sub>홍염, 태양의 쌀알무늬, 크기 비교용 지구.</sub><br><a href="works/solar-limb/source.js">소스 보기</a> · <a href="docs/works.ko.md#solar-limb">조작 안내</a></td>
 </tr>
 <tr>
-<td width="33%" valign="top"><a href="docs/works.ko.md#aurora"><img src="works/aurora/poster.webp" alt="오로라" width="100%"><br><strong>오로라</strong></a><br><sub>설산과 오두막, 수면 위로 흔들리는 빛의 커튼.</sub><br><a href="works/aurora/source.js">소스 보기</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/aurora/"><img src="works/aurora/poster.webp" alt="오로라" width="100%"><br><strong>오로라</strong></a><br><sub>설산과 오두막, 수면 위로 흔들리는 빛의 커튼.</sub><br><a href="works/aurora/source.js">소스 보기</a> · <a href="docs/works.ko.md#aurora">조작 안내</a></td>
 <td width="33%"></td>
 <td width="33%"></td>
 </tr>
@@ -122,12 +125,12 @@ README, 수정 가이드, 작품 조작 안내는 네 가지 언어로 제공됩
 
 <table>
 <tr>
-<td width="33%" valign="top"><a href="docs/works.ko.md#endless-window"><img src="works/endless-window/poster.webp" alt="끝없는 창" width="100%"><br><strong>끝없는 창</strong></a><br><sub>여섯 겹의 세계가 이어져 처음 풍경으로 돌아옵니다.</sub><br><a href="works/endless-window/source.js">소스 보기</a></td>
-<td width="33%" valign="top"><a href="docs/works.ko.md#penrose-tower"><img src="works/penrose-tower/poster.webp" alt="끝없이 오르는 탑" width="100%"><br><strong>끝없이 오르는 탑</strong></a><br><sub>시점을 돌려 불가능한 계단의 구조를 확인하세요.</sub><br><a href="works/penrose-tower/source.js">소스 보기</a></td>
-<td width="33%" valign="top"><a href="docs/works.ko.md#living-jigsaw"><img src="works/living-jigsaw/poster.webp" alt="살아 움직이는 퍼즐" width="100%"><br><strong>살아 움직이는 퍼즐</strong></a><br><sub>맞춰진 조각이 움직이고 마지막 조각이 놓이면 버스가 출발합니다.</sub><br><a href="works/living-jigsaw/source.js">소스 보기</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/endless-window/"><img src="works/endless-window/poster.webp" alt="끝없는 창" width="100%"><br><strong>끝없는 창</strong></a><br><sub>여섯 겹의 세계가 이어져 처음 풍경으로 돌아옵니다.</sub><br><a href="works/endless-window/source.js">소스 보기</a> · <a href="docs/works.ko.md#endless-window">조작 안내</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/penrose-tower/"><img src="works/penrose-tower/poster.webp" alt="끝없이 오르는 탑" width="100%"><br><strong>끝없이 오르는 탑</strong></a><br><sub>시점을 돌려 불가능한 계단의 구조를 확인하세요.</sub><br><a href="works/penrose-tower/source.js">소스 보기</a> · <a href="docs/works.ko.md#penrose-tower">조작 안내</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/living-jigsaw/"><img src="works/living-jigsaw/poster.webp" alt="살아 움직이는 퍼즐" width="100%"><br><strong>살아 움직이는 퍼즐</strong></a><br><sub>맞춰진 조각이 움직이고 마지막 조각이 놓이면 버스가 출발합니다.</sub><br><a href="works/living-jigsaw/source.js">소스 보기</a> · <a href="docs/works.ko.md#living-jigsaw">조작 안내</a></td>
 </tr>
 <tr>
-<td width="33%" valign="top"><a href="docs/works.ko.md#ocean-in-a-tank"><img src="works/ocean-in-a-tank/poster.webp" alt="어항 속 바다" width="100%"><br><strong>어항 속 바다</strong></a><br><sub>책상 위 작은 어항 속에 훨씬 넓은 바다가 숨어 있습니다.</sub><br><a href="works/ocean-in-a-tank/source.js">소스 보기</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/ocean-in-a-tank/"><img src="works/ocean-in-a-tank/poster.webp" alt="어항 속 바다" width="100%"><br><strong>어항 속 바다</strong></a><br><sub>책상 위 작은 어항 속에 훨씬 넓은 바다가 숨어 있습니다.</sub><br><a href="works/ocean-in-a-tank/source.js">소스 보기</a> · <a href="docs/works.ko.md#ocean-in-a-tank">조작 안내</a></td>
 <td width="33%"></td>
 <td width="33%"></td>
 </tr>
@@ -137,8 +140,8 @@ README, 수정 가이드, 작품 조작 안내는 네 가지 언어로 제공됩
 
 <table>
 <tr>
-<td width="33%" valign="top"><a href="docs/works.ko.md#crown-knight"><img src="works/crown-knight/poster.webp" alt="왕관을 잃은 기사" width="100%"><br><strong>왕관을 잃은 기사</strong></a><br><sub>회피, 경직, 카메라 전환이 있는 보스 전투.</sub><br><a href="works/crown-knight/source.js">소스 보기</a></td>
-<td width="33%" valign="top"><a href="docs/works.ko.md#sunset-loop"><img src="works/sunset-loop/poster.webp" alt="노을 순환도로" width="100%"><br><strong>노을 순환도로</strong></a><br><sub>차량 뒤에서 바라보며 노을을 향해 달립니다.</sub><br><a href="works/sunset-loop/source.js">소스 보기</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/crown-knight/"><img src="works/crown-knight/poster.webp" alt="왕관을 잃은 기사" width="100%"><br><strong>왕관을 잃은 기사</strong></a><br><sub>회피, 경직, 카메라 전환이 있는 보스 전투.</sub><br><a href="works/crown-knight/source.js">소스 보기</a> · <a href="docs/works.ko.md#crown-knight">조작 안내</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/sunset-loop/"><img src="works/sunset-loop/poster.webp" alt="노을 순환도로" width="100%"><br><strong>노을 순환도로</strong></a><br><sub>차량 뒤에서 바라보며 노을을 향해 달립니다.</sub><br><a href="works/sunset-loop/source.js">소스 보기</a> · <a href="docs/works.ko.md#sunset-loop">조작 안내</a></td>
 <td width="33%"></td>
 </tr>
 </table>
@@ -147,9 +150,9 @@ README, 수정 가이드, 작품 조작 안내는 네 가지 언어로 제공됩
 
 <table>
 <tr>
-<td width="33%" valign="top"><a href="docs/works.ko.md#thousand-li"><img src="works/thousand-li/poster.webp" alt="천리강산" width="100%"><br><strong>천리강산</strong></a><br><sub>청록 산수화가 움직이는 두루마리로 펼쳐집니다.</sub><br><a href="works/thousand-li/source.js">소스 보기</a></td>
-<td width="33%" valign="top"><a href="docs/works.ko.md#rainbow-bridge"><img src="works/rainbow-bridge/poster.webp" alt="청명상하도 · 무지개다리" width="100%"><br><strong>청명상하도 · 무지개다리</strong></a><br><sub>배, 노점, 행인이 오가는 작은 두루마리 풍경.</sub><br><a href="works/rainbow-bridge/source.js">소스 보기</a></td>
-<td width="33%" valign="top"><a href="docs/works.ko.md#rose-window"><img src="works/rose-window/poster.webp" alt="고딕 장미창" width="100%"><br><strong>고딕 장미창</strong></a><br><sub>스테인드글라스의 빛이 성당 바닥을 천천히 움직입니다.</sub><br><a href="works/rose-window/source.js">소스 보기</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/thousand-li/"><img src="works/thousand-li/poster.webp" alt="천리강산" width="100%"><br><strong>천리강산</strong></a><br><sub>청록 산수화가 움직이는 두루마리로 펼쳐집니다.</sub><br><a href="works/thousand-li/source.js">소스 보기</a> · <a href="docs/works.ko.md#thousand-li">조작 안내</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/rainbow-bridge/"><img src="works/rainbow-bridge/poster.webp" alt="청명상하도 · 무지개다리" width="100%"><br><strong>청명상하도 · 무지개다리</strong></a><br><sub>배, 노점, 행인이 오가는 작은 두루마리 풍경.</sub><br><a href="works/rainbow-bridge/source.js">소스 보기</a> · <a href="docs/works.ko.md#rainbow-bridge">조작 안내</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/rose-window/"><img src="works/rose-window/poster.webp" alt="고딕 장미창" width="100%"><br><strong>고딕 장미창</strong></a><br><sub>스테인드글라스의 빛이 성당 바닥을 천천히 움직입니다.</sub><br><a href="works/rose-window/source.js">소스 보기</a> · <a href="docs/works.ko.md#rose-window">조작 안내</a></td>
 </tr>
 </table>
 

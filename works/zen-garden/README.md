@@ -2,6 +2,8 @@
 
 # 枯山水
 
+[▶ 在线体验](https://ma1902056219-coder.github.io/openpixel/works/zen-garden/) · [源码文件](source.js)
+
 拖动耙砂，保留高度场与光影的变化。
 
 ## 打开和操作

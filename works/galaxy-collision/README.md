@@ -2,6 +2,8 @@
 
 # 星系相撞
 
+[▶ 在线体验](https://ma1902056219-coder.github.io/openpixel/works/galaxy-collision/) · [源码文件](source.js)
+
 双星系接近，恒星轨迹拉成长尾。
 
 ## 打开和操作

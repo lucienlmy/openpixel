@@ -2,6 +2,8 @@
 
 # 永登之塔
 
+[▶ 在线体验](https://ma1902056219-coder.github.io/openpixel/works/penrose-tower/) · [源码文件](source.js)
+
 转动视角，揭示看似无限上升的楼梯。
 
 ## 打开和操作
