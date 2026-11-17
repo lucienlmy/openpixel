@@ -2,7 +2,7 @@
 
 [中文](README.md) · [English](README.en.md) · [日本語](README.ja.md) · [한국어](README.ko.md)
 
-<img src="docs/assets/banner.en.png" alt="OpenPixel — Make these pixel worlds your own." width="100%">
+<a href="https://ma1902056219-coder.github.io/openpixel/"><img src="docs/assets/banner.en.gif" alt="OpenPixel — Make these pixel worlds your own." width="100%"></a>
 
 # OpenPixel
 
@@ -18,6 +18,19 @@
 **[▶ Try all artworks online](https://ma1902056219-coder.github.io/openpixel/)**
 
 </div>
+
+## See them in motion
+
+<div align="center">
+<img src="docs/assets/showcase.gif" alt="Actual runtime footage: ripples, schooling fish and colliding galaxies" width="850">
+</div>
+
+Captured from the running artworks. Try any of the 31 works online, or download the source to make it your own.
+
+- **Reach in:** feed koi, move a magnetic field, wipe frost and rake sand.
+- **Watch it evolve:** moons form rings, fish avoid a dolphin and stars draw long tails.
+- **Take over a scene:** a boss encounter, a sunset drive and a town that wakes up as a puzzle is assembled.
+- **Edit the source:** each artwork has its own folder, source and instructions. No build step or AI API is required.
 
 ## Batch 02 · Five more experiments to remix
 
@@ -35,20 +48,6 @@ From molten sparks to seeds: each folder runs independently, with editable code 
 <td width="33%"></td>
 </tr>
 </table>
-
-
-## See them in motion
-
-<div align="center">
-<img src="docs/assets/batch-02.gif" alt="Actual runtime footage of molten iron flowers, watercolor, coral, dandelions and a kaleidoscope" width="850">
-</div>
-
-Actual runtime footage from the five new experiments. The collection now contains 31 works, including all 26 from the first batch.
-
-- **Reach in:** feed koi, move a magnetic field, wipe frost and rake sand.
-- **Watch it evolve:** moons form rings, fish avoid a dolphin and stars draw long tails.
-- **Take over a scene:** a boss encounter, a sunset drive and a town that wakes up as a puzzle is assembled.
-- **Edit the source:** each artwork has its own folder, source and instructions. No build step or AI API is required.
 
 <a id="start"></a>
 
