@@ -8,7 +8,7 @@
 
 **픽셀 세계를 나만의 작품으로.**
 
-연못의 물결부터 은하 충돌까지, 브라우저에서 실시간으로 그리는 31개의 픽셀 실험입니다.
+연못의 물결부터 은하 충돌까지, 브라우저에서 실시간으로 그리는 36개의 픽셀 실험입니다.
 
 <img src="docs/assets/badge-works.ko.svg" alt="작품"> <img src="docs/assets/badge-runtime.ko.svg" alt="실행"> <img src="docs/assets/badge-license.ko.svg" alt="라이선스">
 
@@ -25,12 +25,29 @@
 <img src="docs/assets/showcase.gif" alt="실제 실행 화면: 물결, 물고기 떼, 은하 충돌" width="850">
 </div>
 
-실제로 실행한 작품 화면입니다. 31개 작품을 온라인으로 체험하거나 소스를 다운로드해 나만의 작품으로 바꿔 보세요.
+실제로 실행한 작품 화면입니다. 36개 작품을 온라인으로 체험하거나 소스를 다운로드해 나만의 작품으로 바꿔 보세요.
 
 - **직접 만져보기:** 비단잉어에게 먹이를 주고, 자기장을 움직이고, 성에를 닦고, 모래에 무늬를 남겨 보세요.
 - **변화 관찰하기:** 위성은 고리가 되고, 물고기는 돌고래를 피하며, 별의 궤적은 긴 꼬리를 만듭니다.
 - **장면 속으로 들어가기:** 보스 전투, 노을 속 드라이브, 퍼즐을 맞추면 움직이는 마을.
 - **소스 수정하기:** 작품마다 독립 폴더, 소스 코드, 설명을 제공합니다. 빌드나 AI API가 필요하지 않습니다.
+
+## 세 번째 공개 · 픽셀 실험 5개
+
+색만 바꿔 폭포를 흐르게 하고 니트 무늬를 움직여 보세요. 나뭇그늘 속 일식, 빗방울 악기, 수묵 효과도 각각 실행하고 코드를 바꿀 수 있습니다.
+
+<table>
+<tr>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/palette-waterfall/"><img src="works/palette-waterfall/poster.webp" alt="색 순환 폭포" width="100%"><br><strong>색 순환 폭포</strong></a><br><sub>팔레트 색을 순환시켜 폭포를 흐르게 합니다.</sub><br><a href="works/palette-waterfall/source.js">소스</a> · <a href="docs/works.ko.md#palette-waterfall">조작 안내</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/living-knit/"><img src="works/living-knit/poster.webp" alt="살아 움직이는 니트" width="100%"><br><strong>살아 움직이는 니트</strong></a><br><sub>한 코씩 뜬 무늬가 움직이고 고양이가 실을 당깁니다.</sub><br><a href="works/living-knit/source.js">소스</a> · <a href="docs/works.ko.md#living-knit">조작 안내</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/pinhole-eclipse/"><img src="works/pinhole-eclipse/poster.webp" alt="나뭇그늘 속 일식" width="100%"><br><strong>나뭇그늘 속 일식</strong></a><br><sub>달을 움직이면 둥근 빛이 모두 초승달 모양으로 바뀝니다.</sub><br><a href="works/pinhole-eclipse/source.js">소스</a> · <a href="docs/works.ko.md#pinhole-eclipse">조작 안내</a></td>
+</tr>
+<tr>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/rain-instrument/"><img src="works/rain-instrument/poster.webp" alt="빗방울 악기" width="100%"><br><strong>빗방울 악기</strong></a><br><sub>처마 아래 그릇을 움직여 빗방울의 리듬을 바꿉니다.</sub><br><a href="works/rain-instrument/source.js">소스</a> · <a href="docs/works.ko.md#rain-instrument">조작 안내</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/ink-slash/"><img src="works/ink-slash/poster.webp" alt="수묵 한 획" width="100%"><br><strong>수묵 한 획</strong></a><br><sub>마른 붓의 먹 자국이 그어진 뒤 대나무가 쓰러집니다.</sub><br><a href="works/ink-slash/source.js">소스</a> · <a href="docs/works.ko.md#ink-slash">조작 안내</a></td>
+<td width="33%"></td>
+</tr>
+</table>
 
 ## 두 번째 공개 · 직접 바꿔 볼 다섯 실험
 
@@ -175,7 +192,7 @@ source.js를 읽고 초기화, 프레임별 갱신, 그리기 함수를 찾아�
 
 ## 업데이트와 참여
 
-두 차례 공개로 현재 총 31개 작품을 제공합니다. 새로운 효과도 비정기적으로 공개할 예정입니다. 조작성, 시각 효과, 성능 개선을 환영합니다. 문제를 제보할 때는 작품명, 브라우저, 재현 단계를 적어주세요. Pull Request에는 변경 내용과 데모·수동 조작 확인 결과를 함께 적어주세요. 원문 참여 안내는 [CONTRIBUTING.md](CONTRIBUTING.md)에 있습니다.
+세 차례 공개로 현재 총 36개 작품을 제공합니다. 새로운 효과도 비정기적으로 공개할 예정입니다. 조작성, 시각 효과, 성능 개선을 환영합니다. 문제를 제보할 때는 작품명, 브라우저, 재현 단계를 적어주세요. Pull Request에는 변경 내용과 데모·수동 조작 확인 결과를 함께 적어주세요. 원문 참여 안내는 [CONTRIBUTING.md](CONTRIBUTING.md)에 있습니다.
 
 ## 제작자와 라이선스
 

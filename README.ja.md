@@ -8,7 +8,7 @@
 
 **ピクセルの世界を、あなたの作品に。**
 
-池の波紋から銀河の衝突まで。ブラウザでリアルタイムに描画する、31 のピクセル実験です。
+池の波紋から銀河の衝突まで。ブラウザでリアルタイムに描画する、36 のピクセル実験です。
 
 <img src="docs/assets/badge-works.ja.svg" alt="作品"> <img src="docs/assets/badge-runtime.ja.svg" alt="実行"> <img src="docs/assets/badge-license.ja.svg" alt="ライセンス">
 
@@ -25,12 +25,29 @@
 <img src="docs/assets/showcase.gif" alt="実際の実行画面：波紋、魚群、銀河の衝突" width="850">
 </div>
 
-実際に動かした作品の映像です。31作品をオンラインで体験し、ソースをダウンロードして自分の作品に改造できます。
+実際に動かした作品の映像です。36作品をオンラインで体験し、ソースをダウンロードして自分の作品に改造できます。
 
 - **触ってみる：** 錦鯉に餌をあげ、磁場を動かし、霜を拭い、砂紋を描けます。
 - **変化を眺める：** 衛星が環になり、魚群がイルカを避け、星の軌跡が長い尾になります。
 - **場面に入り込む：** ボス戦、夕暮れのドライブ、パズルがはまると動き出す町。
 - **ソースを改造する：** 作品ごとに独立したフォルダー、ソース、説明を用意。ビルドや AI API は不要です。
+
+## 第3弾 · 5つのピクセル実験
+
+色を循環させて滝を流し、編み模様を動かす。木漏れ日の日食、雨の楽器、水墨の一閃も、個別に試してコードを改造できます。
+
+<table>
+<tr>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/palette-waterfall/"><img src="works/palette-waterfall/poster.webp" alt="色循環の滝" width="100%"><br><strong>色循環の滝</strong></a><br><sub>パレットの色を循環させて滝を流します。</sub><br><a href="works/palette-waterfall/source.js">ソース</a> · <a href="docs/works.ja.md#palette-waterfall">操作説明</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/living-knit/"><img src="works/living-knit/poster.webp" alt="動き出す編み模様" width="100%"><br><strong>動き出す編み模様</strong></a><br><sub>一目ずつ編んだ模様が動き、猫が毛糸をほどきます。</sub><br><a href="works/living-knit/source.js">ソース</a> · <a href="docs/works.ja.md#living-knit">操作説明</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/pinhole-eclipse/"><img src="works/pinhole-eclipse/poster.webp" alt="木漏れ日の日食" width="100%"><br><strong>木漏れ日の日食</strong></a><br><sub>月を動かすと、壁に映る丸い光が三日月形に変わります。</sub><br><a href="works/pinhole-eclipse/source.js">ソース</a> · <a href="docs/works.ja.md#pinhole-eclipse">操作説明</a></td>
+</tr>
+<tr>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/rain-instrument/"><img src="works/rain-instrument/poster.webp" alt="雨の楽器" width="100%"><br><strong>雨の楽器</strong></a><br><sub>軒下の器を動かして、雨だれのリズムを変えます。</sub><br><a href="works/rain-instrument/source.js">ソース</a> · <a href="docs/works.ja.md#rain-instrument">操作説明</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/ink-slash/"><img src="works/ink-slash/poster.webp" alt="水墨の一閃" width="100%"><br><strong>水墨の一閃</strong></a><br><sub>かすれた墨の軌跡が走り、少し遅れて竹が倒れます。</sub><br><a href="works/ink-slash/source.js">ソース</a> · <a href="docs/works.ja.md#ink-slash">操作説明</a></td>
+<td width="33%"></td>
+</tr>
+</table>
 
 ## 第2弾 · 改造して学べる5つの実験
 
@@ -175,7 +192,7 @@ source.js を読み、初期化、フレーム更新、描画の処理を特定�
 
 ## 更新と参加
 
-2回の公開で、現在は全31作品です。今後も新しい表現を不定期に公開する予定です。操作性、見た目、パフォーマンスの改善を歓迎します。問題の報告には作品名、ブラウザ、再現手順を記載してください。Pull Request には変更内容と、デモ・手動操作の確認結果を添えてください。原文の参加案内は [CONTRIBUTING.md](CONTRIBUTING.md) にあります。
+3回の公開で、現在は全36作品です。今後も新しい表現を不定期に公開する予定です。操作性、見た目、パフォーマンスの改善を歓迎します。問題の報告には作品名、ブラウザ、再現手順を記載してください。Pull Request には変更内容と、デモ・手動操作の確認結果を添えてください。原文の参加案内は [CONTRIBUTING.md](CONTRIBUTING.md) にあります。
 
 ## 作者とライセンス
 

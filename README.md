@@ -2,15 +2,15 @@
 
 [中文](README.md) · [English](README.en.md) · [日本語](README.ja.md) · [한국어](README.ko.md)
 
-<a href="https://ma1902056219-coder.github.io/openpixel/"><img src="docs/assets/openpixel-banner.gif" alt="OpenPixel：31个可以运行、探索和修改的像素小世界" width="100%"></a>
+<a href="https://ma1902056219-coder.github.io/openpixel/"><img src="docs/assets/openpixel-banner.gif" alt="OpenPixel：36个可以运行、探索和修改的像素小世界" width="100%"></a>
 
 # OpenPixel · 像素万象
 
 **把像素世界，变成你的作品。**
 
-31 个浏览器实时绘制的像素实验：从一滴水的涟漪，到两座星系的相撞。
+36 个浏览器实时绘制的像素实验：从一滴水的涟漪，到两座星系的相撞。
 
-<img src="docs/assets/badge-works.svg" alt="31件作品"> <img src="docs/assets/badge-runtime.svg" alt="浏览器运行"> <a href="LICENSE"><img src="docs/assets/badge-license.svg" alt="MIT许可"></a>
+<img src="docs/assets/badge-works.svg" alt="36件作品"> <img src="docs/assets/badge-runtime.svg" alt="浏览器运行"> <a href="LICENSE"><img src="docs/assets/badge-license.svg" alt="MIT许可"></a>
 
 [下载当前源码](https://github.com/ma1902056219-coder/openpixel/archive/refs/heads/main.zip) · [作品目录](#作品目录) · [开始运行](#开始运行) · [修改指南](docs/guide.md)
 
@@ -32,7 +32,24 @@
 - **走进场景**：首领战、落日驾驶、拼好后开始运动的微型世界。
 - **直接改源码**：每件作品独立成目录，附实际画面和中文说明，无需构建或 AI 接口。
 
-仓库首页、修改指南和31件作品的操作说明现提供中文、英文、日文、韩文。作品内界面及源码注释仍以中文为主。
+仓库首页、修改指南和36件作品的操作说明现提供中文、英文、日文、韩文。作品内界面及源码注释仍以中文为主。
+
+## 第三批新增 · 5 个像素实验
+
+只换颜色就能让瀑布流动。从针脚、日食光斑、雨滴音符到一笔飞白，每件都能直接运行，也附可修改的源码。
+
+<table>
+<tr>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/palette-waterfall/"><img src="works/palette-waterfall/poster.webp" alt="色彩循环瀑布" width="100%"><br><strong>色彩循环瀑布</strong></a><br><sub>像素编号不动，瀑布却在流</sub><br><a href="works/palette-waterfall/source.js">查看源码</a> · <a href="works/palette-waterfall/README.md">操作说明</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/living-knit/"><img src="works/living-knit/poster.webp" alt="会动的毛衣" width="100%"><br><strong>会动的毛衣</strong></a><br><sub>一针针织出来，图案里的鹿跑了起来</sub><br><a href="works/living-knit/source.js">查看源码</a> · <a href="works/living-knit/README.md">操作说明</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/pinhole-eclipse/"><img src="works/pinhole-eclipse/poster.webp" alt="树影日食" width="100%"><br><strong>树影日食</strong></a><br><sub>拖动月亮，树荫里的光斑都变成月牙</sub><br><a href="works/pinhole-eclipse/source.js">查看源码</a> · <a href="works/pinhole-eclipse/README.md">操作说明</a></td>
+</tr>
+<tr>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/rain-instrument/"><img src="works/rain-instrument/poster.webp" alt="雨的乐器" width="100%"><br><strong>雨的乐器</strong></a><br><sub>把瓶瓶罐罐挪到屋檐下，让雨来演奏</sub><br><a href="works/rain-instrument/source.js">查看源码</a> · <a href="works/rain-instrument/README.md">操作说明</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/ink-slash/"><img src="works/ink-slash/poster.webp" alt="水墨斩" width="100%"><br><strong>水墨斩</strong></a><br><sub>用一笔飞白，把竹林划开</sub><br><a href="works/ink-slash/source.js">查看源码</a> · <a href="works/ink-slash/README.md">操作说明</a></td>
+<td width="33%"></td>
+</tr>
+</table>
 
 ## 第二批新增 · 5 个可拆解的像素实验
 
@@ -71,7 +88,7 @@ python -m http.server 8080 --bind 127.0.0.1
 
 ## 作品目录
 
-**点击图卡直接在线体验；每件作品另附操作说明与源码，也可下载后离线运行。** 当前合集共 31 件，每件都附可编辑的 `source.js`。
+**点击图卡直接在线体验；每件作品另附操作说明与源码，也可下载后离线运行。** 当前合集共 36 件，每件都附可编辑的 `source.js`。
 
 ### 互动与材质
 
@@ -189,7 +206,7 @@ openpixel/
 
 ## 参与与更新
 
-当前已分两批开放 31 件，后续继续按批次补充。欢迎提交交互改进、性能优化和你的新版本，详见 [CONTRIBUTING.md](CONTRIBUTING.md)。
+当前已分三批开放 36 件，后续继续按批次补充。欢迎提交交互改进、性能优化和你的新版本，详见 [CONTRIBUTING.md](CONTRIBUTING.md)。
 
 遇到问题时，请在 [Issues](https://github.com/ma1902056219-coder/openpixel/issues) 写清作品名、浏览器和复现步骤。
 

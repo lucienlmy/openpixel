@@ -404,3 +404,65 @@
 押したまま円を描くようにドラッグして鏡筒を回し、中央をクリックして揺らします。ボタンで花弁数を 8・12・16・24 に、素材をガラス・ビーズ・押し花に切り替えられます。
 
 `works/kaleidoscope/index.html` · [source.js](../works/kaleidoscope/source.js)
+
+## 第3弾
+
+<a id="palette-waterfall"></a>
+
+## 色循環の滝 / 色彩循环瀑布
+
+[▶ オンラインで体験](https://ma1902056219-coder.github.io/openpixel/works/palette-waterfall/)
+
+パレットの色を循環させて滝を流します。
+
+時間帯を選び、「显示调色板」で色の循環を表示します。Space で再生・停止、右矢印でコマ送りします。
+
+`works/palette-waterfall/index.html` · [source.js](../works/palette-waterfall/source.js)
+
+<a id="living-knit"></a>
+
+## 動き出す編み模様 / 会动的毛衣
+
+[▶ オンラインで体験](https://ma1902056219-coder.github.io/openpixel/works/living-knit/)
+
+一目ずつ編んだ模様が動き、猫が毛糸をほどきます。
+
+「起针」で編み始め、「织到一半」で途中、「活过来」で動く模様、「猫」でほどける場面に移動します。「声音」で音が鳴ります。
+
+`works/living-knit/index.html` · [source.js](../works/living-knit/source.js)
+
+<a id="pinhole-eclipse"></a>
+
+## 木漏れ日の日食 / 树影日食
+
+[▶ オンラインで体験](https://ma1902056219-coder.github.io/openpixel/works/pinhole-eclipse/)
+
+月を動かすと、壁に映る丸い光が三日月形に変わります。
+
+空の部分を左へドラッグすると月が太陽を隠します。「看一次日全食」で皆既日食を再生でき、壁の上をドラッグすると枝が揺れます。
+
+`works/pinhole-eclipse/index.html` · [source.js](../works/pinhole-eclipse/source.js)
+
+<a id="rain-instrument"></a>
+
+## 雨の楽器 / 雨的乐器
+
+[▶ オンラインで体験](https://ma1902056219-coder.github.io/openpixel/works/rain-instrument/)
+
+軒下の器を動かして、雨だれのリズムを変えます。
+
+器を別の雨だれの下へドラッグします。瓶や鉢をタップすると水を捨てられ、上部の横ドラッグで雨量を調整できます。「换调式」で音階が変わります。
+
+`works/rain-instrument/index.html` · [source.js](../works/rain-instrument/source.js)
+
+<a id="ink-slash"></a>
+
+## 水墨の一閃 / 水墨斩
+
+[▶ オンラインで体験](https://ma1902056219-coder.github.io/openpixel/works/ink-slash/)
+
+かすれた墨の軌跡が走り、少し遅れて竹が倒れます。
+
+Space で停止、左右矢印でコマ送り、R で再生、O でオニオンスキンを切り替えます。ボタンから舞台、黒、格子の背景を選べます。
+
+`works/ink-slash/index.html` · [source.js](../works/ink-slash/source.js)

@@ -404,3 +404,65 @@ Turn colored fragments into changing mirrored patterns.
 Hold and drag in a circle to turn the tube; click the center to shake it. The buttons cycle between 8, 12, 16 and 24 petals, and glass, beads or pressed flowers.
 
 `works/kaleidoscope/index.html` · [source.js](../works/kaleidoscope/source.js)
+
+## Batch 03
+
+<a id="palette-waterfall"></a>
+
+## Palette-Cycling Waterfall / 色彩循环瀑布
+
+[▶ Try it online](https://ma1902056219-coder.github.io/openpixel/works/palette-waterfall/)
+
+Make the waterfall flow by cycling colors.
+
+Choose a time of day and toggle “显示调色板” to see the palette. Space toggles playback and Right Arrow steps one frame.
+
+`works/palette-waterfall/index.html` · [source.js](../works/palette-waterfall/source.js)
+
+<a id="living-knit"></a>
+
+## Living Knit / 会动的毛衣
+
+[▶ Try it online](https://ma1902056219-coder.github.io/openpixel/works/living-knit/)
+
+A knitted landscape comes alive, until a cat pulls the yarn.
+
+Use “起针” to start knitting, “织到一半” for the midpoint, “活过来” for the moving pattern, and “猫” to see it unravel. “声音” enables sound.
+
+`works/living-knit/index.html` · [source.js](../works/living-knit/source.js)
+
+<a id="pinhole-eclipse"></a>
+
+## Pinhole Eclipse / 树影日食
+
+[▶ Try it online](https://ma1902056219-coder.github.io/openpixel/works/pinhole-eclipse/)
+
+Move the Moon to turn the bright spots into crescents.
+
+Drag left across the sky to cover the Sun. Use “看一次日全食” to watch a full eclipse, or drag on the wall to move the branches.
+
+`works/pinhole-eclipse/index.html` · [source.js](../works/pinhole-eclipse/source.js)
+
+<a id="rain-instrument"></a>
+
+## Rain Instruments / 雨的乐器
+
+[▶ Try it online](https://ma1902056219-coder.github.io/openpixel/works/rain-instrument/)
+
+Move bottles and bowls under the eaves to change the rhythm.
+
+Drag the vessels under different drips. Tap a bottle or bowl to empty it, drag horizontally in the upper scene to adjust rainfall, and use “换调式” to change scales.
+
+`works/rain-instrument/index.html` · [source.js](../works/rain-instrument/source.js)
+
+<a id="ink-slash"></a>
+
+## Ink-Brush Slash / 水墨斩
+
+[▶ Try it online](https://ma1902056219-coder.github.io/openpixel/works/ink-slash/)
+
+A dry ink stroke sweeps across the bamboo.
+
+Use Space to pause, Left and Right Arrow to step frames, R to replay and O to toggle onion skin. The background buttons select stage, black or checkerboard.
+
+`works/ink-slash/index.html` · [source.js](../works/ink-slash/source.js)

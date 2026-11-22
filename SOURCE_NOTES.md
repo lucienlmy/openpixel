@@ -44,3 +44,13 @@
 | 珊瑚礁 | `pixel-explore/interactive-art-4/index.html` | `c956e2f54eda001f76455613bca4494e3a0ef95191720eab4dec513627c0f409` |
 | 蒲公英 | `pixel-explore/interactive-art-3/index.html` | `fe1354c613e260ea0c6b905148cbd637c0db5706dbf98b1fb574c3c69af4821d` |
 | 万花筒 | `pixel-explore/interactive-art-3/index.html` | `fe1354c613e260ea0c6b905148cbd637c0db5706dbf98b1fb574c3c69af4821d` |
+
+## 第三批 · 2026-11-22
+
+| 作品 | 原文件 | 原文件 SHA-256 |
+|---|---|---|
+| 色彩循环瀑布 | `pixel-explore/masterworks/index.html` | `53715e4ebaa927c0198789ab3f3eeef34aa1bb8ff6fa6656adabc01c2fdfc30c` |
+| 会动的毛衣 | `pixel-explore/new-frontiers/index.html` | `e4969f2d07bf55640654b1aefa8a3655f939a931e8b9ae47b21121020da3a88d` |
+| 树影日食 | `pixel-explore/interactive-art-4/index.html` | `c956e2f54eda001f76455613bca4494e3a0ef95191720eab4dec513627c0f409` |
+| 雨的乐器 | `pixel-explore/interactive-art-4/index.html` | `c956e2f54eda001f76455613bca4494e3a0ef95191720eab4dec513627c0f409` |
+| 水墨斩 | `pixel-explore/vfx/index.html` | `98d507a2ff3aaadd285a04a9a4ab1456cf9cdf1ff7eb9c41b806f5935e92ad5c` |

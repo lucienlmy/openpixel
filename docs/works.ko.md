@@ -404,3 +404,65 @@
 누른 채 원을 그리며 드래그해 통을 돌리고 가운데를 눌러 흔듭니다. 버튼으로 꽃잎 수를 8·12·16·24개로, 재료를 유리·구슬·압화로 바꿀 수 있습니다.
 
 `works/kaleidoscope/index.html` · [source.js](../works/kaleidoscope/source.js)
+
+## 세 번째 공개
+
+<a id="palette-waterfall"></a>
+
+## 색 순환 폭포 / 色彩循环瀑布
+
+[▶ 온라인 체험](https://ma1902056219-coder.github.io/openpixel/works/palette-waterfall/)
+
+팔레트 색을 순환시켜 폭포를 흐르게 합니다.
+
+시간대를 고르고 “显示调色板”을 눌러 색의 순환을 보세요. Space로 재생하거나 멈추고 오른쪽 화살표로 한 프레임씩 이동합니다.
+
+`works/palette-waterfall/index.html` · [source.js](../works/palette-waterfall/source.js)
+
+<a id="living-knit"></a>
+
+## 살아 움직이는 니트 / 会动的毛衣
+
+[▶ 온라인 체험](https://ma1902056219-coder.github.io/openpixel/works/living-knit/)
+
+한 코씩 뜬 무늬가 움직이고 고양이가 실을 당깁니다.
+
+“起针”으로 뜨기 시작, “织到一半”으로 중간, “活过来”로 움직이는 무늬, “猫”로 실이 풀리는 장면을 볼 수 있습니다. “声音”으로 소리를 켭니다.
+
+`works/living-knit/index.html` · [source.js](../works/living-knit/source.js)
+
+<a id="pinhole-eclipse"></a>
+
+## 나뭇그늘 속 일식 / 树影日食
+
+[▶ 온라인 체험](https://ma1902056219-coder.github.io/openpixel/works/pinhole-eclipse/)
+
+달을 움직이면 둥근 빛이 모두 초승달 모양으로 바뀝니다.
+
+하늘을 왼쪽으로 끌어 달로 태양을 가립니다. “看一次日全食”을 누르면 개기일식을 볼 수 있고, 벽에서 드래그하면 가지가 흔들립니다.
+
+`works/pinhole-eclipse/index.html` · [source.js](../works/pinhole-eclipse/source.js)
+
+<a id="rain-instrument"></a>
+
+## 빗방울 악기 / 雨的乐器
+
+[▶ 온라인 체험](https://ma1902056219-coder.github.io/openpixel/works/rain-instrument/)
+
+처마 아래 그릇을 움직여 빗방울의 리듬을 바꿉니다.
+
+그릇을 다른 물방울 아래로 끌어 보세요. 병이나 그릇을 눌러 비우고 위쪽을 가로로 끌어 빗줄기를 조절합니다. “换调式”으로 음계를 바꿉니다.
+
+`works/rain-instrument/index.html` · [source.js](../works/rain-instrument/source.js)
+
+<a id="ink-slash"></a>
+
+## 수묵 한 획 / 水墨斩
+
+[▶ 온라인 체험](https://ma1902056219-coder.github.io/openpixel/works/ink-slash/)
+
+마른 붓의 먹 자국이 그어진 뒤 대나무가 쓰러집니다.
+
+Space로 정지, 좌우 화살표로 프레임 이동, R로 다시 재생, O로 어니언 스킨을 전환합니다. 버튼으로 무대, 검정, 격자 배경을 고릅니다.
+
+`works/ink-slash/index.html` · [source.js](../works/ink-slash/source.js)

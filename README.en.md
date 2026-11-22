@@ -8,7 +8,7 @@
 
 **Make these pixel worlds your own.**
 
-31 pixel experiments rendered in real time in your browser, from ripples on a pond to colliding galaxies.
+36 pixel experiments rendered in real time in your browser, from ripples on a pond to colliding galaxies.
 
 <img src="docs/assets/badge-works.en.svg" alt="Artworks"> <img src="docs/assets/badge-runtime.en.svg" alt="Runs in"> <img src="docs/assets/badge-license.en.svg" alt="License">
 
@@ -25,12 +25,29 @@
 <img src="docs/assets/showcase.gif" alt="Actual runtime footage: ripples, schooling fish and colliding galaxies" width="850">
 </div>
 
-Captured from the running artworks. Try any of the 31 works online, or download the source to make it your own.
+Captured from the running artworks. Try any of the 36 works online, or download the source to make it your own.
 
 - **Reach in:** feed koi, move a magnetic field, wipe frost and rake sand.
 - **Watch it evolve:** moons form rings, fish avoid a dolphin and stars draw long tails.
 - **Take over a scene:** a boss encounter, a sunset drive and a town that wakes up as a puzzle is assembled.
 - **Edit the source:** each artwork has its own folder, source and instructions. No build step or AI API is required.
+
+## Batch 03 · Five new pixel experiments
+
+Make a waterfall move by cycling colors. Explore animated stitches, pinhole eclipses, rain music, and an ink-brush effect. Each runs on its own and includes editable source.
+
+<table>
+<tr>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/palette-waterfall/"><img src="works/palette-waterfall/poster.webp" alt="Palette-Cycling Waterfall" width="100%"><br><strong>Palette-Cycling Waterfall</strong></a><br><sub>Make the waterfall flow by cycling colors.</sub><br><a href="works/palette-waterfall/source.js">Source</a> · <a href="docs/works.en.md#palette-waterfall">Controls</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/living-knit/"><img src="works/living-knit/poster.webp" alt="Living Knit" width="100%"><br><strong>Living Knit</strong></a><br><sub>A knitted landscape comes alive, until a cat pulls the yarn.</sub><br><a href="works/living-knit/source.js">Source</a> · <a href="docs/works.en.md#living-knit">Controls</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/pinhole-eclipse/"><img src="works/pinhole-eclipse/poster.webp" alt="Pinhole Eclipse" width="100%"><br><strong>Pinhole Eclipse</strong></a><br><sub>Move the Moon to turn the bright spots into crescents.</sub><br><a href="works/pinhole-eclipse/source.js">Source</a> · <a href="docs/works.en.md#pinhole-eclipse">Controls</a></td>
+</tr>
+<tr>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/rain-instrument/"><img src="works/rain-instrument/poster.webp" alt="Rain Instruments" width="100%"><br><strong>Rain Instruments</strong></a><br><sub>Move bottles and bowls under the eaves to change the rhythm.</sub><br><a href="works/rain-instrument/source.js">Source</a> · <a href="docs/works.en.md#rain-instrument">Controls</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/ink-slash/"><img src="works/ink-slash/poster.webp" alt="Ink-Brush Slash" width="100%"><br><strong>Ink-Brush Slash</strong></a><br><sub>A dry ink stroke sweeps across the bamboo.</sub><br><a href="works/ink-slash/source.js">Source</a> · <a href="docs/works.en.md#ink-slash">Controls</a></td>
+<td width="33%"></td>
+</tr>
+</table>
 
 ## Batch 02 · Five more experiments to remix
 
@@ -175,7 +192,7 @@ These are pixel-art and small gameplay experiments. Combat and driving retain si
 
 ## Updates and contributions
 
-The collection now includes 31 artworks across two batches. More effects will be shared from time to time. Improvements to interaction, visuals and performance are welcome. For issues, include the artwork name, browser and steps to reproduce. For a pull request, explain your change and check both demo and manual modes. See [CONTRIBUTING.md](CONTRIBUTING.md) for the original Chinese guidelines.
+The collection now includes 36 artworks across three batches. More effects will be shared from time to time. Improvements to interaction, visuals and performance are welcome. For issues, include the artwork name, browser and steps to reproduce. For a pull request, explain your change and check both demo and manual modes. See [CONTRIBUTING.md](CONTRIBUTING.md) for the original Chinese guidelines.
 
 ## Author and license
 

@@ -618,5 +618,105 @@
     },
     "batch": 2,
     "preview": "https://ma1902056219-coder.github.io/openpixel/works/kaleidoscope/"
+  },
+  {
+    "order": 32,
+    "slug": "palette-waterfall",
+    "title": "色彩循环瀑布",
+    "group": "像素画卷",
+    "summary": "像素编号不动，瀑布却在流",
+    "url": "works/palette-waterfall/index.html",
+    "source": "works/palette-waterfall/source.html",
+    "poster": "works/palette-waterfall/poster.webp",
+    "origin_id": "pixel-explore--masterworks--index::cycle::0",
+    "origin_path": "pixel-explore/masterworks/index.html",
+    "origin_sha256": "53715e4ebaa927c0198789ab3f3eeef34aa1bb8ff6fa6656adabc01c2fdfc30c",
+    "source_sha256": "4893b15c059378cf8a3842f0a55762ecb3ff30f8f7d01d4c853825be415a97b3",
+    "source_bytes": 29094,
+    "poster_capture": {
+      "method": "native-runtime"
+    },
+    "batch": 3,
+    "preview": "https://ma1902056219-coder.github.io/openpixel/works/palette-waterfall/"
+  },
+  {
+    "order": 33,
+    "slug": "living-knit",
+    "title": "会动的毛衣",
+    "group": "像素画卷",
+    "summary": "一针针织出来，图案里的鹿跑了起来",
+    "url": "works/living-knit/index.html",
+    "source": "works/living-knit/source.html",
+    "poster": "works/living-knit/poster.webp",
+    "origin_id": "pixel-explore--new-frontiers--index::knit::0",
+    "origin_path": "pixel-explore/new-frontiers/index.html",
+    "origin_sha256": "e4969f2d07bf55640654b1aefa8a3655f939a931e8b9ae47b21121020da3a88d",
+    "source_sha256": "901a4c57939e441d553de5c1375869e7d70b8cb9517d8adba83b248656b6145d",
+    "source_bytes": 33851,
+    "poster_capture": {
+      "method": "native-runtime"
+    },
+    "batch": 3,
+    "preview": "https://ma1902056219-coder.github.io/openpixel/works/living-knit/"
+  },
+  {
+    "order": 34,
+    "slug": "pinhole-eclipse",
+    "title": "树影日食",
+    "group": "自然与宇宙",
+    "summary": "拖动月亮，树荫里的光斑都变成月牙",
+    "url": "works/pinhole-eclipse/index.html",
+    "source": "works/pinhole-eclipse/source.html",
+    "poster": "works/pinhole-eclipse/poster.webp",
+    "origin_id": "pixel-explore--interactive-art-4--index::eclipse::0",
+    "origin_path": "pixel-explore/interactive-art-4/index.html",
+    "origin_sha256": "c956e2f54eda001f76455613bca4494e3a0ef95191720eab4dec513627c0f409",
+    "source_sha256": "fe6ca9185dd957d33ebde78267abd273f58f682dbc4e8f7f4beeddb2912b53e8",
+    "source_bytes": 41924,
+    "poster_capture": {
+      "method": "native-runtime"
+    },
+    "batch": 3,
+    "preview": "https://ma1902056219-coder.github.io/openpixel/works/pinhole-eclipse/"
+  },
+  {
+    "order": 35,
+    "slug": "rain-instrument",
+    "title": "雨的乐器",
+    "group": "互动与材质",
+    "summary": "把瓶瓶罐罐挪到屋檐下，让雨来演奏",
+    "url": "works/rain-instrument/index.html",
+    "source": "works/rain-instrument/source.html",
+    "poster": "works/rain-instrument/poster.webp",
+    "origin_id": "pixel-explore--interactive-art-4--index::rainmusic::0",
+    "origin_path": "pixel-explore/interactive-art-4/index.html",
+    "origin_sha256": "c956e2f54eda001f76455613bca4494e3a0ef95191720eab4dec513627c0f409",
+    "source_sha256": "53b4502da0df49b5b8fb644cc011e861fb7878ff91795956be3835a49490b95b",
+    "source_bytes": 46180,
+    "poster_capture": {
+      "method": "native-runtime"
+    },
+    "batch": 3,
+    "preview": "https://ma1902056219-coder.github.io/openpixel/works/rain-instrument/"
+  },
+  {
+    "order": 36,
+    "slug": "ink-slash",
+    "title": "水墨斩",
+    "group": "可玩场景",
+    "summary": "用一笔飞白，把竹林划开",
+    "url": "works/ink-slash/index.html",
+    "source": "works/ink-slash/source.html",
+    "poster": "works/ink-slash/poster.webp",
+    "origin_id": "pixel-explore--vfx--index::inkslash::0",
+    "origin_path": "pixel-explore/vfx/index.html",
+    "origin_sha256": "98d507a2ff3aaadd285a04a9a4ab1456cf9cdf1ff7eb9c41b806f5935e92ad5c",
+    "source_sha256": "d985087eb71573c72d82a89bd8985d54b206dee288e33f2827561382ba3ff0e7",
+    "source_bytes": 37644,
+    "poster_capture": {
+      "method": "native-runtime"
+    },
+    "batch": 3,
+    "preview": "https://ma1902056219-coder.github.io/openpixel/works/ink-slash/"
   }
 ]
