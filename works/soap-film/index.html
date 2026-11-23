@@ -1,0 +1,58 @@
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8">
+<title>肥皂泡 · OpenPixel</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+
+
+<style>
+/* layout: an arcade cabinet — the game stage, a slim control rail, then the cartridges and the notes */
+:root{--bg:#0e0c14;--panel:#17141f;--line:#2c2738;--fg:#f1ecf8;--dim:#a39bb6;--accent:#ffb43d;--accent2:#5ee6ff;
+  --disp:"ZCOOL KuaiLe","Chakra Petch",system-ui,sans-serif;--ui:"Chakra Petch","PingFang SC","Noto Sans SC",system-ui,sans-serif;color-scheme:dark}
+*{box-sizing:border-box}
+html,body{background:var(--bg);color:var(--fg)}
+body{font-family:var(--ui);margin:0;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:18px 40px}
+.wrap{max-width:1500px;margin:0 auto;display:grid;gap:12px}
+header{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 18px}
+h1{font-family:var(--disp);font-weight:400;font-size:clamp(28px,4vw,44px);margin:0;letter-spacing:.04em}
+h1 b{color:var(--accent);font-weight:400}
+.lede{color:var(--dim);margin:0;max-width:72ch;line-height:1.6;font-size:14px}
+#stage{position:relative;background:#000;border:1px solid var(--line);display:flex;justify-content:center;align-items:center;min-height:180px;overflow:hidden}
+#cv{display:block;cursor:none;image-rendering:pixelated;max-width:100%;touch-action:none;outline:none;-webkit-user-select:none;user-select:none}
+#cv:focus-visible{outline:2px solid var(--accent2)}
+#hint{font-size:12px;color:var(--dim);line-height:1.5;margin-top:-4px}
+#tbtn{position:absolute;right:max(10px,env(safe-area-inset-right,0px));bottom:10px;display:none;gap:10px}
+#tbtn button{width:58px;height:58px;border-radius:50%;border:2px solid #fff6;background:#0008;color:#fff;font:700 15px var(--ui);touch-action:none}
+.rail{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:3px;overflow:hidden}
+.seg button,.btn{font:inherit;font-size:13px;color:var(--dim);background:var(--panel);border:0;padding:6px 12px;cursor:pointer}
+.btn{border:1px solid var(--line);border-radius:3px}
+.seg button+button{border-left:1px solid var(--line)}
+.seg button.on,.btn.on{color:var(--fg);background:#2c2014;box-shadow:inset 0 -2px 0 var(--accent)}
+button:focus-visible{outline:2px solid var(--accent2);outline-offset:1px}
+.lab{display:none}
+.opts{display:inline-flex;gap:8px;flex-wrap:wrap}
+#info{margin-left:auto;font-size:12px;color:var(--dim);font-variant-numeric:tabular-nums}
+.carts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+@media (max-width:1000px){.carts{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.cart{display:grid;gap:6px;text-align:left;background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:8px;color:var(--fg);font:inherit;cursor:pointer}
+.cart canvas{width:100%;aspect-ratio:16/9;max-width:100%;image-rendering:pixelated;background:#000;display:block}
+.cart .nm{font-family:var(--disp);font-size:20px;letter-spacing:.04em}
+.cart .ref{font-size:12px;color:var(--dim);line-height:1.5}
+.cart.on{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}
+.notes{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:24px;border-top:1px solid var(--line);padding-top:14px}
+.notes h2{font-family:var(--disp);font-weight:400;font-size:26px;margin:0 0 6px}
+.notes p{margin:0 0 10px;line-height:1.7;color:#d3cce0;max-width:68ch}
+.notes ul{margin:0;padding-left:18px;line-height:1.7;color:#d3cce0}
+.notes .h{font-size:12px;letter-spacing:.12em;color:var(--accent2);margin-bottom:6px}
+@media (max-width:760px){.carts{grid-template-columns:minmax(0,1fr)}.cart{grid-template-columns:120px minmax(0,1fr);align-items:center}.cart canvas{grid-row:span 2}.notes{grid-template-columns:minmax(0,1fr)}#info{margin-left:0;width:100%}}
+</style>
+<div class="wrap">
+<nav aria-label="作品导航" style="display:flex;gap:16px;padding-bottom:14px;font:14px/1.5 system-ui"><a href="../../index.html#collection" style="color:inherit">← 返回合集</a><a href="source.html" style="color:inherit">查看源码</a><a href="https://github.com/ma1902056219-coder/openpixel/blob/main/works/soap-film/README.md" style="color:inherit">操作说明</a></nav>
+<header><h1>肥皂泡</h1><p class="lede">吹出一个泡泡，看彩膜流动到破裂。</p></header>
+<div id="stage"><canvas id="cv" width="480" height="270" tabindex="0" aria-label="互动像素画"></canvas><div id="tbtn"></div></div>
+<div class="rail" id="rail"></div>
+<div id="hint"></div>
+<div class="carts" id="carts"></div>
+<div class="notes"><div><h2 id="nm"></h2><div id="about"></div></div><div><div class="h">碰它的时候会发生什么</div><ul id="tags"></ul></div></div>
+</div>
+<script src="source.js"></script>

@@ -8,7 +8,7 @@
 
 **ピクセルの世界を、あなたの作品に。**
 
-池の波紋から銀河の衝突まで。ブラウザでリアルタイムに描画する、36 のピクセル実験です。
+池の波紋から銀河の衝突まで。ブラウザでリアルタイムに描画する、41 のピクセル実験です。
 
 <img src="docs/assets/badge-works.ja.svg" alt="作品"> <img src="docs/assets/badge-runtime.ja.svg" alt="実行"> <img src="docs/assets/badge-license.ja.svg" alt="ライセンス">
 
@@ -25,12 +25,29 @@
 <img src="docs/assets/showcase.gif" alt="実際の実行画面：波紋、魚群、銀河の衝突" width="850">
 </div>
 
-実際に動かした作品の映像です。36作品をオンラインで体験し、ソースをダウンロードして自分の作品に改造できます。
+実際に動かした作品の映像です。41作品をオンラインで体験し、ソースをダウンロードして自分の作品に改造できます。
 
 - **触ってみる：** 錦鯉に餌をあげ、磁場を動かし、霜を拭い、砂紋を描けます。
 - **変化を眺める：** 衛星が環になり、魚群がイルカを避け、星の軌跡が長い尾になります。
 - **場面に入り込む：** ボス戦、夕暮れのドライブ、パズルがはまると動き出す町。
 - **ソースを改造する：** 作品ごとに独立したフォルダー、ソース、説明を用意。ビルドや AI API は不要です。
+
+## 第4弾 · 5つのピクセル実験
+
+1200個の光点をクジラに変え、稲妻やシャボン玉を描きます。露の屈折や田んぼアートの遠近法も、個別に試してコードを改造できます。
+
+<table>
+<tr>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/drone-light-show/"><img src="works/drone-light-show/poster.webp" alt="夜空のドローンショー" width="100%"><br><strong>夜空のドローンショー</strong></a><br><sub>同じ1200個の光点が地球、クジラ、月に変わります。</sub><br><a href="works/drone-light-show/source.js">ソース</a> · <a href="docs/works.ja.md#drone-light-show">操作説明</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/storm-lightning/"><img src="works/storm-lightning/poster.webp" alt="雷雨" width="100%"><br><strong>雷雨</strong></a><br><sub>雲から線を描くと、枝分かれした稲妻が走ります。</sub><br><a href="works/storm-lightning/source.js">ソース</a> · <a href="docs/works.ja.md#storm-lightning">操作説明</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/soap-film/"><img src="works/soap-film/poster.webp" alt="シャボン膜" width="100%"><br><strong>シャボン膜</strong></a><br><sub>色が変わるシャボン玉をふくらませて割ります。</sub><br><a href="works/soap-film/source.js">ソース</a> · <a href="docs/works.ja.md#soap-film">操作説明</a></td>
+</tr>
+<tr>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/dewdrop-refraction/"><img src="works/dewdrop-refraction/poster.webp" alt="一滴の露" width="100%"><br><strong>一滴の露</strong></a><br><sub>水滴の中に逆さまの花が見えます。</sub><br><a href="works/dewdrop-refraction/source.js">ソース</a> · <a href="docs/works.ja.md#dewdrop-refraction">操作説明</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/rice-field-perspective/"><img src="works/rice-field-perspective/poster.webp" alt="田んぼアート" width="100%"><br><strong>田んぼアート</strong></a><br><sub>展望台から見ると稲の模様が鶴になります。</sub><br><a href="works/rice-field-perspective/source.js">ソース</a> · <a href="docs/works.ja.md#rice-field-perspective">操作説明</a></td>
+<td width="33%"></td>
+</tr>
+</table>
 
 ## 第3弾 · 5つのピクセル実験
 
@@ -192,7 +209,7 @@ source.js を読み、初期化、フレーム更新、描画の処理を特定�
 
 ## 更新と参加
 
-3回の公開で、現在は全36作品です。今後も新しい表現を不定期に公開する予定です。操作性、見た目、パフォーマンスの改善を歓迎します。問題の報告には作品名、ブラウザ、再現手順を記載してください。Pull Request には変更内容と、デモ・手動操作の確認結果を添えてください。原文の参加案内は [CONTRIBUTING.md](CONTRIBUTING.md) にあります。
+4回の公開で、現在は全41作品です。今後も新しい表現を不定期に公開する予定です。操作性、見た目、パフォーマンスの改善を歓迎します。問題の報告には作品名、ブラウザ、再現手順を記載してください。Pull Request には変更内容と、デモ・手動操作の確認結果を添えてください。原文の参加案内は [CONTRIBUTING.md](CONTRIBUTING.md) にあります。
 
 ## 作者とライセンス
 

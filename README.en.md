@@ -8,7 +8,7 @@
 
 **Make these pixel worlds your own.**
 
-36 pixel experiments rendered in real time in your browser, from ripples on a pond to colliding galaxies.
+41 pixel experiments rendered in real time in your browser, from ripples on a pond to colliding galaxies.
 
 <img src="docs/assets/badge-works.en.svg" alt="Artworks"> <img src="docs/assets/badge-runtime.en.svg" alt="Runs in"> <img src="docs/assets/badge-license.en.svg" alt="License">
 
@@ -25,12 +25,29 @@
 <img src="docs/assets/showcase.gif" alt="Actual runtime footage: ripples, schooling fish and colliding galaxies" width="850">
 </div>
 
-Captured from the running artworks. Try any of the 36 works online, or download the source to make it your own.
+Captured from the running artworks. Try any of the 41 works online, or download the source to make it your own.
 
 - **Reach in:** feed koi, move a magnetic field, wipe frost and rake sand.
 - **Watch it evolve:** moons form rings, fish avoid a dolphin and stars draw long tails.
 - **Take over a scene:** a boss encounter, a sunset drive and a town that wakes up as a puzzle is assembled.
 - **Edit the source:** each artwork has its own folder, source and instructions. No build step or AI API is required.
+
+## Batch 04 · Five new pixel experiments
+
+Turn 1,200 points of light into a whale, draw branching lightning, and blow iridescent bubbles. Explore light through a dewdrop and a rice-field image built for one viewpoint.
+
+<table>
+<tr>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/drone-light-show/"><img src="works/drone-light-show/poster.webp" alt="Sky of a Thousand Lights" width="100%"><br><strong>Sky of a Thousand Lights</strong></a><br><sub>The same 1,200 lights become a globe, a whale, and a moon.</sub><br><a href="works/drone-light-show/source.js">Source</a> · <a href="docs/works.en.md#drone-light-show">Controls</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/storm-lightning/"><img src="works/storm-lightning/poster.webp" alt="Thunderstorm" width="100%"><br><strong>Thunderstorm</strong></a><br><sub>Drag a path through the clouds to draw a branching bolt.</sub><br><a href="works/storm-lightning/source.js">Source</a> · <a href="docs/works.en.md#storm-lightning">Controls</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/soap-film/"><img src="works/soap-film/poster.webp" alt="Soap Film" width="100%"><br><strong>Soap Film</strong></a><br><sub>Blow and pop bubbles whose colors change as the film thins.</sub><br><a href="works/soap-film/source.js">Source</a> · <a href="docs/works.en.md#soap-film">Controls</a></td>
+</tr>
+<tr>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/dewdrop-refraction/"><img src="works/dewdrop-refraction/poster.webp" alt="One Drop of Dew" width="100%"><br><strong>One Drop of Dew</strong></a><br><sub>See a flower upside down through a droplet.</sub><br><a href="works/dewdrop-refraction/source.js">Source</a> · <a href="docs/works.en.md#dewdrop-refraction">Controls</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/rice-field-perspective/"><img src="works/rice-field-perspective/poster.webp" alt="Rice Field Art" width="100%"><br><strong>Rice Field Art</strong></a><br><sub>Find the crane that only lines up from the viewing tower.</sub><br><a href="works/rice-field-perspective/source.js">Source</a> · <a href="docs/works.en.md#rice-field-perspective">Controls</a></td>
+<td width="33%"></td>
+</tr>
+</table>
 
 ## Batch 03 · Five new pixel experiments
 
@@ -192,7 +209,7 @@ These are pixel-art and small gameplay experiments. Combat and driving retain si
 
 ## Updates and contributions
 
-The collection now includes 36 artworks across three batches. More effects will be shared from time to time. Improvements to interaction, visuals and performance are welcome. For issues, include the artwork name, browser and steps to reproduce. For a pull request, explain your change and check both demo and manual modes. See [CONTRIBUTING.md](CONTRIBUTING.md) for the original Chinese guidelines.
+The collection now includes 41 artworks across four batches. More effects will be shared from time to time. Improvements to interaction, visuals and performance are welcome. For issues, include the artwork name, browser and steps to reproduce. For a pull request, explain your change and check both demo and manual modes. See [CONTRIBUTING.md](CONTRIBUTING.md) for the original Chinese guidelines.
 
 ## Author and license
 

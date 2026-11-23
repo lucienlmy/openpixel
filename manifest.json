@@ -718,5 +718,105 @@
     },
     "batch": 3,
     "preview": "https://ma1902056219-coder.github.io/openpixel/works/ink-slash/"
+  },
+  {
+    "order": 37,
+    "slug": "drone-light-show",
+    "title": "千机夜空",
+    "group": "像素画卷",
+    "summary": "让 1200 个光点从地球变成鲸鱼",
+    "url": "works/drone-light-show/index.html",
+    "source": "works/drone-light-show/source.html",
+    "poster": "works/drone-light-show/poster.webp",
+    "origin_id": "pixel-explore--new-frontiers-2--index::drones::0",
+    "origin_path": "pixel-explore/new-frontiers-2/index.html",
+    "origin_sha256": "d3140237ede5b12b64a6d2c870b727fbb0c6e9481104cd55843705d3827a8c0d",
+    "source_sha256": "8a8dd1c3331d7c76b0a563feeef772a38c60c43ac779761a940d188853f9b0b6",
+    "source_bytes": 35838,
+    "poster_capture": {
+      "method": "native-runtime"
+    },
+    "batch": 4,
+    "preview": "https://ma1902056219-coder.github.io/openpixel/works/drone-light-show/"
+  },
+  {
+    "order": 38,
+    "slug": "storm-lightning",
+    "title": "雷暴",
+    "group": "可玩场景",
+    "summary": "画一条线，松手劈出闪电",
+    "url": "works/storm-lightning/index.html",
+    "source": "works/storm-lightning/source.html",
+    "poster": "works/storm-lightning/poster.webp",
+    "origin_id": "pixel-explore--interactive-art-3--index::storm::0",
+    "origin_path": "pixel-explore/interactive-art-3/index.html",
+    "origin_sha256": "fe1354c613e260ea0c6b905148cbd637c0db5706dbf98b1fb574c3c69af4821d",
+    "source_sha256": "f59e50b478e8cac88e957d1a5ff4324a88ca5b6b0ff9ba1e55541d62408bd0c9",
+    "source_bytes": 41284,
+    "poster_capture": {
+      "method": "native-runtime"
+    },
+    "batch": 4,
+    "preview": "https://ma1902056219-coder.github.io/openpixel/works/storm-lightning/"
+  },
+  {
+    "order": 39,
+    "slug": "soap-film",
+    "title": "肥皂泡",
+    "group": "互动与材质",
+    "summary": "吹出一个泡泡，看彩膜流动到破裂",
+    "url": "works/soap-film/index.html",
+    "source": "works/soap-film/source.html",
+    "poster": "works/soap-film/poster.webp",
+    "origin_id": "pixel-explore--interactive-art-3--index::bubble::0",
+    "origin_path": "pixel-explore/interactive-art-3/index.html",
+    "origin_sha256": "fe1354c613e260ea0c6b905148cbd637c0db5706dbf98b1fb574c3c69af4821d",
+    "source_sha256": "3647f2376c48740e5280604579bb4b73e6146a30de0eae18adafb4c4fe842983",
+    "source_bytes": 39115,
+    "poster_capture": {
+      "method": "native-runtime"
+    },
+    "batch": 4,
+    "preview": "https://ma1902056219-coder.github.io/openpixel/works/soap-film/"
+  },
+  {
+    "order": 40,
+    "slug": "dewdrop-refraction",
+    "title": "一滴露水",
+    "group": "自然与宇宙",
+    "summary": "水滴里有一朵倒过来的花",
+    "url": "works/dewdrop-refraction/index.html",
+    "source": "works/dewdrop-refraction/source.html",
+    "poster": "works/dewdrop-refraction/poster.webp",
+    "origin_id": "world-styles--micro-macro--index::dew::0",
+    "origin_path": "world-styles/micro-macro/index.html",
+    "origin_sha256": "02e979d8eb8697130486d3f6acfc39d41c8743ca94912c676b9bf972db45f732",
+    "source_sha256": "b440a0ef52e1b2e300e9f0ddf76a7a01b24c1f764a055adb523482b0c2fbd8d6",
+    "source_bytes": 19528,
+    "poster_capture": {
+      "method": "native-runtime"
+    },
+    "batch": 4,
+    "preview": "https://ma1902056219-coder.github.io/openpixel/works/dewdrop-refraction/"
+  },
+  {
+    "order": 41,
+    "slug": "rice-field-perspective",
+    "title": "稻田画",
+    "group": "像素画卷",
+    "summary": "从田埂上看是色块，登塔才看见一只鹤",
+    "url": "works/rice-field-perspective/index.html",
+    "source": "works/rice-field-perspective/source.html",
+    "poster": "works/rice-field-perspective/poster.webp",
+    "origin_id": "pixel-explore--new-frontiers-2--index::paddy::0",
+    "origin_path": "pixel-explore/new-frontiers-2/index.html",
+    "origin_sha256": "d3140237ede5b12b64a6d2c870b727fbb0c6e9481104cd55843705d3827a8c0d",
+    "source_sha256": "4f9911d531d27631a92c8a86ace14828841839d7fca0954a705c3dbda6474a44",
+    "source_bytes": 31742,
+    "poster_capture": {
+      "method": "native-runtime"
+    },
+    "batch": 4,
+    "preview": "https://ma1902056219-coder.github.io/openpixel/works/rice-field-perspective/"
   }
 ]

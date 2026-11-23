@@ -466,3 +466,65 @@
 Space로 정지, 좌우 화살표로 프레임 이동, R로 다시 재생, O로 어니언 스킨을 전환합니다. 버튼으로 무대, 검정, 격자 배경을 고릅니다.
 
 `works/ink-slash/index.html` · [source.js](../works/ink-slash/source.js)
+
+## 네 번째 공개
+
+<a id="drone-light-show"></a>
+
+## 천 개의 빛이 있는 밤 / 千机夜空
+
+[▶ 온라인 체험](https://ma1902056219-coder.github.io/openpixel/works/drone-light-show/)
+
+같은 빛점 1200개가 지구와 고래, 달로 변합니다.
+
+“地球”, “鲸鱼”, “入水”, “月亮” 버튼으로 지구, 고래, 잠수, 달 장면으로 이동합니다. “声音”으로 소리를 켭니다.
+
+`works/drone-light-show/index.html` · [source.js](../works/drone-light-show/source.js)
+
+<a id="storm-lightning"></a>
+
+## 뇌우 / 雷暴
+
+[▶ 온라인 체험](https://ma1902056219-coder.github.io/openpixel/works/storm-lightning/)
+
+구름에서 선을 그리면 가지가 갈라지는 번개가 칩니다.
+
+구름에서 아래로 끈 뒤 놓으세요. 구름을 누르면 번쩍이고 길게 누르면 번개가 충전됩니다.
+
+`works/storm-lightning/index.html` · [source.js](../works/storm-lightning/source.js)
+
+<a id="soap-film"></a>
+
+## 비눗방울 막 / 肥皂泡
+
+[▶ 온라인 체험](https://ma1902056219-coder.github.io/openpixel/works/soap-film/)
+
+막이 얇아지며 색이 변하는 비눗방울을 만들고 터뜨립니다.
+
+누른 채 천천히 움직이면 큰 방울이, 빠르게 움직이면 작은 방울들이 생깁니다. 방울을 누르면 터집니다.
+
+`works/soap-film/index.html` · [source.js](../works/soap-film/source.js)
+
+<a id="dewdrop-refraction"></a>
+
+## 이슬 한 방울 / 一滴露水
+
+[▶ 온라인 체험](https://ma1902056219-coder.github.io/openpixel/works/dewdrop-refraction/)
+
+이슬 속에 거꾸로 비친 꽃을 볼 수 있습니다.
+
+약 22초마다 반복됩니다. Space로 멈추고 오른쪽 화살표로 한 프레임씩 굴절과 수면 변화를 살펴보세요.
+
+`works/dewdrop-refraction/index.html` · [source.js](../works/dewdrop-refraction/source.js)
+
+<a id="rice-field-perspective"></a>
+
+## 논 그림 / 稻田画
+
+[▶ 온라인 체험](https://ma1902056219-coder.github.io/openpixel/works/rice-field-perspective/)
+
+전망대에 오르면 논의 색 조각이 두루미로 보입니다.
+
+“田埂上”으로 논둑, “爬上塔”으로 전망대에 오르는 장면, “正上方”으로 위에서 보는 장면을 엽니다.
+
+`works/rice-field-perspective/index.html` · [source.js](../works/rice-field-perspective/source.js)

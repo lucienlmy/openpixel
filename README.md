@@ -2,15 +2,15 @@
 
 [中文](README.md) · [English](README.en.md) · [日本語](README.ja.md) · [한국어](README.ko.md)
 
-<a href="https://ma1902056219-coder.github.io/openpixel/"><img src="docs/assets/openpixel-banner.gif" alt="OpenPixel：36个可以运行、探索和修改的像素小世界" width="100%"></a>
+<a href="https://ma1902056219-coder.github.io/openpixel/"><img src="docs/assets/openpixel-banner.gif" alt="OpenPixel：41个可以运行、探索和修改的像素小世界" width="100%"></a>
 
 # OpenPixel · 像素万象
 
 **把像素世界，变成你的作品。**
 
-36 个浏览器实时绘制的像素实验：从一滴水的涟漪，到两座星系的相撞。
+41 个浏览器实时绘制的像素实验：从一滴水的涟漪，到两座星系的相撞。
 
-<img src="docs/assets/badge-works.svg" alt="36件作品"> <img src="docs/assets/badge-runtime.svg" alt="浏览器运行"> <a href="LICENSE"><img src="docs/assets/badge-license.svg" alt="MIT许可"></a>
+<img src="docs/assets/badge-works.svg" alt="41件作品"> <img src="docs/assets/badge-runtime.svg" alt="浏览器运行"> <a href="LICENSE"><img src="docs/assets/badge-license.svg" alt="MIT许可"></a>
 
 [下载当前源码](https://github.com/ma1902056219-coder/openpixel/archive/refs/heads/main.zip) · [作品目录](#作品目录) · [开始运行](#开始运行) · [修改指南](docs/guide.md)
 
@@ -32,7 +32,24 @@
 - **走进场景**：首领战、落日驾驶、拼好后开始运动的微型世界。
 - **直接改源码**：每件作品独立成目录，附实际画面和中文说明，无需构建或 AI 接口。
 
-仓库首页、修改指南和36件作品的操作说明现提供中文、英文、日文、韩文。作品内界面及源码注释仍以中文为主。
+仓库首页、修改指南和41件作品的操作说明现提供中文、英文、日文、韩文。作品内界面及源码注释仍以中文为主。
+
+## 第四批新增 · 5 个像素实验
+
+让 1200 个光点变成鲸鱼，也可以亲手画闪电、吹出彩色泡泡。另有水滴折射与稻田透视，每件都附独立试玩和可编辑源码。
+
+<table>
+<tr>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/drone-light-show/"><img src="works/drone-light-show/poster.webp" alt="千机夜空" width="100%"><br><strong>千机夜空</strong></a><br><sub>让 1200 个光点从地球变成鲸鱼</sub><br><a href="works/drone-light-show/source.js">查看源码</a> · <a href="works/drone-light-show/README.md">操作说明</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/storm-lightning/"><img src="works/storm-lightning/poster.webp" alt="雷暴" width="100%"><br><strong>雷暴</strong></a><br><sub>画一条线，松手劈出闪电</sub><br><a href="works/storm-lightning/source.js">查看源码</a> · <a href="works/storm-lightning/README.md">操作说明</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/soap-film/"><img src="works/soap-film/poster.webp" alt="肥皂泡" width="100%"><br><strong>肥皂泡</strong></a><br><sub>吹出一个泡泡，看彩膜流动到破裂</sub><br><a href="works/soap-film/source.js">查看源码</a> · <a href="works/soap-film/README.md">操作说明</a></td>
+</tr>
+<tr>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/dewdrop-refraction/"><img src="works/dewdrop-refraction/poster.webp" alt="一滴露水" width="100%"><br><strong>一滴露水</strong></a><br><sub>水滴里有一朵倒过来的花</sub><br><a href="works/dewdrop-refraction/source.js">查看源码</a> · <a href="works/dewdrop-refraction/README.md">操作说明</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/rice-field-perspective/"><img src="works/rice-field-perspective/poster.webp" alt="稻田画" width="100%"><br><strong>稻田画</strong></a><br><sub>从田埂上看是色块，登塔才看见一只鹤</sub><br><a href="works/rice-field-perspective/source.js">查看源码</a> · <a href="works/rice-field-perspective/README.md">操作说明</a></td>
+<td width="33%"></td>
+</tr>
+</table>
 
 ## 第三批新增 · 5 个像素实验
 
@@ -88,7 +105,7 @@ python -m http.server 8080 --bind 127.0.0.1
 
 ## 作品目录
 
-**点击图卡直接在线体验；每件作品另附操作说明与源码，也可下载后离线运行。** 当前合集共 36 件，每件都附可编辑的 `source.js`。
+**点击图卡直接在线体验；每件作品另附操作说明与源码，也可下载后离线运行。** 当前合集共 41 件，每件都附可编辑的 `source.js`。
 
 ### 互动与材质
 
@@ -206,7 +223,7 @@ openpixel/
 
 ## 参与与更新
 
-当前已分三批开放 36 件，后续继续按批次补充。欢迎提交交互改进、性能优化和你的新版本，详见 [CONTRIBUTING.md](CONTRIBUTING.md)。
+当前已分四批开放 41 件，后续继续按批次补充。欢迎提交交互改进、性能优化和你的新版本，详见 [CONTRIBUTING.md](CONTRIBUTING.md)。
 
 遇到问题时，请在 [Issues](https://github.com/ma1902056219-coder/openpixel/issues) 写清作品名、浏览器和复现步骤。
 

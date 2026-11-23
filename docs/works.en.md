@@ -466,3 +466,65 @@ A dry ink stroke sweeps across the bamboo.
 Use Space to pause, Left and Right Arrow to step frames, R to replay and O to toggle onion skin. The background buttons select stage, black or checkerboard.
 
 `works/ink-slash/index.html` · [source.js](../works/ink-slash/source.js)
+
+## Batch 04
+
+<a id="drone-light-show"></a>
+
+## Sky of a Thousand Lights / 千机夜空
+
+[▶ Try it online](https://ma1902056219-coder.github.io/openpixel/works/drone-light-show/)
+
+The same 1,200 lights become a globe, a whale, and a moon.
+
+Use “地球”, “鲸鱼”, “入水” and “月亮” to jump to the globe, whale, dive or moon. “声音” turns on sound.
+
+`works/drone-light-show/index.html` · [source.js](../works/drone-light-show/source.js)
+
+<a id="storm-lightning"></a>
+
+## Thunderstorm / 雷暴
+
+[▶ Try it online](https://ma1902056219-coder.github.io/openpixel/works/storm-lightning/)
+
+Drag a path through the clouds to draw a branching bolt.
+
+Start in the cloud layer and drag down, then release. Tap a cloud to flash, or hold it to charge a bolt.
+
+`works/storm-lightning/index.html` · [source.js](../works/storm-lightning/source.js)
+
+<a id="soap-film"></a>
+
+## Soap Film / 肥皂泡
+
+[▶ Try it online](https://ma1902056219-coder.github.io/openpixel/works/soap-film/)
+
+Blow and pop bubbles whose colors change as the film thins.
+
+Hold and move slowly to grow one large bubble. Flick for smaller bubbles, and tap a bubble to pop it.
+
+`works/soap-film/index.html` · [source.js](../works/soap-film/source.js)
+
+<a id="dewdrop-refraction"></a>
+
+## One Drop of Dew / 一滴露水
+
+[▶ Try it online](https://ma1902056219-coder.github.io/openpixel/works/dewdrop-refraction/)
+
+See a flower upside down through a droplet.
+
+Watch the 22-second loop. Use Space to pause and the Right Arrow to step through the refraction and the moment of contact.
+
+`works/dewdrop-refraction/index.html` · [source.js](../works/dewdrop-refraction/source.js)
+
+<a id="rice-field-perspective"></a>
+
+## Rice Field Art / 稻田画
+
+[▶ Try it online](https://ma1902056219-coder.github.io/openpixel/works/rice-field-perspective/)
+
+Find the crane that only lines up from the viewing tower.
+
+Use “田埂上” for the field path, “爬上塔” to climb the tower, and “正上方” for an overhead view.
+
+`works/rice-field-perspective/index.html` · [source.js](../works/rice-field-perspective/source.js)

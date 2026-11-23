@@ -54,3 +54,13 @@
 | 树影日食 | `pixel-explore/interactive-art-4/index.html` | `c956e2f54eda001f76455613bca4494e3a0ef95191720eab4dec513627c0f409` |
 | 雨的乐器 | `pixel-explore/interactive-art-4/index.html` | `c956e2f54eda001f76455613bca4494e3a0ef95191720eab4dec513627c0f409` |
 | 水墨斩 | `pixel-explore/vfx/index.html` | `98d507a2ff3aaadd285a04a9a4ab1456cf9cdf1ff7eb9c41b806f5935e92ad5c` |
+
+## 第四批 · 2026-11-23
+
+| 作品 | 原文件 | 原文件 SHA-256 |
+|---|---|---|
+| 千机夜空 | `pixel-explore/new-frontiers-2/index.html` | `d3140237ede5b12b64a6d2c870b727fbb0c6e9481104cd55843705d3827a8c0d` |
+| 雷暴 | `pixel-explore/interactive-art-3/index.html` | `fe1354c613e260ea0c6b905148cbd637c0db5706dbf98b1fb574c3c69af4821d` |
+| 肥皂泡 | `pixel-explore/interactive-art-3/index.html` | `fe1354c613e260ea0c6b905148cbd637c0db5706dbf98b1fb574c3c69af4821d` |
+| 一滴露水 | `world-styles/micro-macro/index.html` | `02e979d8eb8697130486d3f6acfc39d41c8743ca94912c676b9bf972db45f732` |
+| 稻田画 | `pixel-explore/new-frontiers-2/index.html` | `d3140237ede5b12b64a6d2c870b727fbb0c6e9481104cd55843705d3827a8c0d` |

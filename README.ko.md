@@ -8,7 +8,7 @@
 
 **픽셀 세계를 나만의 작품으로.**
 
-연못의 물결부터 은하 충돌까지, 브라우저에서 실시간으로 그리는 36개의 픽셀 실험입니다.
+연못의 물결부터 은하 충돌까지, 브라우저에서 실시간으로 그리는 41개의 픽셀 실험입니다.
 
 <img src="docs/assets/badge-works.ko.svg" alt="작품"> <img src="docs/assets/badge-runtime.ko.svg" alt="실행"> <img src="docs/assets/badge-license.ko.svg" alt="라이선스">
 
@@ -25,12 +25,29 @@
 <img src="docs/assets/showcase.gif" alt="실제 실행 화면: 물결, 물고기 떼, 은하 충돌" width="850">
 </div>
 
-실제로 실행한 작품 화면입니다. 36개 작품을 온라인으로 체험하거나 소스를 다운로드해 나만의 작품으로 바꿔 보세요.
+실제로 실행한 작품 화면입니다. 41개 작품을 온라인으로 체험하거나 소스를 다운로드해 나만의 작품으로 바꿔 보세요.
 
 - **직접 만져보기:** 비단잉어에게 먹이를 주고, 자기장을 움직이고, 성에를 닦고, 모래에 무늬를 남겨 보세요.
 - **변화 관찰하기:** 위성은 고리가 되고, 물고기는 돌고래를 피하며, 별의 궤적은 긴 꼬리를 만듭니다.
 - **장면 속으로 들어가기:** 보스 전투, 노을 속 드라이브, 퍼즐을 맞추면 움직이는 마을.
 - **소스 수정하기:** 작품마다 독립 폴더, 소스 코드, 설명을 제공합니다. 빌드나 AI API가 필요하지 않습니다.
+
+## 네 번째 공개 · 픽셀 실험 5개
+
+빛점 1200개로 고래를 만들고, 번개를 그리거나 비눗방울을 불어 보세요. 이슬의 굴절과 논 그림의 원근법도 직접 실행하고 고칠 수 있습니다.
+
+<table>
+<tr>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/drone-light-show/"><img src="works/drone-light-show/poster.webp" alt="천 개의 빛이 있는 밤" width="100%"><br><strong>천 개의 빛이 있는 밤</strong></a><br><sub>같은 빛점 1200개가 지구와 고래, 달로 변합니다.</sub><br><a href="works/drone-light-show/source.js">소스</a> · <a href="docs/works.ko.md#drone-light-show">조작 안내</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/storm-lightning/"><img src="works/storm-lightning/poster.webp" alt="뇌우" width="100%"><br><strong>뇌우</strong></a><br><sub>구름에서 선을 그리면 가지가 갈라지는 번개가 칩니다.</sub><br><a href="works/storm-lightning/source.js">소스</a> · <a href="docs/works.ko.md#storm-lightning">조작 안내</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/soap-film/"><img src="works/soap-film/poster.webp" alt="비눗방울 막" width="100%"><br><strong>비눗방울 막</strong></a><br><sub>막이 얇아지며 색이 변하는 비눗방울을 만들고 터뜨립니다.</sub><br><a href="works/soap-film/source.js">소스</a> · <a href="docs/works.ko.md#soap-film">조작 안내</a></td>
+</tr>
+<tr>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/dewdrop-refraction/"><img src="works/dewdrop-refraction/poster.webp" alt="이슬 한 방울" width="100%"><br><strong>이슬 한 방울</strong></a><br><sub>이슬 속에 거꾸로 비친 꽃을 볼 수 있습니다.</sub><br><a href="works/dewdrop-refraction/source.js">소스</a> · <a href="docs/works.ko.md#dewdrop-refraction">조작 안내</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/rice-field-perspective/"><img src="works/rice-field-perspective/poster.webp" alt="논 그림" width="100%"><br><strong>논 그림</strong></a><br><sub>전망대에 오르면 논의 색 조각이 두루미로 보입니다.</sub><br><a href="works/rice-field-perspective/source.js">소스</a> · <a href="docs/works.ko.md#rice-field-perspective">조작 안내</a></td>
+<td width="33%"></td>
+</tr>
+</table>
 
 ## 세 번째 공개 · 픽셀 실험 5개
 
@@ -192,7 +209,7 @@ source.js를 읽고 초기화, 프레임별 갱신, 그리기 함수를 찾아�
 
 ## 업데이트와 참여
 
-세 차례 공개로 현재 총 36개 작품을 제공합니다. 새로운 효과도 비정기적으로 공개할 예정입니다. 조작성, 시각 효과, 성능 개선을 환영합니다. 문제를 제보할 때는 작품명, 브라우저, 재현 단계를 적어주세요. Pull Request에는 변경 내용과 데모·수동 조작 확인 결과를 함께 적어주세요. 원문 참여 안내는 [CONTRIBUTING.md](CONTRIBUTING.md)에 있습니다.
+네 차례 공개로 현재 총 41개 작품을 제공합니다. 새로운 효과도 비정기적으로 공개할 예정입니다. 조작성, 시각 효과, 성능 개선을 환영합니다. 문제를 제보할 때는 작품명, 브라우저, 재현 단계를 적어주세요. Pull Request에는 변경 내용과 데모·수동 조작 확인 결과를 함께 적어주세요. 원문 참여 안내는 [CONTRIBUTING.md](CONTRIBUTING.md)에 있습니다.
 
 ## 제작자와 라이선스
 

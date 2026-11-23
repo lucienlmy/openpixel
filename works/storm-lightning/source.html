@@ -1,0 +1,373 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>雷暴 · 源码</title><style>body{margin:0;background:#0d1513;color:#dbe4d7;font:14px/1.7 ui-monospace,Consolas,monospace}header{position:sticky;top:0;padding:16px 24px;background:#14221f;border-bottom:1px solid #34483e;display:flex;gap:24px;flex-wrap:wrap}a{color:#b7e99c}pre{padding:24px;overflow:auto;tab-size:2}</style><header><a href="index.html">← 返回作品</a><a href="source.js" download>下载 source.js</a><a href="https://github.com/ma1902056219-coder/openpixel/blob/main/works/storm-lightning/README.md">修改说明</a><span>本页为源码预览；编辑 source.js 后刷新作品页</span></header><pre><code>// SPDX-License-Identifier: MIT
+// Copyright (c) 2026 喵老弟 / MarkMFFF
+
+const PF={
+&#x27;0&#x27;:[&#x27;.###.&#x27;,&#x27;#..##&#x27;,&#x27;#.#.#&#x27;,&#x27;##..#&#x27;,&#x27;#...#&#x27;,&#x27;#...#&#x27;,&#x27;.###.&#x27;],&#x27;1&#x27;:[&#x27;..#..&#x27;,&#x27;.##..&#x27;,&#x27;#.#..&#x27;,&#x27;..#..&#x27;,&#x27;..#..&#x27;,&#x27;..#..&#x27;,&#x27;#####&#x27;],
+&#x27;2&#x27;:[&#x27;.###.&#x27;,&#x27;#...#&#x27;,&#x27;....#&#x27;,&#x27;..##.&#x27;,&#x27;.#...&#x27;,&#x27;#....&#x27;,&#x27;#####&#x27;],&#x27;3&#x27;:[&#x27;####.&#x27;,&#x27;....#&#x27;,&#x27;....#&#x27;,&#x27;.###.&#x27;,&#x27;....#&#x27;,&#x27;....#&#x27;,&#x27;####.&#x27;],
+&#x27;4&#x27;:[&#x27;...#.&#x27;,&#x27;..##.&#x27;,&#x27;.#.#.&#x27;,&#x27;#..#.&#x27;,&#x27;#####&#x27;,&#x27;...#.&#x27;,&#x27;...#.&#x27;],&#x27;5&#x27;:[&#x27;#####&#x27;,&#x27;#....&#x27;,&#x27;####.&#x27;,&#x27;....#&#x27;,&#x27;....#&#x27;,&#x27;#...#&#x27;,&#x27;.###.&#x27;],
+&#x27;6&#x27;:[&#x27;.###.&#x27;,&#x27;#....&#x27;,&#x27;#....&#x27;,&#x27;####.&#x27;,&#x27;#...#&#x27;,&#x27;#...#&#x27;,&#x27;.###.&#x27;],&#x27;7&#x27;:[&#x27;#####&#x27;,&#x27;....#&#x27;,&#x27;...#.&#x27;,&#x27;..#..&#x27;,&#x27;.#...&#x27;,&#x27;.#...&#x27;,&#x27;.#...&#x27;],
+&#x27;8&#x27;:[&#x27;.###.&#x27;,&#x27;#...#&#x27;,&#x27;#...#&#x27;,&#x27;.###.&#x27;,&#x27;#...#&#x27;,&#x27;#...#&#x27;,&#x27;.###.&#x27;],&#x27;9&#x27;:[&#x27;.###.&#x27;,&#x27;#...#&#x27;,&#x27;#...#&#x27;,&#x27;.####&#x27;,&#x27;....#&#x27;,&#x27;....#&#x27;,&#x27;.###.&#x27;],
+&#x27;A&#x27;:[&#x27;.###.&#x27;,&#x27;#...#&#x27;,&#x27;#...#&#x27;,&#x27;#####&#x27;,&#x27;#...#&#x27;,&#x27;#...#&#x27;,&#x27;#...#&#x27;],&#x27;B&#x27;:[&#x27;####.&#x27;,&#x27;#...#&#x27;,&#x27;#...#&#x27;,&#x27;####.&#x27;,&#x27;#...#&#x27;,&#x27;#...#&#x27;,&#x27;####.&#x27;],
+&#x27;C&#x27;:[&#x27;.###.&#x27;,&#x27;#...#&#x27;,&#x27;#....&#x27;,&#x27;#....&#x27;,&#x27;#....&#x27;,&#x27;#...#&#x27;,&#x27;.###.&#x27;],&#x27;D&#x27;:[&#x27;####.&#x27;,&#x27;#...#&#x27;,&#x27;#...#&#x27;,&#x27;#...#&#x27;,&#x27;#...#&#x27;,&#x27;#...#&#x27;,&#x27;####.&#x27;],
+&#x27;E&#x27;:[&#x27;#####&#x27;,&#x27;#....&#x27;,&#x27;#....&#x27;,&#x27;####.&#x27;,&#x27;#....&#x27;,&#x27;#....&#x27;,&#x27;#####&#x27;],&#x27;F&#x27;:[&#x27;#####&#x27;,&#x27;#....&#x27;,&#x27;#....&#x27;,&#x27;####.&#x27;,&#x27;#....&#x27;,&#x27;#....&#x27;,&#x27;#....&#x27;],
+&#x27;G&#x27;:[&#x27;.###.&#x27;,&#x27;#...#&#x27;,&#x27;#....&#x27;,&#x27;#.###&#x27;,&#x27;#...#&#x27;,&#x27;#...#&#x27;,&#x27;.####&#x27;],&#x27;H&#x27;:[&#x27;#...#&#x27;,&#x27;#...#&#x27;,&#x27;#...#&#x27;,&#x27;#####&#x27;,&#x27;#...#&#x27;,&#x27;#...#&#x27;,&#x27;#...#&#x27;],
+&#x27;I&#x27;:[&#x27;###&#x27;,&#x27;.#.&#x27;,&#x27;.#.&#x27;,&#x27;.#.&#x27;,&#x27;.#.&#x27;,&#x27;.#.&#x27;,&#x27;###&#x27;],&#x27;J&#x27;:[&#x27;..###&#x27;,&#x27;...#.&#x27;,&#x27;...#.&#x27;,&#x27;...#.&#x27;,&#x27;#..#.&#x27;,&#x27;#..#.&#x27;,&#x27;.##..&#x27;],
+&#x27;K&#x27;:[&#x27;#...#&#x27;,&#x27;#..#.&#x27;,&#x27;#.#..&#x27;,&#x27;##...&#x27;,&#x27;#.#..&#x27;,&#x27;#..#.&#x27;,&#x27;#...#&#x27;],&#x27;L&#x27;:[&#x27;#....&#x27;,&#x27;#....&#x27;,&#x27;#....&#x27;,&#x27;#....&#x27;,&#x27;#....&#x27;,&#x27;#....&#x27;,&#x27;#####&#x27;],
+&#x27;M&#x27;:[&#x27;#...#&#x27;,&#x27;##.##&#x27;,&#x27;#.#.#&#x27;,&#x27;#.#.#&#x27;,&#x27;#...#&#x27;,&#x27;#...#&#x27;,&#x27;#...#&#x27;],&#x27;N&#x27;:[&#x27;#...#&#x27;,&#x27;##..#&#x27;,&#x27;#.#.#&#x27;,&#x27;#..##&#x27;,&#x27;#...#&#x27;,&#x27;#...#&#x27;,&#x27;#...#&#x27;],
+&#x27;O&#x27;:[&#x27;.###.&#x27;,&#x27;#...#&#x27;,&#x27;#...#&#x27;,&#x27;#...#&#x27;,&#x27;#...#&#x27;,&#x27;#...#&#x27;,&#x27;.###.&#x27;],&#x27;P&#x27;:[&#x27;####.&#x27;,&#x27;#...#&#x27;,&#x27;#...#&#x27;,&#x27;####.&#x27;,&#x27;#....&#x27;,&#x27;#....&#x27;,&#x27;#....&#x27;],
+&#x27;Q&#x27;:[&#x27;.###.&#x27;,&#x27;#...#&#x27;,&#x27;#...#&#x27;,&#x27;#...#&#x27;,&#x27;#.#.#&#x27;,&#x27;#..#.&#x27;,&#x27;.##.#&#x27;],&#x27;R&#x27;:[&#x27;####.&#x27;,&#x27;#...#&#x27;,&#x27;#...#&#x27;,&#x27;####.&#x27;,&#x27;#.#..&#x27;,&#x27;#..#.&#x27;,&#x27;#...#&#x27;],
+&#x27;S&#x27;:[&#x27;.####&#x27;,&#x27;#....&#x27;,&#x27;#....&#x27;,&#x27;.###.&#x27;,&#x27;....#&#x27;,&#x27;....#&#x27;,&#x27;####.&#x27;],&#x27;T&#x27;:[&#x27;#####&#x27;,&#x27;..#..&#x27;,&#x27;..#..&#x27;,&#x27;..#..&#x27;,&#x27;..#..&#x27;,&#x27;..#..&#x27;,&#x27;..#..&#x27;],
+&#x27;U&#x27;:[&#x27;#...#&#x27;,&#x27;#...#&#x27;,&#x27;#...#&#x27;,&#x27;#...#&#x27;,&#x27;#...#&#x27;,&#x27;#...#&#x27;,&#x27;.###.&#x27;],&#x27;V&#x27;:[&#x27;#...#&#x27;,&#x27;#...#&#x27;,&#x27;#...#&#x27;,&#x27;#...#&#x27;,&#x27;.#.#.&#x27;,&#x27;.#.#.&#x27;,&#x27;..#..&#x27;],
+&#x27;W&#x27;:[&#x27;#...#&#x27;,&#x27;#...#&#x27;,&#x27;#...#&#x27;,&#x27;#.#.#&#x27;,&#x27;#.#.#&#x27;,&#x27;##.##&#x27;,&#x27;#...#&#x27;],&#x27;X&#x27;:[&#x27;#...#&#x27;,&#x27;#...#&#x27;,&#x27;.#.#.&#x27;,&#x27;..#..&#x27;,&#x27;.#.#.&#x27;,&#x27;#...#&#x27;,&#x27;#...#&#x27;],
+&#x27;Y&#x27;:[&#x27;#...#&#x27;,&#x27;#...#&#x27;,&#x27;.#.#.&#x27;,&#x27;..#..&#x27;,&#x27;..#..&#x27;,&#x27;..#..&#x27;,&#x27;..#..&#x27;],&#x27;Z&#x27;:[&#x27;#####&#x27;,&#x27;....#&#x27;,&#x27;...#.&#x27;,&#x27;..#..&#x27;,&#x27;.#...&#x27;,&#x27;#....&#x27;,&#x27;#####&#x27;],
+&#x27;+&#x27;:[&#x27;.....&#x27;,&#x27;..#..&#x27;,&#x27;..#..&#x27;,&#x27;#####&#x27;,&#x27;..#..&#x27;,&#x27;..#..&#x27;,&#x27;.....&#x27;],&#x27;-&#x27;:[&#x27;.....&#x27;,&#x27;.....&#x27;,&#x27;.....&#x27;,&#x27;#####&#x27;,&#x27;.....&#x27;,&#x27;.....&#x27;,&#x27;.....&#x27;],
+&#x27;!&#x27;:[&#x27;#&#x27;,&#x27;#&#x27;,&#x27;#&#x27;,&#x27;#&#x27;,&#x27;#&#x27;,&#x27;.&#x27;,&#x27;#&#x27;],&#x27;?&#x27;:[&#x27;.###.&#x27;,&#x27;#...#&#x27;,&#x27;....#&#x27;,&#x27;..##.&#x27;,&#x27;..#..&#x27;,&#x27;.....&#x27;,&#x27;..#..&#x27;],&#x27;.&#x27;:[&#x27;.&#x27;,&#x27;.&#x27;,&#x27;.&#x27;,&#x27;.&#x27;,&#x27;.&#x27;,&#x27;.&#x27;,&#x27;#&#x27;],
+&#x27;:&#x27;:[&#x27;.&#x27;,&#x27;.&#x27;,&#x27;#&#x27;,&#x27;.&#x27;,&#x27;.&#x27;,&#x27;#&#x27;,&#x27;.&#x27;],&#x27;/&#x27;:[&#x27;....#&#x27;,&#x27;....#&#x27;,&#x27;...#.&#x27;,&#x27;..#..&#x27;,&#x27;.#...&#x27;,&#x27;#....&#x27;,&#x27;#....&#x27;],&#x27;x&#x27;:[&#x27;.....&#x27;,&#x27;.....&#x27;,&#x27;#...#&#x27;,&#x27;.#.#.&#x27;,&#x27;..#..&#x27;,&#x27;.#.#.&#x27;,&#x27;#...#&#x27;],
+&#x27;%&#x27;:[&#x27;##..#&#x27;,&#x27;##..#&#x27;,&#x27;...#.&#x27;,&#x27;..#..&#x27;,&#x27;.#...&#x27;,&#x27;#..##&#x27;,&#x27;#..##&#x27;],&quot;&#x27;&quot;:[&#x27;#&#x27;,&#x27;#&#x27;,&#x27;.&#x27;,&#x27;.&#x27;,&#x27;.&#x27;,&#x27;.&#x27;,&#x27;.&#x27;],&#x27;*&#x27;:[&#x27;.....&#x27;,&#x27;#.#.#&#x27;,&#x27;.###.&#x27;,&#x27;#####&#x27;,&#x27;.###.&#x27;,&#x27;#.#.#&#x27;,&#x27;.....&#x27;],
+&#x27;(&#x27;:[&#x27;.#&#x27;,&#x27;#.&#x27;,&#x27;#.&#x27;,&#x27;#.&#x27;,&#x27;#.&#x27;,&#x27;#.&#x27;,&#x27;.#&#x27;],&#x27;)&#x27;:[&#x27;#.&#x27;,&#x27;.#&#x27;,&#x27;.#&#x27;,&#x27;.#&#x27;,&#x27;.#&#x27;,&#x27;.#&#x27;,&#x27;#.&#x27;],&#x27;,&#x27;:[&#x27;..&#x27;,&#x27;..&#x27;,&#x27;..&#x27;,&#x27;..&#x27;,&#x27;..&#x27;,&#x27;.#&#x27;,&#x27;#.&#x27;],&#x27;=&#x27;:[&#x27;.....&#x27;,&#x27;.....&#x27;,&#x27;#####&#x27;,&#x27;.....&#x27;,&#x27;#####&#x27;,&#x27;.....&#x27;,&#x27;.....&#x27;],
+&#x27;&lt;&#x27;:[&#x27;...#&#x27;,&#x27;..#.&#x27;,&#x27;.#..&#x27;,&#x27;#...&#x27;,&#x27;.#..&#x27;,&#x27;..#.&#x27;,&#x27;...#&#x27;],&#x27;&gt;&#x27;:[&#x27;#...&#x27;,&#x27;.#..&#x27;,&#x27;..#.&#x27;,&#x27;...#&#x27;,&#x27;..#.&#x27;,&#x27;.#..&#x27;,&#x27;#...&#x27;],&#x27;#&#x27;:[&#x27;.#.#.&#x27;,&#x27;#####&#x27;,&#x27;.#.#.&#x27;,&#x27;.#.#.&#x27;,&#x27;.#.#.&#x27;,&#x27;#####&#x27;,&#x27;.#.#.&#x27;],
+&#x27;_&#x27;:[&#x27;.....&#x27;,&#x27;.....&#x27;,&#x27;.....&#x27;,&#x27;.....&#x27;,&#x27;.....&#x27;,&#x27;.....&#x27;,&#x27;#####&#x27;],&#x27; &#x27;:[&#x27;...&#x27;,&#x27;...&#x27;,&#x27;...&#x27;,&#x27;...&#x27;,&#x27;...&#x27;,&#x27;...&#x27;,&#x27;...&#x27;]};
+
+
+// ================= K: a small true-colour pixel core =================
+// A 480x270 colour buffer + emissive (for bloom) + depth. Each game owns its own renderer (voxel space, oblique heightfield,
+// folding paper) and writes final pixels here; K only handles text, sound, helpers, and the hand-off to the display.
+const K=(function(){
+const W=480,H=270,N=W*H;
+const col=new Uint32Array(N),em=new Uint8Array(N),dep=new Float32Array(N);
+const img=new ImageData(W,H),o32=new Uint32Array(img.data.buffer);
+const BW=W&gt;&gt;1,BH=H&gt;&gt;1,bimg=new ImageData(BW,BH),b32=new Uint32Array(bimg.data.buffer);
+const S={W,H,col,em,dep,img,bimg,frame:0,flash:0,flashC:0xffffff,fade:0,fadeC:0,raw:false,bloomK:1,shx:0,shy:0};
+// ---------------- colour helpers ----------------
+const rgb=(r,g,b)=&gt;((r&lt;0?0:r&gt;255?255:r|0)&lt;&lt;16)|((g&lt;0?0:g&gt;255?255:g|0)&lt;&lt;8)|(b&lt;0?0:b&gt;255?255:b|0);
+const hex=s=&gt;parseInt(s.replace(&#x27;#&#x27;,&#x27;&#x27;),16);
+function mix(a,b,t){if(t&lt;=0)return a;if(t&gt;=1)return b;const ar=a&gt;&gt;16&amp;255,ag=a&gt;&gt;8&amp;255,ab=a&amp;255;return rgb(ar+((b&gt;&gt;16&amp;255)-ar)*t,ag+((b&gt;&gt;8&amp;255)-ag)*t,ab+((b&amp;255)-ab)*t)}
+function mul(a,k){return rgb((a&gt;&gt;16&amp;255)*k,(a&gt;&gt;8&amp;255)*k,(a&amp;255)*k)}
+function mulc(a,kr,kg,kb){return rgb((a&gt;&gt;16&amp;255)*kr,(a&gt;&gt;8&amp;255)*kg,(a&amp;255)*kb)}
+function add(a,b){return rgb((a&gt;&gt;16&amp;255)+(b&gt;&gt;16&amp;255),(a&gt;&gt;8&amp;255)+(b&gt;&gt;8&amp;255),(a&amp;255)+(b&amp;255))}
+// a ramp is a hand-picked list of colours, dark to light; sampling snaps to a step (no gradients, no dither)
+const ramp=s=&gt;s.split(&#x27; &#x27;).map(hex);
+function rs(R,t){const n=R.length;let i=Math.floor(t*n);return R[i&lt;0?0:i&gt;=n?n-1:i]}
+// ---------------- random ----------------
+let seed=1;const rnd=()=&gt;{seed=(seed*1664525+1013904223)|0;return((seed&gt;&gt;&gt;8)&amp;0xffffff)/0x1000000};
+const rr=(a,b)=&gt;a+(b-a)*rnd(),ri=(a,b)=&gt;Math.floor(rr(a,b+1));
+function hash(x,y){let h=(x|0)*374761393+(y|0)*668265263;h=(h^(h&gt;&gt;&gt;13))*1274126177;h=h^(h&gt;&gt;&gt;16);return(h&gt;&gt;&gt;0)/4294967296}
+const pmod=(a,n)=&gt;((a%n)+n)%n;
+const clamp=(v,a,b)=&gt;v&lt;a?a:v&gt;b?b:v,lerp=(a,b,t)=&gt;a+(b-a)*t,sstep=(a,b,x)=&gt;{const t=clamp((x-a)/(b-a),0,1);return t*t*(3-2*t)};
+function vnoise(x,y,s){const X=Math.floor(x),Y=Math.floor(y),fx=x-X,fy=y-Y,u=fx*fx*(3-2*fx),v=fy*fy*(3-2*fy);s=s||0;
+  const a=hash(X+s,Y),b=hash(X+1+s,Y),c=hash(X+s,Y+1),d=hash(X+1+s,Y+1);return a+(b-a)*u+(c-a)*v+(a-b-c+d)*u*v}
+function fbm(x,y,o,s){let v=0,a=0.5,f=1;for(let i=0;i&lt;o;i++){v+=a*vnoise(x*f,y*f,(s||0)+i*31);f*=2;a*=0.5}return v/(1-Math.pow(0.5,o))}
+// ---------------- drawing ----------------
+function clear(c){col.fill(c);em.fill(0);dep.fill(1e9)}
+function px(x,y,c,e){x|=0;y|=0;if(x&lt;0||y&lt;0||x&gt;=W||y&gt;=H)return;const p=y*W+x;col[p]=c;em[p]=e||0}
+function pxa(x,y,c,a,e){x|=0;y|=0;if(x&lt;0||y&lt;0||x&gt;=W||y&gt;=H)return;const p=y*W+x;col[p]=mix(col[p],c,a);if(e)em[p]=Math.max(em[p],e)}
+function rect(x,y,w,h,c,e){x=Math.round(x);y=Math.round(y);for(let j=Math.max(0,y);j&lt;Math.min(H,y+h);j++)for(let i=Math.max(0,x);i&lt;Math.min(W,x+w);i++){const p=j*W+i;col[p]=c;em[p]=e||0}}
+function recta(x,y,w,h,c,a){x=Math.round(x);y=Math.round(y);for(let j=Math.max(0,y);j&lt;Math.min(H,y+h);j++)for(let i=Math.max(0,x);i&lt;Math.min(W,x+w);i++){const p=j*W+i;col[p]=mix(col[p],c,a)}}
+function line(x0,y0,x1,y1,c,e){x0=Math.round(x0);y0=Math.round(y0);x1=Math.round(x1);y1=Math.round(y1);const dx=Math.abs(x1-x0),dy=-Math.abs(y1-y0),sx=x0&lt;x1?1:-1,sy=y0&lt;y1?1:-1;let er=dx+dy;
+  for(let k=0;k&lt;3000;k++){px(x0,y0,c,e);if(x0===x1&amp;&amp;y0===y1)break;const e2=2*er;if(e2&gt;=dy){er+=dy;x0+=sx}if(e2&lt;=dx){er+=dx;y0+=sy}}}
+function disc(cx,cy,r,c,e){for(let y=Math.floor(cy-r);y&lt;=Math.ceil(cy+r);y++)for(let x=Math.floor(cx-r);x&lt;=Math.ceil(cx+r);x++){const dx=x+0.5-cx,dy=y+0.5-cy;if(dx*dx+dy*dy&lt;=r*r)px(x,y,c,e)}}
+function disca(cx,cy,r,c,a){for(let y=Math.floor(cy-r);y&lt;=Math.ceil(cy+r);y++)for(let x=Math.floor(cx-r);x&lt;=Math.ceil(cx+r);x++){const dx=x+0.5-cx,dy=y+0.5-cy;if(dx*dx+dy*dy&lt;=r*r)pxa(x,y,c,a)}}
+function ring(cx,cy,r,w,c,e){const r0=Math.max(0,r-w);for(let y=Math.floor(cy-r);y&lt;=Math.ceil(cy+r);y++)for(let x=Math.floor(cx-r);x&lt;=Math.ceil(cx+r);x++){const dx=x+0.5-cx,dy=y+0.5-cy,d=dx*dx+dy*dy;if(d&lt;=r*r&amp;&amp;d&gt;=r0*r0)px(x,y,c,e)}}
+// soft additive glow (goes to colour and to bloom)
+function glow(cx,cy,r,c,k){const cr=(c&gt;&gt;16&amp;255)*k,cg=(c&gt;&gt;8&amp;255)*k,cb=(c&amp;255)*k;for(let y=Math.max(0,Math.floor(cy-r));y&lt;=Math.min(H-1,Math.ceil(cy+r));y++)for(let x=Math.max(0,Math.floor(cx-r));x&lt;=Math.min(W-1,Math.ceil(cx+r));x++){
+  const dx=x+0.5-cx,dy=y+0.5-cy,d=(dx*dx+dy*dy)/(r*r);if(d&gt;=1)continue;const a=(1-d)*(1-d),p=y*W+x,o=col[p];col[p]=rgb((o&gt;&gt;16&amp;255)+cr*a,(o&gt;&gt;8&amp;255)+cg*a,(o&amp;255)+cb*a);em[p]=Math.min(255,em[p]+a*120*k)}}
+// sprites: rows of chars mapped through a palette object; &#x27;.&#x27; is empty
+function spr(rows,map){const h=rows.length,w=Math.max(...rows.map(r=&gt;r.length)),c=new Int32Array(w*h).fill(-1);
+  for(let y=0;y&lt;h;y++)for(let x=0;x&lt;rows[y].length;x++){const ch=rows[y][x];if(ch===&#x27;.&#x27;||ch===&#x27; &#x27;)continue;const m=map[ch];if(m==null)throw new Error(&#x27;sprite char &#x27;+ch);c[y*w+x]=m}return{w,h,c}}
+function blit(s,x,y,o){o=o||{};x=Math.round(x);y=Math.round(y);const fl=o.flip,tint=o.tint,ta=o.ta||0,e=o.em||0,al=o.a;
+  for(let j=0;j&lt;s.h;j++){const Y=y+j;if(Y&lt;0||Y&gt;=H)continue;for(let i=0;i&lt;s.w;i++){let c=s.c[j*s.w+(fl?s.w-1-i:i)];if(c&lt;0)continue;const X=x+i;if(X&lt;0||X&gt;=W)continue;const p=Y*W+X;
+    if(tint!=null)c=mix(c,tint,ta);if(al!=null)col[p]=mix(col[p],c,al);else col[p]=c;em[p]=e}}}
+// ---------------- text: 5x7 latin, 3x5 digits, CJK rasterised from the system font at 4x ----------------
+const S8=[[-1,0],[1,0],[0,-1],[0,1],[-1,-1],[1,-1],[-1,1],[1,1]];
+function ptext(str,x,y,c,o){o=o||{};const sc=o.scale||1,e=o.em||0;str=String(str).toUpperCase();let w=0;for(const ch of str){const g=PF[ch]||PF[&#x27; &#x27;];w+=(g[0].length+1)*sc}w-=sc;
+  if(o.align===&#x27;c&#x27;)x-=Math.floor(w/2);else if(o.align===&#x27;r&#x27;)x-=w;x=Math.round(x);y=Math.round(y);
+  const pass=(cc,dx,dy,ee)=&gt;{let cx=x;for(const ch of str){const g=PF[ch]||PF[&#x27; &#x27;];for(let j=0;j&lt;7;j++)for(let i=0;i&lt;g[j].length;i++)if(g[j][i]===&#x27;#&#x27;)rect(cx+i*sc+dx,y+j*sc+dy,sc,sc,cc,ee);cx+=(g[0].length+1)*sc}};
+  if(o.ink!=null)for(const[dx,dy]of S8)pass(o.ink,dx,dy,0);if(o.shadow!=null)pass(o.shadow,sc,sc,0);pass(c,0,0,e);return w}
+const GC=new Map();let gcv=null,gcg=null;
+const FAM=&#x27;&quot;PingFang SC&quot;,&quot;Hiragino Sans GB&quot;,&quot;Noto Sans SC&quot;,&quot;Noto Sans CJK SC&quot;,&quot;Microsoft YaHei&quot;,&quot;WenQuanYi Zen Hei&quot;,sans-serif&#x27;;
+const FAMS={kai:&#x27;&quot;Kaiti SC&quot;,&quot;STKaiti&quot;,&quot;KaiTi&quot;,&quot;AR PL UKai CN&quot;,&quot;Noto Serif SC&quot;,&quot;Noto Serif CJK SC&quot;,&quot;Songti SC&quot;,serif&#x27;,serif:&#x27;&quot;Songti SC&quot;,&quot;Noto Serif SC&quot;,&quot;Noto Serif CJK SC&quot;,&quot;SimSun&quot;,serif&#x27;};
+function glyph(ch,size,bold,fam){const key=ch+&#x27;|&#x27;+size+&#x27;|&#x27;+(bold?1:0)+&#x27;|&#x27;+(fam||&#x27;&#x27;);let G=GC.get(key);if(G)return G;
+  if(ch===&#x27; &#x27;){G={w:Math.round(size*0.35),px:[]};GC.set(key,G);return G}
+  const KK=4;if(!gcv){gcv=document.createElement(&#x27;canvas&#x27;);gcg=gcv.getContext(&#x27;2d&#x27;,{willReadFrequently:true})}
+  const f=(bold?&#x27;bold &#x27;:&#x27;&#x27;)+(size*KK)+&#x27;px &#x27;+(fam?FAMS[fam]||fam:FAM);gcg.font=f;const mw=gcg.measureText(ch).width;const w=Math.max(1,Math.round(mw/KK)),h=size+3;
+  gcv.width=(w+2)*KK;gcv.height=h*KK;gcg.font=f;gcg.textBaseline=&#x27;top&#x27;;gcg.fillStyle=&#x27;#fff&#x27;;gcg.fillText(ch,KK,KK*0.5);
+  const d=gcg.getImageData(0,0,gcv.width,gcv.height).data,pp=[],CW=gcv.width;
+  for(let y=0;y&lt;h;y++)for(let x=0;x&lt;w+2;x++){let s=0;for(let j=0;j&lt;KK;j++)for(let i=0;i&lt;KK;i++)s+=d[((y*KK+j)*CW+x*KK+i)*4+3];if(s/(KK*KK*255)&gt;(bold?0.42:0.34))pp.push(x-1,y)}
+  G={w,px:pp};GC.set(key,G);return G}
+function measure(str,size,bold,fam){let w=0;for(const ch of String(str))w+=glyph(ch,size,bold,fam).w;return w}
+// o: size, bold, align, ink (outline), shadow, em, sp (letter spacing), a (alpha)
+function text(str,x,y,c,o){o=o||{};const size=o.size||12,sp=o.sp||0;str=String(str);const w=measure(str,size,o.bold,o.fam)+sp*(str.length-1);if(o.align===&#x27;c&#x27;)x-=Math.floor(w/2);else if(o.align===&#x27;r&#x27;)x-=w;x=Math.round(x);y=Math.round(y);
+  const a=o.a==null?1:o.a;const put=a&gt;=1?(X,Y,cc,ee)=&gt;px(X,Y,cc,ee):(X,Y,cc,ee)=&gt;pxa(X,Y,cc,a,ee);
+  const pass=(cc,dx,dy,ee,list)=&gt;{let cx=x;for(const ch of str){const G=glyph(ch,size,o.bold,o.fam);const q=G.px;for(let i=0;i&lt;q.length;i+=2)for(const[ax,ay]of list)put(cx+q[i]+dx+ax,y+q[i+1]+dy+ay,cc,ee);cx+=G.w+sp}};
+  if(o.ink!=null)pass(o.ink,0,0,0,S8);if(o.shadow!=null)pass(o.shadow,1,1,0,[[0,0]]);pass(c,0,0,o.em||0,[[0,0]]);return w}
+// ---------------- present: grade, flash/fade, bloom bright-pass from emissive ----------------
+function present(){const raw=S.raw,fl=S.flash,fc=S.flashC,fd=S.fade,fdc=S.fadeC;
+  for(let p=0;p&lt;N;p++){let c=col[p];if(!raw){if(fd&gt;0)c=mix(c,fdc,fd);if(fl&gt;0)c=mix(c,fc,fl)}o32[p]=0xff000000|(c&amp;255)&lt;&lt;16|(c&amp;0xff00)|(c&gt;&gt;16&amp;255)}
+  const k=S.bloomK;for(let y=0;y&lt;BH;y++)for(let x=0;x&lt;BW;x++){const p=(y*2)*W+x*2;let r=0,g=0,b=0;
+    for(let j=0;j&lt;4;j++){const q=p+(j&amp;1)+(j&gt;&gt;1)*W,e=em[q];if(!e)continue;const c=col[q],f=e/255*k;r+=(c&gt;&gt;16&amp;255)*f;g+=(c&gt;&gt;8&amp;255)*f;b+=(c&amp;255)*f}
+    r=Math.min(255,r/4);g=Math.min(255,g/4);b=Math.min(255,b/4);b32[y*BW+x]=0xff000000|(b&lt;&lt;16)|(g&lt;&lt;8)|r}}
+// ---------------- sound: a tiny WebAudio synth ----------------
+const SND={on:false,ctx:null,last:{},master:null,nb:null,amb:null};
+function sndInit(){if(SND.ctx)return;try{const C=new (window.AudioContext||window.webkitAudioContext)();SND.ctx=C;SND.master=C.createGain();SND.master.gain.value=0.5;
+  const comp=C.createDynamicsCompressor();SND.master.connect(comp);comp.connect(C.destination);
+  const nb=C.createBuffer(1,C.sampleRate*2,C.sampleRate),d=nb.getChannelData(0);for(let i=0;i&lt;d.length;i++)d[i]=Math.random()*2-1;SND.nb=nb}catch(e){SND.ctx=null}}
+function tone(type,f0,f1,dur,vol,t0,att){const C=SND.ctx,o=C.createOscillator(),g=C.createGain();o.type=type;o.frequency.setValueAtTime(f0,t0);o.frequency.exponentialRampToValueAtTime(Math.max(20,f1),t0+dur);
+  if(att){g.gain.setValueAtTime(0.0008,t0);g.gain.exponentialRampToValueAtTime(vol,t0+att)}else g.gain.setValueAtTime(vol,t0);g.gain.exponentialRampToValueAtTime(0.0008,t0+dur);o.connect(g);g.connect(SND.master);o.start(t0);o.stop(t0+dur+0.02)}
+function noise(dur,vol,t0,ftype,f0,f1,q,att){const C=SND.ctx,s=C.createBufferSource(),f=C.createBiquadFilter(),g=C.createGain();s.buffer=SND.nb;f.type=ftype||&#x27;lowpass&#x27;;f.frequency.setValueAtTime(f0||3000,t0);f.frequency.exponentialRampToValueAtTime(Math.max(30,f1||f0||3000),t0+dur);f.Q.value=q||0.7;
+  if(att){g.gain.setValueAtTime(0.0008,t0);g.gain.exponentialRampToValueAtTime(vol,t0+att)}else g.gain.setValueAtTime(vol,t0);g.gain.exponentialRampToValueAtTime(0.0008,t0+dur);s.connect(f);f.connect(g);g.connect(SND.master);s.start(t0,Math.random()*1);s.stop(t0+dur+0.02)}
+// a looping filtered-noise bed whose level and colour a game sets every frame (wind, rain, crowd)
+function bed(name,ftype,f,q){if(!SND.ctx)return null;SND.beds=SND.beds||{};if(SND.beds[name])return SND.beds[name];const C=SND.ctx,s=C.createBufferSource(),fl=C.createBiquadFilter(),g=C.createGain();
+  s.buffer=SND.nb;s.loop=true;fl.type=ftype;fl.frequency.value=f;fl.Q.value=q||0.7;g.gain.value=0;s.connect(fl);fl.connect(g);g.connect(SND.master);s.start();return SND.beds[name]={g,fl}}
+function bedSet(name,vol,f){const b=SND.beds&amp;&amp;SND.beds[name];if(!b)return;const t=SND.ctx.currentTime;b.g.gain.setTargetAtTime(SND.on?vol:0,t,0.15);if(f)b.fl.frequency.setTargetAtTime(f,t,0.2)}
+function bedsOff(){if(!SND.beds)return;for(const k in SND.beds)SND.beds[k].g.gain.setTargetAtTime(0,SND.ctx.currentTime,0.1)}
+function now(){return SND.ctx?SND.ctx.currentTime:0}
+const live=()=&gt;SND.on&amp;&amp;SND.ctx&amp;&amp;!S.mute;
+return {W,H,N,S,rgb,hex,mix,mul,mulc,add,ramp,rs,rnd,rr,ri,hash,pmod,clamp,lerp,sstep,vnoise,fbm,setSeed:v=&gt;{seed=v|0},
+  clear,px,pxa,rect,recta,line,disc,disca,ring,glow,spr,blit,ptext,text,measure,glyph,present,
+  SND,sndInit,tone,noise,bed,bedSet,bedsOff,now,live};
+})();
+
+const GAMES=[];
+
+
+// ================= shared bits for the twenty pieces: an autoplay queue, easing, palettes =================
+// AIQ: the demo hand walks a queue of [x, y, down, frames, fn?] steps; plan(g, A) refills it when empty.
+function AIQ(g,plan){const A=g.ai||(g.ai={q:[],k:0,x:240,y:135,down:false,sx:240,sy:135});if(!A.q.length)plan(g,A);if(!A.q.length)A.q.push([A.x,A.y,false,30]);const tg=A.q[0];A.k++;
+  if(A.k===1){A.sx=A.x;A.sy=A.y;if(tg[4])tg[4](g)}const k=Math.min(1,A.k/Math.max(1,tg[3]));const e=tg[5]===&#x27;lin&#x27;?k:(k&lt;0.5?2*k*k:1-Math.pow(-2*k+2,2)/2);
+  A.x=A.sx+(tg[0]-A.sx)*e;A.y=A.sy+(tg[1]-A.sy)*e;const down=tg[2],click=down&amp;&amp;!A.down;A.down=down;if(A.k&gt;=tg[3]){A.q.shift();A.k=0}
+  return{x:0,y:0,mouse:{x:A.x,y:A.y,down,click}}}
+// a stroke helper: push a polyline as one pressed drag
+function aiStroke(A,pts,spd){const p0=pts[0];A.q.push([p0[0],p0[1],false,24],[p0[0],p0[1],true,3]);for(let i=1;i&lt;pts.length;i++){const a=pts[i-1],b=pts[i];A.q.push([b[0],b[1],true,Math.max(2,Math.round(Math.hypot(b[0]-a[0],b[1]-a[1])/(spd||3))),null,&#x27;lin&#x27;])}A.q.push([pts[pts.length-1][0],pts[pts.length-1][1],false,6])}
+// shared mouse tracker: previous position, velocity, press edges
+function MT(g,m){const T=g._mt||(g._mt={x:240,y:135,px:240,py:135,vx:0,vy:0,down:false,pdown:false,on:false});T.pdown=T.down;
+  if(m){T.px=T.on?T.x:m.x;T.py=T.on?T.y:m.y;T.x=m.x;T.y=m.y;T.vx=T.vx*0.6+(T.x-T.px)*0.4;T.vy=T.vy*0.6+(T.y-T.py)*0.4;T.down=m.down;T.on=true;T.click=m.click}else{T.on=false;T.down=false;T.click=false}
+  T.up=T.pdown&amp;&amp;!T.down;return T}
+
+
+
+// ================= 雷暴: draw the lightning yourself =================
+// A city at night under a storm. Drag down from the clouds and a dim crackling leader follows your finger; let go and the
+// bolt comes down along it, forking, flickering through its return strokes. The flash lights the clouds from inside,
+// throws the skyline into hard relief and doubles everything in the river. Thunder follows. A struck district blacks
+// out and comes back window by window. Tap a cloud for sheet lightning inside it; hold on a cloud to charge it until it
+// lets go by itself on the tallest thing nearby.
+const STORM=(function(){const {W,H,S,mix,clamp,lerp,hash,fbm,rgb}=K;const col=S.col,em=S.em,N=W*H;
+const WL=206;// waterline
+const CLD=new Float32Array(W*120),CLN=new Float32Array(W*120);// cloud density and a &quot;facing down&quot; shade
+const BID=new Int16Array(W*WL).fill(-1);const BLD=[];const WIN=[];let built=false;
+const cbase=x=&gt;Math.round(92+10*Math.sin(x*0.021)+8*fbm(x*0.03,2,3,101));
+function build(){built=true;K.setSeed(303);
+  for(let y=0;y&lt;120;y++)for(let x=0;x&lt;W;x++){const p=y*W+x;const b=cbase(x);const n=fbm(x*0.018,y*0.035,5,102);let d=clamp((b-y)/30,0,1)*0.6+n*0.6;if(y&gt;b)d*=Math.max(0,1-(y-b)/6);CLD[p]=d;
+    const n2=fbm(x*0.018,(y-3)*0.035,5,102);CLN[p]=clamp((n-n2)*6+0.5,0,1)}
+  // skyline: a row of buildings back to front, a TV tower, a lightning rod on the tallest block
+  let x=-6;while(x&lt;W){const w=K.ri(14,34),h=K.ri(28,96)*(x&gt;300&amp;&amp;x&lt;380?1.2:1);BLD.push({x,w,top:WL-Math.round(h),far:K.rnd()&lt;0.4,out:0,hit:0});x+=w+K.ri(-2,3)}
+  BLD.push({x:326,w:8,top:WL-128,tower:true,out:0,hit:0});
+  for(let i=0;i&lt;BLD.length;i++){const b=BLD[i];for(let yy=b.top;yy&lt;WL;yy++)for(let xx=b.x;xx&lt;b.x+b.w;xx++){if(xx&lt;0||xx&gt;=W)continue;if(b.tower){const u=(yy-b.top)/(WL-b.top);const hw=Math.round(1+u*3+(Math.abs(yy-b.top-26)&lt;3?3:0));if(Math.abs(xx-b.x-4)&gt;hw)continue}BID[yy*W+xx]=i}
+    if(!b.tower)for(let yy=b.top+4;yy&lt;WL-4;yy+=5)for(let xx=b.x+2;xx&lt;b.x+b.w-2;xx+=4)if(K.rnd()&lt;0.45)WIN.push({x:xx,y:yy,b:i,c:K.rnd()&lt;0.7?0xffd890:K.rnd()&lt;0.5?0xa0e0ff:0xffffff,on:1})}}
+// ---------------- bolts ----------------
+function jag(pts,amp){// midpoint displacement around a path, three passes
+  let P=pts.map(p=&gt;[p[0],p[1]]);for(let pass=0;pass&lt;4;pass++){const Q=[P[0]];for(let i=1;i&lt;P.length;i++){const a=P[i-1],b=P[i];const dx=b[0]-a[0],dy=b[1]-a[1],l=Math.hypot(dx,dy);const off=(K.rnd()-0.5)*l*amp;Q.push([(a[0]+b[0])/2-dy/l*off,(a[1]+b[1])/2+dx/l*off],b)}P=Q}return P}
+function resample(P,step){const out=[P[0]];let acc=0;for(let i=1;i&lt;P.length;i++){acc+=Math.hypot(P[i][0]-P[i-1][0],P[i][1]-P[i-1][1]);if(acc&gt;=step||i===P.length-1){out.push(P[i]);acc=0}}return out}
+function makeBolt(g,path,power){const main=jag(resample(path,26),0.7);const br=[];
+  for(let i=4;i&lt;main.length-4;i+=K.ri(3,7)){if(K.rnd()&gt;0.55)continue;const a=main[i];const ang=Math.atan2(main[i+1][1]-a[1],main[i+1][0]-a[0])+(K.rnd()&lt;0.5?-1:1)*K.rr(0.4,1.0);const len=K.rr(14,46)*power;
+    br.push(jag([a,[a[0]+Math.cos(ang)*len,a[1]+Math.sin(ang)*len]],0.6))}
+  const end=main[main.length-1];const bi=end[1]&lt;WL&amp;&amp;end[0]&gt;=0&amp;&amp;end[0]&lt;W?BID[Math.round(end[1])*W+Math.round(end[0])]:-1;
+  g.bolts.push({main,br,t:0,power,strokes:K.ri(2,4)});g.flash=Math.max(g.flash,1);g.fx=end[0];g.fy=(path[0][1]+end[1])/2;
+  if(bi&gt;=0){const b=BLD[bi];b.hit=1;g.blk={x:b.x+b.w/2,t:0}}
+  thunder(power,Math.abs(end[0]-240)/240)}
+function thunder(p,dist){if(!K.live())return;const t=K.now();const d=dist*0.6;K.noise(0.18,0.45*p,t,&#x27;highpass&#x27;,2400,900,0.7);K.noise(2.8,0.5*p,t+0.12+d,&#x27;lowpass&#x27;,260,50,0.9,0.15);K.noise(1.6,0.3*p,t+0.5+d,&#x27;lowpass&#x27;,180,40,0.8,0.3)}
+function ground(x){const i=BID[Math.round(clamp(x,0,W-1))+W*(WL-1)];// top of whatever is under x
+  for(let y=60;y&lt;WL;y++){if(BID[y*W+Math.round(clamp(x,0,W-1))]&gt;=0)return y}return WL}
+// ---------------- state ----------------
+function init(g){if(!built)build();g.bolts=[];g.flash=0;g.leader=null;g.sheet=[];g.charge=0;g.blk=null;g.rain=[];for(let i=0;i&lt;360;i++)g.rain.push({x:K.rr(0,W),y:K.rr(0,H),v:K.rr(5,8)});g.rings=[];
+  for(const w of WIN)w.on=1;for(const b of BLD){b.out=0;b.hit=0}}
+function tick(g,pad){const T=MT(g,pad.mouse);
+  if(T.on&amp;&amp;T.down){if(T.click){g.leader={pts:[[T.x,Math.min(T.y,cbase(T.x)-4)]],t:0};g.hold=0}
+    else if(g.leader){const L=g.leader.pts,l=L[L.length-1];if(Math.hypot(T.x-l[0],T.y-l[1])&gt;5)L.push([T.x,T.y]);g.leader.t++;
+      if(L.length&lt;2&amp;&amp;Math.hypot(T.x-T.px,T.y-T.py)&lt;0.5)g.hold++;else g.hold=0;g.charge=clamp(g.hold/120,0,1);
+      if(g.hold===150){// the cloud lets go on the tallest thing nearby
+        const x0=L[0][0];let best=null;for(const b of BLD){const cx=b.x+b.w/2;if(Math.abs(cx-x0)&gt;90)continue;if(!best||b.top&lt;best.top)best=b}const tx=best?best.x+best.w/2:x0;makeBolt(g,[L[0],[lerp(x0,tx,0.5)+K.rr(-20,20),(L[0][1]+ground(tx))/2],[tx,ground(tx)]],1.4);g.leader=null;g.charge=0}}}
+  else if(g.leader){const L=g.leader.pts;
+    if(L.length&lt;2){// a tap: sheet lightning inside the cloud
+      g.sheet.push({x:L[0][0],y:L[0][1]-20,t:0,a:K.rr(0.5,0.9)});thunder(0.3,0.8)}
+    else{const e=L[L.length-1];const gy=ground(e[0]);const path=L.slice();if(e[1]&lt;gy-4)path.push([e[0]+K.rr(-10,10),gy]);else path[path.length-1]=[e[0],Math.min(e[1],gy)];makeBolt(g,path,clamp(0.6+L.length*0.04,0.6,1.5))}
+    g.leader=null;g.charge=0}
+  for(let k=g.bolts.length-1;k&gt;=0;k--){const b=g.bolts[k];b.t++;if(b.t&gt;34)g.bolts.splice(k,1);else if(b.strokes&gt;0&amp;&amp;b.t%8===0&amp;&amp;b.t&lt;30){b.strokes--;g.flash=Math.max(g.flash,0.8)}}
+  for(let k=g.sheet.length-1;k&gt;=0;k--){if(++g.sheet[k].t&gt;40)g.sheet.splice(k,1)}
+  g.flash*=0.8;
+  // blackout spreading from the struck block, then lights return one by one
+  if(g.blk){g.blk.t++;const r=g.blk.t*2.2;for(const w of WIN){const d=Math.abs(w.x-g.blk.x);if(d&lt;r&amp;&amp;d&lt;110&amp;&amp;w.on===1)w.on=0}if(g.blk.t&gt;90)g.blk=null}
+  for(const w of WIN)if(w.on===0&amp;&amp;!g.blk&amp;&amp;K.rnd()&lt;0.012)w.on=1;
+  for(const b of BLD)b.hit*=0.9;
+  for(const r of g.rain){r.y+=r.v;r.x-=r.v*0.25;if(r.y&gt;H){r.y=K.rr(-20,0);r.x=K.rr(0,W+60);if(K.rnd()&lt;0.3)g.rings.push({x:r.x,y:K.rr(WL+4,H),t:0})}}
+  for(let k=g.rings.length-1;k&gt;=0;k--)if(++g.rings[k].t&gt;14)g.rings.splice(k,1);
+  if(K.SND.ctx){K.bed(&#x27;srain&#x27;,&#x27;lowpass&#x27;,2600,0.5);K.bedSet(&#x27;srain&#x27;,0.08,2200)}}
+function draw(g){const t=g.t;const F=Math.min(1,g.flash);em.fill(0);
+  // light sources this frame: the bolt (a few points along it), sheet flashes, the charging cloud
+  const Ls=[];for(const b of g.bolts){const fl=b.t&lt;3||b.t%8&lt;2?1:0.35;const nn=Math.ceil(b.main.length/6);for(let i=0;i&lt;b.main.length;i+=6)Ls.push([b.main[i][0],b.main[i][1],2.2*b.power*fl*Math.max(0,1-b.t/34)/nn])}
+  for(const s of g.sheet){const k=s.a*(s.t&lt;4?1:Math.max(0,1-s.t/40))*(0.6+0.4*Math.sin(s.t*1.7));Ls.push([s.x,s.y,k*0.9])}
+  if(g.leader&amp;&amp;g.charge&gt;0)Ls.push([g.leader.pts[0][0],g.leader.pts[0][1]-10,g.charge*0.5*(0.6+0.4*Math.sin(t*0.6))]);
+  const lightAt=(x,y,rad)=&gt;{let s=0;for(const l of Ls){const d2=(x-l[0])**2+(y-l[1])**2;s+=l[2]/(1+d2/(rad*rad))}return s};
+  // sky and clouds (half-res lighting)
+  for(let y=0;y&lt;WL;y++)for(let x=0;x&lt;W;x+=2){const p=y*W+x;let c;
+    if(y&lt;120&amp;&amp;CLD[p]&gt;0.2){const d=CLD[p];const L=lightAt(x,y,80)*1.1+F*0.15;let base=mix(0x0c0e1a,0x262a40,CLN[p]*0.6+d*0.3);const cb=cbase(x);if(y&gt;cb-30)base=mix(base,0x3a2c38,clamp((y-cb+30)/30,0,1)*0.6);const lit=mix(0x8a7ab8,0xf0e8ff,clamp(L-0.6,0,1));c=mix(base,lit,clamp(L*d*0.75,0,0.88));if(L*d&gt;0.5)em[p]=Math.min(255,(L*d-0.5)*200)}
+    else{c=mix(0x0a0c16,0x161828,y/WL);c=mix(c,0x4a4470,clamp(F*0.5+lightAt(x,y,120)*0.3,0,0.8))}
+    col[p]=c;col[p+1]=c;em[p+1]=em[p]}
+  // skyline: dark faces, flash-lit edges toward the bolt
+  for(let y=50;y&lt;WL;y++)for(let x=0;x&lt;W;x++){const p=y*W+x;const bi=BID[p];if(bi&lt;0)continue;const b=BLD[bi];
+    const L=lightAt(x,y,140)+F*0.2;const left=x&lt;(g.fx||240);const edge=(x===b.x||x===b.x+b.w-1||y===b.top);let c=b.far?0x10121c:0x0a0b12;
+    if(L&gt;0.15){const k=clamp(L*0.8,0,1);c=mix(c,b.far?0x5a5a7a:0x6a6a8a,k*(edge?1:0.45))}if(b.tower&amp;&amp;y===b.top+1)c=(t&gt;&gt;4)%2?0xff3020:0x501010;col[p]=c}
+  for(const w of WIN){if(!w.on)continue;const p=w.y*W+w.x;col[p]=mix(w.c,0xffffff,0);em[p]=110;if(w.x+1&lt;W){col[p+1]=mix(w.c,0x000000,0.3)}}
+  // the bolt itself
+  for(const b of g.bolts){const fl=b.t&lt;3||b.t%8&lt;2;const a=Math.max(0,1-b.t/34);if(!fl&amp;&amp;b.t&gt;4&amp;&amp;a&lt;0.7)continue;
+    const core=fl?0xffffff:0xc8c0ff,glw=0x9a80ff;for(const br of b.br)poly(br,mix(glw,0x000000,0.3),fl?160:80,0);poly(b.main,core,255,b.power&gt;1.1?1:0);
+    for(let i=0;i&lt;b.main.length;i+=4)K.glow(b.main[i][0],b.main[i][1],5,glw,0.14*a)}
+  // leader while drawing
+  if(g.leader){const L=g.leader.pts;for(let i=1;i&lt;L.length;i++){const a=L[i-1],c=L[i];const n=Math.ceil(Math.hypot(c[0]-a[0],c[1]-a[1]));for(let k=0;k&lt;n;k++){const u=k/n;const x=a[0]+(c[0]-a[0])*u+(K.rnd()-0.5)*2,y=a[1]+(c[1]-a[1])*u;if(K.rnd()&lt;0.6)K.pxa(x,y,0xb0a0ff,0.6)}}
+    if(g.charge&gt;0)K.glow(L[0][0],L[0][1],30*g.charge,0x8a70ff,0.4*g.charge)}
+  // rain
+  for(const r of g.rain){const c=F&gt;0.3?0xd0d8ff:0x3a4060;for(let k=0;k&lt;3;k++)K.pxa(r.x+k*0.25,r.y-k,c,0.5-k*0.12)}
+  // river: mirror of everything above the waterline, broken by ripples and rain rings
+  for(let y=WL;y&lt;H;y++){const my=2*WL-y-1;for(let x=0;x&lt;W;x++){const off=Math.round(Math.sin(y*0.7+t*0.15+x*0.02)*(1+(y-WL)*0.04));const sx=clamp(x+off,0,W-1),sy=clamp(my,0,H-1);let c=mix(col[sy*W+sx],0x05060c,0.35+(y-WL)*0.004);col[y*W+x]=c;em[y*W+x]=em[sy*W+sx]&gt;&gt;1}}
+  K.rect(0,WL,W,1,0x1a1c28);
+  for(const r of g.rings){const rr=r.t*0.5;for(let a=0;a&lt;6.28;a+=0.5)K.pxa(r.x+Math.cos(a)*rr*1.6,r.y+Math.sin(a)*rr*0.5,0x6a7090,0.4*(1-r.t/14))}
+  if(F&gt;0.6)K.S.flash=Math.max(K.S.flash,(F-0.6)*0.25)}
+function poly(P,c,e,th){for(let i=1;i&lt;P.length;i++){K.line(P[i-1][0],P[i-1][1],P[i][0],P[i][1],c,e);if(th){K.line(P[i-1][0]+1,P[i-1][1],P[i][0]+1,P[i][1],c,e)}}}
+function ai(g){return AIQ(g,(g,A)=&gt;{const r=K.rnd();
+  if(r&lt;0.55){const x0=K.rr(60,420),y0=K.rr(50,80);const pts=[[x0,y0]];let x=x0,y=y0;const tx=K.rr(40,440);for(let k=0;k&lt;6;k++){y+=K.rr(14,24);x=lerp(x,tx,0.3)+K.rr(-14,14);pts.push([x,y])}aiStroke(A,pts,5);A.q.push([x,y-40,false,K.ri(90,200)])}
+  else if(r&lt;0.8){for(let k=0;k&lt;2;k++){const x=K.rr(40,440),y=K.rr(30,70);A.q.push([x,y,false,40],[x,y,true,4],[x,y,false,50])}}
+  else{const x=K.rr(260,400),y=K.rr(50,70);A.q.push([x,y,false,40],[x,y,true,170],[x,y,false,120])}})}
+function info(g){return&#x27;雷暴 · &#x27;+(g.charge&gt;0.3?&#x27;云在蓄电&#x27;:g.blk?&#x27;停电了&#x27;:&#x27;画一道闪电&#x27;)}
+return{init,tick,draw,ai,info};})();
+GAMES.push({id:&#x27;storm&#x27;,name:&#x27;雷暴&#x27;,ref:&#x27;从云里往下画一道闪电&#x27;,keys:&#x27;从云里按住往下拖：画出闪电的路，松手就劈下来 · 点云：云里闪一下 · 按住云不动：蓄电，满了自己劈向最高的楼&#x27;,thumbAt:260,
+  init:STORM.init,tick:STORM.tick,draw:STORM.draw,ai:STORM.ai,info:STORM.info,
+  about:[&#x27;暴雨夜的城市。从云里按住往下拖，一道暗紫色的先导会跟着你的手指噼啪作响；松手，闪电就沿着这条路劈下来，一路分叉，再闪两三下回击。&#x27;,&#x27;闪光从里面照亮云层，把天际线打出硬硬的轮廓，河面把一切再翻一遍。雷声随后滚过来。被劈中的街区一下子停电，过一会儿窗户再一扇扇亮回来。点一下云，云里会闪一片；按住云不动，它会越蓄越亮，最后自己劈向附近最高的楼。&#x27;],
+  tags:[&#x27;你画的路径变成分叉的闪电&#x27;,&#x27;闪光从内部照亮云层和天际线&#x27;,&#x27;闪电会回击两三次&#x27;,&#x27;被劈中的街区停电又一扇扇亮回&#x27;,&#x27;按住云蓄电，自己劈向最高的楼&#x27;,&#x27;河面倒影、雨和雷声&#x27;]});
+
+
+
+// ================= player: 60 Hz fixed step, hit-stop, keyboard / mouse / touch, attract-mode autoplay, bloom display =================
+(function(){
+const $=id=&gt;document.getElementById(id);
+const {W,H,S}=K;
+const cv=$(&#x27;cv&#x27;),ctx=cv.getContext(&#x27;2d&#x27;),stage=$(&#x27;stage&#x27;);
+const low=document.createElement(&#x27;canvas&#x27;);low.width=W;low.height=H;const lg=low.getContext(&#x27;2d&#x27;);
+const half=document.createElement(&#x27;canvas&#x27;);half.width=W&gt;&gt;1;half.height=H&gt;&gt;1;const hg=half.getContext(&#x27;2d&#x27;);
+const b1=document.createElement(&#x27;canvas&#x27;);b1.width=W;b1.height=H;const b1g=b1.getContext(&#x27;2d&#x27;);
+const b2=document.createElement(&#x27;canvas&#x27;);b2.width=W&gt;&gt;1;b2.height=H&gt;&gt;1;const b2g=b2.getContext(&#x27;2d&#x27;);
+const FILT=(()=&gt;{try{const c=document.createElement(&#x27;canvas&#x27;);c.width=c.height=9;const g=c.getContext(&#x27;2d&#x27;);g.filter=&#x27;blur(2px)&#x27;;g.fillStyle=&#x27;#fff&#x27;;g.fillRect(4,4,1,1);return g.getImageData(1,4,1,1).data[3]&gt;0}catch(e){return false}})();
+const mips=[[120,68],[60,34],[30,17]].map(([w,h])=&gt;{const c=document.createElement(&#x27;canvas&#x27;);c.width=w;c.height=h;return c});
+let skip=false,slow=false,avg=8,cur=0,G=null,paused=false,acc=0,last=performance.now(),visible=true,mode=&#x27;auto&#x27;,idle=0;
+const reduce=matchMedia(&#x27;(prefers-reduced-motion: reduce)&#x27;).matches;
+const keys=new Set(),pressed=new Set();
+// mouse / touch: pointer position in game pixels; click = a press this step; stick = the floating joystick for touch play
+const mouse={x:W/2,y:H/2,down:false,active:false,click:false,touch:false};
+const stick={id:null,ox:0,oy:0,x:0,y:0};
+function newGame(d){K.setSeed((Date.now()&amp;0xffff)+cur*77);S.flash=0;S.fade=0;S.frame=0;S.bloomK=1;K.bedsOff();
+  const g={t:0,stop:0,ts:1,d,auto:mode===&#x27;auto&#x27;};d.init(g);return g}
+const TB={a:false,b:false,ap:false,bp:false};
+function readPad(){const k=c=&gt;keys.has(c);
+  let x=(k(&#x27;ArrowRight&#x27;)||k(&#x27;KeyD&#x27;)?1:0)-(k(&#x27;ArrowLeft&#x27;)||k(&#x27;KeyA&#x27;)?1:0),y=(k(&#x27;ArrowDown&#x27;)||k(&#x27;KeyS&#x27;)?1:0)-(k(&#x27;ArrowUp&#x27;)||k(&#x27;KeyW&#x27;)?1:0);
+  if(stick.id!=null){const m=Math.hypot(stick.x,stick.y);if(m&gt;3){const s=Math.min(1,(m-3)/18);x=stick.x/m*s;y=stick.y/m*s}}
+  const pad={x,y,
+    up:pressed.has(&#x27;ArrowUp&#x27;)||pressed.has(&#x27;KeyW&#x27;),down:pressed.has(&#x27;ArrowDown&#x27;)||pressed.has(&#x27;KeyS&#x27;),left:pressed.has(&#x27;ArrowLeft&#x27;)||pressed.has(&#x27;KeyA&#x27;),right:pressed.has(&#x27;ArrowRight&#x27;)||pressed.has(&#x27;KeyD&#x27;),
+    fire:k(&#x27;KeyJ&#x27;)||k(&#x27;KeyZ&#x27;)||k(&#x27;Space&#x27;)||TB.a,
+    a:pressed.has(&#x27;KeyJ&#x27;)||pressed.has(&#x27;KeyZ&#x27;)||pressed.has(&#x27;Space&#x27;)||pressed.has(&#x27;Enter&#x27;)||TB.ap,
+    b:pressed.has(&#x27;KeyK&#x27;)||pressed.has(&#x27;KeyX&#x27;)||pressed.has(&#x27;Escape&#x27;)||TB.bp,
+    hl:k(&#x27;ArrowLeft&#x27;)||k(&#x27;KeyA&#x27;)||k(&#x27;KeyZ&#x27;)||k(&#x27;ShiftLeft&#x27;)||TB.a,hr:k(&#x27;ArrowRight&#x27;)||k(&#x27;KeyD&#x27;)||k(&#x27;KeyJ&#x27;)||k(&#x27;Slash&#x27;)||k(&#x27;ShiftRight&#x27;)||TB.b,hd:k(&#x27;ArrowDown&#x27;)||k(&#x27;KeyS&#x27;)||k(&#x27;Space&#x27;),
+    bh:k(&#x27;KeyK&#x27;)||k(&#x27;KeyX&#x27;)||TB.b,
+    stick:stick.id!=null,
+    mouse:mouse.active?{x:mouse.x,y:mouse.y,down:mouse.down,click:mouse.click,touch:mouse.touch}:null};
+  pressed.clear();mouse.click=false;TB.ap=TB.bp=false;return pad}
+const HAND=K.spr([&#x27;.kk.......&#x27;,&#x27;kwwk......&#x27;,&#x27;kwwk......&#x27;,&#x27;kwwkkk....&#x27;,&#x27;kwwkwwkk..&#x27;,&#x27;kwwkwwkwkk&#x27;,&#x27;kwwwwwwwwk&#x27;,&#x27;kwwwwwwwwk&#x27;,&#x27;.kwwwwwwk.&#x27;,&#x27;..kwwwwk..&#x27;,&#x27;..kwwwwk..&#x27;],{k:0x1a1418,w:0xf4ecdc});
+const HANDD=K.spr([&#x27;..........&#x27;,&#x27;..........&#x27;,&#x27;.kk.......&#x27;,&#x27;kwwkkkkk..&#x27;,&#x27;kwwkwwkwkk&#x27;,&#x27;kwwwwwwwwk&#x27;,&#x27;kwwwwwwwwk&#x27;,&#x27;kwwwwwwwwk&#x27;,&#x27;.kwwwwwwk.&#x27;,&#x27;..kwwwwk..&#x27;,&#x27;..kwwwwk..&#x27;],{k:0x1a1418,w:0xf4ecdc});
+function drawHand(){if(!G||G.d.noHand||G.thumb)return;let m=null;if(mode===&#x27;play&#x27;){if(mouse.active&amp;&amp;!mouse.touch)m={x:mouse.x,y:mouse.y,down:mouse.down}}else m=G._hand;if(!m)return;
+  const s=m.down?HANDD:HAND;const st=G.d.handStyle;K.blit(s,Math.round(m.x)-2,Math.round(m.y)-(m.down?2:0))}
+function step(){const d=G.d;
+  if(G.stop&gt;0){G.stop--;S.frame++;return}
+  let pad;
+  if(mode===&#x27;play&#x27;){pad=readPad();const any=pad.x||pad.y||pad.fire||pad.a||pad.b||(pad.mouse&amp;&amp;(pad.mouse.down||pad.mouse.click));if(!any)idle++;else idle=0;
+    if(idle&gt;60*40&amp;&amp;(!d.canAttract||d.canAttract(G))){setMode(&#x27;auto&#x27;);if(d.onAuto)d.onAuto(G)}}
+  else{pressed.clear();mouse.click=false;pad=d.ai(G);G._hand=pad.mouse||null}
+  d.tick(G,pad);G.t++;S.frame++;if(S.flash&gt;0){S.flash*=0.86;if(S.flash&lt;0.02)S.flash=0}}
+function frame(){G.d.draw(G);drawHand();S.raw=false;K.present();lg.putImageData(S.img,0,0);
+  ctx.imageSmoothingEnabled=false;ctx.globalCompositeOperation=&#x27;source-over&#x27;;ctx.globalAlpha=1;ctx.drawImage(low,0,0,cv.width,cv.height);
+  hg.putImageData(S.bimg,0,0);ctx.globalCompositeOperation=&#x27;lighter&#x27;;ctx.imageSmoothingEnabled=true;
+  if(FILT){b1g.clearRect(0,0,W,H);b1g.filter=&#x27;blur(2px)&#x27;;b1g.drawImage(half,0,0,W,H);b1g.filter=&#x27;none&#x27;;
+    b2g.clearRect(0,0,W&gt;&gt;1,H&gt;&gt;1);b2g.filter=&#x27;blur(7px)&#x27;;b2g.drawImage(half,0,0);b2g.filter=&#x27;none&#x27;;
+    ctx.globalAlpha=0.8;ctx.drawImage(b1,0,0,cv.width,cv.height);ctx.globalAlpha=0.9;ctx.drawImage(b2,0,0,cv.width,cv.height);ctx.globalAlpha=1}
+  else{let src=half;const al=[0.6,0.7,0.8];mips.forEach((m,i)=&gt;{const g=m.getContext(&#x27;2d&#x27;);g.imageSmoothingEnabled=true;g.clearRect(0,0,m.width,m.height);g.drawImage(src,0,0,m.width,m.height);src=m;ctx.globalAlpha=al[i];ctx.drawImage(m,0,0,cv.width,cv.height)});ctx.globalAlpha=1}
+  ctx.globalCompositeOperation=&#x27;source-over&#x27;;syncInfo()}
+function fit(){const aw=stage.clientWidth-2,ah=Math.max(200,innerHeight*0.74);let sc=Math.min(aw/W,ah/H);const dpr=devicePixelRatio||1;
+  const css=sc&gt;=2?Math.floor(sc*dpr)/dpr:Math.max(0.5,sc);const dev=Math.max(1,Math.min(4,Math.round(css*dpr)));if(cv.width!==W*dev){cv.width=W*dev;cv.height=H*dev}
+  cv.style.width=Math.floor(W*css)+&#x27;px&#x27;;cv.style.height=Math.floor(H*css)+&#x27;px&#x27;}
+let infoLast=&#x27;&#x27;;function syncInfo(){const d=G.d;const s=(d.info?d.info(G):&#x27;&#x27;)+(mode===&#x27;play&#x27;?&#x27;&#x27;:&#x27; · 自己在动&#x27;);if(s!==infoLast){$(&#x27;info&#x27;).textContent=s;infoLast=s}}
+// ---------------- controls ----------------
+const rail=$(&#x27;rail&#x27;);
+function seg(label,opts,get,set){const l=document.createElement(&#x27;span&#x27;);l.className=&#x27;lab&#x27;;l.textContent=label;const s=document.createElement(&#x27;div&#x27;);s.className=&#x27;seg&#x27;;
+  for(const[v,t]of opts){const b=document.createElement(&#x27;button&#x27;);b.type=&#x27;button&#x27;;b.textContent=t;b.onclick=()=&gt;{set(v);sync()};b.dataset.v=v;s.appendChild(b)}
+  const sync=()=&gt;{for(const b of s.children)b.classList.toggle(&#x27;on&#x27;,String(b.dataset.v)===String(get()))};rail.append(l,s);sync();return sync}
+const btn=(t,fn)=&gt;{const b=document.createElement(&#x27;button&#x27;);b.type=&#x27;button&#x27;;b.className=&#x27;btn&#x27;;b.textContent=t;b.onclick=fn;rail.appendChild(b);return b};
+const syncMode=seg(&#x27;&#x27;,[[&#x27;play&#x27;,&#x27;亲手摸&#x27;],[&#x27;auto&#x27;,&#x27;自己动&#x27;]],()=&gt;mode,v=&gt;{wake();setMode(v);cv.focus()});
+const playB=btn(&#x27;暂停&#x27;,()=&gt;setPaused(!paused));
+btn(&#x27;重来&#x27;,()=&gt;{G=newGame(GAMES[cur]);frame();cv.focus()});
+let sndUser=false;
+const sndB=btn(&#x27;声音 开&#x27;,()=&gt;{K.sndInit();sndUser=true;K.SND.on=!K.SND.on;syncSnd();if(K.SND.ctx&amp;&amp;K.SND.ctx.state===&#x27;suspended&#x27;)K.SND.ctx.resume();if(!K.SND.on)K.bedsOff()});
+function syncSnd(){const on=K.SND.on||!sndUser;sndB.textContent=on?&#x27;声音 开&#x27;:&#x27;声音 关&#x27;;sndB.classList.toggle(&#x27;on&#x27;,on)}
+// sound comes on with the first key or touch (browsers need a gesture), unless the player turned it off
+function wake(){if(sndUser)return;K.sndInit();if(K.SND.ctx){K.SND.on=true;if(K.SND.ctx.state===&#x27;suspended&#x27;)K.SND.ctx.resume()}syncSnd()}
+const optBox=document.createElement(&#x27;span&#x27;);optBox.className=&#x27;opts&#x27;;rail.appendChild(optBox);
+function buildOpts(){optBox.innerHTML=&#x27;&#x27;;const d=GAMES[cur];for(const o of d.opts||[]){const b=document.createElement(&#x27;button&#x27;);b.type=&#x27;button&#x27;;b.className=&#x27;btn&#x27;;b.onclick=()=&gt;{wake();o.set(G);syncOpts();cv.focus()};b._o=o;optBox.appendChild(b)}syncOpts()}
+function syncOpts(){for(const b of optBox.children){const o=b._o;const v=o.get?o.get(G):null;b.textContent=typeof o.label===&#x27;function&#x27;?o.label(G):o.label;b.classList.toggle(&#x27;on&#x27;,!!v)}}
+setInterval(()=&gt;{if(G)syncOpts()},500);
+const info=document.createElement(&#x27;span&#x27;);info.id=&#x27;info&#x27;;rail.appendChild(info);
+function setMode(m){mode=m;idle=0;syncMode();$(&#x27;hint&#x27;).textContent=m===&#x27;play&#x27;?(GAMES[cur].keys||&#x27;&#x27;):&#x27;它在自己动 · 把手放上画面就换成你&#x27;;if(G)G.auto=m===&#x27;auto&#x27;;touchUI()}
+function setPaused(p){paused=p;playB.textContent=p?&#x27;继续&#x27;:&#x27;暂停&#x27;}
+addEventListener(&#x27;keydown&#x27;,e=&gt;{if(e.target.tagName===&#x27;INPUT&#x27;)return;const gameKey=/^(Arrow|Key[WASDJKZX]|Space|Enter|Escape)/.test(e.code);
+  if(e.code===&#x27;KeyP&#x27;){setPaused(!paused);return}
+  if(gameKey&amp;&amp;(e.code===&#x27;Space&#x27;||e.code===&#x27;Enter&#x27;)&amp;&amp;document.activeElement&amp;&amp;document.activeElement.tagName===&#x27;BUTTON&#x27;)return;
+  if(gameKey){wake();if(paused)setPaused(false);if(mode!==&#x27;play&#x27;){setMode(&#x27;play&#x27;)}if(!keys.has(e.code))pressed.add(e.code);keys.add(e.code);e.preventDefault()}});
+addEventListener(&#x27;keyup&#x27;,e=&gt;keys.delete(e.code));
+addEventListener(&#x27;blur&#x27;,()=&gt;{keys.clear();if(mode===&#x27;play&#x27;&amp;&amp;G&amp;&amp;G.d.onBlur)G.d.onBlur(G)});
+function cpos(e){const r=cv.getBoundingClientRect();return[(e.clientX-r.left)/r.width*W,(e.clientY-r.top)/r.height*H]}
+const coarse=matchMedia(&#x27;(pointer: coarse)&#x27;).matches;
+let hov=0;cv.addEventListener(&#x27;pointermove&#x27;,e=&gt;{const p=cpos(e);if(e.pointerId===stick.id){stick.x=p[0]-stick.ox;stick.y=p[1]-stick.oy}if(mode!==&#x27;play&#x27;){if(e.pointerType===&#x27;mouse&#x27;&amp;&amp;GAMES[cur].hover&amp;&amp;++hov&gt;40){hov=0;setMode(&#x27;play&#x27;)}else return}mouse.x=p[0];mouse.y=p[1];mouse.active=true;mouse.touch=e.pointerType!==&#x27;mouse&#x27;});
+cv.addEventListener(&#x27;pointerdown&#x27;,e=&gt;{cv.focus();wake();const p=cpos(e);e.preventDefault();
+  if(mode!==&#x27;play&#x27;){setMode(&#x27;play&#x27;)}
+  // touch on a stick game: a touch anywhere starts a floating joystick; the game may also read it as a tap
+  if(e.pointerType!==&#x27;mouse&#x27;&amp;&amp;G.d.touch===&#x27;stick&#x27;){stick.id=e.pointerId;stick.ox=p[0];stick.oy=p[1];stick.x=stick.y=0}
+  try{cv.setPointerCapture(e.pointerId)}catch(_){}
+  mouse.x=p[0];mouse.y=p[1];mouse.active=true;mouse.down=true;mouse.click=true;mouse.touch=e.pointerType!==&#x27;mouse&#x27;});
+addEventListener(&#x27;pointerup&#x27;,e=&gt;{if(e.pointerId===stick.id){stick.id=null;stick.x=stick.y=0}mouse.down=false});
+addEventListener(&#x27;pointercancel&#x27;,e=&gt;{if(e.pointerId===stick.id){stick.id=null;stick.x=stick.y=0}mouse.down=false});
+cv.addEventListener(&#x27;pointerleave&#x27;,e=&gt;{if(e.pointerType===&#x27;mouse&#x27;)mouse.active=false});
+// touch buttons (A / B) for games that want them
+const tb=$(&#x27;tbtn&#x27;);
+function tbtn(lbl,k){const b=document.createElement(&#x27;button&#x27;);b.type=&#x27;button&#x27;;b.textContent=lbl;
+  b.addEventListener(&#x27;pointerdown&#x27;,e=&gt;{e.preventDefault();wake();if(mode!==&#x27;play&#x27;){setMode(&#x27;play&#x27;)}TB[k]=true;TB[k+&#x27;p&#x27;]=true});
+  const up=()=&gt;{TB[k]=false};b.addEventListener(&#x27;pointerup&#x27;,up);b.addEventListener(&#x27;pointercancel&#x27;,up);b.addEventListener(&#x27;pointerleave&#x27;,up);tb.appendChild(b);return b}
+const tA=tbtn(&#x27;A&#x27;,&#x27;a&#x27;),tB=tbtn(&#x27;B&#x27;,&#x27;b&#x27;);
+function touchUI(){const d=GAMES[cur];const show=coarse&amp;&amp;d.tbtn&amp;&amp;mode===&#x27;play&#x27;;tb.style.display=show?&#x27;flex&#x27;:&#x27;none&#x27;;if(show){tA.textContent=d.tbtn[0];tB.textContent=d.tbtn[1]||&#x27;B&#x27;;tB.style.display=d.tbtn[1]?&#x27;&#x27;:&#x27;none&#x27;}}
+// ---------------- cartridges ----------------
+const carts=$(&#x27;carts&#x27;);
+function select(i){cur=i;const d=GAMES[i];mode=&#x27;auto&#x27;;G=newGame(d);$(&#x27;nm&#x27;).textContent=d.name;$(&#x27;about&#x27;).innerHTML=d.about.map(p=&gt;&#x27;&lt;p&gt;&#x27;+p+&#x27;&lt;/p&gt;&#x27;).join(&#x27;&#x27;);$(&#x27;tags&#x27;).innerHTML=d.tags.map(t=&gt;&#x27;&lt;li&gt;&#x27;+t+&#x27;&lt;/li&gt;&#x27;).join(&#x27;&#x27;);
+  for(const[k,c]of [...carts.children].entries())c.classList.toggle(&#x27;on&#x27;,k===i);buildOpts();setMode(mode);try{history.replaceState(null,&#x27;&#x27;,&#x27;#&#x27;+d.id)}catch(e){}frame()}
+GAMES.forEach((d,i)=&gt;{const b=document.createElement(&#x27;button&#x27;);b.type=&#x27;button&#x27;;b.className=&#x27;cart&#x27;;const c=document.createElement(&#x27;canvas&#x27;);c.width=W;c.height=H;
+  const nm=document.createElement(&#x27;span&#x27;);nm.className=&#x27;nm&#x27;;nm.textContent=d.name;const rf=document.createElement(&#x27;span&#x27;);rf.className=&#x27;ref&#x27;;rf.textContent=d.ref;b.append(c,nm,rf);
+  b.onclick=()=&gt;{select(i);stage.scrollIntoView({block:&#x27;nearest&#x27;,behavior:&#x27;smooth&#x27;})};carts.appendChild(b);d._thumb=c});
+// thumbnails are simulated one per task after the page is up, so it opens at once; the game being played just lends its live frame
+function thumb(d){const keep=[cur,G];cur=GAMES.indexOf(d);G=newGame(d);G.auto=true;G.thumb=true;for(let k=0;k&lt;(d.thumbAt||300);k++){const pad=d.ai(G);if(G.stop&gt;0)G.stop--;else{d.tick(G,pad);G.t++}S.frame++;if(d.thumbUntil&amp;&amp;d.thumbUntil(G))break}d.draw(G);S.raw=false;K.present();
+  const g=d._thumb.getContext(&#x27;2d&#x27;);g.putImageData(S.img,0,0);cur=keep[0];G=keep[1]}
+function thumbs(){const q=GAMES.slice();const one=()=&gt;{const d=q.shift();if(!d)return;thumb(d);setTimeout(one,30)};setTimeout(one,200)}
+new ResizeObserver(()=&gt;{fit();if(G)frame()}).observe(stage);
+new IntersectionObserver(es=&gt;{visible=es[0].isIntersecting}).observe(stage);
+document.addEventListener(&#x27;visibilitychange&#x27;,()=&gt;{if(document.hidden&amp;&amp;mode===&#x27;play&#x27;&amp;&amp;G&amp;&amp;G.d.onBlur)G.d.onBlur(G)});
+const start=Math.max(0,GAMES.findIndex(d=&gt;&#x27;#&#x27;+d.id===location.hash));
+fit();select(start);thumbs();if(reduce)setPaused(true);syncSnd();
+function loop(now){const dt=Math.min(0.1,(now-last)/1000);last=now;
+  if(!paused&amp;&amp;visible){acc+=dt*60*(G.ts||1);let n=0;while(acc&gt;=1&amp;&amp;n&lt;5){step();acc-=1;n++}skip=!skip;if(n&amp;&amp;(!slow||!skip)){const t0=performance.now();frame();const ft=performance.now()-t0;avg=avg*0.95+ft*0.05;slow=avg&gt;14}}
+  requestAnimationFrame(loop)}
+requestAnimationFrame(loop);
+window.__TT={step:()=&gt;step(),frame,select,get G(){return G},setMode:m=&gt;{setMode(m);G=newGame(GAMES[cur])},press:c=&gt;{pressed.add(c)},hold:(c,on)=&gt;{on?keys.add(c):keys.delete(c)},mouse};
+})();
+</code></pre>

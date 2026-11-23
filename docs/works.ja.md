@@ -466,3 +466,65 @@
 Space で停止、左右矢印でコマ送り、R で再生、O でオニオンスキンを切り替えます。ボタンから舞台、黒、格子の背景を選べます。
 
 `works/ink-slash/index.html` · [source.js](../works/ink-slash/source.js)
+
+## 第4弾
+
+<a id="drone-light-show"></a>
+
+## 夜空のドローンショー / 千机夜空
+
+[▶ オンラインで体験](https://ma1902056219-coder.github.io/openpixel/works/drone-light-show/)
+
+同じ1200個の光点が地球、クジラ、月に変わります。
+
+「地球」「鲸鱼」「入水」「月亮」で地球、クジラ、潜水、月の場面へ移動できます。「声音」で音を有効にします。
+
+`works/drone-light-show/index.html` · [source.js](../works/drone-light-show/source.js)
+
+<a id="storm-lightning"></a>
+
+## 雷雨 / 雷暴
+
+[▶ オンラインで体験](https://ma1902056219-coder.github.io/openpixel/works/storm-lightning/)
+
+雲から線を描くと、枝分かれした稲妻が走ります。
+
+雲の中から下へドラッグして指を離します。雲をタップすると光り、長押しすると雷をためます。
+
+`works/storm-lightning/index.html` · [source.js](../works/storm-lightning/source.js)
+
+<a id="soap-film"></a>
+
+## シャボン膜 / 肥皂泡
+
+[▶ オンラインで体験](https://ma1902056219-coder.github.io/openpixel/works/soap-film/)
+
+色が変わるシャボン玉をふくらませて割ります。
+
+押しながらゆっくり動かすと大きな泡ができます。素早く払うと小さな泡ができ、泡をタップすると割れます。
+
+`works/soap-film/index.html` · [source.js](../works/soap-film/source.js)
+
+<a id="dewdrop-refraction"></a>
+
+## 一滴の露 / 一滴露水
+
+[▶ オンラインで体験](https://ma1902056219-coder.github.io/openpixel/works/dewdrop-refraction/)
+
+水滴の中に逆さまの花が見えます。
+
+約22秒のループです。Spaceで停止し、右矢印で屈折や水面が揺れるところをコマ送りできます。
+
+`works/dewdrop-refraction/index.html` · [source.js](../works/dewdrop-refraction/source.js)
+
+<a id="rice-field-perspective"></a>
+
+## 田んぼアート / 稻田画
+
+[▶ オンラインで体験](https://ma1902056219-coder.github.io/openpixel/works/rice-field-perspective/)
+
+展望台から見ると稲の模様が鶴になります。
+
+「田埂上」であぜ道、「爬上塔」で展望台に上がる場面、「正上方」で真上に切り替えます。
+
+`works/rice-field-perspective/index.html` · [source.js](../works/rice-field-perspective/source.js)
