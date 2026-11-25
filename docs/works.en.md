@@ -528,3 +528,65 @@ Find the crane that only lines up from the viewing tower.
 Use “田埂上” for the field path, “爬上塔” to climb the tower, and “正上方” for an overhead view.
 
 `works/rice-field-perspective/index.html` · [source.js](../works/rice-field-perspective/source.js)
+
+## Batch 05
+
+<a id="puddle-worlds"></a>
+
+## Through the Puddle / 水洼倒影
+
+[▶ Try it online](https://ma1902056219-coder.github.io/openpixel/works/puddle-worlds/)
+
+A puddle reflects a street you can cross into.
+
+Start with “雨夜这边” and jump near the transition with “跳进水洼”. “灯笼那边” goes straight to the lantern street.
+
+`works/puddle-worlds/index.html` · [source.js](../works/puddle-worlds/source.js)
+
+<a id="walking-colossus"></a>
+
+## Walking Colossus / 巨像
+
+[▶ Try it online](https://ma1902056219-coder.github.io/openpixel/works/walking-colossus/)
+
+A stone creature carries a city past the sunset.
+
+Watch the one-minute loop. Use 2× to find the backlit passage, then pause or step one frame at a time.
+
+`works/walking-colossus/index.html` · [source.js](../works/walking-colossus/source.js)
+
+<a id="uv-graffiti"></a>
+
+## UV Graffiti / 喷漆
+
+[▶ Try it online](https://ma1902056219-coder.github.io/openpixel/works/uv-graffiti/)
+
+Paint on brick and switch to UV to reveal the glow.
+
+Tap a can to change colors, drag to spray, and hold in one place for drips. “灯：路灯” switches to UV light.
+
+`works/uv-graffiti/index.html` · [source.js](../works/uv-graffiti/source.js)
+
+<a id="bell-at-dawn"></a>
+
+## Bell at Dawn / 撞钟
+
+[▶ Try it online](https://ma1902056219-coder.github.io/openpixel/works/bell-at-dawn/)
+
+Ring a bell to push away clouds and shake snow loose.
+
+Grab the striker, pull it right, then release. Tap the bell for a softer hit. Turn on sound for the long decay and mountain echo.
+
+`works/bell-at-dawn/index.html` · [source.js](../works/bell-at-dawn/source.js)
+
+<a id="flipdot-night"></a>
+
+## A Night on the Flip-Dot Display / 翻片屏的一夜
+
+[▶ Try it online](https://ma1902056219-coder.github.io/openpixel/works/flipdot-night/)
+
+Station lettering falls away and becomes a field of sand.
+
+Use “字掉下来” for the falling letters and “火车” for the train. “声音” enables the mechanical clicks and music.
+
+`works/flipdot-night/index.html` · [source.js](../works/flipdot-night/source.js)

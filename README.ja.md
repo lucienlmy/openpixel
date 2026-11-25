@@ -8,7 +8,7 @@
 
 **ピクセルの世界を、あなたの作品に。**
 
-池の波紋から銀河の衝突まで。ブラウザでリアルタイムに描画する、41 のピクセル実験です。
+池の波紋から銀河の衝突まで。ブラウザでリアルタイムに描画する、46 のピクセル実験です。
 
 <img src="docs/assets/badge-works.ja.svg" alt="作品"> <img src="docs/assets/badge-runtime.ja.svg" alt="実行"> <img src="docs/assets/badge-license.ja.svg" alt="ライセンス">
 
@@ -25,12 +25,29 @@
 <img src="docs/assets/showcase.gif" alt="実際の実行画面：波紋、魚群、銀河の衝突" width="850">
 </div>
 
-実際に動かした作品の映像です。41作品をオンラインで体験し、ソースをダウンロードして自分の作品に改造できます。
+実際に動かした作品の映像です。46作品をオンラインで体験し、ソースをダウンロードして自分の作品に改造できます。
 
 - **触ってみる：** 錦鯉に餌をあげ、磁場を動かし、霜を拭い、砂紋を描けます。
 - **変化を眺める：** 衛星が環になり、魚群がイルカを避け、星の軌跡が長い尾になります。
 - **場面に入り込む：** ボス戦、夕暮れのドライブ、パズルがはまると動き出す町。
 - **ソースを改造する：** 作品ごとに独立したフォルダー、ソース、説明を用意。ビルドや AI API は不要です。
+
+## 第5弾 · 5つのピクセル実験
+
+水たまりを抜けて別の通りへ。夕暮れを歩く巨像、蛍光スプレー、鐘の音、閉館後の反転フラップ式表示板も個別に楽しめます。
+
+<table>
+<tr>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/puddle-worlds/"><img src="works/puddle-worlds/poster.webp" alt="水たまりの向こう" width="100%"><br><strong>水たまりの向こう</strong></a><br><sub>水たまりに映る別の通りへ移動します。</sub><br><a href="works/puddle-worlds/source.js">ソース</a> · <a href="docs/works.ja.md#puddle-worlds">操作説明</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/walking-colossus/"><img src="works/walking-colossus/poster.webp" alt="歩く巨像" width="100%"><br><strong>歩く巨像</strong></a><br><sub>街を背負った石の巨獣が夕日の前を歩きます。</sub><br><a href="works/walking-colossus/source.js">ソース</a> · <a href="docs/works.ja.md#walking-colossus">操作説明</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/uv-graffiti/"><img src="works/uv-graffiti/poster.webp" alt="蛍光スプレー" width="100%"><br><strong>蛍光スプレー</strong></a><br><sub>れんがに色を吹き付け、紫外線の下で光らせます。</sub><br><a href="works/uv-graffiti/source.js">ソース</a> · <a href="docs/works.ja.md#uv-graffiti">操作説明</a></td>
+</tr>
+<tr>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/bell-at-dawn/"><img src="works/bell-at-dawn/poster.webp" alt="夜明けの鐘" width="100%"><br><strong>夜明けの鐘</strong></a><br><sub>鐘を鳴らすと雲が広がり、雪が舞い落ちます。</sub><br><a href="works/bell-at-dawn/source.js">ソース</a> · <a href="docs/works.ja.md#bell-at-dawn">操作説明</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/flipdot-night/"><img src="works/flipdot-night/poster.webp" alt="フリップドット表示板の一夜" width="100%"><br><strong>フリップドット表示板の一夜</strong></a><br><sub>駅の表示板から文字が崩れて砂丘になります。</sub><br><a href="works/flipdot-night/source.js">ソース</a> · <a href="docs/works.ja.md#flipdot-night">操作説明</a></td>
+<td width="33%"></td>
+</tr>
+</table>
 
 ## 第4弾 · 5つのピクセル実験
 
@@ -209,7 +226,7 @@ source.js を読み、初期化、フレーム更新、描画の処理を特定�
 
 ## 更新と参加
 
-4回の公開で、現在は全41作品です。今後も新しい表現を不定期に公開する予定です。操作性、見た目、パフォーマンスの改善を歓迎します。問題の報告には作品名、ブラウザ、再現手順を記載してください。Pull Request には変更内容と、デモ・手動操作の確認結果を添えてください。原文の参加案内は [CONTRIBUTING.md](CONTRIBUTING.md) にあります。
+5回の公開で、現在は全46作品です。今後も新しい表現を不定期に公開する予定です。操作性、見た目、パフォーマンスの改善を歓迎します。問題の報告には作品名、ブラウザ、再現手順を記載してください。Pull Request には変更内容と、デモ・手動操作の確認結果を添えてください。原文の参加案内は [CONTRIBUTING.md](CONTRIBUTING.md) にあります。
 
 ## 作者とライセンス
 

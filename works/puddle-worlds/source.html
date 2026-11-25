@@ -1,0 +1,519 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>水洼倒影 · 源码</title><style>body{margin:0;background:#0d1513;color:#dbe4d7;font:14px/1.7 ui-monospace,Consolas,monospace}header{position:sticky;top:0;padding:16px 24px;background:#14221f;border-bottom:1px solid #34483e;display:flex;gap:24px;flex-wrap:wrap}a{color:#b7e99c}pre{padding:24px;overflow:auto;tab-size:2}</style><header><a href="index.html">← 返回作品</a><a href="source.js" download>下载 source.js</a><a href="https://github.com/ma1902056219-coder/openpixel/blob/main/works/puddle-worlds/README.md">修改说明</a><span>本页为源码预览；编辑 source.js 后刷新作品页</span></header><pre><code>// SPDX-License-Identifier: MIT
+// Copyright (c) 2026 喵老弟 / MarkMFFF
+
+&quot;use strict&quot;;
+// ================= helpers =================
+const fl=Math.floor, rd=Math.round, PI=Math.PI, D2R=PI/180;
+const clamp=(v,a,b)=&gt;v&lt;a?a:v&gt;b?b:v;
+
+function L(g,x0,y0,x1,y1,c,th){th=th||1;x0=rd(x0);y0=rd(y0);x1=rd(x1);y1=rd(y1);g.fillStyle=c;
+  const dx=Math.abs(x1-x0),sx=x0&lt;x1?1:-1,dy=-Math.abs(y1-y0),sy=y0&lt;y1?1:-1;let e=dx+dy;const o=(th-1)&gt;&gt;1;
+  for(let i=0;i&lt;2000;i++){g.fillRect(x0-o,y0-o,th,th);if(x0===x1&amp;&amp;y0===y1)break;const e2=2*e;if(e2&gt;=dy){e+=dy;x0+=sx}if(e2&lt;=dx){e+=dx;y0+=sy}}}
+
+function ring(g,cx,cy,rx,c,ry){ry=ry==null?rx:ry;cx=rd(cx);cy=rd(cy);g.fillStyle=c;const n=Math.max(16,fl((rx+ry)*5));
+  for(let i=0;i&lt;n;i++){const a=i/n*2*PI;g.fillRect(cx+rd(Math.cos(a)*rx),cy+rd(Math.sin(a)*ry),1,1)}}
+
+function hash(a,b,c){let h=Math.imul(a|0,374761393)^Math.imul((b|0)+0x9e37,668265263)^Math.imul((c|0)+0x7f4a,1274126177);
+  h=Math.imul(h^(h&gt;&gt;&gt;13),1103515245);h^=h&gt;&gt;&gt;16;h=Math.imul(h,0x45d9f3b);h^=h&gt;&gt;&gt;15;return (h&gt;&gt;&gt;0)/4294967296}
+
+const hx=h=&gt;[parseInt(h.slice(1,3),16),parseInt(h.slice(3,5),16),parseInt(h.slice(5,7),16)];
+
+const U=h=&gt;{const a=hx(h);return((255&lt;&lt;24)|(a[2]&lt;&lt;16)|(a[1]&lt;&lt;8)|a[0])&gt;&gt;&gt;0};
+
+
+const SAMPLES=[];
+
+
+// ================= creative ideas: shared drawing kit =================
+// A frame is painted into a Uint32 framebuffer (exact pixels, no blending), then canvas ops may add strokes on top.
+const UC=new Map();function UU(h){let v=UC.get(h);if(v===undefined){v=U(h);UC.set(h,v)}return v}
+function FB(w,h){const c=document.createElement(&#x27;canvas&#x27;);c.width=w;c.height=h;const x=c.getContext(&#x27;2d&#x27;);const im=x.createImageData(w,h);
+  return{w,h,c,x,im,d:new Uint32Array(im.data.buffer)}}
+function fbPut(F,g){g.putImageData(F.im,0,0)}
+
+// pixel / span / rect in the framebuffer (colours are hex strings or U ints)
+const cu=c=&gt;typeof c===&#x27;number&#x27;?c:UU(c);
+function fp(F,x,y,c){x|=0;y|=0;if(x&lt;0||y&lt;0||x&gt;=F.w||y&gt;=F.h)return;F.d[y*F.w+x]=cu(c)}
+function fr(F,x,y,w,h,c){c=cu(c);let x0=Math.max(0,fl(x)),y0=Math.max(0,fl(y)),x1=Math.min(F.w,fl(x)+fl(w)),y1=Math.min(F.h,fl(y)+fl(h));for(let j=y0;j&lt;y1;j++)F.d.fill(c,j*F.w+x0,j*F.w+x1)}
+function fdisc(F,cx,cy,r,c){c=cu(c);for(let y=-Math.ceil(r);y&lt;=Math.ceil(r);y++){const yy=y;const w=Math.sqrt(Math.max(0,r*r-yy*yy));if(r*r-yy*yy&lt;0)continue;const a=rd(cx-w),b=rd(cx+w);const Y=rd(cy)+y;if(Y&lt;0||Y&gt;=F.h)continue;
+  const x0=Math.max(0,a),x1=Math.min(F.w-1,b);if(x1&gt;=x0)F.d.fill(c,Y*F.w+x0,Y*F.w+x1+1)}}
+function fell(F,cx,cy,rx,ry,c){c=cu(c);const Y0=Math.ceil(cy-ry),Y1=fl(cy+ry);for(let Y=Y0;Y&lt;=Y1;Y++){if(Y&lt;0||Y&gt;=F.h)continue;const t=(Y+0.5-cy)/ry;if(Math.abs(t)&gt;1)continue;const w=rx*Math.sqrt(1-t*t);const x0=Math.max(0,rd(cx-w)),x1=Math.min(F.w,rd(cx+w));if(x1&gt;x0)F.d.fill(c,Y*F.w+x0,Y*F.w+x1)}}
+function fpoly(F,pts,c){c=cu(c);let y0=1e9,y1=-1e9;for(const p of pts){if(p[1]&lt;y0)y0=p[1];if(p[1]&gt;y1)y1=p[1]}
+  for(let y=Math.max(0,fl(y0));y&lt;=Math.min(F.h-1,Math.ceil(y1));y++){const yc=y+0.5,xs=[];
+    for(let i=0,j=pts.length-1;i&lt;pts.length;j=i++){const a=pts[i],b=pts[j];if((a[1]&gt;yc)!==(b[1]&gt;yc))xs.push(a[0]+(yc-a[1])/(b[1]-a[1])*(b[0]-a[0]))}
+    xs.sort((a,b)=&gt;a-b);for(let k=0;k+1&lt;xs.length;k+=2){const xa=Math.max(0,rd(xs[k])),xb=Math.min(F.w,rd(xs[k+1]));if(xb&gt;xa)F.d.fill(c,y*F.w+xa,y*F.w+xb)}}}
+function fline(F,x0,y0,x1,y1,c,th){c=cu(c);th=th||1;x0=rd(x0);y0=rd(y0);x1=rd(x1);y1=rd(y1);const dx=Math.abs(x1-x0),sx=x0&lt;x1?1:-1,dy=-Math.abs(y1-y0),sy=y0&lt;y1?1:-1;let e=dx+dy;const o=(th-1)&gt;&gt;1;
+  for(let i=0;i&lt;3000;i++){for(let a=0;a&lt;th;a++)for(let b=0;b&lt;th;b++){const X=x0-o+a,Y=y0-o+b;if(X&gt;=0&amp;&amp;Y&gt;=0&amp;&amp;X&lt;F.w&amp;&amp;Y&lt;F.h)F.d[Y*F.w+X]=c}if(x0===x1&amp;&amp;y0===y1)break;const e2=2*e;if(e2&gt;=dy){e+=dy;x0+=sx}if(e2&lt;=dx){e+=dx;y0+=sy}}}
+// a thick stroke along a polyline (round-ish: discs at points)
+function fstroke(F,pts,c,r){for(let i=0;i+1&lt;pts.length;i++){const a=pts[i],b=pts[i+1],n=Math.max(1,Math.ceil(Math.hypot(b[0]-a[0],b[1]-a[1])));for(let k=0;k&lt;=n;k++){const t=k/n;fdisc(F,a[0]+(b[0]-a[0])*t,a[1]+(b[1]-a[1])*t,r,c)}}}
+// quadratic / cubic point helpers
+const qb=(a,b,c,t)=&gt;[(1-t)*(1-t)*a[0]+2*(1-t)*t*b[0]+t*t*c[0],(1-t)*(1-t)*a[1]+2*(1-t)*t*b[1]+t*t*c[1]];
+function qpts(a,b,c,n){const o=[];for(let i=0;i&lt;=n;i++)o.push(qb(a,b,c,i/n));return o}
+// per-pixel painter over a box: f(x,y) returns colour (string/int) or null to keep
+function fpaint(F,x0,y0,x1,y1,f){x0=Math.max(0,fl(x0));y0=Math.max(0,fl(y0));x1=Math.min(F.w,Math.ceil(x1));y1=Math.min(F.h,Math.ceil(y1));
+  for(let y=y0;y&lt;y1;y++)for(let x=x0;x&lt;x1;x++){const c=f(x,y);if(c!=null)F.d[y*F.w+x]=cu(c)}}
+
+const sm=t=&gt;t&lt;0?0:t&gt;1?1:t*t*(3-2*t);
+const lerp=(a,b,t)=&gt;a+(b-a)*t;
+const seg=(t,a,b)=&gt;clamp((t-a)/(b-a),0,1);
+// a capsule limb/finger with outline, base and a light stripe offset toward the light (lx,ly)
+function cap(F,pts,r,o,b,l,lx,ly){fstroke(F,pts,o,r+1);fstroke(F,pts,b,r);if(l){const k=r*0.45;fstroke(F,pts.map(p=&gt;[p[0]+lx*k,p[1]+ly*k]),l,Math.max(0.6,r*0.38))}}
+
+
+// ================= creative ideas: shared sound (from new-frontiers-2 n0_sound.js) =================
+// everything is synthesised in the browser: noise beds through filters, oscillators, a generated reverb; nothing is loaded
+let SND=null,SND_WANT=false,SND_LAST=0;
+function sndOn(ctx0){if(SND)return SND;let ctx=ctx0;if(!ctx){try{ctx=new (window.AudioContext||window.webkitAudioContext)()}catch(e){return null}}
+  const sr=ctx.sampleRate,master=ctx.createGain();master.gain.value=ctx0?0.8:0;master.connect(ctx.destination);
+  const lp=ctx.createBiquadFilter();lp.type=&#x27;lowpass&#x27;;lp.frequency.value=18000;lp.Q.value=0.5;lp.connect(master);
+  const bus=ctx.createGain();bus.gain.value=1;bus.connect(lp);
+  const ir=ctx.createBuffer(2,sr*3,sr);for(let c=0;c&lt;2;c++){const d=ir.getChannelData(c);for(let i=0;i&lt;d.length;i++)d[i]=(Math.random()*2-1)*Math.pow(1-i/d.length,2.6)*(i&lt;sr*0.01?i/(sr*0.01):1)}
+  const rev=ctx.createConvolver();rev.buffer=ir;const revG=ctx.createGain();revG.gain.value=0.6;rev.connect(revG);revG.connect(bus);
+  const nb=(len,brown)=&gt;{const b=ctx.createBuffer(1,sr*len,sr),d=b.getChannelData(0);let l=0;for(let i=0;i&lt;d.length;i++){const w=Math.random()*2-1;if(brown){l=(l+0.02*w)/1.02;d[i]=l*3.5}else d[i]=w}return b};
+  SND={ctx,master,bus,lp,rev,white:nb(2,false),brown:nb(4,true),beds:{},vol:0,clock:null,ks:new Map(),
+    at(){return this.clock!=null?this.clock:this.ctx.currentTime+0.03}};
+  if(!ctx0){ctx.resume&amp;&amp;ctx.resume();
+    // the sound follows the picture: when the animation stops ticking (paused, tab hidden) it fades out
+    SND.iv=setInterval(()=&gt;{if(!SND)return;const live=performance.now()-SND_LAST&lt;220,target=live?0.8:0;if(target!==SND.vol){SND.vol=target;const now=SND.ctx.currentTime;SND.master.gain.cancelScheduledValues(now);SND.master.gain.setTargetAtTime(target,now,live?0.12:0.04)}},60)}
+  return SND}
+function sndOff(){if(!SND)return;clearInterval(SND.iv);try{SND.ctx.close()}catch(e){}SND=null}
+const SND_CTL={type:&#x27;toggle&#x27;,key:&#x27;sound&#x27;,label:&#x27;声音&#x27;,get def(){return SND_WANT}};
+function sndInit(S){S.pu=null;if(S.opt.sound)sndOn()}
+function sndOpt(S,k){if(k!==&#x27;sound&#x27;)return;SND_WANT=!!S.opt.sound;if(SND_WANT)sndOn();else sndOff()}
+// called from a piece&#x27;s tick: works out the previous frame so events fire once when the loop crosses them
+function sndTick(S,LOOPT,fn){if(!SND||!S.opt.sound)return;SND_LAST=performance.now();const u=S.t%LOOPT;let pu=S.pu==null?u-1:S.pu;
+  if(u&lt;pu)pu=(pu&gt;=LOOPT-3&amp;&amp;u&lt;3)?-1:u-1;else if(u-pu&gt;30)pu=u-1;S.pu=u;fn(SND,S,u,pu,S.t)}
+const crossed=(pu,u,x)=&gt;pu&lt;x&amp;&amp;u&gt;=x;
+// ---- building blocks ----
+function bed(A,name,src,ft,f,q,freq){let b=A.beds[name];if(b)return b;const c=A.ctx;let s;
+  if(src===&#x27;white&#x27;||src===&#x27;brown&#x27;){s=c.createBufferSource();s.buffer=A[src];s.loop=true;s.loopStart=Math.random()}else{s=c.createOscillator();s.type=src;s.frequency.value=freq||110}
+  const fi=c.createBiquadFilter();fi.type=ft;fi.frequency.value=f;fi.Q.value=q||0.7;const g=c.createGain();g.gain.value=0;s.connect(fi);fi.connect(g);g.connect(A.bus);s.start();
+  return A.beds[name]={s,f:fi,g}}
+function bset(A,name,vol,f,tc,freq){const b=A.beds[name];if(!b)return;const t=A.at();b.g.gain.setTargetAtTime(Math.max(0,vol),t,tc||0.25);if(f)b.f.frequency.setTargetAtTime(f,t,tc||0.25);if(freq&amp;&amp;b.s.frequency)b.s.frequency.setTargetAtTime(freq,t,tc||0.25)}
+function env(A,node,t0,a,peak,dur,out,wet){const g=A.ctx.createGain();g.gain.setValueAtTime(0.0001,t0);g.gain.linearRampToValueAtTime(peak,t0+a);g.gain.exponentialRampToValueAtTime(0.0001,t0+a+dur);node.connect(g);g.connect(out||A.bus);
+  if(wet){const w=A.ctx.createGain();w.gain.value=wet;g.connect(w);w.connect(A.rev)}return g}
+function tone(A,type,f,t0,dur,vol,o){o=o||{};const c=A.ctx,s=c.createOscillator();s.type=type;s.frequency.setValueAtTime(f,t0);if(o.to)s.frequency.exponentialRampToValueAtTime(o.to,t0+(o.glide||dur));if(o.det)s.detune.value=o.det;
+  let n=s;if(o.ft){const fi=c.createBiquadFilter();fi.type=o.ft;fi.frequency.value=o.ff;fi.Q.value=o.q||0.7;s.connect(fi);n=fi}env(A,n,t0,o.a||0.005,vol,dur,null,o.wet);s.start(t0);s.stop(t0+(o.a||0.005)+dur+0.05)}
+function noise(A,t0,dur,vol,ft,f,o){o=o||{};const c=A.ctx,s=c.createBufferSource();s.buffer=o.brown?A.brown:A.white;s.loop=true;const fi=c.createBiquadFilter();fi.type=ft;fi.frequency.setValueAtTime(f,t0);if(o.to)fi.frequency.exponentialRampToValueAtTime(o.to,t0+(o.glide||dur));fi.Q.value=o.q||0.7;s.connect(fi);
+  env(A,fi,t0,o.a||0.003,vol,dur,null,o.wet);s.start(t0,Math.random()*1.5);s.stop(t0+(o.a||0.003)+dur+0.05)}
+// a struck bell: inharmonic partials, the low ones ring longest
+function bell(A,t0,f,vol,wet){[[0.5,1,7],[1,0.8,5],[1.19,0.55,3.6],[1.5,0.4,3],[2,0.5,2.4],[2.52,0.25,1.6],[2.66,0.2,1.3],[3.01,0.18,1.1],[4.2,0.12,0.7]].forEach(([r,a,d])=&gt;tone(A,&#x27;sine&#x27;,f*r,t0,d,vol*a,{a:0.004,wet:wet==null?0.5:wet}))}
+// a plucked string (Karplus-Strong), rendered once per pitch
+function pluck(A,t0,f,vol,wet,out){const c=A.ctx,key=Math.round(f*10);let b=A.ks.get(key);if(!b){const sr=c.sampleRate,N=Math.round(sr/f),len=Math.floor(sr*2.8);b=c.createBuffer(1,len,sr);const d=b.getChannelData(0);
+    for(let i=0;i&lt;N;i++)d[i]=Math.random()*2-1;d[N]=d[0];for(let i=N+1;i&lt;len;i++)d[i]=0.4985*(d[i-N]+d[i-N-1]);A.ks.set(key,b)}
+  const s=c.createBufferSource();s.buffer=b;const g=c.createGain();g.gain.value=vol;s.connect(g);g.connect(out||A.bus);if(wet){const w=c.createGain();w.gain.value=wet;g.connect(w);w.connect(out?A.master:A.rev)}s.start(t0)}
+
+const mtof=m=&gt;440*Math.pow(2,(m-69)/12);
+
+// ================= 1. 一生如圆 : a life told in match cuts; the same circle survives every cut =================
+
+
+// ================= 2. 放大镜下的早餐 : an aerial desert that turns out to be toast seen through a magnifier =================
+
+
+// ================= 3. 格子外 : a girl climbs out of a comic panel after her balloon =================
+// Rule of the piece: inside a panel everything is coloured by that panel&#x27;s light; in the white gutters between panels
+// (outside any story) she, the balloon and the cat are only ink lines on paper.
+
+
+// ================= 4. 手影 : hand shadows on a bedroom wall that run away on their own =================
+
+
+// ================= 5. 画中画 : a painter painting the room he is in; the camera falls into the canvas forever =================
+// Every level is the same room drawn from vector shapes through a transform, so it stays crisp at any zoom.
+// Each level inward is one season later; after four levels the picture is back where it began.
+
+
+// ================= 6. 活拼图 : only the pieces already put in place are alive =================
+
+
+// ================= 7. 水洼倒影 : the puddles on a rainy street reflect a different street =================
+// Two worlds share one street: a cold rainy night and a lantern festival with a whale in the air.
+// Each puddle shows the OTHER world (background mirrored about the building line, people about their feet).
+// A girl jumps into the big puddle, the camera tilts down into it, the picture turns over, and we are on the other side.
+(function(){
+const W=480,H=270,F=FB(W,H);
+const GL=196,BO=80,BH=GL+BO,GH=276;// ground line; background buffers hold world rows -80..195, ground buffers rows 196..471
+const HALF=720,LOOP=HALF*2,DIVE0=560,DIVE1=690,K0=1.67;// reflections are squashed (seen at a grazing angle)
+const pack=(r,g,b)=&gt;(0xff000000|(b&lt;&lt;16)|(g&lt;&lt;8)|r)&gt;&gt;&gt;0;
+const mixU=(v,w,a)=&gt;pack(rd((v&amp;255)+((w&amp;255)-(v&amp;255))*a),rd(((v&gt;&gt;8)&amp;255)+(((w&gt;&gt;8)&amp;255)-((v&gt;&gt;8)&amp;255))*a),rd(((v&gt;&gt;16)&amp;255)+(((w&gt;&gt;16)&amp;255)-((v&gt;&gt;16)&amp;255))*a));
+const mulU=(v,m)=&gt;pack(rd((v&amp;255)*m),rd(((v&gt;&gt;8)&amp;255)*m),rd(((v&gt;&gt;16)&amp;255)*m));
+function outl(S,c){c=cu(c);const w=S.w,h=S.h,d=S.d,o=[];for(let y=0;y&lt;h;y++)for(let x=0;x&lt;w;x++){const i=y*w+x;if(d[i])continue;if(x&gt;0&amp;&amp;d[i-1]||x&lt;w-1&amp;&amp;d[i+1]||y&gt;0&amp;&amp;d[i-w]||y&lt;h-1&amp;&amp;d[i+w])o.push(i)}for(const i of o)d[i]=c}
+// stepped glow: a few flat rings blended toward a colour (no dither)
+function glow(B,cx,cy,r,col,a){col=cu(col);for(let y=fl(cy-r);y&lt;=cy+r;y++)for(let x=fl(cx-r);x&lt;=cx+r;x++){if(x&lt;0||y&lt;0||x&gt;=B.w||y&gt;=B.h)continue;const d=Math.hypot(x+0.5-cx,y+0.5-cy)/r;if(d&gt;=1)continue;const s=d&lt;0.4?1:d&lt;0.7?0.6:0.3;const i=y*B.w+x;B.d[i]=mixU(B.d[i],col,a*s)}}
+const yb=y=&gt;y+BO;// world row -&gt; background buffer row
+// ------------------------------------------------------------------ the street: five buildings, same outlines in both worlds
+const BLD=[[0,96,62],[96,100,92],[196,74,48],[270,118,84],[388,92,66]];
+const CAT=x=&gt;[104,113].map((y0,j)=&gt;y0+Math.sin(PI*x/480)*10+j);// two overhead wires (sag)
+const PUD=[[70,224,36,6,14,1,18,5],[225,248,70,15,-30,3,36,10],[372,217,30,5,-10,1,14,3],[420,258,42,7,16,-1,22,5],[128,262,26,5,8,1,12,4]];
+const PMASK=new Uint8Array(W*GH),WET=new Uint8Array(W*GH);
+for(let gy=0;gy&lt;GH;gy++)for(let x=0;x&lt;W;x++){const wy=gy+GL;let m=0,n=0;PUD.forEach((p,i)=&gt;{const e=(a,b,c,d)=&gt;((x+0.5-a)/c)**2+((wy+0.5-b)/d)**2;const v=Math.min(e(p[0],p[1],p[2],p[3]),e(p[0]+p[4],p[1]+p[5],p[6],p[7]));if(v&lt;1)m=i+1;else if(v&lt;1.5)n=1});PMASK[gy*W+x]=m;WET[gy*W+x]=n}
+// ------------------------------------------------------------------ static backgrounds
+const BG=[FB(W,BH),FB(W,BH)],BGS=[FB(W,BH),FB(W,BH)],GND=[FB(W,GH),FB(W,GH)];
+function winGrid(B,b,f){const[x0,w,top]=b;for(let fy=GL-46-34;fy&gt;top+6;fy-=34){const n=w&gt;100?3:2,gap=w/n;for(let k=0;k&lt;n;k++)f(rd(x0+gap*k+gap/2-6),fy-6+BO+0,fy)}}
+function paint0(){const B=BGS[0];
+  fpaint(B,0,0,W,BH,(x,y)=&gt;{const wy=y-BO;return wy&lt;-30?&#x27;#0e1219&#x27;:wy&lt;10?&#x27;#121720&#x27;:wy&lt;50?&#x27;#171d27&#x27;:&#x27;#1c232e&#x27;});
+  // low cloud and a far skyline in the haze
+  for(const[x,y,rx,ry]of [[60,-60,90,10],[300,-50,120,9],[420,-10,70,7],[150,0,80,6]])fell(B,x,yb(y),rx,ry,&#x27;#141a23&#x27;);
+  for(let x=0;x&lt;W;x+=14){const h=20+fl(hash(x,2,1)*30);fr(B,x,yb(70-h),14,h+40,&#x27;#161c25&#x27;);if(hash(x,3,1)&lt;0.4)fr(B,x+4,yb(78-h+fl(hash(x,4,1)*10)),2,2,&#x27;#3a4a5a&#x27;)}
+  BLD.forEach((b,i)=&gt;{const[x,w,top]=b,wall=[&#x27;#2b313b&#x27;,&#x27;#30363f&#x27;,&#x27;#272d37&#x27;,&#x27;#323843&#x27;,&#x27;#2a303a&#x27;][i];fr(B,x,yb(top),w,GL-top,wall);fr(B,x+w-2,yb(top),2,GL-top,&#x27;#1f242c&#x27;);fr(B,x,yb(top),w,3,&#x27;#3b424e&#x27;);fr(B,x,yb(top)+3,w,1,&#x27;#1d2229&#x27;);
+    for(let fy=GL-46;fy&gt;top+10;fy-=34)fr(B,x,yb(fy),w,2,&#x27;#242a33&#x27;);
+    winGrid(B,b,(wx,_,fy)=&gt;{const lit=hash(wx,fy,5)&lt;0.28;fr(B,wx-1,yb(fy-8),14,16,&#x27;#1a1f27&#x27;);fr(B,wx,yb(fy-7),12,14,lit?&#x27;#6f93ab&#x27;:&#x27;#1f262f&#x27;);
+      if(lit){for(let k=0;k&lt;14;k+=3)fr(B,wx,yb(fy-7)+k,12,1,&#x27;#58788e&#x27;)}else{fp(B,wx+8,yb(fy-6),&#x27;#2c3540&#x27;);fp(B,wx+9,yb(fy-6),&#x27;#2c3540&#x27;);fp(B,wx+10,yb(fy-5),&#x27;#2c3540&#x27;)}
+      if(hash(wx,fy,9)&lt;0.5){fr(B,wx+1,yb(fy+9),10,5,&#x27;#46505c&#x27;);fr(B,wx+1,yb(fy+9),10,1,&#x27;#56616e&#x27;);for(let k=0;k&lt;4;k++)fp(B,wx+3+k*2,yb(fy+11),&#x27;#2e353f&#x27;)}})
+    // ground floors: shutters, a convenience store, a vending machine
+    const sy=yb(GL-44);
+    if(i===3){fr(B,x+6,sy-8,w-12,8,&#x27;#2a9aa4&#x27;);fr(B,x+6,sy-5,w-12,2,&#x27;#bfeef0&#x27;);fr(B,x+6,sy,w-12,44,&#x27;#bcd6dc&#x27;);for(let k=0;k&lt;4;k++){fr(B,x+12+k*26,sy+8,20,30,&#x27;#8fb0b8&#x27;);for(let r=0;r&lt;5;r++)fr(B,x+13+k*26,sy+10+r*6,18,3,[&#x27;#c87a6a&#x27;,&#x27;#d8c27a&#x27;,&#x27;#7aa8c8&#x27;,&#x27;#9ac08a&#x27;,&#x27;#c89ab8&#x27;][(r+k)%5])}fr(B,x+56,sy+4,22,40,&#x27;#dff0f2&#x27;);fr(B,x+66,sy+4,1,40,&#x27;#8fb0b8&#x27;)}
+    else{fr(B,x+4,sy,w-8,44,&#x27;#3a414b&#x27;);for(let k=0;k&lt;44;k+=3)fr(B,x+4,sy+k,w-8,1,&#x27;#2f353e&#x27;);fr(B,x+4,sy-3,w-8,3,&#x27;#22272f&#x27;);
+      if(i===1){fr(B,x+62,sy+18,14,26,&#x27;#9cc0e4&#x27;);fr(B,x+63,sy+19,12,9,&#x27;#d8ecff&#x27;);for(let r=0;r&lt;3;r++)for(let c=0;c&lt;4;c++)fr(B,x+64+c*3,sy+30+r*4,2,3,[&#x27;#e85a5a&#x27;,&#x27;#5ab0e8&#x27;,&#x27;#f0d050&#x27;,&#x27;#7ad07a&#x27;][(r+c)%4]);fr(B,x+63,sy+42,12,1,&#x27;#5a7090&#x27;)}
+      if(i===2){fr(B,x+w-12,yb(GL-120),8,60,&#x27;#232930&#x27;);for(let k=0;k&lt;4;k++)fr(B,x+w-10,yb(GL-114)+k*14,4,8,&#x27;#3a424c&#x27;)}}})
+  // utility pole
+  fr(B,262,yb(58),4,GL-58,&#x27;#1b2027&#x27;);fr(B,252,yb(70),24,2,&#x27;#1b2027&#x27;);fr(B,266,yb(80),6,10,&#x27;#262c34&#x27;);
+  for(let x=0;x&lt;W;x++)for(const y of CAT(x))fp(B,x,yb(y),&#x27;#0b0e13&#x27;)}
+function paint1(){const B=BGS[1];
+  fpaint(B,0,0,W,BH,(x,y)=&gt;{const wy=y-BO;return wy&lt;-40?&#x27;#0d0f33&#x27;:wy&lt;0?&#x27;#141444&#x27;:wy&lt;36?&#x27;#1f1852&#x27;:wy&lt;70?&#x27;#2e1c58&#x27;:&#x27;#43225a&#x27;});
+  for(let i=0;i&lt;180;i++){const x=fl(hash(i,1,7)*W),y=fl(hash(i,2,7)*170)-80;fp(B,x,yb(y),hash(i,3,7)&lt;0.2?&#x27;#fff4d8&#x27;:&#x27;#9a96d8&#x27;)}
+  fdisc(B,70,yb(-44),13,&#x27;#f8ecc8&#x27;);fdisc(B,76,yb(-48),11,&#x27;#1a1648&#x27;);// crescent
+  // far roofs in silhouette with a pagoda
+  for(let x=0;x&lt;W;x+=16){const h=18+fl(hash(x,2,1)*24);fr(B,x,yb(74-h),16,h+40,&#x27;#251a44&#x27;);fpoly(B,[[x-2,yb(74-h)],[x+8,yb(68-h)],[x+18,yb(74-h)]],&#x27;#251a44&#x27;)}
+  {const x=346;for(let k=0;k&lt;4;k++){const y=34+k*10,w=26-k*5;fpoly(B,[[x-w-4,yb(y+2)],[x,yb(y-5)],[x+w+4,yb(y+2)]],&#x27;#2a1d4a&#x27;);fr(B,x-w+4,yb(y+2),2*w-8,7,&#x27;#2a1d4a&#x27;)}fr(B,x,yb(14),1,14,&#x27;#2a1d4a&#x27;)}
+  BLD.forEach((b,i)=&gt;{const[x,w,top]=b,wall=[&#x27;#3d2622&#x27;,&#x27;#46291f&#x27;,&#x27;#3a2420&#x27;,&#x27;#4a2c24&#x27;,&#x27;#40261f&#x27;][i];fr(B,x,yb(top+6),w,GL-top-6,wall);fr(B,x+w-2,yb(top),2,GL-top,&#x27;#2a1814&#x27;);
+    // tiled roof with upturned eaves
+    fpoly(B,[[x-4,yb(top+8)],[x+3,yb(top+1)],[x+w-3,yb(top+1)],[x+w+4,yb(top+8)],[x+w+1,yb(top+10)],[x-1,yb(top+10)]],&#x27;#2a2030&#x27;);for(let k=x;k&lt;x+w;k+=4)fr(B,k,yb(top+2),1,7,&#x27;#3c3044&#x27;);fr(B,x-4,yb(top+8),w+8,1,&#x27;#5a4a5a&#x27;);fp(B,x-5,yb(top+6),&#x27;#5a4a5a&#x27;);fp(B,x+w+4,yb(top+6),&#x27;#5a4a5a&#x27;);
+    for(let fy=GL-46;fy&gt;top+10;fy-=34){fr(B,x,yb(fy),w,2,&#x27;#2a1814&#x27;);fr(B,x-2,yb(fy)-1,w+4,1,&#x27;#5a3a2a&#x27;)}
+    winGrid(B,b,(wx,_,fy)=&gt;{fr(B,wx-1,yb(fy-8),14,16,&#x27;#2a1814&#x27;);fr(B,wx,yb(fy-7),12,14,hash(wx,fy,5)&lt;0.8?&#x27;#f2bf72&#x27;:&#x27;#c88848&#x27;);for(let k=0;k&lt;12;k+=4)fr(B,wx+k,yb(fy-7),1,14,&#x27;#8a4c2a&#x27;);fr(B,wx,yb(fy-1),12,1,&#x27;#8a4c2a&#x27;);
+      if(hash(wx,fy,6)&lt;0.3){fr(B,wx+3,yb(fy-5),4,10,&#x27;#a8683a&#x27;);fdisc(B,wx+5,yb(fy-6),2,&#x27;#a8683a&#x27;)}})
+    // ground floors open as stalls with curtains
+    const sy=yb(GL-44);fr(B,x+4,sy,w-8,44,&#x27;#ffc878&#x27;);fr(B,x+4,sy+30,w-8,14,&#x27;#e89a50&#x27;);fr(B,x+4,sy+30,w-8,1,&#x27;#b86a30&#x27;);
+    const nc=[&#x27;#2a3a7a&#x27;,&#x27;#b8342e&#x27;,&#x27;#2a3a7a&#x27;,&#x27;#4a6a3a&#x27;,&#x27;#6a2a5a&#x27;][i];for(let k=x+6;k&lt;x+w-6;k+=10){fr(B,k,sy-2,9,16,nc);fr(B,k,sy+13,9,1,&#x27;#1a1830&#x27;)}fdisc(B,x+w/2,sy+5,3,&#x27;#f4e8d8&#x27;);fr(B,x+4,sy-4,w-8,2,&#x27;#2a1814&#x27;);
+    for(let k=0;k&lt;fl((w-16)/12);k++){const gx=x+10+k*12;fr(B,gx,sy+24,8,6,[&#x27;#f4e0c0&#x27;,&#x27;#e86a5a&#x27;,&#x27;#f0c040&#x27;,&#x27;#8ac06a&#x27;][(k+i)%4]);fr(B,gx,sy+24,8,1,&#x27;#fff4e0&#x27;)}
+    if(i===3){fr(B,x+56,sy+22,30,4,&#x27;#b8342e&#x27;);fr(B,x+58,sy+26,2,18,&#x27;#5a2a1a&#x27;);fr(B,x+82,sy+26,2,18,&#x27;#5a2a1a&#x27;)}
+    if(i===1){fr(B,x+64,yb(GL-30),10,30,&#x27;#8a8078&#x27;);fr(B,x+60,yb(GL-34),18,4,&#x27;#6a6058&#x27;);fr(B,x+65,yb(GL-28),8,8,&#x27;#ffd890&#x27;)}
+    if(i===2){fr(B,x+w-12,yb(GL-120),8,60,&#x27;#f0e4d0&#x27;);for(let k=0;k&lt;4;k++)fr(B,x+w-10,yb(GL-114)+k*14,4,8,&#x27;#b8342e&#x27;)}})
+  fr(B,262,yb(58),4,GL-58,&#x27;#2c1a14&#x27;);fr(B,252,yb(70),24,2,&#x27;#2c1a14&#x27;);
+  for(let x=0;x&lt;W;x++)for(const y of CAT(x))fp(B,x,yb(y),&#x27;#1a1018&#x27;)}
+function ground(G,wd){const ramp=wd?[&#x27;#33262a&#x27;,&#x27;#382a2c&#x27;,&#x27;#22181c&#x27;]:[&#x27;#20252c&#x27;,&#x27;#23282f&#x27;,&#x27;#171b21&#x27;];
+  let y=0,h=3,r=0;while(y&lt;GH){for(let x=0;x&lt;W;x++){const tw=h*4,off=(r%2)*tw/2;const j=((x+off)%tw)&lt;1;for(let k=0;k&lt;h&amp;&amp;y+k&lt;GH;k++)G.d[(y+k)*W+x]=UU(k===0||j?ramp[2]:ramp[(fl((x+off)/tw)+r)%2])}y+=h;r++;h=Math.min(22,h+1)}
+  fr(G,0,0,W,2,wd?&#x27;#1c1214&#x27;:&#x27;#11141a&#x27;);
+  // light spilled from shop fronts in flat bands
+  const spill=wd?[[0,480,&#x27;#ffb060&#x27;,0.12]]:[[276,382,&#x27;#7ad8e0&#x27;,0.14],[156,174,&#x27;#9cc0e4&#x27;,0.1]];
+  for(const[x0,x1,c,a]of spill)for(let gy=0;gy&lt;44;gy++)for(let x=x0-fl(gy/4);x&lt;x1+fl(gy/4);x++){if(x&lt;0||x&gt;=W)continue;const s=gy&lt;10?1:gy&lt;24?0.55:0.25;const i=gy*W+x;G.d[i]=mixU(G.d[i],UU(c),a*s)}
+  if(!wd)for(let x=280;x&lt;378;x+=7)for(let gy=4;gy&lt;48;gy++)if((gy+x)%3)G.d[gy*W+x]=mixU(G.d[gy*W+x],UU(&#x27;#7ad8e0&#x27;),0.22*(1-gy/48));
+  for(let i=0;i&lt;W*GH;i++)if(WET[i])G.d[i]=mulU(G.d[i],0.8)}
+paint0();paint1();ground(GND[0],0);ground(GND[1],1);
+// ------------------------------------------------------------------ the whale, hand-shaped, drawn into its own sprite
+const WH=FB(150,64);
+function whale(fl_){const S=WH;S.d.fill(0);const o=(p)=&gt;p.map(([x,y])=&gt;[x+8,y+24]);const a=fl_;
+  fpoly(S,o([[112,0],[124,-9+a],[136,-13+a],[130,-3+a],[137,8+a],[125,6+a],[113,2]]),&#x27;#26305e&#x27;);
+  fpoly(S,o([[0,2],[6,-6],[18,-12],[36,-15],[58,-14],[78,-10],[94,-5],[106,-1],[114,1],[106,5],[90,9],[70,13],[48,15],[26,14],[10,10],[2,6]]),&#x27;#2a3468&#x27;);
+  fpoly(S,o([[6,-6],[18,-12],[36,-15],[58,-14],[78,-10],[94,-5],[78,-7],[58,-11],[36,-12],[18,-9]]),&#x27;#3c4a8c&#x27;);
+  fpoly(S,o([[2,6],[10,10],[26,14],[48,15],[70,13],[90,9],[70,10],[48,11],[26,10],[10,7]]),&#x27;#8a9ac8&#x27;);
+  for(let k=0;k&lt;4;k++)fline(S,10+k*2+8,24+7+k,38+k*4+8,24+11+k,&#x27;#6a7aac&#x27;);
+  for(const[x,y]of [[4,-2],[8,-5],[12,-1],[22,-11],[30,-12],[60,-12]])fp(S,x+8,y+24,&#x27;#6a7aac&#x27;);
+  fpoly(S,o([[30,10],[40,12],[54,28-a],[48,30-a],[34,16]]),&#x27;#26305e&#x27;);fline(S,30+8,10+24,48+8,30-a+24,&#x27;#a8b8e0&#x27;);
+  fp(S,14+8,2+24,&#x27;#0a0c22&#x27;);fp(S,15+8,1+24,&#x27;#c8d0ff&#x27;);outl(S,&#x27;#120e2a&#x27;)}
+// ------------------------------------------------------------------ people: each world has its own version on the same path
+const SA=FB(48,62),SK=FB(32,40),SC=FB(34,22);SA.fx=24;SA.fy=58;SK.fx=16;SK.fy=37;SC.fx=17;SC.fy=19;
+function legs(S,x,hy,fy,ph,c,o,shoe,amp){const a=Math.sin(ph*2*PI)*amp;cap(S,[[x,hy],[x-a,fy-1]],1.5,o,c);cap(S,[[x,hy],[x+a,fy-1]],1.5,o,c);fr(S,rd(x-a)-1,fy-1,4,2,shoe);fr(S,rd(x+a)-1,fy-1,4,2,shoe)}
+function adult(w,ph){const S=SA;S.d.fill(0);const b=Math.abs(Math.sin(ph*2*PI))&gt;0.7?1:0;
+  if(!w){// a tired office worker under a black umbrella, briefcase
+    legs(S,24,40,58,ph,&#x27;#2a2e38&#x27;,&#x27;#2a2e38&#x27;,&#x27;#15171c&#x27;,4.5);
+    fpoly(S,[[19,21+b],[29,21+b],[31,45],[17,45]],&#x27;#4a5260&#x27;);fpoly(S,[[19,21+b],[22,21+b],[20,45],[17,45]],&#x27;#3c4350&#x27;);fr(S,18,33,12,1,&#x27;#363c47&#x27;);fr(S,25,22+b,1,10,&#x27;#3c4350&#x27;);
+    fdisc(S,25,16+b,4,&#x27;#c49a86&#x27;);fr(S,21,12+b,8,3,&#x27;#2a2420&#x27;);fp(S,28,16+b,&#x27;#2a2020&#x27;);
+    cap(S,[[22,24+b],[29,28],[28,22]],1.6,&#x27;#3c4350&#x27;,&#x27;#4a5260&#x27;);fr(S,28,4,1,22,&#x27;#15171c&#x27;);fr(S,28,25,2,2,&#x27;#15171c&#x27;);
+    fr(S,30,34+b,8,7,&#x27;#3a2a22&#x27;);fr(S,30,34+b,8,1,&#x27;#5a4232&#x27;);fr(S,33,32+b,2,2,&#x27;#3a2a22&#x27;);
+    for(let y=0;y&lt;9;y++){const hw=17*Math.sqrt(1-((8-y)/9)**2);fr(S,rd(28-hw),y+1,rd(2*hw),1,y&lt;3?&#x27;#353a46&#x27;:&#x27;#23262e&#x27;)}
+    for(const x of [12,20,28,36,44])fr(S,x-1,9+(x===28?1:0),2,1,&#x27;#15171c&#x27;);for(const x of [16,24,32,40])fp(S,x,8,&#x27;#3a3f4c&#x27;);
+    outl(S,&#x27;#0c0e13&#x27;);for(const x of [11,45])if((ph*4|0)%2)fp(S,x,12,&#x27;#7a8aa0&#x27;)}
+  else{// a girl in a festival kimono and fox mask under a red paper umbrella, carrying a lantern
+    fr(S,21,52,3,5,&#x27;#f4f0e8&#x27;);fr(S,25,52,3,5,&#x27;#f4f0e8&#x27;);fr(S,20,57,4,1,&#x27;#5a3a2a&#x27;);fr(S,25,57,4,1,&#x27;#5a3a2a&#x27;);
+    fpoly(S,[[19,21+b],[29,21+b],[30,54],[18,54]],&#x27;#2a3a7a&#x27;);for(let k=0;k&lt;9;k++)fp(S,20+fl(hash(k,1,4)*9),25+fl(hash(k,2,4)*27),&#x27;#e8e4f0&#x27;);
+    fr(S,18,31+b,12,5,&#x27;#d84a3a&#x27;);fr(S,18,33+b,12,1,&#x27;#f0b040&#x27;);fpoly(S,[[18,24+b],[14,26+b],[14,38],[19,36]],&#x27;#22306a&#x27;);
+    fdisc(S,25,16+b,4,&#x27;#1a1418&#x27;);fdisc(S,21,13+b,2.5,&#x27;#1a1418&#x27;);fpoly(S,[[25,13+b],[30,15+b],[31,17+b],[26,19+b]],&#x27;#f4f0e8&#x27;);fp(S,28,15+b,&#x27;#d8342e&#x27;);fp(S,29,17+b,&#x27;#d8342e&#x27;);fp(S,26,12+b,&#x27;#f4f0e8&#x27;);fp(S,27,11+b,&#x27;#d8342e&#x27;);
+    cap(S,[[22,24+b],[29,28],[28,22]],1.6,&#x27;#22306a&#x27;,&#x27;#2a3a7a&#x27;);fr(S,28,5,1,21,&#x27;#5a3a2a&#x27;);
+    for(let y=0;y&lt;7;y++){const hw=18*Math.sqrt(1-((6-y)/7)**2);fr(S,rd(28-hw),y+2,rd(2*hw),1,y&lt;2?&#x27;#e8704e&#x27;:&#x27;#c8443a&#x27;)}
+    for(let k=-4;k&lt;=4;k++)fline(S,28,2,28+k*4.2,8,&#x27;#f0b060&#x27;);fr(S,10,8,37,1,&#x27;#8a2a22&#x27;);
+    cap(S,[[18,26+b],[16,34+b]],1.4,&#x27;#22306a&#x27;,&#x27;#2a3a7a&#x27;);fline(S,15,35+b,15,39+b,&#x27;#5a3a2a&#x27;);fell(S,15,43+b,3,3.5,&#x27;#ffb050&#x27;);fr(S,13,40+b,5,1,&#x27;#2a1a10&#x27;);fr(S,13,46+b,5,1,&#x27;#2a1a10&#x27;);fp(S,15,43+b,&#x27;#fff0c0&#x27;);
+    outl(S,&#x27;#1a0e14&#x27;)}}
+function kid(w,pose,ph){const S=SK;S.d.fill(0);const cr=pose===&#x27;crouch&#x27;?3:0;const bd=cr;
+  const coat=&#x27;#f0c030&#x27;,cs=&#x27;#c8961c&#x27;;
+  if(pose===&#x27;jump&#x27;){cap(S,[[14,29],[12,33]],1.6,&#x27;#b8342a&#x27;,&#x27;#d0402a&#x27;);cap(S,[[18,29],[20,32]],1.6,&#x27;#b8342a&#x27;,&#x27;#d0402a&#x27;)}
+  else if(pose===&#x27;walk&#x27;)legs(S,16,30,38,ph,&#x27;#d0402a&#x27;,&#x27;#b8342a&#x27;,&#x27;#8a2a20&#x27;,2.5);
+  else{fr(S,12,31+cr,3,6-cr,&#x27;#d0402a&#x27;);fr(S,17,31+cr,3,6-cr,&#x27;#d0402a&#x27;);fr(S,12,31+cr,3,1,&#x27;#e8604a&#x27;);fr(S,17,31+cr,3,1,&#x27;#e8604a&#x27;)}
+  fpoly(S,[[11,15+bd],[21,15+bd],[23,32],[9,32]],coat);fpoly(S,[[11,15+bd],[13,15+bd],[11,32],[9,32]],cs);fr(S,15,18+bd,1,13,cs);fp(S,17,20+bd,&#x27;#8a6a18&#x27;);fp(S,17,24+bd,&#x27;#8a6a18&#x27;);fp(S,17,28+bd,&#x27;#8a6a18&#x27;);
+  const hx=pose===&#x27;look&#x27;?18:pose===&#x27;up&#x27;?16:17,hy=(pose===&#x27;look&#x27;?12:pose===&#x27;up&#x27;?9:10)+bd;
+  if(!w){fdisc(S,hx-1,hy,6,coat);fdisc(S,hx-3,hy,4,cs);fdisc(S,hx+1,hy+1,3.2,&#x27;#f2d0b0&#x27;);fp(S,hx+2,hy+(pose===&#x27;look&#x27;?2:pose===&#x27;up&#x27;?0:1),&#x27;#2a1a1a&#x27;);fr(S,hx-1,hy-5,6,1,&#x27;#f8dc60&#x27;)}
+  else{fdisc(S,hx-1,hy,5,&#x27;#1a1418&#x27;);fdisc(S,hx+1,hy+1,3.4,&#x27;#f2d0b0&#x27;);fr(S,hx-2,hy-4,6,3,&#x27;#1a1418&#x27;);fr(S,hx-6,hy-1,3,6,&#x27;#1a1418&#x27;);fp(S,hx+2,hy+(pose===&#x27;look&#x27;?2:1),&#x27;#2a1a1a&#x27;);fp(S,hx+3,hy+3,&#x27;#e88a7a&#x27;);fdisc(S,13,16+bd,3,coat)}
+  if(pose===&#x27;wave&#x27;){cap(S,[[19,17],[23,10],[24,4]],1.5,cs,coat);fdisc(S,24,4,1.5,&#x27;#f2d0b0&#x27;)}
+  else cap(S,[[19,17+bd],[21,24+bd],[21,27+bd]],1.5,cs,coat);
+  if(w){fell(S,24,30+bd,3.5,3,&#x27;#f4f0e8&#x27;);fp(S,22,27+bd,&#x27;#e85a5a&#x27;);fp(S,24,27+bd,&#x27;#e85a5a&#x27;);fp(S,25,29+bd,&#x27;#d8342e&#x27;);fp(S,24,30+bd,&#x27;#ffd890&#x27;)}
+  outl(S,w?&#x27;#1a0e14&#x27;:&#x27;#0c0e13&#x27;)}
+function cat(w,ph){const S=SC;S.d.fill(0);const a=Math.sin(ph*2*PI)*2;
+  if(!w){const c=&#x27;#3a3e48&#x27;;for(const[x,s]of [[11,1],[13,-1],[20,-1],[22,1]])fline(S,x,13,rd(x+a*s),18,c);fell(S,16,11,7,3.5,c);fdisc(S,24,9,3.2,c);fpoly(S,[[22,7],[22,4],[24,6]],c);fpoly(S,[[25,6],[27,4],[27,8]],c);fstroke(S,qpts([9,10],[4,8],[5,2],6),c,1);fp(S,25,9,&#x27;#c8d040&#x27;);outl(S,&#x27;#0c0e13&#x27;)}
+  else{const c=&#x27;#f2ece2&#x27;;for(const[x,s]of [[11,1],[13,-1],[20,-1],[22,1]])fline(S,x,13,rd(x+a*s),18,&#x27;#2a1a14&#x27;);fell(S,16,11,7,3.5,c);fell(S,16,13,6,1.5,&#x27;#d8ccc0&#x27;);fdisc(S,24,9,3.2,c);fpoly(S,[[27,9],[31,10],[27,11]],c);fpoly(S,[[22,7],[22,3],[25,6]],&#x27;#e07a3a&#x27;);fpoly(S,[[25,6],[27,3],[27,8]],&#x27;#e07a3a&#x27;);
+    fell(S,6,7,5,3,c);fell(S,3,4,3,2.5,&#x27;#ffcc60&#x27;);fp(S,1,3,&#x27;#fff4c0&#x27;);fp(S,26,9,&#x27;#d8342e&#x27;);outl(S,&#x27;#1a0e14&#x27;)}}
+// paths in half-time h (both worlds follow the same timing; only the bodies differ)
+function actors(h,w,prim){const L=[];
+  if(h&gt;=200&amp;&amp;h&lt;460)L.push({S:&#x27;C&#x27;,x:510-(h-200)*2.07,fy:215,ph:h/9,dir:-1});
+  if(h&gt;=110&amp;&amp;h&lt;560)L.push({S:&#x27;A&#x27;,x:-30+(h-110)*1.25,fy:236,ph:h*1.25/24,dir:1});
+  let k=null;
+  if(h&lt;100)k={x:214,fy:248,pose:h&gt;=40?&#x27;up&#x27;:&#x27;stand&#x27;};
+  else if(h&lt;260){const q=h-100;k={x:214+q*1.8,fy:lerp(248,233,Math.min(1,q/20)),pose:&#x27;walk&#x27;,ph:q/10}}
+  else if(h&gt;=300&amp;&amp;h&lt;430)k={x:-20+(h-300)*1.692,fy:233,pose:&#x27;walk&#x27;,ph:h/10};
+  else if(h&gt;=430&amp;&amp;h&lt;470)k={x:200,fy:233,pose:&#x27;look&#x27;};
+  else if(h&gt;=470&amp;&amp;h&lt;478)k={x:200,fy:233,pose:&#x27;crouch&#x27;};
+  else if(h&gt;=478&amp;&amp;h&lt;500){const q=(h-478)/22;k={x:lerp(200,214,q),fy:lerp(233,248,q),lift:Math.sin(PI*q)*14,pose:&#x27;jump&#x27;}}
+  else if(h&gt;=500&amp;&amp;h&lt;508)k={x:214,fy:248,pose:&#x27;crouch&#x27;};
+  else if(h&gt;=508)k={x:214,fy:248,pose:&#x27;look&#x27;};
+  if(k){if(!prim&amp;&amp;h&gt;=430&amp;&amp;h&lt;470)k.pose=&#x27;wave&#x27;;k.S=&#x27;K&#x27;;k.dir=1;L.push(k)}
+  return L.sort((a,b)=&gt;a.fy-b.fy)}
+function sprite(a,w){if(a.S===&#x27;A&#x27;){adult(w,a.ph);return SA}if(a.S===&#x27;K&#x27;){kid(w,a.pose,a.ph||0);return SK}cat(w,a.ph);return SC}
+// ------------------------------------------------------------------ per-frame background dynamics
+function rain(B,t,y0,y1,c,n,up){c=cu(c);for(let i=0;i&lt;n;i++){const x0=hash(i,1,11)*560;let y=(hash(i,2,11)*400+t*9)%(y1-y0+40)-20;if(up)y=(y1-y0)-y;const x=fl(x0-y*0.12);for(let k=0;k&lt;5;k++){const yy=fl(y0+y+k),xx=fl(x-k*0.12+(up?0:0));if(yy&gt;=0&amp;&amp;yy&lt;B.h&amp;&amp;xx&gt;=0&amp;&amp;xx&lt;W)B.d[yy*W+xx]=c}}}
+function dyn(t,showRain0){const B0=BG[0],B1=BG[1];B0.d.set(BGS[0].d);B1.d.set(BGS[1].d);
+  // W0: the cold street; a window goes on and off, the pole&#x27;s lamp buzzes
+  {const on=(fl(t/90)%3)!==0;fr(B0,301,yb(GL-75),12,14,on?&#x27;#7aa0b8&#x27;:&#x27;#1f262f&#x27;);if(on)for(let k=0;k&lt;14;k+=3)fr(B0,301,yb(GL-75)+k,12,1,&#x27;#5a7a90&#x27;);
+    const fz=hash(fl(t/3),1,9)&lt;0.08;fr(B0,270,yb(80)+10,2,2,fz?&#x27;#1f262f&#x27;:&#x27;#d8e8f0&#x27;);if(!fz)glow(B0,271,yb(91),9,&#x27;#a8c8d8&#x27;,0.25);
+    if(showRain0)rain(B0,t,0,BH,&#x27;#4a5868&#x27;,150,false)}
+  // W1: lanterns on the wires sway, the whale swims, sky lanterns rise
+  {for(let i=0;i&lt;5;i++){const x=(fl(t*0.25)+i*137)%640-80,y=-70+((t*0.35+i*61)%300);const yy=yb(150-((t*0.3+i*73)%240));const xx=((i*97+t*0.05)%W+W)%W;fr(B1,fl(xx),yy,3,4,&#x27;#ffb050&#x27;);fp(B1,fl(xx)+1,yy+1,&#x27;#fff0c0&#x27;);glow(B1,xx+1.5,yy+2,6,&#x27;#ff9a50&#x27;,0.3)}
+    for(let n=0,x=10;x&lt;W;x+=22,n++){const sw=Math.sin(t*0.08+x*0.3)*1.2;for(const[j,y]of CAT(x).entries()){if((n+j)%2)continue;const lx=rd(x+sw),ly=yb(rd(y))+2;fr(B1,lx,ly-1,1,2,&#x27;#1a1018&#x27;);glow(B1,lx+0.5,ly+4,8,&#x27;#ff7040&#x27;,0.28);fell(B1,lx+0.5,ly+4,3,3.5,&#x27;#e04a30&#x27;);fr(B1,lx-1,ly+2,3,4,&#x27;#ff9a50&#x27;);fp(B1,lx,ly+3,&#x27;#fff0b0&#x27;);fr(B1,lx-2,ly+1,5,1,&#x27;#1a1018&#x27;);fr(B1,lx-2,ly+8,5,1,&#x27;#1a1018&#x27;)}}
+    const h=t%HALF,wx=420-h*0.9,wy=118+Math.sin(t*0.02)*5;whale(rd(Math.sin(t*0.07)*5));
+    for(let y=0;y&lt;WH.h;y++)for(let x=0;x&lt;WH.w;x++){const v=WH.d[y*WH.w+x];if(!v)continue;const X=fl(wx)+x,Y=yb(fl(wy))+y-24;if(X&gt;=0&amp;&amp;X&lt;W&amp;&amp;Y&gt;=0&amp;&amp;Y&lt;BH)B1.d[Y*W+X]=v}
+}}
+// ------------------------------------------------------------------ one view: primary world A, puddles showing world 1-A
+const RA=new Uint32Array(W*GH),RIP=new Uint8Array(W*GH),MK=new Uint8Array(W*GH);const touched=[];
+function ring(cx,cy,r,a){const n=Math.max(12,fl(r*7));for(let i=0;i&lt;n;i++){const th=i/n*2*PI;for(const[rr,v]of [[r,2],[r-1.2,1]]){if(rr&lt;0.5)continue;const x=rd(cx+Math.cos(th)*rr),wy=rd(cy+Math.sin(th)*rr*0.3);const gy=wy-GL;if(x&lt;0||x&gt;=W||gy&lt;0||gy&gt;=GH)continue;const i2=gy*W+x;if(!MK[i2])continue;if(!RIP[i2])touched.push(i2);RIP[i2]=Math.max(RIP[i2],v===2&amp;&amp;a&gt;0.5?2:1)}}}
+function view(O,A,oy,h,t,p){const BA=BG[A],BB=BG[1-A],GA=GND[A],k=lerp(K0,1,p||0);
+  // mask: static puddles, plus the big one growing while the camera dives
+  MK.set(PMASK);if(p&gt;0){const q=p*p,pd=PUD[1],rx=pd[2]*(1+9*q),ry=pd[3]*(1+40*q);const gy0=0,gy1=Math.min(GH,fl(pd[1]+ry)-GL+1);for(let gy=gy0;gy&lt;gy1;gy++){const wy=gy+GL,t2=((wy+0.5-pd[1])/ry);if(Math.abs(t2)&gt;=1)continue;const hw=rx*Math.sqrt(1-t2*t2);for(let x=Math.max(0,fl(pd[0]-hw));x&lt;Math.min(W,Math.ceil(pd[0]+hw));x++)MK[gy*W+x]=2}}
+  // the other world&#x27;s people, upside down under their own feet
+  RA.fill(0);for(const a of actors(h,1-A,false)){const S=sprite(a,1-A),fy=rd(a.fy-(a.lift||0)*0),x0=rd(a.x);if(a.lift)continue;
+    for(let gy=fy-GL;gy&lt;GH;gy++){const wy=gy+GL,sy=S.fy-rd((wy-fy)*k);if(sy&lt;0)break;if(gy&lt;0)continue;for(let sx=0;sx&lt;S.w;sx++){const v=S.d[sy*S.w+sx];if(!v)continue;const X=x0+(a.dir&lt;0?S.fx-sx:sx-S.fx);if(X&gt;=0&amp;&amp;X&lt;W)RA[gy*W+X]=v}}}
+  // ripples: rain on world 0&#x27;s puddles, the splash, footsteps
+  for(const i of touched)RIP[i]=0;touched.length=0;
+  if(A===0)PUD.forEach((pd,i)=&gt;{for(let f=t-16;f&lt;=t;f++){if(hash(i,f,3)&gt;pd[2]/260)continue;const u=hash(i,f,4)*2*PI,rr=Math.sqrt(hash(i,f,5))*0.8;ring(pd[0]+Math.cos(u)*rr*pd[2],pd[1]+Math.sin(u)*rr*pd[3],(t-f)*0.55+0.5,1-(t-f)/16)}});
+  for(const s0 of [500,505,511,519])if(h&gt;=s0&amp;&amp;h&lt;s0+60){const age=h-s0;ring(216,250,age*0.9+1,1-age/60)}
+  if(h&gt;=110&amp;&amp;h&lt;560)for(let f=h-12;f&lt;=h;f++){if(fl(f*1.25/12)===fl((f-1)*1.25/12))continue;const x=-30+(f-110)*1.25;ring(x+((fl(f*1.25/12)%2)?3:-3),236,(h-f)*0.7+1,1-(h-f)/12)}
+  const tint=UU(A===0?&#x27;#141c28&#x27;:&#x27;#2a1a2c&#x27;),hi=UU(A===0?&#x27;#a8bcd0&#x27;:&#x27;#ffd8a0&#x27;),rim=UU(A===0?&#x27;#56647a&#x27;:&#x27;#c08a68&#x27;),sky0=BB.d[0];
+  for(let y=0;y&lt;H;y++){const wy=y+oy;
+    if(wy&lt;GL){O.d.set(BA.d.subarray(yb(wy)*W,yb(wy)*W+W),y*W);continue}
+    const gy=wy-GL;for(let x=0;x&lt;W;x++){const i=gy*W+x;if(!MK[i]){O.d[y*W+x]=GA.d[i];continue}
+      const r=RIP[i],sgy=r===1?Math.max(0,gy-2):gy,sw=sgy+GL;let v=RA[sgy*W+x];if(!v){const rb=yb(rd(GL-(sw-GL)*k));v=rb&lt;0?sky0:BB.d[rb*W+x]}
+      v=mixU(mulU(v,0.94),tint,0.1);if(r===2)v=mixU(v,hi,0.4);else if(gy&gt;0&amp;&amp;!MK[i-W])v=mixU(v,rim,0.45);O.d[y*W+x]=v}}}
+function blitA(O,a,A,oy){const S=sprite(a,A),fy=rd(a.fy-(a.lift||0))-oy,x0=rd(a.x);for(let sy=0;sy&lt;S.h;sy++){const Y=fy+sy-S.fy;if(Y&lt;0||Y&gt;=H)continue;for(let sx=0;sx&lt;S.w;sx++){const v=S.d[sy*S.w+sx];if(!v)continue;const X=x0+(a.dir&lt;0?S.fx-sx:sx-S.fx);if(X&gt;=0&amp;&amp;X&lt;W)O.d[Y*W+X]=v}}}
+const FE=FB(W,H),FU=FB(W,H);
+function scene(O,A,h,t){const p=h&gt;=DIVE0?sm(Math.min(1,(h-DIVE0)/(DIVE1-DIVE0))):0;const oy=h&lt;60?rd(-73*(1-sm(h/60))):rd(196*p);
+  view(O,A,oy,h,t,p);for(const a of actors(h,A,true))blitA(O,a,A,oy);
+  // splash droplets
+  if(h&gt;=500&amp;&amp;h&lt;524)for(let i=0;i&lt;18;i++){const q=(h-500)/24,vx=(hash(i,1,13)-0.5)*3.2,vy=-2.2-hash(i,2,13)*2.4;const x=216+vx*q*24,y=248+(vy*q*24+0.5*0.32*(q*24)**2)-oy;fp(O,x,y,A===0?&#x27;#9ab0c8&#x27;:&#x27;#ffd8a0&#x27;);if(i%3===0)fp(O,x,y-1,A===0?&#x27;#6a7a90&#x27;:&#x27;#e8a070&#x27;)}
+  if(A===0)rain(O,t,0,H,&#x27;#56657a&#x27;,140,false)}
+function draw(s,g){const t=((s.t%LOOP)+LOOP)%LOOP,A=fl(t/HALF),h=t%HALF;
+  dyn(t,A===1);
+  if(h&lt;DIVE1)scene(F,A,h,t);
+  else{// the picture turns over: the reflection we fell into becomes the street we stand in
+    const q=(h-DIVE1)/(HALF-DIVE1),c=Math.cos(PI*sm(q));let src;if(c&gt;0){scene(FE,A,DIVE1-1,t);src=FE}else{dyn(t,A===0);scene(FU,1-A,0,t);src=FU}
+    const ac=Math.max(0.02,Math.abs(c)),bk=UU(&#x27;#05060a&#x27;);for(let y=0;y&lt;H;y++){const sy=rd(135+(y-135)/ac);if(sy&lt;0||sy&gt;=H){F.d.fill(bk,y*W,y*W+W);continue}F.d.set(src.d.subarray(sy*W,sy*W+W),y*W)}
+    const e0=rd(135-135*ac),e1=rd(135+135*ac)-1;if(e0&gt;=0)F.d.fill(UU(&#x27;#e8e0d0&#x27;),e0*W,e0*W+W);if(e1&lt;H&amp;&amp;e1&gt;e0)F.d.fill(UU(&#x27;#e8e0d0&#x27;),e1*W,e1*W+W)}
+  fbPut(F,g)}
+SAMPLES.push({id:&#x27;puddle&#x27;,name:&#x27;水洼倒影&#x27;,w:W,h:H,thumb:440,
+  tags:[&#x27;水洼里映出的是另一条街，不是这一条&#x27;,&#x27;人在水洼里的倒影是另一个世界的那个人&#x27;,&#x27;雨下在这边，倒影里的雨往上落&#x27;,&#x27;鲸鱼只在倒影里游，翻过去之后它就在头顶&#x27;,&#x27;镜头沉进水洼，画面翻过来，就到了另一边&#x27;],
+  about:&#x27;下雨的夜里，一条关了门的老街。街上的水洼却映出另一条街：同样的房子，挂满灯笼，屋檐下开着夜市，一头鲸鱼慢慢游过电线。走过去的上班族，在水洼里是一个戴狐狸面具、撑红纸伞的姑娘；一只黑猫，在倒影里是一只尾巴发光的白狐。一个穿黄雨衣的小女孩低头看水洼，水洼里的她在朝她招手。她跳进去，水花溅开，镜头跟着沉进水洼，画面翻了过来——我们站在了灯笼街上，抬头就是那头鲸。这边的水洼里，映着那条下雨的街。再跳一次，又回来了。&#x27;,
+  controls:[SND_CTL,{type:&#x27;button&#x27;,label:&#x27;雨夜这边&#x27;,act(s){s.t=0}},{type:&#x27;button&#x27;,label:&#x27;灯笼那边&#x27;,act(s){s.t=HALF}},{type:&#x27;button&#x27;,label:&#x27;跳进水洼&#x27;,act(s){s.t=fl(((s.t%LOOP)+LOOP)%LOOP/HALF)*HALF+420}}],
+  init(s){sndInit(s)},onOpt(s,k){sndOpt(s,k)},onLeave:sndOff,tick(s){sndTick(s,LOOP,sound)},draw,
+  info(s){const t=((s.t%LOOP)+LOOP)%LOOP;return (t&lt;HALF?&#x27;雨夜这边&#x27;:&#x27;灯笼那边&#x27;)+&#x27; · &#x27;+fl((t%HALF)/24)+&#x27; 秒&#x27;}});
+function sound(A,S,u,pu){const at=A.at(),X=x=&gt;crossed(pu,u,x),side=fl(u/HALF),h=u%HALF;
+  // the side you stand on is loud; the other side is heard faintly, as if from under the water
+  bed(A,&#x27;rain&#x27;,&#x27;white&#x27;,&#x27;bandpass&#x27;,2400,0.5);bed(A,&#x27;rainlo&#x27;,&#x27;brown&#x27;,&#x27;lowpass&#x27;,500);bed(A,&#x27;fest&#x27;,&#x27;triangle&#x27;,&#x27;lowpass&#x27;,700,0.7,110);
+  const dv=h&gt;=DIVE0?seg(h,DIVE0,DIVE1):0,here0=side===0?1-dv:dv;
+  bset(A,&#x27;rain&#x27;,0.05*here0+0.006,side===0?2400:900,0.5);bset(A,&#x27;rainlo&#x27;,0.07*here0+0.01,null,0.5);bset(A,&#x27;fest&#x27;,0.02*(1-here0)+0.004,side===1?1400:500,0.6);
+  const PEN=[62,64,67,69,71,74,76,79];
+  if(side===1){if(h%9===0&amp;&amp;hash(fl(h/9),2,5)&lt;0.6)pluck(A,at,mtof(PEN[fl(hash(fl(h/9),3,5)*8)]+12),0.06,0.6);if(h%36===0)noise(A,at,0.12,0.05,&#x27;lowpass&#x27;,180,{brown:true});if(X(150)||X(390))[0,0.4].forEach((d,i)=&gt;tone(A,&#x27;sine&#x27;,[150,190][i],at+d*2,2.4,0.035,{to:[100,140][i],glide:2.2}))}
+  else{if(h%30===0&amp;&amp;hash(fl(h/30),4,5)&lt;0.5)pluck(A,at,mtof([50,57,62,65,69][fl(hash(fl(h/30),5,5)*5)]),0.06,0.7);if(h%5===0&amp;&amp;hash(h,1,6)&lt;0.4)tone(A,&#x27;sine&#x27;,1800+hash(h,2,6)*1600,at,0.05,0.008,{to:900})}
+  if(X(500)){noise(A,at,0.4,0.16,&#x27;lowpass&#x27;,1600,{to:300});for(let i=0;i&lt;5;i++)tone(A,&#x27;sine&#x27;,1200+i*300,at+0.05+i*0.04,0.08,0.02,{to:600})}
+  if(X(DIVE0))noise(A,at,5.2,0.05,&#x27;lowpass&#x27;,2000,{to:200,a:0.8,brown:true});
+  if(X(DIVE1+8)){bell(A,at,mtof(side===0?79:74),0.035,0.7);bell(A,at+0.12,mtof(side===0?86:81),0.02,0.7)}}
+})();
+
+
+// ================= d01 鱼缸里的海 : a goldfish tank on a desk is bigger on the inside =================
+
+
+// ================= d02 红绿灯小人 : the little green man walks out of the pedestrian light =================
+// He stays made of LED dots wherever he goes: every body cell is a lamp on a 4 px pitch.
+
+
+// ================= d03 时针和分针 : two people ride the hands of a tower clock and meet eleven times in twelve hours =================
+
+
+// ================= d04 雪人的循环 : follow one snowman&#x27;s water through a year =================
+// snowman -&gt; melt -&gt; puddle -&gt; vapour -&gt; its own cloud -&gt; rain -&gt; snow -&gt; the kids build it again
+
+
+// ================= d05 地铁线路图 : zoom into a dot on the metro map, it is a real train; the girl getting off is looking at that map =================
+// Everything is vector, drawn through one camera transform, so the zoom in and the push into the phone stay crisp.
+
+
+// ================= d06 天气预报 : the icons on the weather map turn into real weather =================
+
+
+// ================= d07 心电图 : the heartbeat on a monitor becomes mountains, then a calm sea, then a second, tiny heartbeat =================
+// Everything stays in one phosphor green ramp, like the monitor.
+
+
+// ================= d08 加载中 : a tiny worker pushes the progress bar; at 99% it sticks, so they break through =================
+
+
+// ================= d09 俄罗斯方块城 : the falling pieces are buildings; full rows don&#x27;t vanish, people move in =================
+
+
+// ================= d10 月亮是猫 : the moon is a white cat asleep in the sky; the phases are a blanket pulled over it =================
+
+
+// ================= d11 墨迹测试 : one symmetric ink blot keeps flowing from one answer into the next =================
+// The ink is a field of soft blobs on the right half, mirrored; morphing a shape means moving its blobs.
+
+
+// ================= d12 万花筒 : a mandala that turns out to be the street outside, seen through a girl&#x27;s toy kaleidoscope =================
+
+
+// ================= d13 抽屉里的世界 : every drawer of an old dresser holds a little world; the cat travels through them =================
+
+
+// ================= d14 换台 : every channel spills out of the TV into the living room =================
+
+
+// ================= d15 时间切片 : one street cut into 24 vertical strips, each strip a different hour of the same day =================
+
+
+// ================= d16 车窗 : in every tunnel the train window turns into a mirror, and the mirror shows a girl in the empty seat opposite =================
+
+
+// ================= d17 沙漏城 : the sand that runs down builds a desert city; turn the glass over and the city runs back down into dunes =================
+
+
+// ================= d18 一张纸 : a sheet&#x27;s whole life: letter, paper plane, paper boat, pulp, a new sheet, a new letter =================
+
+
+// ================= d19 掌纹 : a tiny traveller walks the lines of a palm; the life line is a whole life =================
+
+
+// ================= d20 跷跷板 : the sun and the moon sit on the two ends of a seesaw; whoever goes to sleep weighs their end down =================
+
+
+// ================= d21 雨伞下 : seen from above, every umbrella hides its own weather =================
+
+
+// ================= d22 电梯 : every floor the elevator doors open onto another world =================
+
+
+// ================= d23 日晷 : the gnomon&#x27;s shadow is a little person who spends the day going round the dial =================
+
+
+// ================= d24 洗衣机 : behind the porthole of a washing machine is a sea; the lost red sock sails away on it =================
+
+
+// ================= d25 翻页小人 : the stick man in a textbook&#x27;s corner flipbook runs off the last page and onto the desk =================
+
+
+// ================= d26 雾镜 : a smiley drawn on a steamed-up mirror lives as long as the fog does =================
+
+
+// ================= d27 天花板 : lying in bed, the cracks in the ceiling turn into rivers and the damp stain into a sea =================
+
+
+// ================= d28 雪地脚印 : nobody is visible; the whole story is told by footprints appearing in fresh snow =================
+
+
+// ================= d29 窗帘缝 : a strip of sun through the curtains crosses a dark room; whatever it touches comes alive =================
+
+
+// ================= d30 键盘城 : a keyboard is a little city; what gets typed on it happens to the city =================
+
+
+// ================= d31 霓虹猫 : a cat made of neon tube can only live inside the signs; between them it runs along the wires =================
+
+
+// ================= d32 一杯茶 : from above, a cup of tea is a lake with a fisherman; stirring, sugar and drinking are weather =================
+
+
+// ================= d33 楼窗 : an apartment block at night; the residents switch their lights so the windows draw pictures =================
+
+
+// ================= d34 山谷回声 : a girl shouts across a canyon; the words fly, bounce back, and the last echo answers =================
+
+
+// ================= d35 电线五线谱 : five power lines are a staff, the sparrows on them are notes; a girl walking underneath plays them =================
+
+
+// ================= d36 雨刷 : on a long rainy drive, every sweep of the wiper wipes in a different place, until it wipes in home =================
+
+
+// ================= d37 气泡 : every big bubble in a glass of soda carries something; when it pops at the top, the thing gets out =================
+
+
+// ================= d38 冰箱 : the moment the fridge door shuts and the light goes out, the food throws a party =================
+
+
+// ================= d39 晾衣绳 : washing on a line, and the wind turns it into a puppet show =================
+
+
+// ================= d40 星座 : the constellations join their dots, come alive and chase each other across the sky =================
+
+
+// ================= player =================
+const cv=document.getElementById(&#x27;cv&#x27;),g=cv.getContext(&#x27;2d&#x27;),stage=document.getElementById(&#x27;stage&#x27;);
+const $=id=&gt;document.getElementById(id);
+let cur=0,S=null,paused=false,speed=1,acc=0,last=performance.now(),visible=true;
+const reduce=matchMedia(&#x27;(prefers-reduced-motion: reduce)&#x27;).matches;if(reduce)paused=true;
+function newState(def){const s={t:0,opt:{}};for(const c of def.controls||[])if(c.key)s.opt[c.key]=c.def;def.init(s);return s}
+function fit(){const d=SAMPLES[cur],aw=stage.clientWidth-2,ah=Math.max(200,innerHeight*0.66);let sc=Math.min(aw/d.w,ah/d.h);if(sc&gt;=2)sc=fl(sc);
+  cv.style.width=fl(d.w*sc)+&#x27;px&#x27;;cv.style.height=fl(d.h*sc)+&#x27;px&#x27;;S.scale=sc}
+function render(){g.imageSmoothingEnabled=false;SAMPLES[cur].draw(S,g);syncUI()}
+function syncUI(){const d=SAMPLES[cur];$(&#x27;info&#x27;).textContent=(d.info?d.info(S)+&#x27; · &#x27;:&#x27;&#x27;)+`${d.w}×${d.h}`+(S.scale&gt;=2?` ×${S.scale}`:&#x27;&#x27;);
+  for(const el of $(&#x27;ctls&#x27;).querySelectorAll(&#x27;[data-key]&#x27;)){const k=el.dataset.key,v=S.opt[k];
+    if(el.dataset.type===&#x27;seg&#x27;)for(const b of el.querySelectorAll(&#x27;button&#x27;))b.classList.toggle(&#x27;on&#x27;,String(b.dataset.v)===String(v));
+    else if(el.dataset.type===&#x27;toggle&#x27;){el.classList.toggle(&#x27;on&#x27;,!!v);el.setAttribute(&#x27;aria-pressed&#x27;,!!v)}
+    else if(el.dataset.type===&#x27;range&#x27;&amp;&amp;document.activeElement!==el)el.value=v}}
+function tick(){SAMPLES[cur].tick(S);S.t++}
+function select(i){if(SAMPLES[cur]&amp;&amp;S&amp;&amp;SAMPLES[cur].onLeave)SAMPLES[cur].onLeave(S);cur=i;const d=SAMPLES[i];cv.width=d.w;cv.height=d.h;S=newState(d);
+  $(&#x27;nm&#x27;).textContent=d.name;$(&#x27;about&#x27;).textContent=d.about;
+  $(&#x27;tags&#x27;).innerHTML=&#x27;&lt;li class=&quot;h&quot;&gt;TECHNIQUES&lt;/li&gt;&#x27;+d.tags.map(t=&gt;`&lt;li&gt;${t}&lt;/li&gt;`).join(&#x27;&#x27;);
+  const box=$(&#x27;ctls&#x27;);box.innerHTML=&#x27;&#x27;;
+  for(const c of d.controls||[]){
+    if(c.type===&#x27;seg&#x27;){const lab=document.createElement(&#x27;span&#x27;);lab.className=&#x27;lab&#x27;;lab.textContent=c.label;const seg=document.createElement(&#x27;div&#x27;);seg.className=&#x27;seg&#x27;;seg.dataset.key=c.key;seg.dataset.type=&#x27;seg&#x27;;
+      for(const[v,l]of c.options){const b=document.createElement(&#x27;button&#x27;);b.type=&#x27;button&#x27;;b.textContent=l;b.dataset.v=v;b.onclick=()=&gt;{S.opt[c.key]=v;d.onOpt&amp;&amp;d.onOpt(S,c.key);render()};seg.appendChild(b)}
+      box.append(lab,seg)}
+    else if(c.type===&#x27;toggle&#x27;){const b=document.createElement(&#x27;button&#x27;);b.type=&#x27;button&#x27;;b.textContent=c.label;b.dataset.key=c.key;b.dataset.type=&#x27;toggle&#x27;;b.onclick=()=&gt;{S.opt[c.key]=!S.opt[c.key];d.onOpt&amp;&amp;d.onOpt(S,c.key);render()};box.append(b)}
+    else if(c.type===&#x27;range&#x27;){const lab=document.createElement(&#x27;label&#x27;);lab.className=&#x27;lab&#x27;;lab.textContent=c.label;lab.htmlFor=&#x27;rg-&#x27;+c.key;const r=document.createElement(&#x27;input&#x27;);r.type=&#x27;range&#x27;;r.id=&#x27;rg-&#x27;+c.key;r.min=c.min;r.max=c.max;r.step=&#x27;0.1&#x27;;r.dataset.key=c.key;r.dataset.type=&#x27;range&#x27;;
+      r.oninput=()=&gt;{S.opt[c.key]=+r.value;render()};box.append(lab,r)}
+    else if(c.type===&#x27;button&#x27;){const b=document.createElement(&#x27;button&#x27;);b.type=&#x27;button&#x27;;b.textContent=c.label;b.onclick=()=&gt;{c.act(S);render()};box.append(b)}}
+  for(const[k,el]of [...$(&#x27;tabs&#x27;).children].entries())el.classList.toggle(&#x27;on&#x27;,k===i);
+  cv.style.touchAction=d.onPointer?&#x27;none&#x27;:&#x27;auto&#x27;;fit();render();try{history.replaceState(null,&#x27;&#x27;,&#x27;#&#x27;+d.id)}catch(e){}}
+// speed control
+for(const[v,l]of [[0.25,&#x27;¼&#x27;],[0.5,&#x27;½&#x27;],[1,&#x27;1×&#x27;],[2,&#x27;2×&#x27;],[4,&#x27;4×&#x27;]]){const b=document.createElement(&#x27;button&#x27;);b.type=&#x27;button&#x27;;b.textContent=l;b.dataset.v=v;b.onclick=()=&gt;{speed=v;for(const x of $(&#x27;spd&#x27;).children)x.classList.toggle(&#x27;on&#x27;,+x.dataset.v===speed)};$(&#x27;spd&#x27;).appendChild(b)}
+for(const x of $(&#x27;spd&#x27;).children)x.classList.toggle(&#x27;on&#x27;,+x.dataset.v===speed);
+function setPaused(p){paused=p;$(&#x27;play&#x27;).textContent=p?&#x27;播放&#x27;:&#x27;暂停&#x27;}
+$(&#x27;play&#x27;).onclick=()=&gt;setPaused(!paused);
+$(&#x27;stepb&#x27;).onclick=()=&gt;{setPaused(true);tick();render()};
+function cpos(e){const r=cv.getBoundingClientRect(),d=SAMPLES[cur];return[(e.clientX-r.left)/r.width*d.w,(e.clientY-r.top)/r.height*d.h]}
+cv.addEventListener(&#x27;pointerdown&#x27;,e=&gt;{const d=SAMPLES[cur],p=cpos(e);if(d.onPointer){try{cv.setPointerCapture(e.pointerId)}catch(_){}d.onPointer(S,p[0],p[1],&#x27;down&#x27;,1);e.preventDefault()}if(d.onClick)d.onClick(S,p[0],p[1]);render()});
+cv.addEventListener(&#x27;pointermove&#x27;,e=&gt;{const d=SAMPLES[cur];if(d.onPointer){const p=cpos(e);d.onPointer(S,p[0],p[1],&#x27;move&#x27;,e.buttons)}});
+cv.addEventListener(&#x27;pointerup&#x27;,e=&gt;{const d=SAMPLES[cur];if(d.onPointer){const p=cpos(e);d.onPointer(S,p[0],p[1],&#x27;up&#x27;,0)}});
+addEventListener(&#x27;keydown&#x27;,e=&gt;{if(e.target.tagName===&#x27;INPUT&#x27;)return;const d=SAMPLES[cur];
+  if(d.onKey&amp;&amp;d.onKey(S,e.key,true)){e.preventDefault();return}
+  if(e.key===&#x27; &#x27;){e.preventDefault();setPaused(!paused)}else if(e.key===&#x27;ArrowRight&#x27;){e.preventDefault();setPaused(true);tick();render()}
+  else{const k=&#x27;1234567890-=&#x27;.indexOf(e.key);if(k&gt;=0&amp;&amp;k&lt;SAMPLES.length)select(k);else if(e.key===&#x27;[&#x27;||e.key===&#x27;]&#x27;)select((cur+(e.key===&#x27;]&#x27;?1:SAMPLES.length-1))%SAMPLES.length)}});
+addEventListener(&#x27;keyup&#x27;,e=&gt;{const d=SAMPLES[cur];if(d.onKey)d.onKey(S,e.key,false)});
+// thumbnails
+SAMPLES.forEach((d,i)=&gt;{const b=document.createElement(&#x27;button&#x27;);b.type=&#x27;button&#x27;;b.className=&#x27;tab&#x27;;const c=document.createElement(&#x27;canvas&#x27;);c.width=d.w;c.height=d.h;
+  const st=newState(d);st.t=d.thumb||40;const tg=c.getContext(&#x27;2d&#x27;);tg.imageSmoothingEnabled=false;d.draw(st,tg);
+  const tl=document.createElement(&#x27;span&#x27;);tl.className=&#x27;tl&#x27;;tl.innerHTML=`&lt;span class=&quot;k&quot;&gt;${i+1}&lt;/span&gt;${d.name}`;b.append(c,tl);b.onclick=()=&gt;select(i);$(&#x27;tabs&#x27;).appendChild(b)});
+new ResizeObserver(()=&gt;{if(S){fit();render()}}).observe(stage);
+new IntersectionObserver(es=&gt;{visible=es[0].isIntersecting}).observe(stage);
+const start=Math.max(0,SAMPLES.findIndex(d=&gt;&#x27;#&#x27;+d.id===location.hash));select(start);setPaused(paused);
+function loop(now){const dt=Math.min(0.25,(now-last)/1000);last=now;
+  if(!paused&amp;&amp;visible){acc+=dt*24*speed;let n=0;while(acc&gt;=1&amp;&amp;n&lt;8){tick();acc-=1;n++}if(n)render()}
+  requestAnimationFrame(loop)}
+requestAnimationFrame(loop);
+</code></pre>

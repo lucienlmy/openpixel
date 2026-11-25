@@ -2,15 +2,15 @@
 
 [中文](README.md) · [English](README.en.md) · [日本語](README.ja.md) · [한국어](README.ko.md)
 
-<a href="https://ma1902056219-coder.github.io/openpixel/"><img src="docs/assets/openpixel-banner.gif" alt="OpenPixel：41个可以运行、探索和修改的像素小世界" width="100%"></a>
+<a href="https://ma1902056219-coder.github.io/openpixel/"><img src="docs/assets/openpixel-banner.gif" alt="OpenPixel：46个可以运行、探索和修改的像素小世界" width="100%"></a>
 
 # OpenPixel · 像素万象
 
 **把像素世界，变成你的作品。**
 
-41 个浏览器实时绘制的像素实验：从一滴水的涟漪，到两座星系的相撞。
+46 个浏览器实时绘制的像素实验：从一滴水的涟漪，到两座星系的相撞。
 
-<img src="docs/assets/badge-works.svg" alt="41件作品"> <img src="docs/assets/badge-runtime.svg" alt="浏览器运行"> <a href="LICENSE"><img src="docs/assets/badge-license.svg" alt="MIT许可"></a>
+<img src="docs/assets/badge-works.svg" alt="46件作品"> <img src="docs/assets/badge-runtime.svg" alt="浏览器运行"> <a href="LICENSE"><img src="docs/assets/badge-license.svg" alt="MIT许可"></a>
 
 [下载当前源码](https://github.com/ma1902056219-coder/openpixel/archive/refs/heads/main.zip) · [作品目录](#作品目录) · [开始运行](#开始运行) · [修改指南](docs/guide.md)
 
@@ -32,7 +32,24 @@
 - **走进场景**：首领战、落日驾驶、拼好后开始运动的微型世界。
 - **直接改源码**：每件作品独立成目录，附实际画面和中文说明，无需构建或 AI 接口。
 
-仓库首页、修改指南和41件作品的操作说明现提供中文、英文、日文、韩文。作品内界面及源码注释仍以中文为主。
+仓库首页、修改指南和46件作品的操作说明现提供中文、英文、日文、韩文。作品内界面及源码注释仍以中文为主。
+
+## 第五批新增 · 5 个像素实验
+
+穿过水洼到另一条街，看巨兽背城走过夕阳。也能亲手喷漆、撞钟，再到打烊的车站看站牌逐片翻动。
+
+<table>
+<tr>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/puddle-worlds/"><img src="works/puddle-worlds/poster.webp" alt="水洼倒影" width="100%"><br><strong>水洼倒影</strong></a><br><sub>镜头跳进水洼，翻到另一条街</sub><br><a href="works/puddle-worlds/source.js">查看源码</a> · <a href="works/puddle-worlds/README.md">操作说明</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/walking-colossus/"><img src="works/walking-colossus/poster.webp" alt="巨像" width="100%"><br><strong>巨像</strong></a><br><sub>一头石兽，背着整座古城从夕阳前走过</sub><br><a href="works/walking-colossus/source.js">查看源码</a> · <a href="works/walking-colossus/README.md">操作说明</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/uv-graffiti/"><img src="works/uv-graffiti/poster.webp" alt="喷漆" width="100%"><br><strong>喷漆</strong></a><br><sub>在砖墙画一笔，换成紫外灯就会亮</sub><br><a href="works/uv-graffiti/source.js">查看源码</a> · <a href="works/uv-graffiti/README.md">操作说明</a></td>
+</tr>
+<tr>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/bell-at-dawn/"><img src="works/bell-at-dawn/poster.webp" alt="撞钟" width="100%"><br><strong>撞钟</strong></a><br><sub>撞一下铜钟，云散开，雪落下来</sub><br><a href="works/bell-at-dawn/source.js">查看源码</a> · <a href="works/bell-at-dawn/README.md">操作说明</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/flipdot-night/"><img src="works/flipdot-night/poster.webp" alt="翻片屏的一夜" width="100%"><br><strong>翻片屏的一夜</strong></a><br><sub>车站关门后，站牌上的字掉下来变成沙丘</sub><br><a href="works/flipdot-night/source.js">查看源码</a> · <a href="works/flipdot-night/README.md">操作说明</a></td>
+<td width="33%"></td>
+</tr>
+</table>
 
 ## 第四批新增 · 5 个像素实验
 
@@ -105,7 +122,7 @@ python -m http.server 8080 --bind 127.0.0.1
 
 ## 作品目录
 
-**点击图卡直接在线体验；每件作品另附操作说明与源码，也可下载后离线运行。** 当前合集共 41 件，每件都附可编辑的 `source.js`。
+**点击图卡直接在线体验；每件作品另附操作说明与源码，也可下载后离线运行。** 当前合集共 46 件，每件都附可编辑的 `source.js`。
 
 ### 互动与材质
 
@@ -223,7 +240,7 @@ openpixel/
 
 ## 参与与更新
 
-当前已分四批开放 41 件，后续继续按批次补充。欢迎提交交互改进、性能优化和你的新版本，详见 [CONTRIBUTING.md](CONTRIBUTING.md)。
+当前已分五批开放 46 件，后续继续按批次补充。欢迎提交交互改进、性能优化和你的新版本，详见 [CONTRIBUTING.md](CONTRIBUTING.md)。
 
 遇到问题时，请在 [Issues](https://github.com/ma1902056219-coder/openpixel/issues) 写清作品名、浏览器和复现步骤。
 

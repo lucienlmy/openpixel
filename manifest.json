@@ -818,5 +818,105 @@
     },
     "batch": 4,
     "preview": "https://ma1902056219-coder.github.io/openpixel/works/rice-field-perspective/"
+  },
+  {
+    "order": 42,
+    "slug": "puddle-worlds",
+    "title": "水洼倒影",
+    "group": "空间与错觉",
+    "summary": "镜头跳进水洼，翻到另一条街",
+    "url": "works/puddle-worlds/index.html",
+    "source": "works/puddle-worlds/source.html",
+    "poster": "works/puddle-worlds/poster.webp",
+    "origin_id": "pixel-explore--creative-ideas--index::puddle::0",
+    "origin_path": "pixel-explore/creative-ideas/index.html",
+    "origin_sha256": "b5bfc4fdec96c366e8508da5d3f5adde5751c07808a7fb2e450131adb5249ac0",
+    "source_sha256": "e79cf47403d4402df6e26ac328e2269c4fece711ec28de4dca93d57313d68c01",
+    "source_bytes": 48149,
+    "poster_capture": {
+      "method": "native-runtime"
+    },
+    "batch": 5,
+    "preview": "https://ma1902056219-coder.github.io/openpixel/works/puddle-worlds/"
+  },
+  {
+    "order": 43,
+    "slug": "walking-colossus",
+    "title": "巨像",
+    "group": "像素画卷",
+    "summary": "一头石兽，背着整座古城从夕阳前走过",
+    "url": "works/walking-colossus/index.html",
+    "source": "works/walking-colossus/source.html",
+    "poster": "works/walking-colossus/poster.webp",
+    "origin_id": "pixel-explore--masterworks--index::colossus::0",
+    "origin_path": "pixel-explore/masterworks/index.html",
+    "origin_sha256": "53715e4ebaa927c0198789ab3f3eeef34aa1bb8ff6fa6656adabc01c2fdfc30c",
+    "source_sha256": "758b8f4efd5d08510f20c1396be06f09462877f5a30e138120e3bc143e08224c",
+    "source_bytes": 21098,
+    "poster_capture": {
+      "method": "native-runtime"
+    },
+    "batch": 5,
+    "preview": "https://ma1902056219-coder.github.io/openpixel/works/walking-colossus/"
+  },
+  {
+    "order": 44,
+    "slug": "uv-graffiti",
+    "title": "喷漆",
+    "group": "互动与材质",
+    "summary": "在砖墙画一笔，换成紫外灯就会亮",
+    "url": "works/uv-graffiti/index.html",
+    "source": "works/uv-graffiti/source.html",
+    "poster": "works/uv-graffiti/poster.webp",
+    "origin_id": "pixel-explore--interactive-art-3--index::spray::0",
+    "origin_path": "pixel-explore/interactive-art-3/index.html",
+    "origin_sha256": "fe1354c613e260ea0c6b905148cbd637c0db5706dbf98b1fb574c3c69af4821d",
+    "source_sha256": "c9f7064db78d037cd37d92af07333d5fd5523aa852976002ed19f285cfe26caa",
+    "source_bytes": 38246,
+    "poster_capture": {
+      "method": "native-runtime"
+    },
+    "batch": 5,
+    "preview": "https://ma1902056219-coder.github.io/openpixel/works/uv-graffiti/"
+  },
+  {
+    "order": 45,
+    "slug": "bell-at-dawn",
+    "title": "撞钟",
+    "group": "互动与材质",
+    "summary": "撞一下铜钟，云散开，雪落下来",
+    "url": "works/bell-at-dawn/index.html",
+    "source": "works/bell-at-dawn/source.html",
+    "poster": "works/bell-at-dawn/poster.webp",
+    "origin_id": "pixel-explore--interactive-art-2--index::bell::0",
+    "origin_path": "pixel-explore/interactive-art-2/index.html",
+    "origin_sha256": "49e8a9293072efd4904e417f4aa8b15aa9f0e4a35f2735427cfd7b5ee04088d4",
+    "source_sha256": "5e432052f5c474d94d7f4dbf29dc72497c4044f394f787c2ff670de735fcfce5",
+    "source_bytes": 51035,
+    "poster_capture": {
+      "method": "native-runtime"
+    },
+    "batch": 5,
+    "preview": "https://ma1902056219-coder.github.io/openpixel/works/bell-at-dawn/"
+  },
+  {
+    "order": 46,
+    "slug": "flipdot-night",
+    "title": "翻片屏的一夜",
+    "group": "空间与错觉",
+    "summary": "车站关门后，站牌上的字掉下来变成沙丘",
+    "url": "works/flipdot-night/index.html",
+    "source": "works/flipdot-night/source.html",
+    "poster": "works/flipdot-night/poster.webp",
+    "origin_id": "pixel-explore--new-frontiers--index::flipdot::0",
+    "origin_path": "pixel-explore/new-frontiers/index.html",
+    "origin_sha256": "e4969f2d07bf55640654b1aefa8a3655f939a931e8b9ae47b21121020da3a88d",
+    "source_sha256": "5b971bdb41b0270a8883068bd8b2df38ea424983dfecd3f32e4ce6cae0650fca",
+    "source_bytes": 46256,
+    "poster_capture": {
+      "method": "native-runtime"
+    },
+    "batch": 5,
+    "preview": "https://ma1902056219-coder.github.io/openpixel/works/flipdot-night/"
   }
 ]

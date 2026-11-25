@@ -8,7 +8,7 @@
 
 **Make these pixel worlds your own.**
 
-41 pixel experiments rendered in real time in your browser, from ripples on a pond to colliding galaxies.
+46 pixel experiments rendered in real time in your browser, from ripples on a pond to colliding galaxies.
 
 <img src="docs/assets/badge-works.en.svg" alt="Artworks"> <img src="docs/assets/badge-runtime.en.svg" alt="Runs in"> <img src="docs/assets/badge-license.en.svg" alt="License">
 
@@ -25,12 +25,29 @@
 <img src="docs/assets/showcase.gif" alt="Actual runtime footage: ripples, schooling fish and colliding galaxies" width="850">
 </div>
 
-Captured from the running artworks. Try any of the 41 works online, or download the source to make it your own.
+Captured from the running artworks. Try any of the 46 works online, or download the source to make it your own.
 
 - **Reach in:** feed koi, move a magnetic field, wipe frost and rake sand.
 - **Watch it evolve:** moons form rings, fish avoid a dolphin and stars draw long tails.
 - **Take over a scene:** a boss encounter, a sunset drive and a town that wakes up as a puzzle is assembled.
 - **Edit the source:** each artwork has its own folder, source and instructions. No build step or AI API is required.
+
+## Batch 05 · Five new pixel experiments
+
+Cross a puddle into another street, watch a walking citadel, and explore fluorescent paint, a ringing bell, and a mechanical display. Each scene runs on its own.
+
+<table>
+<tr>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/puddle-worlds/"><img src="works/puddle-worlds/poster.webp" alt="Through the Puddle" width="100%"><br><strong>Through the Puddle</strong></a><br><sub>A puddle reflects a street you can cross into.</sub><br><a href="works/puddle-worlds/source.js">Source</a> · <a href="docs/works.en.md#puddle-worlds">Controls</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/walking-colossus/"><img src="works/walking-colossus/poster.webp" alt="Walking Colossus" width="100%"><br><strong>Walking Colossus</strong></a><br><sub>A stone creature carries a city past the sunset.</sub><br><a href="works/walking-colossus/source.js">Source</a> · <a href="docs/works.en.md#walking-colossus">Controls</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/uv-graffiti/"><img src="works/uv-graffiti/poster.webp" alt="UV Graffiti" width="100%"><br><strong>UV Graffiti</strong></a><br><sub>Paint on brick and switch to UV to reveal the glow.</sub><br><a href="works/uv-graffiti/source.js">Source</a> · <a href="docs/works.en.md#uv-graffiti">Controls</a></td>
+</tr>
+<tr>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/bell-at-dawn/"><img src="works/bell-at-dawn/poster.webp" alt="Bell at Dawn" width="100%"><br><strong>Bell at Dawn</strong></a><br><sub>Ring a bell to push away clouds and shake snow loose.</sub><br><a href="works/bell-at-dawn/source.js">Source</a> · <a href="docs/works.en.md#bell-at-dawn">Controls</a></td>
+<td width="33%" valign="top"><a href="https://ma1902056219-coder.github.io/openpixel/works/flipdot-night/"><img src="works/flipdot-night/poster.webp" alt="A Night on the Flip-Dot Display" width="100%"><br><strong>A Night on the Flip-Dot Display</strong></a><br><sub>Station lettering falls away and becomes a field of sand.</sub><br><a href="works/flipdot-night/source.js">Source</a> · <a href="docs/works.en.md#flipdot-night">Controls</a></td>
+<td width="33%"></td>
+</tr>
+</table>
 
 ## Batch 04 · Five new pixel experiments
 
@@ -209,7 +226,7 @@ These are pixel-art and small gameplay experiments. Combat and driving retain si
 
 ## Updates and contributions
 
-The collection now includes 41 artworks across four batches. More effects will be shared from time to time. Improvements to interaction, visuals and performance are welcome. For issues, include the artwork name, browser and steps to reproduce. For a pull request, explain your change and check both demo and manual modes. See [CONTRIBUTING.md](CONTRIBUTING.md) for the original Chinese guidelines.
+The collection now includes 46 artworks across five batches. More effects will be shared from time to time. Improvements to interaction, visuals and performance are welcome. For issues, include the artwork name, browser and steps to reproduce. For a pull request, explain your change and check both demo and manual modes. See [CONTRIBUTING.md](CONTRIBUTING.md) for the original Chinese guidelines.
 
 ## Author and license
 

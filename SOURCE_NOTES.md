@@ -64,3 +64,13 @@
 | 肥皂泡 | `pixel-explore/interactive-art-3/index.html` | `fe1354c613e260ea0c6b905148cbd637c0db5706dbf98b1fb574c3c69af4821d` |
 | 一滴露水 | `world-styles/micro-macro/index.html` | `02e979d8eb8697130486d3f6acfc39d41c8743ca94912c676b9bf972db45f732` |
 | 稻田画 | `pixel-explore/new-frontiers-2/index.html` | `d3140237ede5b12b64a6d2c870b727fbb0c6e9481104cd55843705d3827a8c0d` |
+
+## 第五批 · 2026-11-25
+
+| 作品 | 原文件 | 原文件 SHA-256 |
+|---|---|---|
+| 水洼倒影 | `pixel-explore/creative-ideas/index.html` | `b5bfc4fdec96c366e8508da5d3f5adde5751c07808a7fb2e450131adb5249ac0` |
+| 巨像 | `pixel-explore/masterworks/index.html` | `53715e4ebaa927c0198789ab3f3eeef34aa1bb8ff6fa6656adabc01c2fdfc30c` |
+| 喷漆 | `pixel-explore/interactive-art-3/index.html` | `fe1354c613e260ea0c6b905148cbd637c0db5706dbf98b1fb574c3c69af4821d` |
+| 撞钟 | `pixel-explore/interactive-art-2/index.html` | `49e8a9293072efd4904e417f4aa8b15aa9f0e4a35f2735427cfd7b5ee04088d4` |
+| 翻片屏的一夜 | `pixel-explore/new-frontiers/index.html` | `e4969f2d07bf55640654b1aefa8a3655f939a931e8b9ae47b21121020da3a88d` |

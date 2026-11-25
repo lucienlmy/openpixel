@@ -528,3 +528,65 @@ Space で停止、左右矢印でコマ送り、R で再生、O でオニオン�
 「田埂上」であぜ道、「爬上塔」で展望台に上がる場面、「正上方」で真上に切り替えます。
 
 `works/rice-field-perspective/index.html` · [source.js](../works/rice-field-perspective/source.js)
+
+## 第5弾
+
+<a id="puddle-worlds"></a>
+
+## 水たまりの向こう / 水洼倒影
+
+[▶ オンラインで体験](https://ma1902056219-coder.github.io/openpixel/works/puddle-worlds/)
+
+水たまりに映る別の通りへ移動します。
+
+「雨夜这边」で雨の通りから始め、「跳进水洼」で場面転換の直前に移動します。「灯笼那边」で提灯の通りに直接移れます。
+
+`works/puddle-worlds/index.html` · [source.js](../works/puddle-worlds/source.js)
+
+<a id="walking-colossus"></a>
+
+## 歩く巨像 / 巨像
+
+[▶ オンラインで体験](https://ma1902056219-coder.github.io/openpixel/works/walking-colossus/)
+
+街を背負った石の巨獣が夕日の前を歩きます。
+
+約1分で一周します。2倍速で逆光の場面を探し、停止やコマ送りで観察できます。
+
+`works/walking-colossus/index.html` · [source.js](../works/walking-colossus/source.js)
+
+<a id="uv-graffiti"></a>
+
+## 蛍光スプレー / 喷漆
+
+[▶ オンラインで体験](https://ma1902056219-coder.github.io/openpixel/works/uv-graffiti/)
+
+れんがに色を吹き付け、紫外線の下で光らせます。
+
+缶を押して色を変え、ドラッグして吹き付けます。同じ場所に長く吹くと塗料が垂れます。「灯：路灯」で紫外線に切り替えます。
+
+`works/uv-graffiti/index.html` · [source.js](../works/uv-graffiti/source.js)
+
+<a id="bell-at-dawn"></a>
+
+## 夜明けの鐘 / 撞钟
+
+[▶ オンラインで体験](https://ma1902056219-coder.github.io/openpixel/works/bell-at-dawn/)
+
+鐘を鳴らすと雲が広がり、雪が舞い落ちます。
+
+撞木を右へ引いて離します。鐘を押して軽く鳴らすこともできます。音を有効にすると余韻や山のこだまが聞こえます。
+
+`works/bell-at-dawn/index.html` · [source.js](../works/bell-at-dawn/source.js)
+
+<a id="flipdot-night"></a>
+
+## フリップドット表示板の一夜 / 翻片屏的一夜
+
+[▶ オンラインで体験](https://ma1902056219-coder.github.io/openpixel/works/flipdot-night/)
+
+駅の表示板から文字が崩れて砂丘になります。
+
+「字掉下来」で文字が落ちる場面、「火车」で列車へ移動できます。「声音」で反転音と音楽を有効にします。
+
+`works/flipdot-night/index.html` · [source.js](../works/flipdot-night/source.js)

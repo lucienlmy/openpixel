@@ -528,3 +528,65 @@ Space로 정지, 좌우 화살표로 프레임 이동, R로 다시 재생, O로 
 “田埂上”으로 논둑, “爬上塔”으로 전망대에 오르는 장면, “正上方”으로 위에서 보는 장면을 엽니다.
 
 `works/rice-field-perspective/index.html` · [source.js](../works/rice-field-perspective/source.js)
+
+## 다섯 번째 공개
+
+<a id="puddle-worlds"></a>
+
+## 웅덩이 너머 / 水洼倒影
+
+[▶ 온라인 체험](https://ma1902056219-coder.github.io/openpixel/works/puddle-worlds/)
+
+물웅덩이에 비친 다른 거리로 넘어갑니다.
+
+“雨夜这边”에서 시작해 “跳进水洼”를 누르면 전환 직전으로 이동합니다. “灯笼那边”은 등불 거리로 바로 이동합니다.
+
+`works/puddle-worlds/index.html` · [source.js](../works/puddle-worlds/source.js)
+
+<a id="walking-colossus"></a>
+
+## 걷는 거상 / 巨像
+
+[▶ 온라인 체험](https://ma1902056219-coder.github.io/openpixel/works/walking-colossus/)
+
+도시를 짊어진 돌짐승이 노을 앞을 걸어갑니다.
+
+한 바퀴에 약 1분입니다. 2배속으로 역광 장면을 찾고 정지하거나 한 프레임씩 볼 수 있습니다.
+
+`works/walking-colossus/index.html` · [source.js](../works/walking-colossus/source.js)
+
+<a id="uv-graffiti"></a>
+
+## 형광 스프레이 / 喷漆
+
+[▶ 온라인 체험](https://ma1902056219-coder.github.io/openpixel/works/uv-graffiti/)
+
+벽돌 벽에 칠하고 자외선을 켜면 페인트가 빛납니다.
+
+캔을 눌러 색을 고르고 끌어서 칠합니다. 한 곳에 누르고 있으면 페인트가 흐릅니다. “灯：路灯”으로 자외선을 켭니다.
+
+`works/uv-graffiti/index.html` · [source.js](../works/uv-graffiti/source.js)
+
+<a id="bell-at-dawn"></a>
+
+## 새벽 종소리 / 撞钟
+
+[▶ 온라인 체험](https://ma1902056219-coder.github.io/openpixel/works/bell-at-dawn/)
+
+종을 치면 구름이 밀려나고 눈이 떨어집니다.
+
+나무 막대를 오른쪽으로 당겼다가 놓습니다. 종을 눌러 가볍게 칠 수도 있습니다. 소리를 켜면 잔향과 메아리가 들립니다.
+
+`works/bell-at-dawn/index.html` · [source.js](../works/bell-at-dawn/source.js)
+
+<a id="flipdot-night"></a>
+
+## 플립닷 전광판의 하룻밤 / 翻片屏的一夜
+
+[▶ 온라인 체험](https://ma1902056219-coder.github.io/openpixel/works/flipdot-night/)
+
+역의 전광판에서 떨어진 글자가 모래언덕이 됩니다.
+
+“字掉下来”는 글자가 떨어지는 장면, “火车”는 기차 장면입니다. “声音”을 켜면 원판이 돌아가는 소리와 음악이 들립니다.
+
+`works/flipdot-night/index.html` · [source.js](../works/flipdot-night/source.js)
